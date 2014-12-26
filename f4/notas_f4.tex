@@ -1,0 +1,43 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts} %Fonts de AMS
+\usepackage{mathbbol} %Font para matrices como la identidad
+%%Formato de hoja%%
+\usepackage[margin=2cm]{geometry}
+
+%%Imagenes%%
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\graphicspath{{./fig/}}
+\usepackage{float}
+
+%%Ecuaciones y teoremas
+\numberwithin{equation}{section} %Número de ecuación por sección
+
+\newtheorem{definition}{Definición}[chapter]
+\newtheorem{axiom}{Axioma}[chapter]
+\newtheorem{law}{Ley}[chapter]
+\newtheorem{principle}{Principio}[chapter]
+\newtheorem{postulate}{Postulado}[chapter]
+\newtheorem{collorary}{Colorario}[chapter]
+%\setcounter{\thelaw}{0}
+
+\title{Notas de Física 4}
+\author{S. Schiavinato}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Termodinámica}
+\input{termo.tex}
+
+\chapter{Mecánica cuántica}
+\input{cuantica.tex}
+
+\end{document}
+

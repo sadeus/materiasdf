@@ -1,0 +1,93 @@
+\documentclass[a4paper,spanish]{article}
+
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\newcommand{\oiint}{\displaystyle\bigcirc\!\!\!\!\!\!\!\!\int\!\!\!\!\!\int}
+
+
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+
+\def\Fou {\mathcal{F}}
+\def\Rea {\mathcal{R}e}
+\def\Ima {\mathcal{I}m}
+\def\N {\mathbb{N}}
+\def\C {\mathbb{C}}
+\def\Q {\mathbb{Q}}
+\def\R {\mathbb{R}}
+\def\Z {\mathbb{Z}}
+
+
+%\renewcommand{\contentsname}{\'Indice}
+%\renewcommand{\chaptername}{Cap\'\i tulo}
+%\renewcommand{\bibname}{Referencias}
+
+\newtheorem{prop}{Proposici\'on}[section]
+\newtheorem{teo}[prop]{Teorema}
+\newtheorem{defi}[prop]{Definici\'on}
+\newtheorem{obs}[prop]{Observaci\'on}
+\newtheorem{cor}[prop]{Corolario}
+\newtheorem{lema}[prop]{Lema}
+\newtheorem{ejem}[prop]{Ejemplo}
+\newtheorem{ejer}[prop]{Ejercicio}
+
+\numberwithin{equation}{section}
+\newtheorem{definition}{Definici\'on}
+
+
+\newenvironment{proof}{
+\trivlist \item[\hskip \labelsep\mbox{\it Demostraci\'on:
+}]}{\hfill\mbox{$\square$}
+%\trivlist \item[\hskip \labelsep{\sl
+%#1}\mbox{Demostraci\'on}]}{\hfill\mbox{$\square$}
+\endtrivlist}
+
+%\topmargin 0cm \oddsidemargin 0.7cm %% margenes
+%\textheight 21cm \textwidth 15cm %% tama\~no del texto
+\parindent 0cm %% sangria
+
+\begin{document}
+\part{Reflexi\'on y Trasmici\'on de ondas}
+Teniendo una soluci\'on propagante arm\'onica \ref{eq:ondas_propagante_armonica} y un cambio repentino de medio (que se puede lograr en una cuerda cambiando la densidad) se genera un proceso de reflexi\'on y transmisi\'on de la onda propagante.
+			
+			Dispongamos el cambio de medio de $x = 0$, en ese punto pedimos que la continuidad de las soluciones de la ecuaci\'on de onda, que implica que la coordenada y su derivada espacial valgan lo mismo, es decir
+			\begin{equation*}
+				\psi_1(x = 0,t) = \psi_2(x = 0,t) \qquad \partial_x \psi_1(x = 0,t) = \partial_x \psi_2(x = 0, t)
+			\end{equation*}
+			y consideramos que tenemos un n\'umero de ondas para cada medio, es decir $k_1$ y $k_2$. De esta forma encontramos que
+			\begin{align*}
+				\psi_1(0,t) = (A + B) e^{i\omega t} = \psi_2(0,t) = C e^{i\omega t} \qquad &\Rightarrow \qquad A + B = C\\
+				\partial_x \psi_1(0,t) =  i k_1 (B - A) = \partial_x \psi_2(0,t) = i k_2 C \qquad &\Rightarrow \qquad A + B = \frac{k_2}{k_1} C
+			\end{align*}
+			con lo que obtenemos que
+			\begin{equation}
+				B = \frac{k_1 - k_2}{k_1 + k_2} A \qquad C = \frac{2 k_1}{k_2 + k_1} A
+				\label{eq:ondas_reflexion_amplitudes}
+			\end{equation}
+			y definimos coeficientes de transmici\'on y reflexi\'on de la siguiente manera
+			\begin{equation}
+				T = \frac{C}{A} = \frac{2 k_1}{k_1 + k_2} \qquad R = \frac{B}{A} = \frac{k_1 - k_2}{k_1 + k_2}
+				\label{eq:ondas_reflexion_coeficientes}
+			\end{equation}
+			con lo que observamos que si $k_1 = k_2$ no hay reflexi\'on, como es esperable, y la transmisi\'on es total. Si el coeficiente $R = -1$, entonces $T = 0$ (observar que se verifica que $T - R = 1$), por lo que toda la se\~nal es reflejada (que es el caso de ondas estacionarias). Estos coeficientes no dependen de la fase o la frecuencia de la onda incidente y adem\'as siempre van a ser reales, por lo que la reflexi\'on y transmisi\'on tendr\'a la misma fase inicial.
+			En una cuerda la impedancia tiene un valor definido $Z = \sqrt{T_0 \rho}$. En general la impedancia de un sistema es compleja, la parte real se denomina resistencia (determina el valor de la respuesta) y la parte imaginaria, reactancia (cambia la fase de la respuesta).
+			
+			Con esta magnitud definida podemos reescribir los coeficientes de transmisi\'on y reflexi\'on de la siguiente forma
+			\begin{equation}
+				R = \frac{Z_1 - Z_2}{Z_1 + Z_2} \qquad T = \frac{2 Z_1}{Z_1 + Z_2}
+				\label{eq:ondas_reflexion_coeficientes_impedancia}
+			\end{equation}
+			ya que $Z = \frac{T_0}{c} = T_0 \frac{k}{\omega}$. Nuevamente vemos que no cambia la fase al reflejarse, y que si $Z_1 = Z_2$ la reflexi\'on es nula (lo que se llama terminaci\'on perfecta).
+			
+			Como ya mencionamos si la reflexi\'on es total estamos en un caso de onda estacionaria. En este caso no existe transmisi\'on, por lo que toda la energ\'ia que llega al borde debe ser devuelta (ya que si no el borde cambiar\'ia su estado din\'amico, empezando a acelerar) y por lo tanto en una onda estacionaria no hay flujo neto de energ\'ia (toda la energ\'ia que vino de la fuente vuelve a la fuente).
+\end{document}

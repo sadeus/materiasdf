@@ -1,0 +1,397 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\pagestyle{plain}
+\usepackage{amsmath}
+\usepackage{amsbsy}
+\addtolength{\voffset}{-60pt}
+\addtolength{\textheight}{70pt}
+
+\numberwithin{equation}{section}
+\title{Notas de Física 1}
+\author{S. Schiavinato}
+\date{}
+
+\begin{document}
+\maketitle
+\section{Cinemática de una partícula}
+    \subsection{Elementos del movimiento}
+        Para ubicar un objeto en el espacio es necesario tener un sistema de referencia a partir de donde se mide distancias y de ahí un vector posición para ubicarlo en el espacio circundante al sistema de referencia. Este vector posición puede venir determinando por sus coordenadas o por ángulos y distancia mínima entre el sistema de referencia y la ubicación en el espacio (llamada comúnmente módulo). De esta forma tenemos el vector posición $\boldsymbol{r}$ depende de tres funciones del tiempo.\\
+        Ahora consideremos lo que es un objeto puntual. Un objeto puntual es una definición relativa al sistema de referencia y se puede asumir que un cuerpo es puntual cuando respecto de la magnitud de las mediciones de distancia el objeto es ordenes de magnitud más pequeño. Nuestro análisis se enfocará en elementos puntuales y después en sistemas de varios elementos puntuales.\\
+        A partir del concepto de posición en función del tiempo podemos derivar intuitivamente cuando un cuerpo recorre más rápido o más lento una distancia. Esa magnitud la llamamos rapidez, y cuando el damos un sentido y dirección la denominamos velocidad (para nosotros será un vector $\boldsymbol{v}$). De esta forma podemos hablar de velocidad promedio o media y velocidad instante a instante o instantánea. 
+        \begin{equation}
+            \boldsymbol{v}_{m} = \frac{\boldsymbol{r}(t + \Delta t) - \boldsymbol{r}(t)}{\Delta t}
+        \end{equation}
+        \begin{equation}
+            \boldsymbol{v}_{i} = \boldsymbol{v} = \lim_{\Delta t \to 0} \frac{\boldsymbol{r}(t + \Delta t) - \boldsymbol{r}(t)}{\Delta t}
+        \end{equation}
+        La existencia del límite anterior está verificado experimentalmente y es producto de la continuidad del movimiento; no se puede pasar instantáneamente de un punto del espacio a otro.\\
+        Ahora agregamos un concepto fundamental a nuestro análisis, la aceleración o cambio de velocidad en el tiempo y la definimos de la misma forma que hicimos la velocidad media e instantánea
+        \begin{equation}
+            \boldsymbol{a}_{m} = \frac{\boldsymbol{v}(t + \Delta t) - \boldsymbol{v}(t)}{\Delta t}
+        \end{equation}
+        \begin{equation}
+            \boldsymbol{a}_{i} = \boldsymbol{a} = \lim_{\Delta t \to 0} \frac{\boldsymbol{v}(t + \Delta t) - \boldsymbol{v}(t)}{\Delta t}
+        \end{equation}
+        La experiencia muestra que el límite anterior existe siempre, lo que implica que la velocidad es continua y no puede pasar de un valor instantáneamente a otro sin pasar por los intermedios.\\
+        Ahora necesitamos agregar un concepto más cinemático, la velocidad angular. Dicha indica la velocidad de rotación respecto de un punto, por que intuitivamente vale
+        \begin{equation}
+            \omega = \frac{\mathrm{d}\theta}{\mathrm{d}t} = \dot{\theta}
+        \end{equation}
+        Pero esta definición no indica el sentido del giro o el plano donde gira. Para eso definimos el vector velocidad angular a partir del producto vectorial entre la velocidad y la posición respecto al punto de referencia
+        \begin{equation}
+            \boldsymbol{\omega} = \frac{\boldsymbol{r} \times \boldsymbol{v}}{r^2} = \frac{\mathrm{d}\theta}{\mathrm{d}t} \hat{u}
+        \end{equation}
+        Siendo el versor $\hat{u}$ el versor normal al plano de giro
+    \subsection{Coordenadas polares}
+        Definimos los versores $\hat{r}$ y $\hat{\theta}$ como los que apuntan a la posición del cuerpo desde el sistema de referencia y el perpendicular a primer versor respectivamente (es decir que $\hat{r} \cdot \hat{\theta} = 0$) 
+        \begin{equation}
+            \boldsymbol{r} = r \hat{r}
+            \label{eq:r_pol}
+        \end{equation}
+        \begin{equation}
+            \boldsymbol{v} = \dot{\boldsymbol{r}} = \dot{r} \hat{r} + r \dot{\hat{r}} = \dot{r} \hat{r} + r \theta \hat{\omega}
+            \label{eq:v_pol}
+        \end{equation}
+        \begin{equation*}
+            \boldsymbol{a} = \dot{\boldsymbol{v}} = \ddot{r} \hat{r} + \dot{r} \dot{\hat{r}} + \dot{r} \theta \hat{\theta} + r \dot{\theta} \hat{\theta} + r \theta \dot{\hat{\theta}} = (\ddot{r} - r \dot{\theta}) \hat{r} + (2 \dot{r} \dot{\theta} + r \ddot{\theta}) \hat{\theta}
+        \end{equation*}
+        \begin{equation}
+            \boldsymbol{a} = (\ddot{r} - r \omega) \hat{r} + (2 \dot{r} \omega + r \dot{\omega}) \hat{\theta}
+            \label{eq:a_pol}
+        \end{equation}
+        \subsection{Coordenadas intrínsecas}
+            Definimos el versor $\hat{\tau}$ y $\hat{n}$ como el vector que es tangencialmente a la curva del movimiento y el perpendicular a la curva respectivamente. De esa forma la velocidad del cuerpo se puede describir de la siguiente manera
+            \begin{equation}
+                \boldsymbol{v} = v \hat{\tau}
+                \label{eq:v_intrin}
+            \end{equation}
+            Ahora la aceleración es la derivada primera de la velocidad, entonces debemos incluir la derivada del versor $\hat{\tau}$. 
+            \begin{equation}
+                \boldsymbol{a} = \dot{\boldsymbol{v}} = \dot{v} \hat{tau} + v \dot{\hat{\tau}} = \dot{v} \hat{\tau} + v \dot{\alpha} \hat{n} = \dot{v} \hat{\tau} + \frac{v^{2}}{\rho} \hat{n}
+                \label{eq:a_intrin}
+            \end{equation}
+            El radio de giro (instantáneo) $\rho$ es igual al cambio de posición en función del cambio de ángulo, cuanto mayor el cambio del ángulo y menor la distancia recorrida mayor será el radio de giro
+            \begin{equation}
+                \rho = \frac{\mathrm{d}s}{\mathrm{d}\alpha}
+            \end{equation}
+\section{Dinámica de una partícula}
+	\subsection{Leyes de Mach}
+	La formulación clásica de Newton de la mecánica contiene una grave falla: la segunda ley define fuerza y masa inercial dentro de si misma, llegando a un circulo.\\
+	Para ello Ernest Mach fundamentó la mecánica en dos principios, verificados experimentalmente. \\
+	El primer principio es el siguiente: dos cuerpos puntuales en interacción mutua se moverán de forma acelerada tal que se cumpla la siguiente expresión
+	\begin{equation}
+		\frac{\boldsymbol{a_i}}{\boldsymbol{a_j}} = \frac{\boldsymbol{a_i'}}{\boldsymbol{a_j'}} = \frac{\boldsymbol{a_i''}}{\boldsymbol{a_j''}} = \dots = \frac{m_i}{m_j}
+	\end{equation}
+	Siendo las sucesivas aceleraciones de diferente magnitud, pero el cociente constante. El cociente $\frac{m_i}{m_j}$ se denomina masa inercial del cuerpo j en unidades del cuerpo i; lo que resta ahora para definir sistemáticamente la masa inercial es disponer de un patrón, el cual para nosotros será el kilogramo guardado en París.\\
+	El segundo principio indica que las aceleraciones siempre van sobre la recta que une las masas, o sea son colineales (se verá más adelante un concepto que permite describir este hecho matemáticamente). Lo que podemos concluir es lo siguiente
+	\begin{equation}
+		m_i \boldsymbol{a_i} + m_j \boldsymbol{a_j} = \boldsymbol{0} \label{eq:mach1}
+	\end{equation}
+	Y finalmente terminamos llamando a $m \boldsymbol{a}$ intensidad de interacción o fuerza. Este ente es representativo de la interacción, independiente del cuerpo donde se efectúa.
+	\begin{equation}
+		\boldsymbol{F_i} + \boldsymbol{F_j} = 0
+	\end{equation}
+	Y finalmente llegamos a la segunda ley de Newton
+	\begin{equation}
+		\boldsymbol{F} = m \boldsymbol{a}
+	\end{equation}
+	La unidad de la fuerza en el Sistema Internacional es el Newton (N) y es igual a $\text{kg} \, \text{m} \, \text{s}^{-2}$.\\
+	La masa inercial se comprueba experimentalmente que es aditiva, es decir que un cuerpo con varias partes unidas se comporta como un cuerpo de masa igual a la suma de sus partes. También se puede observar lo mismo para las fuerzas, y el resultado de la suma vectorial se llama resultante $\boldsymbol{R}$.  \\
+	Observemos que si $\boldsymbol{R} = 0$ entonces estamos en la situación de equilibrio estático y en ese caso se da que $\boldsymbol{a} = 0$ y depende de las condiciones iniciales si el sistema está en reposo o en movimiento uniforme (Es necesario recalcar que la teoría de la mecánica clásica no diferencia entre el reposo o el movimiento, siendo el reposo un caso del movimiento con velocidad igual a cero).
+	\subsection{Fuerzas de rozamiento}
+		Se tiene un cuerpo sobre una superficie horizontal en reposo. Se observa que al estar en reposo debe existir una fuerza de vínculo, que denominaremos $R_v$ o reacción de vínculo, efectuada por la mesa para que no se mueva debido al peso. Ahora se le aplica una fuerza tangencial al cuerpo (paralela a la superficie) y se observa que para fuerzas pequeñas no se mueve y a partir de un valor empieza a moverse, pero que la aceleración no es la esperada respecto de la fuerza efectuada. Esta experiencia describe lo que se denomina fuerza de rozamiento; el primer caso es el estático y que el modelo simple que tenemos lo puede describir de la siguiente forma:
+		\begin{equation}
+			F_{roz_e} <= \mu_e R_v
+		\end{equation}
+		En este caso $\mu_e$ es una constante adimensional menor a 1. Y para el caso dinámico se observa lo siguiente
+		\begin{equation}
+			F_{roz_d} = \mu_d R_v
+		\end{equation}
+		Siendo $\mu_d < \mu_e$. Se observa que el modelo predice (de forma correcta según la experiencia) que la fuerza de rozamiento estático depende de la interacción externa, hasta cierto punto límite, donde empieza a moverse y sufre una fuerza de rozamiento dinámica constante, que se opone al movimiento del cuerpo.
+		\subsection{Sistema no inerciales}
+            Un sistema de referencia inercial es uno donde la ley de inercia se verifica. Es decir un sistema inercial es uno que estando el cuerpo en un estado de movimiento (el reposo es un estado de movimiento) no cambia su estado a no ser que interaccione con otro cuerpo. De esta forma en un sistema inercial no se puede utilizar ninguna experiencia física interna al sistema de referencia para poder determinar si se encuentra en movimiento uniforme respecto a otro sistema; es decir no es posible determinar si otro sistema de referencia inercial está quieto o si uno está quieto. Este principio se denomina principio de relatividad; a partir de las siguientes transformaciones se puede vincular el movimiento de cualquier cuerpo entre un sistema o y otro o':
+            \begin{equation}
+                \boldsymbol{r} = \boldsymbol{r'} + \boldsymbol{R}_{i} + \boldsymbol{V}t \qquad t = t'
+            \end{equation}
+            El vector $\boldsymbol{R}_{i}$ es la posición inicial en la cual se empezó a considerar el problema y la velocidad $\boldsymbol{V}$ es la velocidad del sistema de referencia o' respecto al sistema o.\\
+            De esta forma un sistema no inercial es uno donde no se verifica la ley de inercia. Esto sucede cuando el sistema de referencia se encuentra acelerado respecto a un sistema inercial, ya que se observa que el cuerpo en el sistema inercial se queda en movimiento uniforme y el sistema de referencia acelera; un observador sobre el sistema no inercial vería como las leyes de Newton no son válidas y de esa forma necesita agregar un término de aceleración para poder describir correctamente el movimiento.\\
+            Veamos en el caso de que el sistema no inercial se encuentre acelerado traslacionalmente. Usemos como experimento mental un cuerpo en reposo sobre una mesa ubicado en el marco del sistema de referencia no inercial. Según un sistema no inercial no hay fuerza alguna por lo que el cuerpo se encuentra en reposo. Respecto del sistema no inercial se observa sin embargo que el cuerpo se mueve y no se observa la fuerza que cambia el movimiento. De esta forma la segunda ley de Newton en el sistema no inercial la podemos escribir de la siguiente forma
+            \begin{equation}
+                \sum \boldsymbol{F} - m \boldsymbol{A} = m \boldsymbol{a}'
+                \label{eq:sni_tras}
+            \end{equation}
+            En este caso la aceleración $\boldsymbol{A}$ es la del sistema no inercial respecto al inercial y las fuerzas son las fuerzas con pares de acción y reacción (llamadas fuerzas inerciales).\\
+            Cuando el sistema no inercial rota respecto al sistema inercial podemos describir la velocidad de un cuerpo ubicado en $\boldsymbol{r}$ (respecto al sistema no inercial) de la siguiente forma
+            \begin{equation}
+                \boldsymbol{v} = \boldsymbol{v} + \boldsymbol{\omega} \times \boldsymbol{r}
+            \end{equation}
+            Si derivamos esta expresión respecto del tiempo obtenemos lo siguiente
+            \begin{equation}
+                \boldsymbol{a} = \boldsymbol{a}' - \boldsymbol{\omega} \times \boldsymbol{v}' - \boldsymbol{\omega} \times (\boldsymbol{\omega} \times \boldsymbol{r}) - \dot{\boldsymbol{\omega}} \times \boldsymbol{r}
+                \label{eq:sni_rot}
+            \end{equation}
+\section{Oscilador armónico}
+	Un ejemplo clásico de un oscilador es un cuerpo con un resorte engarzado con un extremo fijo sobre una superficie horizontal. La fuerza que genera un resorte se modela con la ley de Hooke
+	\begin{equation}
+		\boldsymbol{F} = k \Delta l \hat{r}
+	\end{equation}
+	En este caso el versor $\hat{r}$ es el que apunta entre el punto fijo y el punto libre. Si consideramos el movimiento unidimensional como en este caso podemos expresar la siguiente relación
+	\begin{equation}
+		\boldsymbol{F} = - k \Delta l \hat{x} = m \ddot{x} \hat{x}
+	\end{equation}
+	\begin{equation}
+		\ddot{x} - \frac{k}{m} \Delta l = 0
+	\end{equation}
+	Y $\Delta l = (x - l_0)$ entonces podemos expresar la ecuación así
+	\begin{equation}
+		\ddot{x} + \frac{k}{m} x = \frac{k}{m} l_0
+	\end{equation}
+	Que es una ecuación diferencial de segundo orden no homogénea. La solución de dicha es de la siguiente forma
+	\begin{equation}
+		x(t) = A \sen(\omega_0 t + \phi_0) + x_p
+	\end{equation}
+	Siendo $A$ la amplitud máxima del movimiento, $\omega_0$ es la frecuencia de oscilación natural del resorte (en este caso igual a $\frac{k}{m}$)) y $\phi_0$ es la fase inicial del movimiento. Esas constantes se pueden derivar de las condiciones iniciales de velocidad y posición. El término $x_p$ es la solución particular de la ecuación diferencial y conviene siempre utilizar una solución que no dependa del tiempo y en este caso es la posición de equilibrio (dónde sabemos que $\ddot{x} = 0$).\\
+	En el caso que se una fuerza que depende de la velocidad de forma lineal, es decir
+	\begin{equation}
+		\boldsymbol{F} = c \boldsymbol{v}
+	\end{equation}
+	Un caso físico de una fuerza así es la de viscosidad, la cual es contraria a la velocidad del movimiento (entonces será $\boldsymbol{F} = - c \boldsymbol{v}$) y es producto de que el medio sea fluido. De esa forma la ecuación diferencial para el caso unidimensional quedará quedará
+	\begin{equation}
+			\ddot{x} + \frac{c}{m} \dot{x} + \frac{k}{m} x = \frac{k}{m} l_0
+	\end{equation}
+	La solución homogénea de dicha es exponencial y se puede generalizar dependiendo de las constantes
+	\begin{equation}
+		x_H(t) = A e^{\lambda_1 t} + B e^{\lambda_2 t}
+	\end{equation}
+	Siendo $\lambda_{1,2}$ igual a 
+	\begin{equation}
+	\lambda_{1,2} = \frac{c}{2m} \pm \sqrt{\frac{c^2}{4 m^2} - \frac{k}{m}}
+	\end{equation}
+	Se debe considerar lo siguiente de la solución homogénea propuesta
+	\begin{equation}
+		\sen(\theta) = \frac{e^{i \theta} - e^{-i \theta}}{2i} \qquad \cos(\theta) = \frac{e^{i \theta} + e^{-i \theta}}{2}
+	\end{equation}
+	Y la definición de coseno y seno hiperbólico es:
+	\begin{equation}
+		\senh(\theta) = \frac{e^{\theta} - e^{\theta}}{2i} \qquad \cosh(\theta) = \frac{e^{\theta} + e^{\theta}}{2}
+	\end{equation}
+	De esta forma dependiendo de las constantes del problema (denominado comúnmente física del problema) la solución puede ser oscilante, antioscilante (en el caso sin rozamiento viscoso) y los diferentes tipos de amortiguamiento (sobreamortiguda, subamortiguado y amortiguamiento crítico) si hay rozamiento viscoso.
+\section{Dinámica de varias partículas}
+	
+	Previamente definamos ciertas magnitudes que nos permitirán describir correctamente a partir de las leyes de Mach un sistema de partículas\\
+	El centro de masa es un punto particular de un sistema de partículas, que se ubica dependiendo de la distribución de masa del sistema. La posición del centro de masa será
+	\begin{equation}
+		\boldsymbol{R}_{cm} = \frac{\sum m_i \boldsymbol{r}_i}{\sum m_i} = \mu_i \boldsymbol{r}_i
+	\end{equation}
+	La magnitud $\mu_i$ se denomina masa reducida, no tiene unidad y es igual a: 
+	\begin{equation}
+		\mu_i = \frac{m_i}{\sum m_i}
+	\end{equation}
+	Ahora podemos definir también la velocidad y aceleración del centro de masa
+	\begin{equation}
+		\boldsymbol{V}_{cm} = \dot{\boldsymbol{R}}_{cm} \qquad \boldsymbol{A}_{cm} = \ddot{\boldsymbol{R}}_{cm}
+	\end{equation}
+	Un sistema de referencia que vamos a usar de forma constante el sistema adosado al centro de masa de un sistema, que en la literatura se denomina sistema-C. En dicho la velocidad del centro de masa es obviamente nula y se puede dar el caso de ser un sistema no inercial.
+\section{Teoremas de conservación}
+	Definimos la siguiente magnitud, a partir de la velocidad y la masa inercial, llamada momento o impulso lineal
+	\begin{equation}
+		\boldsymbol{p} = m \boldsymbol{v}
+	\end{equation}
+	Entonces podemos definir para una partícula lo siguiente
+	\begin{equation}
+		\sum \boldsymbol{F} = \dot{\boldsymbol{p}}
+	\end{equation}
+	\begin{equation}
+		\boldsymbol{P} = \sum \boldsymbol{p}
+	\end{equation}
+	De las dos expresiones anteriores obtenemos lo siguiente
+	\begin{equation}
+		\sum \boldsymbol{F} = \sum \boldsymbol{F}_{ext} + \sum \boldsymbol{F}_{int} = \dot{\boldsymbol{P}} 
+	\end{equation}
+	Y a partir de las leyes de Mach sabemos que las fuerzas entre particulas de un sistema es igual a cero (ecuación \ref{eq:mach1})
+	\begin{equation}
+		\sum \boldsymbol{F}_{ext} = \dot{\boldsymbol{P}} \label{eq:newton_sistemas} 
+	\end{equation}
+	El teorema de conservación del momento lineal entonces dice que si no hay fuerzas externas a un sistema el momento lineal se mantiene constante
+	\begin{equation}
+		\sum \boldsymbol{F}_{ext} = 0 = \dot{\boldsymbol{P}} \label{eq:teo_p}
+	\end{equation}
+	Se define el momento de una fuerza aplicada en el punto $p$ respecto a un centro de momentos $o$ como
+	\begin{equation}
+		\tau^{o} = (\boldsymbol{r}_p - \boldsymbol{r_o}) \times \boldsymbol{F} = \boldsymbol{r}_{po} \times \boldsymbol{F} \label{eq:momento_fuerza}
+	\end{equation}
+	Veamos el caso de dos cuerpos en interación. Si solamente hay fuerzas entre los cuerpos se verifican la relación \ref{eq:teo_p}
+	En caso de haber solamente fuerzas externas se obtiene para dos cuerpos
+	\begin{equation}
+		\sum \boldsymbol{\tau^{o}} = \boldsymbol{r}_1 \times \boldsymbol{F}_1 + \boldsymbol{r}_2 \times \boldsymbol{F}_2  = \boldsymbol{0}
+	\end{equation}
+	Lo que indica que las fuerzas están sobre la misma recta que une los cuerpos 1 y 2
+	\begin{equation}
+		\boldsymbol{l^{o}} = \boldsymbol{r} \times \boldsymbol{p}
+	\end{equation}
+	Ahora definamos como hicimos para momento angular
+	\begin{equation}
+		\boldsymbol{L}^{o} = \sum \boldsymbol{l}^{o} = \sum \boldsymbol{r} \times \boldsymbol{p}
+	\end{equation}
+	Podemos elaborar un cambio de sistema de referencia para el momento lineal de un sistema de partículas
+	\begin{equation*}
+		\boldsymbol{L^{o}} = \sum \boldsymbol{r} \times \boldsymbol{p} = \sum (\boldsymbol{r}' + \boldsymbol{R}) \times m_i (\boldsymbol{v}' + \boldsymbol{V})
+	\end{equation*}
+	\begin{equation*}
+		\boldsymbol{L}^{o} = \sum \boldsymbol{r}' \times m_i \boldsymbol{v}' + \sum \boldsymbol{R} \times m_i \boldsymbol{v}' + \sum \boldsymbol{r}' \times m_i \boldsymbol{V} + \sum \boldsymbol{R} \times m_i \boldsymbol{V}
+	\end{equation*}
+	\begin{equation}
+		\boldsymbol{L}^{o} = \boldsymbol{L}^{o'} + \boldsymbol{R} \times \boldsymbol{P}' + M_t \boldsymbol{R}_{CM} \times \boldsymbol{V} + M_t \boldsymbol{R} \times \boldsymbol{V} \label{eq:l_general}
+	\end{equation}
+	Esta es una ecuación genérica y la relación más importante que vamos a usar es si el sistema de referencia inicial (o') es el centro de masa del sistema
+	\begin{equation}
+		\boldsymbol{L}^{o} = \boldsymbol{L}^{cm} + \boldsymbol{R} \times M_t \boldsymbol{V} = \boldsymbol{L}^{CM} + \boldsymbol{R} \times \boldsymbol{P}
+	\end{equation}
+	Debe recordarse que el momento lineal respecto del sistema de referencia adosado al centro de masa será siempre igual a cero, ya que la velocidad de dicho es igual a la velocidad $\boldsymbol{V}_{CM}$.
+	Finalmente usando las leyes de Mach y las expresiones anteriores obtenemos la siguiente expresión
+	\begin{equation}
+		\sum \boldsymbol{\tau}^{o}_{ext} = \dot{\boldsymbol{L}^{o}} \label{eq:rot_newton_sistemas}
+	\end{equation}
+	Y en caso de no haber momentos de fuerzas externo se conservará el momento angular del sistema, lo que es teorema de la conservación del momento angular
+	\begin{equation}
+		\sum \boldsymbol{\tau}^{o}_{ext} = 0 = \dot{\boldsymbol{L}^{o}} \label{eq:teo_l}
+	\end{equation}
+	Como es un vector axial su conservación implica que se limite el movimiento. Si se conserva la dirección el plano del movimiento no puede cambiar, si se conserva el sentido no puede cambiar el sentido de giro del sistema y si se conserva la magnitud el sistema barre en mismo tiempo la misma área.
+	Veamos que pasa si el centro de momentos no es un punto fijo en el espacio
+	\begin{equation*}
+		\dot{\boldsymbol{L}^{o}} = \sum \dot{\boldsymbol{r}} \times m_i \boldsymbol{v}_i + \sum \boldsymbol{r} \times \dot{\boldsymbol{p}}_i
+	\end{equation*}
+	\begin{equation*}
+		\dot{\boldsymbol{L}^{o}} = \sum \dot{\boldsymbol{r}} \times m_i \boldsymbol{v}_i - \sum \dot{\boldsymbol{r}'} \times m_i \boldsymbol{v}_i + \sum \boldsymbol{r} \times \dot{\boldsymbol{p}}_i
+	\end{equation*}
+	En este caso $\boldsymbol{r}'$ es la posición del punto o respecto a un sistema considerado quieto (entonces $\dot{\boldsymbol{r}} = 0$). De esa forma queda
+	\begin{equation}
+		\dot{\boldsymbol{L}^{o}} = \sum \boldsymbol{r} \times \dot{\boldsymbol{p}_i} - \sum \boldsymbol{v}_o \times \boldsymbol{p}_i
+	\end{equation}
+	Se observa que el centro de momentos debe ser fijo para que la ecuación \ref{eq:rot_newton_sistemas} sea válida. \\
+	Veamos el caso donde el sistema de referencia es un sistema no inercial. La aceleración sabemos que es la obtenida en \ref{eq:a_no_inercial} por lo que podemos obtener el siguiente momento de fuerza
+	\begin{equation}
+		\boldsymbol{\tau}^{o} = \boldsymbol{r} \times m \boldsymbol{a}' - \boldsymbol{r} \times m \boldsymbol{a}^{\ast} = \boldsymbol{\tau}^{\,o} - \boldsymbol{\tau}^{\,\ast}
+	\end{equation}
+	Seguimos la nomenclatura usada para sistema no inerciales, los vectores primados son los intrínsecos del sistema no inercial y los asteriscos son los no inerciales. El momento angular es más fácil de describir debido a que la velocidad de un punto respecto al sistema inercial se puede describir de la siguiente forma
+	\begin{equation*}
+		\boldsymbol{v} = \boldsymbol{v}' + \omega \times \boldsymbol{r}
+	\end{equation*}
+	De esta forma el momento angular se describe de la siguiente manera
+	\begin{equation}
+		\boldsymbol{L}^{o} = \boldsymbol{L}^{o'} + \sum m_i \boldsymbol{r}_i \times (\boldsymbol{\omega} \times \boldsymbol{r}_i)
+	\end{equation}
+	Ahora definimos al trabajo de una fuerza como la siguiente expresión
+	\begin{equation}
+		W_{A \to B} = \int_{A}^B \boldsymbol{F} \cdot \mathrm{d}\boldsymbol{r} \label{eq:trabajo}
+	\end{equation}
+	Si consideramos que una fuerza es igual al cambio de momento lineal obtenemos los siguiente
+	\begin{equation*}
+		W = \int \frac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}t} \cdot \mathrm{d}\boldsymbol{r}
+	\end{equation*}
+	A partir de acá definimos la magnitud energía cinética $T$ como el trabajo de una fuerza cualquiera
+	\begin{equation}
+		T = \int \boldsymbol{p} \cdot \mathrm{d}\boldsymbol{v} = \frac{\boldsymbol{p}\cdot\boldsymbol{p}}{2m} = \frac{p^2}{2m} = \frac{1}{2}m v^2
+	\end{equation}
+	Si la fuerza solo depende de la posición se dice que es conservativa entonces el trabajo de dicha se puede describir de la siguiente manera
+	\begin{equation*}
+		W_{A \to B} = \int_{A}^B \boldsymbol{F} \cdot \mathrm{d}\boldsymbol{r} = - (V(\boldsymbol{r}_A) - V(\boldsymbol{r}_B))
+	\end{equation*}
+	\begin{equation*}
+		\Delta V = - W_{A \to B}
+	\end{equation*}
+	De esta forma el potencial viene definido por una constante que es arbitraria y se elige de forma que convenga
+	\begin{equation}
+		V(\boldsymbol{r}) = - \int \boldsymbol{F} \cdot \mathrm{d}\boldsymbol{r} + V_{ref} \label{eq:potencial}
+	\end{equation}
+	A partir de esta fórmula se puede probar que el potencial se aditivo; dos fuerzas conservativas con diferentes potenciales sobre una partícula generan un potencial que es igual a la suma de ambos potenciales.			
+	\subsection{Gravitación}
+	La fuerza de gravitación entre dos cuerpos se puede describir de la siguiente manera
+	\begin{equation}
+		\boldsymbol{F} = - \frac{G\,m_1\,m_2}{|\boldsymbol{r}_{21}|^2} \hat{r}_{21} \label{eq:f_grav}
+	\end{equation}
+	En necesario remarcar que la masa de la fórmula \ref{eq:f_grav} es diferente de la masa inercial. Se denomina masa gravitacional, pero por convención es numéricamente igual a la masa inercial y de la misma unidad.\\
+	El potencial de la fuerza gravitacional será ahora
+	\begin{equation}
+		V(\boldsymbol{r}) = - \int \boldsymbol{F}_{g} \cdot d\boldsymbol{r} + V(r = + \infty) = \frac{G\,m_1\,m_2}{|\boldsymbol{r}_{21}|}
+	\end{equation}
+\section{Cinemática de cuerpo rígido}
+Un cuerpo rígido es un caso particular de un sistema de varias partículas que merece un una sección aparte por su complejidad y especialmente por su aplicación.\\
+Un cuerpo rígido es tal que la distancia entre cualquier punto material de dicho se mantiene constante en el tiempo; es decir dados dos puntos 1 y 2 se cumple los siguiente
+\begin{equation}
+|\boldsymbol{r_1} - \boldsymbol{r_2}| = \text{cte} \label{eq:cod_rig1}
+\end{equation} 
+Siendo cualquiera el sistema de referencia (bajo las premisas de la mecánica clásica).\\
+De esta forma podemos escribir la siguiente relación
+\begin{equation*}
+	(\boldsymbol{r_1} - \boldsymbol{r_2}) \cdot (\boldsymbol{r_1} - \boldsymbol{r_2}) = cte
+\end{equation*}
+\begin{equation*}
+	\frac{\mathrm{d}}{\mathrm{d}t}(\boldsymbol{r_1} - \boldsymbol{r_2}) \cdot (\boldsymbol{r_1} - \boldsymbol{r_2}) = 0
+\end{equation*}
+\begin{equation*}
+	(\boldsymbol{v_1} - \boldsymbol{v_2}) \cdot (\boldsymbol{r_1} - \boldsymbol{r_2}) + (\boldsymbol{r_1} - \boldsymbol{r_2}) \cdot (\boldsymbol{v_1} - \boldsymbol{v_2}) = 2 (\boldsymbol{v_1} - \boldsymbol{v_2}) \cdot (\boldsymbol{r_1} - \boldsymbol{r_2}) = 0
+\end{equation*}
+\begin{equation}
+	(\boldsymbol{v_1} - \boldsymbol{v_2}) \cdot (\boldsymbol{r_1} - \boldsymbol{r_2}) =  0 \label{eq:cod_rig2}
+\end{equation}
+Ahora presentamos la ecuación cinemática del cuerpo rígido
+\begin{equation}
+	\boldsymbol{v}_p = \boldsymbol{v}_c + \boldsymbol{\Omega} \times (\boldsymbol{r}_p - \boldsymbol{r}_c) \label{eq:rig_cinema}
+\end{equation}
+Es única debido a que se puede hacer el siguiente procedimiento
+\begin{equation*}
+	(\boldsymbol{v}_p - \boldsymbol{v}_c) \cdot (\boldsymbol{r}_p - \boldsymbol{r}_c) = (\boldsymbol{\Omega} \times (\boldsymbol{r}_p - \boldsymbol{r}_c)) \cdot (\boldsymbol{r}_p - \boldsymbol{r}_c) = 0 
+\end{equation*}
+Como observamos se vuelve a verificar \ref{eq:cod_rig2}, por lo que la ecuación cinemática de un rígido es equivalente a la condición de rigidez.
+\section{Dinámica de cuerpo rígido}
+	\begin{equation}
+		\sum \boldsymbol{F}_{ext} = \dot{\boldsymbol{P}} = M \boldsymbol{a}_{cm} \label{eq:newton_rig}
+	\end{equation}
+	\begin{equation}
+		\sum \boldsymbol{\tau}^{o}_{ext} = \dot{\boldsymbol{L}}^{o} \label{eq:newton_rig_rot}
+	\end{equation}
+	\begin{equation*}
+		\boldsymbol{L}^{o} = \sum \boldsymbol{r}_{i} \times \boldsymbol{p}_i = \sum m \boldsymbol{r}_i \times \boldsymbol{p}_i
+	\end{equation*}
+	Como es un cuerpo de muchas partículas podemos pasar a integrar la masa y encontrar la siguiente expresión
+	\begin{equation*}
+		\boldsymbol{L}^{o} = \int \rho \mathrm{d}V \boldsymbol{r} \times \boldsymbol{v}
+	\end{equation*}
+	Reemplazando la $\boldsymbol{v}$ por la ecuación cinemática \ref{eq:rig_cinema} obtenemos lo siguiente
+	\begin{equation}
+		\boldsymbol{L}^{o} = M \boldsymbol{r}_{cm} \times \boldsymbol{v}_{p} + M \boldsymbol{r}_{p} \times (\boldsymbol{v}_{cm} - \boldsymbol{v}_p) + \int \rho \mathrm{d}V (\boldsymbol{r} - \boldsymbol{r}_p) \times (\boldsymbol{\Omega} \times (\boldsymbol{r} - \boldsymbol{r}_p))
+	\end{equation}
+	Ahora esta fórmula general la vamos a utilizar desde el sistema de referencia centro de masa, con lo que quedará de la siguiente manera
+	\begin{equation}
+		\boldsymbol{L}^{o} = M \boldsymbol{r}_{cm} \times \boldsymbol{v}_{cm} + \int \rho \mathrm{d}V (\boldsymbol{r} - \boldsymbol{r}_{cm}) \times (\boldsymbol{\Omega} \times (\boldsymbol{r} - \boldsymbol{r}_{cm}))
+	\end{equation}
+	El primer término se denomina momento angular orbital y el segundo término momento angular intrínseco o spin. El momento angular spin contiene ciertas dificultades matemáticas que no podemos sortear por lo que presentamos directamente la solución
+	\begin{equation}
+		\boldsymbol{L}^{o} = \boldsymbol{L}^{cm} + \boldsymbol{I} \boldsymbol{\Omega} 
+	\end{equation}
+	En este caso $\boldsymbol{I}$ es un tensor llamado momento de inercia que representa la distribución de la masa del cuerpo en el espacio. Cómo para un cuerpo cualquiera hay tres ejes principales de rotación (debido a que hay en el espacio solo hay tres grados de libertad) el tensor de inercial se puede representar como una matriz de 3x3 y sus autovalores representa el momento de inercia en cada eje principal de rotación.\\
+	Veamos ahora la energía cinemática de un cuerpo rígido. Sabemos que para un sistema de partículas la energía cinemática es
+	\begin{equation*}
+		T = \sum \frac{1}{2} m_i \boldsymbol{v}_i \cdot \boldsymbol{v}_i = \int \frac{\boldsymbol{v} \cdot \boldsymbol{v}}{2} \rho \mathrm{d}V = 
+	\end{equation*}
+	Reemplazando \ref{eq:rig_cinema} en la ecuación anterior obtenemos
+	\begin{equation}
+        T = \frac{1}{2} M \boldsymbol{v}_p \cdot \boldsymbol{v}_p + \frac{1}{2} \boldsymbol{\Omega}^t \boldsymbol{I}_p \boldsymbol{\Omega} + \boldsymbol{v}_p \cdot \boldsymbol{\Omega} \times M (\boldsymbol{r}_{cm} - \boldsymbol{r}_p)
+	\end{equation}
+    Ahora considerando el punto p el centro de masa obtenemos la fórmula que vamos a emplear
+    \begin{equation}
+        T = \frac{1}{2} M \boldsymbol{v}_{cm} \cdot \boldsymbol{v}_{cm} + \frac{1}{2} \boldsymbol{\Omega}^t \boldsymbol{I}_{cm} \boldsymbol{\Omega}
+        \label{eq:t_rigido}
+    \end{equation}
+    En caso más práctico para nosotros será cuando el cuerpo gire respecto a un eje principal de rotación por lo que la energía cin\'etica del cuerpo rígido será
+    \begin{equation}
+        T = \frac{1}{2} M v_{cm}^2 + \frac{1}{2} I_{cm} \Omega^2
+        \label{eq:t_rigido2}
+    \end{equation}
+    
+\end{document}

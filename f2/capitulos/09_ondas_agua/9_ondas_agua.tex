@@ -1,0 +1,414 @@
+\documentclass[a4paper,spanish]{article}
+
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\newcommand{\oiint}{\displaystyle\bigcirc\!\!\!\!\!\!\!\!\int\!\!\!\!\!\int}
+
+
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+
+\def\Fou {\mathcal{F}}
+\def\Rea {\mathcal{R}e}
+\def\Ima {\mathcal{I}m}
+\def\N {\mathbb{N}}
+\def\C {\mathbb{C}}
+\def\Q {\mathbb{Q}}
+\def\R {\mathbb{R}}
+\def\Z {\mathbb{Z}}
+
+
+%\renewcommand{\contentsname}{\'Indice}
+%\renewcommand{\chaptername}{Cap\'\i tulo}
+%\renewcommand{\bibname}{Referencias}
+
+\newtheorem{prop}{Proposici\'on}[section]
+\newtheorem{teo}[prop]{Teorema}
+\newtheorem{defi}[prop]{Definici\'on}
+\newtheorem{obs}[prop]{Observaci\'on}
+\newtheorem{cor}[prop]{Corolario}
+\newtheorem{lema}[prop]{Lema}
+\newtheorem{ejem}[prop]{Ejemplo}
+\newtheorem{ejer}[prop]{Ejercicio}
+
+\numberwithin{equation}{section}
+\newtheorem{definition}{Definici\'on}
+
+
+\newenvironment{proof}{
+\trivlist \item[\hskip \labelsep\mbox{\it Demostraci\'on:
+}]}{\hfill\mbox{$\square$}
+%\trivlist \item[\hskip \labelsep{\sl
+%#1}\mbox{Demostraci\'on}]}{\hfill\mbox{$\square$}
+\endtrivlist}
+
+%\topmargin 0cm \oddsidemargin 0.7cm %% margenes
+%\textheight 21cm \textwidth 15cm %% tama\~no del texto
+\parindent 0cm %% sangria
+
+\begin{document}
+
+\part{Un \'analisis integratorio: Modelado de ondas en el agua}
+
+En esta parte pareci\'o propicio finalizar ondas mec\'anicas con el ejemplo que m\'as pensamos cuando nos dicen ondas: ondas en el agua, que son, en general dispersivas. La forma de poder encarar este objetivo es analizar la geometr\'ia del movimiento ondulatorio en el agua, analizar sus restricciones para poder atacar la f\'isica del movimiento (O sea de alg\'un modo poder plantear las ecuaciones de Newton que es lo \'unico que sabemos a\'un) para hallar la relaci\'on de dispersi\'on que nos dar\'a el tipo de ecuaci\'on de ondas regente y finalizar con algunos casos extremos que nos permitir\'an palpar lo que estamos modelizando.
+
+\section{La naturaleza del movimiento ondulatorio}
+
+Supongamos un canal rectangular infinito de altura $h$ donde est\'a el agua. Observamos que en equilibrio la superficie superior es plana y horizontal; hasta que por alguna brisa se excita alg\'un modo y se forma una onda arm\'onica. Aunque lo \'unico que podamos observar sea una onda transversal al plano de la superficie del agua, \textit{toda} la masa de agua esta participando de alg\'un modo en una onda \textbf{longitudinal}. De no ver esto revisarlo ya que es vital entender la onda es longitudinal. Describiremos, como siempre, los desplazamientos del equilibrio con la funci\'on $\psi$.
+
+\paragraph{Propiedades del agua}
+Veamos algunas propiedades del agua que nos ayudaran en nuestro modelo (ya tomamos como sabidas las dadas en el estudio de la cocina de microondas). Desde el punto de vista del movimiento ondulatorio, las propiedades que resaltan son
+
+\begin{enumerate}
+\item Es muy d\'ificil de comprimir
+\item Fluye f\'acilmente
+\end{enumerate}
+
+N\'umericamente la compresibilidad del agua en condiciones est\'andar es de $5.10^{-10} m^2 N{-1}$, adem\'as si pudi\'esemos apilar toda una columna de agua de $1 \ m$ entonces la presi\'on resultante (unos $10^4 N m{-2}$) aumentar\'ian su densidad en $0.05 $, o sea nada, por lo que no es osado asumir que en nuestros casos el agua es un fluido \textit{incompresible} (que es muy distinto a incomprensible jaja).\\
+La facilidad con la que un fluido fluye (ohhhhh) viene de su \textit{viscosidad} que proviene del amortiguamiento y por ende llevar\'a a una \textit{atenuaci\'ion} del movimiento ondulatorio (Repasar los cap anteriores!). Supongamos, sin embargo, que nuestro fluido no presente viscosidad. La incompresibilidad va a presentar serias restricciones al movimiento, ya que si en alg\'un momento tenemos una part\'icula que se mueve hacia abajo, la part\'icula circundante debe moverse \textit{al costado} pues sino se apilar\'ian llevando a una compresi\'on del fluido!! Por ende analicemos dicho movimiento
+
+\subsection{Consideraciones generales}
+Supongamos un eje coordenado cartesiano con el eje $y$ vertical, con $y=0$ la superficie, y el eje $z$ representando el avance de la onda (Notemos con un movimiento en dos dimensiones basta pues por simetr\'ia para peque\~nas vibraciones el eje $x$ se comportar\'a de la misma manera al $z$).\\
+Para el plano $yz$ cada part\'icula de agua va a recorrer una trayectoria dada por $r=(y,z)$ que podemos especificar por los desplazamientos $\psi_y(y,z,t)$ y $\psi_z(y,z,t)$, estimemos algunas afirmaciones para movimientos arm\'onicos en la superficie de estas dos funciones:
+
+\begin{enumerate}
+\item El agua se presenta en un estado estacionario, por lo que tanto $\psi_y$ como $\psi_z$ presentan la frecuencia $\omega$ de la onda viajera de la superficie
+\item Es natural pensar que los argumentos de las funciones presenten un t\'ermino $\omega t -kz$ pues son ondas viajeras en \'algun sentido general de todo el fluido. A su vez al no saber de la dependencia con $y$, supongamos que \textit{son independientes de $y$}, o sea que si en un estado de equilibrio tenemos una pila de part\'iculas, \'estas se mueven conjuntamente al haber una perturbaci\'on y aunque la perturbaci\'on avance \textbf{la posici\'on relativa de la pila de part\'iculas respecto a ellas mismas es siempre constante!}.
+\item Si imaginamos el momento en que $\psi_y =0$ entonces ah\'i $\dot{\psi_y}$ es m\'axima y entonces el mayor rearreglo horizontal debe realizarse, por lo que suponemos que $\psi_z$ es m\'aximo por lo que estimamos \textit{$\psi_y$ y $\psi_z$ estan en cuadratura}
+\item Esperamos que el movimiento del agua acrecente su suavidad al ir adentr\'andonos con profundidades mayores, por lo que a distancia infinita no deber\'ia haber dependencia de la distancia por lo que las amplitudes horizontal y verticla estimamos que \textit{s\'olo dependen de $y$}
+\end{enumerate}
+
+Entonces todo esto se peude decir que esperamos que los desplazamientos sean de la pinta:
+
+\begin{equation}
+\psi_y(y,z,t)=A_y(y)\cos{(\omega t -kz)}
+\ \ 
+\psi_z(y,z,t)=A_z(y)\sin{(\omega t -kz)}
+\label{desplazamientos_agua}
+\end{equation}
+
+Notemos que desplazamientos como los dados, se tiene que $\forall y,z,t$ de (\ref{desplazamientos_agua}) vale
+
+\[(\cfrac{\psi_y}{A_y})^2+(\cfrac{\psi_z}{A_z})^2 = 1\]
+
+Por lo que \textbf{para el movimientos suave ondulatorio del agua, cada part\'icula realiza una trayectoria de una elipse con centro en el punto de equilibrio}. Como el desplazamiento del punto de equilibrio no es un par\'ametro medible f\'acilmente, es preferible utilizar la velocidad del fluido para representarlo, por lo que si suponemos peque\~nas oscilaciones podemos decir que 
+
+\begin{equation}
+\begin{array}{c}
+v_y(y,z,t)\approx \dot{\psi_y}=-\omega A_y(y)\sin{(\omega t -kz)} \\
+\\
+v_z(y,z,t)\approx \dot{\psi_z}=\omega A_z(y)\cos{(\omega t -kz)} \\
+\\
+\Updownarrow \\
+\\
+\psi_y,\psi_z \ll y,z \ \ \forall t 
+\end{array}
+\label{velocidad_fluido}
+\end{equation}
+
+Ahora nos tenemos que preguntar luego de todo lo deducido con los dedos, como son las formas de las elipses? aqu\'i es donde entra nuestro conocimiento de las propiedades del agua para imponer restricciones.
+
+\subsection{La incompresibilidad}
+Vamos a deducir las condiciones matem\'aticas que dicen que un fluido es incompresible. Para una superficie $S$ cerrada y \textit{suave}(Decimos una superficie es suave si presenta plano tangente en todo punto y var\'ia uniformemente) que encierra un volumen dado $V= \int_S \rho(x,y,z)dV$ se tiene que un fluido es incompresible si el flujo a trav\'es de $S$ con frontera $\Omega$ es nulo $\forall S=Im\lbrace{T(x_1,x_2) \in \R^3}\rbrace$. Es decir que
+
+\[ \oiint_{\Omega} {\vec{v} \cdot \vec{dS}} =0 \ \ \forall S \]
+
+Y, si recordamos todos el  teorema de Gauss-Ostrogradsky tenemos entonces que $\forall S$ con frontera $\partial S=\Omega$ el campo $\vec{v}$ es $\mathcal{C}^1$ y entonces
+
+\begin{equation}
+\nabla \cdot \vec{v}= \textbf{div} \ v = \cfrac{\partial v_y}{\partial y} + \cfrac{\partial v_z}{\partial z} = 0
+\label{condiciones_incompresibilidad}
+\end{equation}
+
+Johann Carl Friedrich Gauss $(1777 ? 1855$), fue un matem\'atico, astr\'onomo, geodesta, y f\'isico alem\'an que contribuy\'o significativamente en muchos campos, incluida la teor\'ia de n\'umeros, el an\'alisis matem\'atico, la geometr\'ia diferencial, la estad\'istica, el \'algebra, la geodesia, el magnetismo y la \'optica. Considerado \textbf{el pr\'incipe de las matem\'aticas} y \textbf{el matem\'atico m\'as grande desde la antiguedad}, Gauss ha tenido una influencia notable en muchos campos de la matem\'atica y de la ciencia, y es considerado uno de los matem\'aticos que m\'as influencia ha tenido en la Historia. Fue de los primeros en extender el concepto de divisibilidad a otros conjuntos.
+Gauss fue un ni\~no prodigio, de quien existen muchas an\'ecdotas acerca de su asombrosa precocidad. Hizo sus primeros grandes descubrimientos mientras era apenas un adolescente en el bachillerato y complet\'o su magnum opus, Disquisitiones Arithmeticae a los veinti\'un a\~nos $(1798)$, aunque no ser\'ia publicado hasta $1801$. Fue un trabajo fundamental para que se consolidara la teor\'ia de los n\'umeros y ha moldeado esta \'area hasta los d\'ias presentes.
+
+\subsection{La no-viscosidad}
+Como estamos suponiendo que nuestro fluido no presenta viscosidad, entonces como originalmente estaba en reposo podemos afirmar que cualquier perturbaci\'on \textbf{no puede generar momento angular} en nuestro fluido. La rotaci\'on s\'olo puede generarse por fuerzas transversales que no existen en un fluido no viscoso. Por ende podemos decir que la \textit{circulaci\'on} a trav\'es de toda curva debe ser nula. Matem\'aticamente, Sea $C$ una curva suave (presenta recta tangente en todo punto que var\'ia continuamente) siendo borde de una superficie plana $S$, o sea $C=\partial S$ entonces
+
+\[ \oint_{C} {\vec{v} \cdot \vec{dl}} = 0 \ \ \forall \mathcal{C}\]
+
+y aqu\'i si recordamos el Teorema de Stokes, suponiendo nuevamente que $\vec{v}$ es un campo $\mathcal{C}^1$ entonces tenemos la condici\'on que se llama de \textit{irrotabilidad} o de fluido \textbf{irrotacional}
+
+\begin{equation}
+\nabla \times \vec{v} = \textbf{rot} \ v = \cfrac{\partial v_y}{\partial z} - \cfrac{\partial v_z}{\partial y} = 0
+\label{condiciones_irotabilidad_fluido}
+\end{equation}
+
+Sir George Gabriel Stokes, primer Baronet $(1819-1903)$ fue un matem\'atico y f\'isico irland\'es que realiz\'o contribuciones importantes a la din\'amica de fluidos (incluyendo las ecuaciones de Navier-Stokes), la \'optica y la f\'isica matem\'atica (incluyendo el teorema de Stokes). Fue secretario y luego presidente de la Royal Society de Inglaterra.
+
+\subsection{La forma de las elipses}
+Ahora apliquemos las relaciones (\ref{condiciones_incompresibilidad}) y (\ref{condiciones_irotabilidad_fluido}) halladas antes y algunas otras condiciones de contorno a nuestras expresiones (\ref{velocidad_fluido}) para $v_y$ y $v_z$ lo que nos dara informaci\'on de las amplitudes. Aplicando (\ref{condiciones_incompresibilidad}) tenemos que:
+
+\[ -\omega \cfrac{d {A_y}}{dy}(y)\sin(\omega t -kz) - k \omega A_z(y)\sin(\omega t -kz) =0
+\]
+
+Y cancelando el factor $\omega \sin( \omega t -kz)$ tenemos
+
+\begin{equation}
+ \Longrightarrow \cfrac{d {A_y}}{dy}(y) -k A_z(y) =0 
+\end{equation}
+
+An\'alogamente con (\ref{condiciones_irotabilidad_fluido}) obtenemos
+
+\begin{equation}
+ \cfrac{d {A_z}}{dy}(y) -k A_y(y) =0 
+\end{equation}
+
+Suponiendo las amplitudes $A_y,A_z \in \mathcal{C}^2$ entonces podemos derivar la primera ecuaci\'on con respecto a $y$ y reemplazar la segunda en la primera obteniendo
+
+\[\cfrac{d^2A_y}{dy^2}-k^2A_y=0\]
+
+\[\Longrightarrow A_y(y)=A'e^{ky}+B'e^{-ky}\]
+
+Y ahora nos falta hallar nuestras condiciones de contorno para $A'$ y $B'$. En la superficie $y=0$ tenemos que:
+
+\[\psi_y(0,z,t)=\left(A'+B'\right)\cos(\omega t -kz)\] 
+
+Entonces llamando a $A_y(0)=A=A'+B'$. Por otro lado cuando $y=-h$ en el fondo del canal no puede haber movimiento vertical solo lateral por lo que 
+
+\[A_y(-h)=0=A'e^{-hk}+B'e^{kh}\]
+
+Y entonces resolvemos este sistema de dos ecuaciones con dos inc\'ognitas
+
+\[
+\begin{array}{rcl}
+A' & = & \cfrac{Ae^{kh}}{e^{kh}-e{-kh}} \\
+B' & = & -\cfrac{Ae^{-kh}}{e^{kh}-e{-kh}} 
+\end{array}
+\]
+
+Lo que nos lleva a la ecuaci\'on de la amplitud
+
+\begin{equation}
+A_y(y)=\cfrac{A\left[e^{k(h+y)}-e^{-k(h+y)}\right]}{e^{kh}-e{-kh}}=\cfrac{A\sinh\left[k(h+y)\right]}{\sinh{kh}}
+\label{amplitud_y_fluido}
+\end{equation}
+\begin{equation}
+A_z(y)=\cfrac{A\left[e^{k(h+y)}+e^{-k(h+y)}\right]}{e^{kh}-e{-kh}}=\cfrac{A\cosh\left[k(h+y)\right]}{\sinh{kh}}
+\label{amplitud_z_fluido}
+\end{equation}
+
+Y eso nos indica que la forma de las elipses es mas horizontal y achatadas, factor que va aumentando al aumentar la profundidad como funci\'on de $\tanh[k(h+y)]$ llegando a que en el fondo el movimiento es s\'olo horizontal con el agua yendo de adelante para atr\'as.No obstante en fluidos viscosos en general existe una "capa l\'imite" sobre la cual pasa este efecto y all\'i hay v\'ortices horizontales que son los responsables de las famosas crestas del mar en la arena de una playa.
+
+\subsection{Casos extremos}
+
+Finalmente podemos y vale la pena remarcar los dos casos extremos de movimientos del agua con profundidades grandes y peque\~nas
+
+\paragraph{Los movimientos en aguas profundas}
+Si el movimiento ocurre en aguas mucho mas profundas que la longitud de onda ($kh \gg 1$) y a nosotros nos interesa el agua de la superficie ($\vert y \vert \ll h$) entonces podemos usar
+
+\[\sinh{kh}\approx \frac{1}{2}e^{kh}\]
+\[\sinh[k(h+y)]\approx \cosh[k(h+y)] \approx \frac{1}{2}e^{kh}\]
+
+Entonces ahora tenemos que
+
+\[
+\begin{array}{rcl}
+\psi_y(y,z,t) & \approx & Ae^{yk}\cos[ \omega t -kz] \\
+\psi_z(y,z,t) & \approx & Ae{yk}\sin[ \omega t -kz] 
+\end{array}
+\]
+Entonces podemos ver que ahora las elipses se tornaron circunferencias cuyo di\'ametro decrece exponencialmente al ir aumentando la profundidad y el movimiento es casi nulo a profundidades mayores a $\frac{1}{k}$ porlo que \textit{en aguas profundas las ondas no perturban el agua a mas de una longitud de onda de la superficie} que es aprovechado muy bien por las industrias petroleras al hacer sus estaciones de extracci\'on mar\'itimas.
+
+\paragraph{Aguas poco profundas}
+En el otro extremo tenemos las aproximaciones
+
+\[\sinh{kh} \approx kh \]
+\[\sinh[k(h+y)] \approx k(h+y)\]
+\[\cosh[k(h+y)] \approx 1\]
+
+Y entonces tenemos que los desplazamientos seran del tipo 
+
+\begin{equation}
+\begin{array}{rcl}
+\psi_y(y,z,t) & \approx & A(1+\frac{y}{h})\cos[ \omega t -kz] \\
+\psi_z(y,z,t) & \approx & A\frac{1}{kh}\sin[ \omega t -kz] 
+\end{array}
+\label{agua_poco_prof}
+\end{equation}
+
+Y ahora la amplitud horizontal es m\'as o menos la misma a todas profundidades mientras que la amplitud vertical decae linealmente con la profundidad por lo que \textit{las ondas de aguas poco profundas resultan ser casi del todo longitudinales} con una masa de agua que simplemente empuja adelante y hacia atr\'as su alrededor.
+
+\section{La relaci\'on de dispersi\'on}
+
+Hasta ahora hemos descubierto  como describir el movimiento de un canal estrecho de agua con ondas viajeras sinusoidales en sus superficie, pero sin embargo todavia no sabemos qu\'e tipo de sinusoidales podemos tener. Para poder obtener la relaci\'on de dispersi\'on debemos involucrar las leyes de Newton en alg\'un lado!\\
+Dentro de la mec\'anica de fluidos el an\'alogo de las leyes de Newton resulta en el \textit{teorema de Bernoulli} que aplica a situaciones estacionarias, lo que quiere decir que la velocidad del fluido sea independiente del tiempo para todo tiempo, o sea $v(x,y,z,t)=v(x,y,z) \ \forall t$; condici\'on que no cumplen nuestras velocidades \ref{velocidad_fluido}.
+\\
+Daniel Bernoulli $(1700 - 1782)$ fue un matem\'atico, estad\'istico, f\'isico y m\'edico holand\'es-suizo. Destac\'o no s\'olo en matem\'atica pura, sino tambi\'en en las llamadas aplicadas. Hizo importantes contribuciones en hidrodin\'amica y elasticidad.\\
+
+
+Sin embargo aplicando la transformaci\'on $z'=z-\frac{\omega t}{k}$ las velocidades pasan a ser.
+
+\begin{equation}
+\begin{array}{c}
+v_y(y,z')= \omega A_y(y)\sin{kz'} \\
+\\
+v_z(y,z')= \omega A_z(y)\cos{(kz'-\frac{\omega}{k})}
+\end{array} 
+\label{velocidad_fluido_nueva}
+\end{equation}
+
+y ahora si tenemos velocidades estacionarias, o sea cambiamos nuestra manera de ver al fluido y pasamos de ver una part\'icula y seguirla a pararnos nosotros y ver como pasan todas por un lugar.
+
+Entonces l teorema de Bernoulli nos dice que el total de energ\'ia por unidad de masa resulta:
+
+\begin{equation}
+W=\frac{p}{\rho}+\frac{1}{2}v^2+V
+\label{bernoulli}
+\end{equation}
+
+con $p$ la presi\'on, $V$ la energ\'ia potencial por unidad de masa y $\rho$ la densidad del flu\'ido; y entonces presenta el mismo valor en todo punto de una \textit{l\'inea de corriente} que simplemente es un camino recorrido por una part\'icula de flu\'ido en estado estacionario.
+
+Hay dos contribuciones a la presi\'on en la superficie, una es la atmosf\'erica $p_a$ que es constante en todo punto; y la otra es debido a la \textit{tensi\'on superficial}, que conlleva una diferencia de presi\'on sobre cualquier frontera con curvatura. Dicha curvatura ocurre solo en el eje $z$  con el radio de curvatura $1/(\frac{\partial^2 \psi}{\partial z^2})$ y entonces la presi\'on total resulta:
+
+\begin{equation}
+p=p_a - \sigma(\partial^2 \psi / \partial z ^2)
+\label{presion_sup}
+\end{equation}
+
+Con $\sigma$ la tensi\'on superficial ($0.073 \ Nm^{-1}$ para la frontera aire agua a $20°$) y el signo menos es debido a que una curvatura positiva indica una concavidad positiva y enotnces una \textbf{reducci\'on} de la presi\'on. Metiendo los desplazamientos en el nuevo sistema en la ecuaci\'on \ref{presion_sup} tenemos.
+
+\begin{equation}
+p=p_a+\sigma k^2 A \cos{kz'}
+\label{presion}
+\end{equation}
+
+Por el lado de la velocidad tenemos:
+
+\begin{equation}
+\begin{array}{rcl}
+v^2 & = & v_y^2 (0,z') + v_z^2(0,z') \\
+& = & \omega ^2 A^2 \left(\sin^2(kz')+\coth^2(kh)\cos^2(kz')\right) + \left(\frac{\omega}{k}\right)^2 -2\omega^2 (A/k)\coth(kh)\cos(kz')
+\end{array}
+\label{velocidades_dispersion}
+\end{equation}
+
+y para la energ\'ia potencial simplemente la gravitatoria
+
+\begin{equation}
+V=g\psi=gA\cos(kz')
+\label{energia_potencial}
+\end{equation}
+
+Poniendo \ref{velocidades_dispersion} , \ref{energia_potencial} , \ref{presion} en \ref{bernoulli}, despreciando los t\'erminos de orden mayor a 1 pues $kA\ll 1$ para ondas de amplitudes bajas, obtenemos:
+
+\[
+W= \frac{p_a}{\rho} + (\frac{\sigma k^2}{\rho}) A \cos{kz'} + \frac{1}{2}(\frac{\omega}{k})^2 - (\frac{\omega^2}{k}) \coth {kh} A \cos {kz'} + g A \cos {kz'}
+\]
+
+que, seg\'un Bernoulli debe ser independiente de z' (valor constante en una l\'inea de flu\'ido) y eso valdr\'a si los t\'erminos que incluyen a $\cos {kz'}$ sean $0$, lo que vale si:
+
+\[ \frac{\sigma k^2}{\rho} - \left(\frac{\omega ^2}{k} \right) \coth (kh) + g = 0\]
+
+Que se puede escribir de la manera:
+
+\begin{equation}
+\omega ^2 = \left( gk + \frac{\sigma k^3}{\rho} \right)\tanh {kh}
+\label{relacion_dispersion}
+\end{equation}
+
+Que es la relaci\'on de dispersi\'on para ondas de baja amplitud
+
+\section{Ejemplos de ondas de agua}
+En esta secci\'on discutiremos casos extremos de la relaci\'on de dispersi\'on y ejemplos de ondas que la describen.
+
+\subsection*{Aguas profundas y aguas s\'omeras}
+Dado que al profundidad del agua se mete en la relaci\'on de dispersi\'on \ref{relacion_dispersion} v\'ia $\tanh {kh}$, para aguas profundas ($kh \gg 1$) podremos decir
+
+\[ \tanh {kh} \approx 1\]
+
+y la relaci\'on \ref{relacion_dispersion} se vuelve independiente de la profundidad.\\
+En cambio, para aguas poco profundas puedo utilizar la expansi\'on a primer orden:
+
+\[\tanh = kh - \frac{1}{3}(kh)^3 + ...  \ \ \forall kh< \frac{\pi}{2}\]
+
+\subsection{Rizos}
+
+La relaci\'on de dispersion \ref{relacion_dispersion} presenta dos t\'erminos que representaran dos tipos de fuerza de retorno con distintos comportamientos en la superficie del flu\'ido. La primera (que presenta a $g$ y no a $\sigma$) nos va a indicar la tendencia del agua apilada en crestas a caer por la gravedad; mientras que la segunda representa la fuerza de la tensi\'on superficial a que el flu\'ido no se "desestructure" demasiado y tiende a achatar nuestras ondas. Podemos probar que para las ondas de \'este t\'itulo, que representan ondas cortas, es \textbf{solamente} significativo el t\'ermino de la tensi\'on superficial. Veamoslo!
+
+los dos t\'erminos se igualan cuando:
+
+\[k^2=\frac{\rho g}{\sigma}\]
+
+\[ \Longrightarrow \ \lambda= 2 \pi \sqrt{\left(\frac{\sigma}{\rho g}\right)} \]
+
+Cuyo valor es de $17 \ mm$ para agua a $20°$, ondas con valores de $\lambda$ mucho menores que \'este van a tener una curvatura tan grande que el t\'ermino dominante ser\'a el de la tensi\'on superficial. Si entonces suponemos $\lambda \ll 17 \ mm$ el t\'ermino de la gravedad lo podemos despreciar y entonces suponiendo $kh \gg 1$ (que valdr\'a casi siempre pues miren la longitud de onda!!) tenemos:
+
+\begin{equation}
+w\approx \sqrt{\frac{\sigma k^3}{\rho}}
+\end{equation}
+
+Y como $k^{3/2}$ es c\'oncava positiva tenemos un caso de dispersi\'on \textbf{an\'omala}.\\
+La velocidad de fase es:
+
+\[v_{\phi}=w / k \approx \sqrt{\frac{\sigma k}{\rho}} = \sqrt{\frac{\sigma 2 \pi}{\rho \lambda}} \]
+
+Y las ondas con longitud de onda m\'as corta viajan m\'as r\'apido. Por otro la velocidad de grupo:
+
+\[ v_g = d\omega / dk \approx \frac{3}{2}\sqrt{\frac{\sigma k}{\rho}} = \frac{3}{2}v_{\phi}
+\]
+
+Como $v_g > v_{\phi}$ las ondas en general parece que viajan hacia atr\'as al propagarse.
+
+\subsection*{Ondas gravitatorias en aguas profundas}
+Para toda onda con $\lambda \gg 17 \ mm$ el efecto de la tensi\'on superficial es despreciable y, por ahora, supongamos que $kh \gg 1$ donde entonces todas las part\'iculas se mover\'an en c\'irculos. Entonces
+
+\begin{equation}
+\omega\approx \sqrt{gk}
+\end{equation}
+
+Y entonces presenta una dispersi\'on \textbf{normal}, con velocidades:
+\[
+\begin{array}{rcccl}
+v_{\phi} & \approx & \sqrt{g / k} & = & \sqrt{g \lambda / 2 \pi} \\
+v_g & \approx & \frac{1}{2}\sqrt{g / k} & = & \frac{1}{2}v_{\phi} 
+\end{array}
+\]
+
+Y tenemos como primer y principal ejemplo de ondas de \'este tipo a las del oleaje y en general este tipo nos permiten predecir tormentas a muchos $km$ de distancia mediante las ondas que viajan a la velocidad de fase, mientras que la energ\'ia se transporta con el paquete a la velocidad de grupo, menor que la de fase (gracias a dios jaja)
+
+\subsection{Ondas gravitatorias en aguas s\'omeras}
+Estas ondas, como vimos, son aproximadamente longitudinales; entonces para $kh \ll 1$ de \ref{relacion_dispersion} tenemos:
+
+\[\omega^2=ghk^2 \left(1-\frac{1}{3}h^2 k^2\right) \]
+
+y aplicando el teo del binomio al termino de $(1-\epsilon)^{1 / 2}$  tenemos
+
+\[\omega  \approx ck -dk^3\]
+
+con
+
+\begin{equation}
+\begin{array}{rcl}
+c & \equiv & (gh)^{1/2} \\
+d & \equiv & \frac{1}{6}ch^2
+\end{array}
+\end{equation}
+
+Y obtenemos una dispersi\'on \textbf{normal} pues $d>0$, aunque en el caso donde podemos despreciar el t\'ermino c\'ubico de la tangente hiperb\'olica tenemos:
+
+\begin{equation}
+v_g=v_{\phi}\approx c = (gh)^{1 / 2}
+\end{equation}
+
+En cuyo caso  tendr\'iamos, recordando \ref{agua_poco_prof} tendr\'iamos:
+
+\begin{equation}
+\dot{\psi_z}\approx (c / h) \psi \approx (g / h)^{1 / 2} \psi
+\end{equation}
+
+Y la velocidad estar\'ia en fase con el desplazamiento y con una proporci\'on a \'este constante para todas las frecuencias. Es m\'as, \'este factor es casi la impedancia caracter\'istica del sistema (salvo un factor de densidad), por lo que podemos observar en $\psi$ como una medida del aumento de la presi\'on hidrost\'atica del agua debajo.\\
+El ejemplo mas caracter\'istico de ondas en aguas s\'omeras representa a las vistas en la costa. Si la playa var\'ia gradualmente, las ondas que se aproximan a la costa ir\'ian perdiendo velocidad porque $h$ va decreciendo, lo que conlleva que su amplitud aumente para que la energ\'ia sea constante; aunque \'esto no vale para ondas de amplitudes grandes, conocidas como olas, cuyo \'ultimo destino es \textit{romper} en la playa. Esta ejemplo llevado al extremo est\'a en los \textit{tsunamis} donde un terremoto en la placa oce\'anica genera una perturbaci\'on que cumple con lo que predijimos, salvo  que en el an\'alisis exacto valen m\'as t\'erminos de la tangente hiperbolica y la relaci\'on de dispersi\'on no resulta tan simple, aunque el concepto es el mismo y es v\'alido. Pero, ehmm, c\'omo? Esto no val\'ia para ondas en aguas s\'omeras?   Ah buen mis peque\~nos, es que estos terremotos generan ondas con longitudes de onda \textbf{tan} enormes que hasta el oc\'eano entero es un charco en relaci\'on y toda esa velocidad se transforma en amplitud con muy poca p\'erdida de energ\'ia, es m\'as como la dispersi\'on en general es baja pasa que la energ\'ia se concentra en unas pocas olas con los efectos conocidos.
+
+\end{document}

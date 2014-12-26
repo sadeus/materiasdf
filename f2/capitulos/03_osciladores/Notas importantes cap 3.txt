@@ -1,0 +1,7 @@
+Lo que falta:
+
+-Extender un poco y ser un poco mas didactico no se si wooa pero algo mas didactico si
+ademas se puede introducir eñl concepto de numero de onda, rel de dispersion, etc; y en forzado
+hablar de las distintas frecuencias de reswonancia y como varia el modo de vibracion
+-Graficos aca no pense nada aun
+-Ejemplos de la guia, al menos 1 diagonalizango y uno con el metodo general!

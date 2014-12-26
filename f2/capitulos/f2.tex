@@ -1,0 +1,1998 @@
+\documentclass[a4paper,spanish]{article}
+
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\newcommand{\oiint}{\displaystyle\bigcirc\!\!\!\!\!\!\!\!\int\!\!\!\!\!\int}
+
+
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+
+\def\Fou {\mathcal{F}}
+\def\Rea {\mathcal{R}e}
+\def\Ima {\mathcal{I}m}
+\def\N {\mathbb{N}}
+\def\C {\mathbb{C}}
+\def\Q {\mathbb{Q}}
+\def\R {\mathbb{R}}
+\def\Z {\mathbb{Z}}
+
+
+%\renewcommand{\contentsname}{\'Indice}
+%\renewcommand{\chaptername}{Cap\'\i tulo}
+%\renewcommand{\bibname}{Referencias}
+
+\newtheorem{prop}{Proposici\'on}[section]
+\newtheorem{teo}[prop]{Teorema}
+\newtheorem{defi}[prop]{Definici\'on}
+\newtheorem{obs}[prop]{Observaci\'on}
+\newtheorem{cor}[prop]{Corolario}
+\newtheorem{lema}[prop]{Lema}
+\newtheorem{ejem}[prop]{Ejemplo}
+\newtheorem{ejer}[prop]{Ejercicio}
+
+\numberwithin{equation}{section}
+\newtheorem{definition}{Definicion}
+
+
+\newenvironment{proof}{
+\trivlist \item[\hskip \labelsep\mbox{\it Demostraci\'on:
+}]}{\hfill\mbox{$\square$}
+%\trivlist \item[\hskip \labelsep{\sl
+%#1}\mbox{Demostraci\'on}]}{\hfill\mbox{$\square$}
+\endtrivlist}
+
+%\topmargin 0cm \oddsidemargin 0.7cm %% margenes
+%\textheight 21cm \textwidth 15cm %% tama�o del texto
+\parindent 0cm %% sangria
+
+\title{Notas de F\'isica 2}
+\author{S. Schiavinato, A. Sirota}
+
+
+\begin{document}
+
+\maketitle \tableofcontents
+
+\bigskip
+
+{\LARGE \textbf{Prefacio}}
+
+\bigskip
+
+Buenas! Si and�s leyendo esto significa que est\'as atrapado en
+eso que llamamos Lic. en Ciencias F\'isicas de la FCEyN, cursando o
+preparando el final de F2. Y justamente estas notas surgieron con
+el simple motivo de ayudarnos nosotros a nosotros, de alumnos para
+alumnos. Es com\'un tener que ligarse alg\'un profe que no es tan
+claro o no enfoca la materia como nos gustar\'ia y en pos de poder
+ayudar empezamos este viaje!!
+
+\bigskip
+
+\newpage 
+\part{Introducci\'on matem\'atica}
+
+A lo largo de nuestro viaje nos encontraremos y tendremos que
+amigarnos con los n\'umeros complejos, por lo que es conveniente
+poder introducirlos ahora con un cierto formalismo para luego
+poder referirnos a ellos con comodidad.
+
+\section{El cuerpo $\C$ de los números complejos}
+Consideremos el conjunto $\R^2$ con las operaciones\\
+$$\displaystyle (x,y)+(u,v)=(x+u,y+v)$$
+$$\displaystyle (x,y).(u,v)=(xu-yv,xv+yu).$$
+Es muy fácil comprobar las propiedades asociativa y conmutativa
+de las operaciones así definidas y la distributiva del producto
+respecto de la suma. El elemento neutro de la suma es $(0,0)$ y
+$(1,0)$ es la unidad del producto. Además,
+$(\widehat{a}'x,\widehat{a}'y)$ es el opuesto de $(x,y)$, y
+$\forall (x,y) \neq (0,0)$ tiene inverso
+\[\displaystyle
+(x,y).(\cfrac{x}{x^2+y^2},\cfrac{-y}{x^2+y^2})=(1,0).\] Todas estas
+propiedades se resumen en que $(\R^2;+;.)$ es un
+$\textit{cuerpo}$, que representamos por $\C$ y les llamamos a sus
+elementos numeros complejos.
+
+\subsection{Forma binomica de un numero complejo}
+
+El s\'imbolo usual $\displaystyle(x,y)$ para representar pares
+ordenados en la estructura de $\R^2$ como $\R$ espacio vectorial
+no es conveniente para representar n\'umeros complejos (calculate
+cualquier potencia grande y lo vas a notar). Pero observemos que
+\[(x,0)+(y,0)=(x+y,0)\]
+\[(x,0).(y,0)=(xy,0).\]
+
+Es decir que los n\'umeros complejos de la forma $(x,0)$ se
+comportan respecto a la suma y multiplicaci\'on definidas para los
+complejos como n\'umeros reales respecto a su suma y
+multiplicaci\'on (O sea $\R\times{\lbrace0\rbrace}$ es un
+subcuerpo de $\C$ isomorfo a $\R$). Esto nos permite la
+identificaci\'on $\textbf{$(x,0)=x$}$. Por otro lado al n\'umero
+complejo $(0,1)$ lo representaremos por $\textit{i}$, la unidad
+imaginaria (t\'ermino acuñado por Descartes (1596-1650), padre de
+los ejes coordenados) y con ello
+tenemos\[i^2=(0,1).(0,1)=(-1,0)=-1.\]
+Y ahora podemos escribir a todo n\'umero complejo como \\
+ \[z=(x,y)=(x,0)+(0,y)=(x,0)+(0,1).(y,0)=x+iy,\]
+que le llamamos la forma bin\'omica de un numero complejo donde
+$x=\Rea \ z $ y $y=\Ima \ z $
+
+\textbf{Observaci\'on}: Acabamos de ver que $i^2=-1$ pero eso ni
+cerca nos permite escribir $i=\sqrt{-1}$, ya que si lo hacemos y
+manejamos a la ra\'iz como estamos acostumbrados llegamos a que\\
+\[-1=i^2=i.i=\sqrt{-1}.\sqrt{-1}=\sqrt{{-1}.{-1}}=\sqrt{1}=1\]
+$\Longrightarrow $-1=1$ \ Abs! $ Fijense que en realidad si
+escribimos  $i=\sqrt{-1}$ no podemos interpretar a -1 como n\'mero
+real (ya que estos no tienen ra\'iz cuadrada de negativos) sino
+como $-1$ complejo, por lo que \textit{estamos usando ra\'ices de
+n\'umeros complejos sin siquiera haberlas definido y presuponiendo
+que mantienen las propiedades de los n\'umeros reales}. Antes de
+escribir $i=\sqrt{-1}$ tenemos que saber que significa
+$\sqrt{z} \ \forall \ z\in\C$ y ah\'i se ve que
+$\sqrt{zw}=\sqrt{z}\sqrt{w}$ no es v\'alida $\forall \ z,w \in\C\setminus\R^+$.
+
+\textbf{Observaci\'on 2}: No existe un orden en $ \C$! Es
+importante remarcar que en los complejos no existe una relación
+de orden como $\leq$ ya que, si la hubiese
+\[0<i^2=-1 \Longrightarrow \ 0<1 + {-1} = 0 \ Abs!\]
+Por lo tanto hay que tener cuidado con escribir relaciones de
+orden en $\C$.
+
+\subsection{M\'odulo y conjugado de un número complejo}
+Dado un número complejo $z=x+iy$ se puede definir su reflexi\'on
+con respecto al eje real pens\'andolo como $\R$ espacio vectorial,
+que resulta en el $\textit{conjugado}$ de un n\'umero complejo:
+$\overline{z}=x-iy$. Por otro lado tambi\'en en la misma linea de
+razonamiento se define el \textit{módulo} de z como $\vert
+z\vert=\sqrt{x^2+y^2}$. Intuitivamente se ve al m\'odulo como la
+mera norma eucl\'idea, lo que nos lleva a verificar el m\'odulo
+cumple las condiciones de una norma y definimos la
+\textit{distancia} entre dos n\'umeros complejos como $\vert{z-w}\vert \ \forall \ z,w \in\C$.
+
+\textbf{Propiedades}: Se puede verificar
+\begin{enumerate}
+\item $\overline{z+w}=\overline{z}+\overline{w}$
+\item $\overline{zw}=\overline{z}\overline{w}$
+\item $\vert{zw}\vert=\vert {z}\vert.\vert {w}\vert$
+\item $\vert {z+w}\vert\leq \vert {z}\vert +\vert {w}\vert$
+\end{enumerate}
+entre otras. Finalmente vale remarcar
+
+\[z.\overline{z}=\vert{z}\vert\]
+\[\Longrightarrow \ \forall \ {z} \in \C, z^{-1}=\cfrac{\overline{z}}{\vert{z}\vert}\]
+
+\subsection{Forma polar de un número complejo}
+Dado que todo complejo $z=x+iy\neq{0}$ presenta un m\'odulo no
+nulo, uno puede escribir
+\[z=\vert{z}\vert.\cfrac{x+iy}{\vert{z}\vert}.\] Como el segundo
+factor esta en la circunferencia unidad, se tiene que
+$\cfrac{x+iy}{\vert{z}\vert}$ tiene una relaci\'on
+biun\'ivoca con $\cos{t} + i\sin{t} \ , \ t\in{[0,2\pi)} $. A este $t$
+se le llama el \textit{argumento principal} del número $z$ y
+notemos que aunque su definición no acarrea ambiguedades, la
+funci\'on $\arg {z} $ resulta discontinua. A la representaci\'on
+\[z=r(\cos{\theta}+i\sin{\theta} \ , \ r \in \R^+ \ , \ \theta \in
+[0,2 \pi)\] se le llama \textit{forma polar de un número complejo $z$}.
+
+\section{Exponencial compleja}
+
+Consideremos la serie $\sum\limits_{n\geq{0}} \cfrac{z^n}{n!} $ que, aplicando el criterio del cociente, sabemos que converge para todo $z$ complejo.
+Entonces llamamos \textit{exponencial compleja} a la función \\
+\[ \exp{z}= \sum_{n=0} ^{\infty} \cfrac{z^n}{n!} \ \left( z \in \C \right) \]
+
+\subsection{Propiedades}
+Se cumplen las siguientes propiedades cuya demostraci\'on, en funci\'on de la definici\'on de la exponencial compleja, no le resultara dificultosa al lector
+\begin{enumerate}
+
+\item $exp'(z) = exp (z)$ 
+\item $ exp (0) = 1 $
+\item $ exp (x)= e^{x} \mbox{ para } \ x \in \R \mbox{  con lo que se justifica } exp (z) = e^{z} \ z \in \C $
+\item $ e^{z+w}= e^{z}.e^{w}$
+\item $ e^{z} \neq 0 \ \forall \ z \in \C$
+\item $ \mbox{ Si } z= x+iy \ \Longrightarrow \ e^{z} = e^{x}.e^{iy} = e^{x}.(\cos(y)+i\sin(y))$
+
+\end{enumerate}
+\subsection{Otras funciones complejas \'utiles y forma exponencial}
+
+A partir de la exponencial compleja podemos obtener las funciones seno y coseno complejos, que como se imaginar\'an, nos ser\'an muy \'utiles; para luego poder dar la forma mas común de representar un número complejo tanto notacional como gr\'aficamente:
+
+Nosotros sabemos que $\forall \ t \in \R $
+\[ 
+\begin{array}{rcl}
+e^{it} & = & \sum\limits_{n=0}^{\infty}
+\cfrac{\left(it\right)^n}{n!} \\
+& = & \lim\limits_{n \rightarrow \infty} \ \sum\limits_{k=0}^{n} \cfrac{\left(it\right)^k}{k!} \\
+& = & \lim\limits_{n \rightarrow \infty} \ \sum\limits_{k=0}^{2n+1} \cfrac{\left(it\right)^k}{k!} \\
+& = & \lim\limits_{n \rightarrow \infty} \ \left( \sum\limits _{k=0}^{n} \cfrac{(-1^(k)).t^{2k}}{2k!}
++i. \sum\limits_{k=0}^{n} \cfrac{(-1)^k.t^(2k+1)}{(2k+1)!} \right) \\
+& = & \cos(t)+i\sin(t)
+\end{array}
+\]
+
+\[\Longrightarrow\ \ e^{iz} + e^{-iz} = 2. \cos(z) \ \forall \ z\in\C\]
+\[\Longrightarrow\ \cos (z) = \cfrac{e^{iz} + e^{-iz}}{2}\]
+
+Y an\'alogamente $\sin(z) = \cfrac{e^{iz} - e^{-iz}}{2i}$
+
+Con lo cual tenemos una nueva manera de representar un n\'umero complejo que la llamaremos \textit{forma exponencial} a saber
+$z=\vert{z}\vert.e^{i\theta} \ \theta\in\left[0,2\pi\right)$.
+
+En general nosotros sabemos de F1 que la soluci\'on del oscilador
+armónico la podemos escribir como $\psi (t) = A. \cos (\omega .t
++ \varphi )$ donde A era la amplitud y $\varphi$ era la fase de la
+solución, pero si extendemos el coseno también se puede escribir
+como $\psi (t) = A_f. \cos (\omega .t) + B_c. \sen (\omega .t)$
+donde f representa a estar en fase y c a estar en cuadratura. Sin
+embargo, con el nuevo formalismo complejo tenemos otra forma de
+representar las soluciones, que ser\'a la m\'as \'util veremos y
+es la raz\'on por la que se introdujo el tema antes, $\psi (t) =
+\Rea \lbrace{A. \exp(\omega .t + \varphi )}\rbrace \ A \in \R$ o $\psi (t) = \Rea \lbrace{A. \exp(\omega .t)}\rbrace \ A \in \C$ donde ahora podemos elegir muy a
+gusto tener una amplitud con o sin la fase incluida, y sobre todo
+podemos evitarnos todas las propiedades trigonom\'etricas y
+cambiarlas por exponenciales que son m\'as simples de manipular.
+
+\newpage 
+\part{Movimiento arm\'onico con 1 grado de libertad}
+
+Todo movimiento podemos clasificarlo como acotado o no acotado.
+Los movimientos acotados son los que nos van a interesar analizar
+en estas primeras secciones. Además de los movimientos acotados
+también vamos a describir los movimientos oscilatorios, es decir
+los cuales que varían de forma estable (o no, esto ya depende de
+la definición precisa) respecto a estado de equilibrio (donde las
+razones dinámicas, las fuerzas, del movimiento no existen).
+
+\section{Movimiento Arm\'onico simple}
+
+En general en la física al querer describir un evento en
+particular, uno comienza por un modelo, algo palpable donde
+podamos describir exactamente todas los par\'ametros relevantes
+del sistema. Posteriormente uno intentar\'a reconocer esos
+par\'ametros en los sistemas m\'as complejos a analizar y as\'i
+uno modeliza la situaci\'on en particular, por ende comencemos por
+modelizar el movimiento arm\'onico m\'as simple que podamos.
+
+\subsection{El modelo}
+
+El ejemplo más simple de oscilador es un resorte con una masa (en
+el vacío y sin gravedad, para simplificarlo más aún). Tomamos
+como otra consideración que el movimiento va a ser
+unidimensional. Aplicando las ecuaciones de Newton encontramos que
+el movimiento está dado por
+
+    \begin{equation*}
+        \ddot{x}(t) = - \cfrac{k}{m} x(t)
+    \end{equation*}
+    y tiene por solución la siguiente ecuación
+    \begin{equation*}
+        x(t) = A \sen(\omega_0 t + \phi_0)
+    \end{equation*}
+    siendo $A$ y $\phi_0$ condiciones iniciales (derivables de
+    $x(t = 0)$ y $\dot{x}(t = 0)$), y $\omega_0 = \sqrt{\dfrac{k}{m}}$
+    la frecuencia angular de oscilación.
+    Podemos encontrar muchos fenómenos físicos que sean modelables con la
+    ecuación del resorte, y todos ellos los podemos describir con la
+    ecuación \ref{eq:oscilador}, la denominada ecuación del oscilador
+    armónico (con una frecuencia definida)
+    \begin{equation}
+        \ddot{\psi} = -\omega_0^2 \psi
+        \label{eq:oscilador}
+    \end{equation}
+    donde la constante $\omega_0$ representa la frecuencia de oscilación
+    de la coordenada $\psi$, que en general representar\'a
+
+    \[\cfrac{\textbf{[Unidad de Fuerza restauradora]}}{\textbf{[Unidad de masa]}.
+    \textbf{[Unidad de desplazamiento]}}.\]
+    \[\textbf{Ejercicio vital}: Conv\'enzase\ de\ la\ formula\ representada\ antes\
+    y\ note\ su\ utilidad\] Con la ecuación anterior tenemos como solución general
+    \begin{equation}
+        \psi(t) = A e^{i \omega_0 t} + B e^{-i \omega_0 t} + cc = C e^{i
+        (\omega_0 t + \phi_0)} = A \sen_(\omega_0 t + \phi_0)
+        \label{eq:oscilador_solucion}
+    \end{equation}
+    Todas las expresiones son soluciones posibles, todas dan soluciones reales
+    (ya que cc significa complejo conjugado) y básicamente son senos y cosenos
+    sumados, o un seno/coseno con una fase inicial.
+\paragraph{Energía}
+    Ahora veamos la energía del oscilador en general, considerando que
+    $\omega_0^2 = \dfrac{k}{m}$, siendo $k$ y $m$ las magnitudes que correspondan
+    dependiendo del caso.
+    \begin{equation}
+        E = \cfrac{1}{2} m \dot{\psi}(t)^2 + \cfrac{1}{2} k \psi(t)^2
+        \label{eq:oscilador_energia}
+    \end{equation}
+Por lo que tenemos
+    \begin{equation}
+        \dot {E} = m \dot{\psi}(t)\ddot{\psi(t)} + k \psi(t)\dot{\psi(t)}
+        \label{energia_oscilador_derivada}
+    \end{equation}
+
+\begin{center}
+\[\dot{\psi(t)}\neq 0 \Longrightarrow m\ddot{\psi}+k \psi=0. \]
+\end{center}
+
+Qué es exactamente la ecuaci\'on de movimiento que vale $\forall
+t \in \R$ Con la soluci\'on \ref{eq:oscilador_solucion} observamos
+que la energ\'a se conserva y que tiene la siguiente expresi\'on
+    \begin{equation}
+        E(t) = \cfrac{1}{2} k A^2
+        \label{eq:oscilador_energia_tiempo}
+    \end{equation}
+    es decir, que una de las condiciones iniciales depende de la energía inicial.
+
+\subsection{Movimiento arm\'onico simple en la física}
+Analicemos algunos casos donde podamos modelar con lo visto antes, sin contar el p\'endulo que ya aburre!
+
+\paragraph{Vibraciones ac\'usticas}
+
+Consideremos una lampara con un volumen en el bulbo v y un tubo anexo de largo l y superficie lateral a, a su vez supongamos que el volumen del tubo la es mucho menor que v. Entonces:\\
+
+La masa del aire en el tubo es $la\rho$ y mediremos su desplazamiento \textit{hacia adentro} con la cantidad $ \psi$ . Llamemos a la diferencia neta de presi\'on $p$, entonces por la segunda ley de Newton tenemos:
+\[(la\rho)\ddot{\psi}=-ap\]\\
+Ahora hallemos la relacio\'on entre $\psi$ y $p$, que estar\'a dada por \textit{la compresibilidad} del aire:
+\begin{equation}
+\kappa=-\cfrac{1}{V}\left(\cfrac{\partial V}{\partial p}\right)
+\label{compresibilidad}
+\end{equation}
+Para el aire en la lamparita el cambio de volumen es $\cfrac{a\psi}{v}$. Por lo que podemos decir\\
+\[\kappa\approx \cfrac{a\psi}{vp}\]
+Que lleva a:
+\begin{equation}
+\omega_0\approx\sqrt{\cfrac{a}{lv\rho\kappa}}
+\end{equation}
+\textbf{Observaci\'on}: Se obtuvo esa frecuencia usando la formula que se recuerda revisar, siempre vale posta!
+\subparagraph*{Que compresibilidad??}
+Antes de verificar num\'ericamente  la formula \ref{compresibilidad} tenemos que pensar que compresibilidad usamos, ya que el volumen \textbf{no} solo depende de la presi\'on sino que \textit{tambi\'en} de la temperatura. Primero debemos analizar \textit{que pasa} con la temperatura mientras sucede nuestro cambio de presi\'on. Una posibilidad es que no halla cambios en la temperatura, lo que nos llevar\'ia a usar la \textit{compresibilidad isot\'ermica} $\kappa_T$; que pasar\'ia si los cambios fuesen tan lentos que el flujo de calor es intercambiable a todo tiempo. \\
+La otra posibilidad es que los cambios sean muy r\'apidos, llevando a una \textit{compresibilidad adiab\'atica} sin flujo de calor en si, $\kappa_S$. Claramente $\kappa_S \leq\kappa_T$ pues demanda mas presi\'on comprimir un gas si ademas se calienta. Finalmente le daremos la mano derecha a la compresi\'on adiab\'atica experimentalmente.
+\subparagraph*{Evaluaci\'on num\'erica}
+Suponiendo gases ideales, se tiene que $pV^\gamma=\mbox{cte}, \mbox{con} \ \gamma=\cfrac{C_p}{C_V}$ Por lo que por \ref{compresibilidad} tenemos $\kappa_S=\cfrac{1}{\gamma}p$.\\\\Por otro lado:
+\[pV=RT \Longrightarrow \rho=\cfrac{M}{V}=\cfrac{Mp}{RT}\]
+\[\Longrightarrow\ p\kappa_S=\cfrac{M}{\gamma}RT\]
+
+\begin{equation}
+	\omega_0 \approx \sqrt{{\left(\cfrac{a}{lv}\right)}{\left(\cfrac{\gamma R T}{M}\right)}}
+\end{equation}
+
+Es \'util notar que la frecuencia aumenta con $T^{1/2}$ pero es independiente de $p$. Esto ocurre porque tanto la masa como la "fuerza del resorte" que es inversamente proporcional a $\kappa_S$(que aqu\'i es el aire en el bulbo) son proporcionales a $p$. En general esperamos otras frecuencias un comportamiento parecido con otros factores geom\'etricos distintos a $\cfrac{a}{lv}$. Si insertamos valores obtenemos un $\omega_0 \approx 500 s^{-1}$ que se escucha como un grave \textit{plop}!
+
+\paragraph{Vibraciones del Plasma}
+ Un plasma es un gas con part\'iculas parcial o totalmente ionizadas, pero que se mantiene el\'ectricamente neutro. Para imaginarnos como puede vibrar simplemente basta con irradiar con luz UV un gas muy finamente durante un tiempo $t$. La luz UV al ser ionizante desacopla los electrones de las part\'iculas de gas obteni\'endose el plasma con $N$ iones positivos y electrones por unidad de volumen de plasma. Luego basta encender un campo el\'ectrico ortogonal a la proyecci\'on de la luz UV haciendo que tanto los electrones como los iones positivos se muevan ( como $m_p\gg m_e$ ignoraremos el movimiento de los iones positivos). Luego de un tiempo $t$ la capa de electrones se desplazo $\psi$ produciendo una capa negativa sin balancear de $-eN\psi$ por unidad de \'area. Aqu\'i ya basta con apagar el campo externo y hemos generado un campo interno:
+\[E=\left(\cfrac{Ne}{\epsilon_o}\right)\psi\]\\
+Que produce una fuerza el\'ectrica de retorno $F=-eE$ para cada electr\'on, llevando a la ecuaci\'on de movimiento para cada electr\'on:
+
+\[\ddot{\psi} + \left(\cfrac{Ne^2}{m_e\epsilon_0}\right)\psi=0\]	
+\\Llevando a una frecuencia
+\begin{equation}
+	\omega_0 = \sqrt{\cfrac{e^2}{m_e\epsilon_0}}.\sqrt{N}
+	\label{frecuencia_plasma_simple}
+\end{equation}
+
+Podemos imaginar el conjunto de electrones como un fluido oscilante. Como casi todos los par\'ametros, excepto $N$ son constantes en \ref{frecuencia_plasma_simple} podemos tomar a la frecuencia de oscilaci\'on del plasma como una medida de la densidad electr\'onica en un plasma particular. Finalmente, para posteriores usos:
+\begin{equation}
+\cfrac{e^2}{m_e\epsilon_0}=3.18.10^3 \ m^3.s^{-2}
+\label{constantes_plasma}
+\end{equation}
+Aunque parezca ficticio, este proceso sucede naturalmente y espont\'aneamente en la ionosfera, capa de la atm\'osfera a unos $\approx 60$ km. All\'i podemos identificar dos capas distintivas, la mas baja (la D)  con un $N \approx 10^9 \ m^{-3}$ al mediod\'ia. Por otro lado la capa mas alta (la capa $F_2$) toma valores de $N \approx 10^{12} \ m^{-3}$, entonces con la ayuda de\ref{frecuencia_plasma_simple} y \ref{constantes_plasma} podemos obtener frecuencias $\omega_0 \approx 2.10^6 \ s^{-1}$ ($v_o \approx 300 \ kHz$) para la capa D y de $\omega_0 \approx 6.10^7 \ s^{-1}$ ($v_o \approx 10 \ MHz$) para la capa $F_2$. Estas frecuencias son t\'ipicamente de radio y luego veremos que es lo que ayuda a las ondas de radio cortas poder reflejarse en la capa $F_2$ y entonces poder transmitirse a zonas lejanas a pesar de la curvatura de la Tierra.  
+
+\section{Movimiento arm\'onico simple amortiguado}
+En general nuestro modo de analizar las oscilaciones hasta ahora era bastante \textit{naive} considerando que la energ\'ia se conservaba siempre y no exist\'ian fuerzas disipativas, ahora vamos a complicar un poco mas el modelo y vamos a poder explicar mucho mas sucesos...
+\subsection{El modelo}
+    Podemos agregarle al oscilador arm\'onico una fuerza dependiente de la velocidad, que hace que la energ\'ia del sistema se disipe y se amortigue el movimiento. Es decir, la forma funcional general del oscilador arm\'onico amortiguado es
+    \begin{equation}
+        \ddot{\psi} = - \omega_0^2 \psi - \gamma \dot{\psi}
+        \label{eq:oscilador_amortiguado}
+    \end{equation}
+    
+Que suponiendo una soluci\'on del estilo $\psi=A.\exp{\lambda t}$ nos da la ecuaci\'on algebraica caracter\'istica 
+\[\lambda^2 + \gamma \lambda + \omega_0^2 = 0\]
+Con dos ra\'ices a saber:
+\begin{equation}
+\lambda = -\cfrac{1}{2}\gamma \pm \sqrt{\cfrac{\gamma^2}{4}- \omega_0 ^2}
+\label{raices_caracteristica_amortiguado}
+\end{equation}
+ 
+Como vemos el tipo de soluciones de nuestro sistema depender\'a de los par\'ametros! 
+Llamaremos soluci\'on \textit{subamortiguada} cuando $\gamma < 2\omega_0$, soluci\'on \textit{sobreamortiguada} cuando $\gamma > 2\omega_0$, y soluci\'on \textit{cr\'iticamente amortiguada} cuando $\gamma = 2\omega_0$.
+
+\paragraph{Movimiento subamortiguado}
+Aqu\'i tendremos soluciones complejas a la ecuacion \ref{raices_caracteristica_amortiguado} con lo que escribiremos 
+	
+	\[ \lambda = -\cfrac{1}{2}\gamma \pm i\omega_f\]
+	
+Con 
+
+	
+	\[\omega_f\equiv\sqrt{\omega_0 ^2 - \cfrac{\gamma ^2}{4}}= \omega_0\sqrt{1-\left(\cfrac{\gamma}{2\omega_0}\right)^2}\]
+	
+
+Lo que nos lleva a unas soluciones del estilo
+
+    \begin{equation}
+        \psi(t) = A e^{-\cfrac{\gamma}{2} t} e^{i (\omega_f t + \phi_0)},
+        \label{eq:oscilador_amortiguado_sub_solucion}
+    \end{equation}
+    
+\subparagraph*{Decaimiento de la energia}
+
+Como podemos ver en \ref{eq:oscilador_amortiguado} la fuerza de resistencia siempre se opone al movimeinto, constantemente quitando energia a nuestro oscilador. Veamos esto! Simirlarmente a lo hecho en \ref{energia_oscilador_derivada} llegamos a que 
+
+\[\dot{E}=\dot{\psi}\left(m\ddot{\psi}+s\psi\right)\]
+
+Y entonces por \ref{eq:oscilador_amortiguado} tenemos
+
+\begin{equation}
+\dot{E}=-b\dot{\psi}^2\leq0\ \forall{t} \in \R 
+\end{equation}
+
+Lo que nos muestra de manera muy clara como siempre se va perdiendo energia, dependiendo linealmente del factor amortiguante!\\
+La ecuacion anterior es valida para todos los tipos de amortiguamiento, en especifico para obtener $E(t)$ en el caso subamortiguado basta poner \ref{eq:oscilador_amortiguado_sub_solucion} en la expresion de la energia. No obstante nos interesa mas el decaimiento de energia en un periodo completo de medicion, que se define como
+
+\begin{equation*}
+\langle{E}\rangle \equiv \cfrac{1}{T} \int _{t=0} ^{t=T} E(t) dt
+\label{promedio_temporal}
+\end{equation*}
+
+Y en nuestro caso resulta ser
+
+\begin{equation}
+\langle{E}\rangle \approx \cfrac{1}{2} m {\omega_0}^2 A^2 e^{-\gamma t}
+\end{equation} 
+
+Lo que nos da a una perdida fraccional de energia
+
+\begin{equation}
+-\cfrac{1}{\langle{E}\rangle}.\cfrac{d\langle{E}\rangle}{dt} \approx \gamma
+\label{perdida_proporcional_energia_oscilador}
+\end{equation}
+
+Punto donde empieza a ponerse interesante la definicion del gamma como factor del amortiguamiento.
+
+\subparagraph*{Valor Q}
+En vez de andar usando el valor $\cfrac{\gamma}{2\omega_0}$ para definir cuando hay amortiguamiento suave, es preferible definir un factor que cumpla nuestro requerimientos, al cual le llamaremos \textit{factor de calidad}:
+
+\[Q\equiv\cfrac{\omega_0}{\gamma}\]
+
+Por lo que podemos decir que nuestro sistema va a estar suavemente amortiguado cuando $Q>\cfrac{1}{2}$. Proximamente veremos nuevas ventajas de la definicion del factor de calidad.
+
+\paragraph{Movimiento sobreamortiguado}
+Si volvemos a \ref{raices_caracteristica_amortiguado} y ahora consideramos que $\gamma>2\omega_0$ obtenemos que las dos raices de la ecuacion caracteristica son ambas reales y negativas! Como en general es mas comodo trabajar con cantidades positivas definamos
+
+\begin{equation*}
+\mu_1\equiv -p_1=\cfrac{1}{2}\gamma + \sqrt{\left({\cfrac{\gamma^2}{4}-\omega_0^2}\right)} 
+\end{equation*}
+
+\begin{equation*}
+\mu_2\equiv -p_2=\cfrac{1}{2}\gamma - \sqrt{\left({\cfrac{\gamma^2}{4}-\omega_0^2}\right)}
+\end{equation*}
+
+De lo que se ve que $\mu_1>\cfrac{\gamma}{2}>\omega_0$ tanto como $\mu_1\mu_2=\omega_0$ y entonces $\mu_2<\omega_0$. Obteniendo unas soluciones
+
+    \begin{equation}
+        \psi(t) = A e^{(-\mu_1 t)} + B e^{(-\mu_2 t)}
+        \label{eq:oscilador_sobreamortiguado_soluciones}
+    \end{equation}
+ Aqui podemos analizar un caso interesante que es el hecho que A y B \textbf{no necesariamente} son positivos! Cuando tenemos el hecho que (por las condiciones iniciales!) son de signo distinto, podemos llegar a tener que la masita pase \textit{una vez} la posicion de equilibrio y luego el movimiento muera, mientras que si son ambos positivos o negativos esto nunca ocurrira y nunca llegara a la posicion de equilibrio la masita; hecho y derecho este movimiento es \textit{aperiodico}.
+
+\paragraph{Movimiento criticamente amortiguado}
+
+ Finalmente cuando $\gamma=2\omega_0$ obtenemos una sola solucion exponencial, que por cuestion de independiencia lineal matematicas terminamos teniendo estas soluciones
+ 
+   \begin{equation}
+        \psi(t) = (A + B t) e^{-\omega_0 t}
+        \label{eq:oscilador_amortiguado_critico}
+   \end{equation}
+   
+\textbf{Observacion 1}: Fisicamente podemos pensar en el caso subamortiguado, haciendo crecer el valor de $\gamma$ y pensar que las soluciones cumplen continuidad. En este caso podemos ver que al aumentar $\gamma$ la frecuencia $\omega_f$ se hace casi nula, perdiendo toda la curvatura y eso nos da una idea que la otra solucion independiente debe ser una linea recta!
+\textbf{Observacion 2}: Matematicamente podemos analizar el problema hallando la forma de Jordan de la matriz del sistema de ecuaciones diferenciales y de ahi se obtiene el termino lineal.    
+
+Mucho mas no diremos aqui salvo que notemos que el decaimiento es \textit{maximo} en el caso criticamente amortiguado, dado que es linealmente exponencial.
+
+\subsection{El movimiento amortiguado en la fisica}
+
+Analogamente a lo anterior verificaremos algunos casos donde podemos modelar con un movimiento amortiguado simple de algun tipo.	
+
+\paragraph{Amortiguamiento por colisiones}
+Volviendo a nuestro amigo el plasma visto antes, ahi pudimos ver que el origen del movimiento oscilatorio resultaba del comportamiento cooperativo de los electrones con una velocidad determinada $\dot{\psi}$. Sin embargo entonces no consideramos la \textit{agitacion termica} que azarozamente produce una agitacion que podria colisionar con los electrones contiguos, produciendo una dispersion con direccion al azar y , por ende, dejando de participar del grupo de electrones que aportan a la vibracion en si. Esta \textit{perdida} de electrones a la vibracion del plasma debe ser proporcional a la densidad $N$ presente, y debe tener un tiempo caracteristico de decaimiento $\tau_c$. Podemos estimar:
+
+\[-\cfrac{1}{N}\cfrac{dN}{dt}=\cfrac{1}{\tau_c}\]
+
+Pero en contraparte a los otros tipos de amortiguamiento vistos, aqui \textbf{no hay decaimiento en amplitud} sino en la densidad de electrones participantes. Por ende, en analogia a \ref{perdida_proporcional_energia_oscilador} podemos estimar 
+
+\[\gamma_c=\cfrac{1}{\tau_c}\]
+
+\subparagraph*{Amortiguamiento en la ionosfera}
+En la ionosfera los electrones son mas que proclives a colisionar con moleculas neutras, y la tasa de colisiones debe ser proporcional a $N_m$ y a la velocidad de los electrones. La ultima esta dada por $v_{temp}$ que, vimos, supera a $\dot{\psi}$. Entonces:
+
+\begin{equation}
+\gamma_c=\sigma_c\left(N_mv_{temp}\right)
+\end{equation}
+
+Con $\sigma_c$ una constante de proporcionalidad, tiene unidades de area y puede pensarse como el area efectiva de choque dada por las moleculas a los electrones; cuyo valor experimental ronda los $\sigma_c\approx 10^{-19} m^2$ El factor $N_m$ debe ser alto si hay una presion alta y temperatura baja (son moleculas neutras de la atmosfera), por ende suponiendo gases ideales:
+
+\begin{equation}
+N_m=\cfrac{p}{kT}
+\end{equation} 
+
+Con $k$ la constante de Bolztmann. Por otro lado suponiendo cada contribucion cuadratica aporta $\cfrac{1}{2}kT$, los electrones al tener 3 grados de libertad obtenemos
+
+\[\cfrac{1}{2}m_e{v_{temp}}^2\approx \cfrac{3}{2}kT\]
+
+Con lo que
+
+\begin{equation}
+v_{temp}\approx \sqrt{\cfrac{3kT}{m_e}}
+\end{equation}
+
+Juntando todo tenemos que 
+
+\[\gamma_c\approx \sqrt{\cfrac{3\sigma_c ^2}{m_ek}}pT^{-\cfrac{1}{2}}\]
+
+La presion en la capa D de la ionosfera es de $p\approx0.5 N m^{-2}$ y la temperatura $T\approx 200 K$ con lo que tenemos $\gamma_c \approx 2.10^6 s^{-1}$ que si recordamos lo calculado previamente, son similares, por lo que las vibraciones del plasma en la capa D tienen un $Q\sim 1$.\\
+En la capa $F_2$ por otro lado tenemos $p\approx 10^{-10} N m^{-2}$ y $T\approx 2000 K$ con lo cual, dado que ademas $\omega_{0F} \sim 10. \omega_{0D}$, tenemos que $Q \gg 1$ para la capa $F_2$ lo que resulta muy importante para las radiofrecuencias.
+
+\paragraph{Amortiguamiento por friccion}
+Finalmente para terminar esta seccion nos parecio importante analizar el caso del amortiguamiento por la fuerza de rozamiento usual que experimentamos por el contacto entre dos superficies dadas.
+
+Si analizamos una masita, vemos que la ecuacion de movimiento resulta ser
+
+\[ m\ddot{\psi} = \left\{ \begin{array}{ll}
+         -s\psi -F_d & \mbox{si $\dot{\psi}>0$};\\
+         -s\psi +F_d & \mbox{si $\dot{\psi}<0$}.\end{array} \right. \] 
+
+Que se parece mas a una ecuacion libre que una amortiguada, dado que $F_d$ es invariante con respecto al modulo de $\dot{\psi}$. Una forma de desacoplar este sistema es proponiendo el cambio de coordenadas:
+
+\begin{equation*}
+\begin{array}{l}
+\psi_d=\psi+\cfrac{F_d}{s} \\
+\psi_i=\psi-\cfrac{F_d}{s}
+\end{array}
+\end{equation*}
+
+Nos permite escribir
+
+\begin{equation*}
+\begin{array}{l}
+\ddot{\psi_d}+\omega_0 ^2\psi_d=0 \\
+\ddot{\psi_i}+\omega_0 ^2\psi_i=0
+\end{array}
+\end{equation*}
+
+Para los movimientos a la derecha e izquierda respectivamente, y vemos ya estan plenamente desacoplados y el movimiento de la masita se compone de \textit{medio ciclos} yendo de $\psi_d$ a $\psi_i$ y viceversa, teniendo que, dada una amplitud inicial $A_1$ cada movimiento para en $A_1-2k\cfrac{F_d}{s} \qquad k \in \Z $ con la amplitud efectiva decayendo \textit{linealmente} con el numero de ciclos completados. Finalmente el movimiento se detendra cuando al final de un \textit{medio ciclo} se obtenga que $m\ddot{\psi}<\vert{F_e}\vert$ con $F_e$ la fuerza de rozamiento estatico.
+
+\section{Movimiento armonico forzado}
+Finalmente para completar nuestro estudio de las oscilaciones con un grado de libertad consideraremos el movimiento con posibilidad de aplicar fuerzas externas, que por motivos explicados luego al ver analisis de Fourier, podemos suponer senoidal.
+
+\subsection{El modelo}
+Aqui vamos a ampliar el modelo antes visto al agregarle una fuerza externa \textit{dependiente del tiempo} $F(t)$ que podemos considerar armonica por motivos que veremos luego en el analisis de Fourier:
+
+\[ F(t)= F_0 \cos{\omega t} \]
+
+Con esta fuerza nueva actuante la ecuacion de movimiento se torna:
+
+    \begin{equation}
+        \ddot{\psi} + \omega_0 ^2 \psi + \gamma \dot{\psi} = F(t)
+        \label{eq:oscilador_forzado}
+    \end{equation}
+    
+Como sabemos de la teoria de ecuaciones diferenciales toda solucion $X(t)=X_h(t)+X_p(t)$ es la suma de la solucion del sistema \textit{homogeneo} y una solucion particular cualquiera. Si analizamos un poco el modelo notamos que ya tenemos la $X_h(t)=\psi(t)$ es la solucion del sistema amortiguado, por ende nos basta averiguar la solucion particular, para esto supongamos ya paso un tiempo $t\gg\cfrac{1}{\gamma}$, en este caso tenemos 
+    
+\[\lim_{t\rightarrow\infty} X_h(t)=0\]
+
+Y por ende estaremos estudiando la solucion particular al considerar el que llamamos el \textbf{estado estacionario} de la solucion $X(t)$.
+
+\paragraph{Estados estacionarios}
+
+Intuitivamente sabemos que si la fuente externa pone la frecuencia de oscilacion del sistema finalmente, pero que el sistema va a responder mejor si es parecida su frecuencia natural $\omega_0$. Proponiendo como solucion particular $\psi = C e^{i \omega t}$ tenemos la intuicion que aunque el desplazamiento no necesariamente esta en fase con la fuerza, al menos la diferencia de fase \textbf{ya alcanzo un valor constante}. 
+
+\subparagraph*{Enfoque 1}
+
+Entonces obtenemos la siguiente ecuacion algebraica $(\omega_0^2 - \omega^2 + i \omega \gamma) C = \cfrac{F_0}{m}=A$, por lo que la amplitud es
+	\begin{equation}
+		C = \cfrac{A (\omega_0^2 - \omega^2 - i \omega \gamma)}{(\omega_0^2 - \omega^2)^2 + (\omega \gamma)^2} = \cfrac{A (\omega_0^2 - \omega^2)}{(\omega_0^2 - \omega^2)^2 + (\omega \gamma)^2} - i \cfrac{A \omega \gamma}{(\omega_0^2 - \omega^2)^2 + (\omega \gamma)^2}
+		\label{eq:oscilador_forzado_particular_amplitud}
+	\end{equation}
+\\
+\textbf{Recordatorio:} Para obtener la amplitud $C$ se uso la relacion ya dispuesta que
+
+\[\forall z\in\C^{*} \qquad z^{-1}=\cfrac{\overline{z}}{\vert{z}\vert}\]
+
+Lo que nos da la solucion
+
+	\begin{equation}
+		\psi_p(t) = \Rea \ (C) \cos(\omega t) + \Ima (C) \sen(\omega t) = C \cos(\omega t + \phi)
+		\label{eq:oscilador_forzado_particular_solucion}
+	\end{equation}
+	
+que no tiene constante de integracion ($\Rea \ $ es la parte real y $\Ima$ es la parte imaginaria) ya que dichas aparecen solamente en la solucion homogenea. Ademas la solucion homogenea decae por lo que luego de un tiempo (denominado transitorio) pasa a un estado estable o estacionario donde predomina la solucion particular. La fase $\phi$ indica como esta desfasado el movimiento de la solucion particular de la solucion homogenea. Cabe notar que aqui $\Ima{C}$ resulta que esta en cuadratura con la fuerza $F(t)$  y $\Rea \ (C)$ esta en fase con la fuerza, es costumbre notar a la componente en cuadratura como $A_{abs}$ (de amplitud absorbente)y a la componente en fase como $A_{el}$ (de amplitud elastica). Con lo que queda
+
+\begin{equation}
+\psi_{p} (t)= A_{abs}\sin(\omega t)+A_{el}\cos(\omega t)
+\label{solucion_particular_forzado}
+\end{equation}
+
+Donde la componente absortiva se vuelve maxima en las frecuencias cercanas a la natural del sistema (despues veremos que tan cercanas) y la elastica es practicamente nula; y viceversa fuera de la zona de $\omega_0$. Esto nos lleva a decir que la componente absortiva es la dominante en la zona de $\omega \sim \omega_0$ y la elastica fuera de ella. El otro factor notorio es que $A_el$ cambia el signo al pasar $\omega_0$ y esto representa un cambio en el modo de vibracion del sistema que luego se volvera mas frecuente analizar (con 1 masa lo remarcamos y no le veremos mucho significado fisico ya que la amplitud decae fuera de $\omega_0$).
+
+Para simplificar la notacion uno suele definir la \textbf{impedancia mecanica} de un sistema como
+
+\begin{equation}
+Z=m\left(\gamma\omega+i\left(\cfrac{\omega^2 - \omega_0 ^2}{\omega}\right)\right)
+\label{definicion_impedancia}
+\end{equation}
+
+Donde a la parte real le llamamos \textbf{resistencia} y a la imaginaria \textbf{reactancia}. Con lo cual en \ref{eq:oscilador_forzado_particular_amplitud} nos queda
+
+\[C=\cfrac{-iA}{Z}\]
+
+Entonces observemos que $C=\cfrac{\dot{\psi}}{i\omega}$ con lo que tenemos
+
+\[F(t)= m\left((\omega_0^2 - \omega^2 + i \omega \gamma)\right)\cfrac{\dot{\psi}}{i\omega}\]
+\textbf{Recordatorio}: Lo anterior provino de la ecuacion caracteristica del sistema forzado
+
+Con lo que reagrupando conseguimos la siguiente relacion que justifica la definicion de impedancia:
+
+\begin{equation}
+F=Z\dot{\psi}
+\end{equation}
+
+\textbf{Con lo que la impedancia mecanica es la fuerza necesaria para producir velocidad unitaria en un oscilador!!}
+
+\subparagraph*{Enfoque 2}
+
+El segundo enfoque posible para obtener la amplitud de la solucion particular $\psi_p$ consiste en el uso de fasores o Diagramas de Argand (Jean Robert Argand (1768 -1822) matematica talentoso que introdujo el concepto de representar a los numeros complejos como punto de un $\R$ espacio vectorial isomorfo a $\R^2$). Para esto uno representa el modulo de su numero complejo y con el angulo $\phi$ representa el desfasaje del proximo numero respecto al primero, pero dado que estamos en un estado estacionario donde la diferencia de fase $\varphi=cte$ podemos diagramar a $t=0$ y todo el diagrama conjunto rotara $\forall t$ haciendo valido nuestro calculo de las sumas iniciales.
+
+%ACA PONER EL GRAFICO DE FASORES%
+
+Del grafico facilmente se ve que primero que $-\pi<\phi<0$ por lo que \textit{el desplazamiento siempre esta retrasado a la fuerza impulsora en $\phi$}. Por otro lado viendo el triangulo rectangulo dado se ve:
+
+\begin{equation}
+\tan{\phi}=\cfrac{-\gamma\omega}{\omega_0 ^2 - \omega^2}
+\label{fase_forzado_variacion}
+\end{equation}
+
+Que notemos no contiene en ningun lado a $F_0$ por lo que la diferencia de fase \textbf{solo depende de la frecuencia impulsora}. Por otro lado aplicando pitagoras obtenemos
+
+\[A^2=C^2\left(\left(\omega_0 ^2 - \omega^2\right)^2 + \gamma^2\omega^2\right)\]
+
+De donde obtenemos
+
+\begin{equation}
+C=A\sqrt{\cfrac{1}{\left(\omega_0 ^2 - \omega^2\right)^2 + \gamma^2\omega^2}}
+\end{equation}
+
+Para simplificarnos la vida podemos utilizar la que se llama \textit{curva de respuesta}:
+
+\begin{equation}
+R(\omega)=\cfrac{\gamma^2\omega^2}{\left(\omega_0 ^2 - \omega^2\right)^2 + \gamma^2\omega^2}
+\end{equation}
+
+Que, si notamos, para un sistema muy poco amortiguado $Q \ll \cfrac{1}{2} \qquad \omega \sim \omega_0$ se puede aproximar muy bien por la curva que llamamos \textit{Lorentziana} que se define como
+
+\begin{equation}
+L(\omega)= \cfrac{\cfrac{\gamma^2}{4}}{\left(\omega_0 ^2 - \omega^2\right)+\cfrac{\gamma^2}{4}}
+\label{Lorenztiana}
+\end{equation}
+
+Con lo cual tenemos para, respectivamente, las amplitudes de la posicion, velocidad y aceleracion:
+
+\begin{equation}
+\begin{array}{rcl}
+A & = & \left(\cfrac{F_0}{b\omega}\right)\sqrt{R(\omega)} \\
+A\omega & = & \left(\cfrac{F_0}{b}\right)\sqrt{R(\omega)} \\
+A\omega^2 & = & \left(\cfrac{F_0\omega}{b}\right)\sqrt{R(\omega)} 
+\end{array}
+\label{curvas_respuestas_forzado}
+\end{equation}
+\\
+Con lo que se ve que la velocidad alcanza su maximo en $\omega=\omega_0$ pero la posicion lo alcanza a un valor un poco menor y la aceleracion a un valor un poco mayor. (los valores se pueden hallar derivando, etc, etc...). A su vez vemos que para $\omega<\omega_0 \ \cfrac{F_0}{k}\leq \psi$ y para $\omega>\omega_0 \ \cfrac{F_0}{m}\leq \ddot{\psi}$. Que esta bueno analizar y se lo dejamos al lector! (sino tiene todo servido che!)
+
+Y ahora decimos listo, pero para y la impedancia? y buen vamos a ver que onda con este nuevo enfoque en que nos puede aportar algo nuevo (para lo viejo ya vimos todo lo otro).
+
+Tal como definimos la funcion \textit{real} de respuesta $R(\omega)$ vamos a definir otra funcion nueva de respuesta llamada \textit{compliancia} (\textbf{Aclaracion:} cualquier mejor traduccion del ingles \textit{compliance} es bienvenida).
+Dada una $\psi (t) = A e^{i\omega t}\qquad A\in\C$
+
+\begin{equation}
+K(\omega)=\cfrac{A}{F_0}
+\end{equation}
+
+Entonces volviendo al diagrama podemos ver
+
+\begin{equation*}
+\begin{array}{rcl}
+\cos{\phi} & = & \cfrac{mA\left(\omega_o ^2 - \omega^2\right)}{F_0} \\
+\sin{\phi} & = & \cfrac{mA\gamma\omega}{F_0}
+\end{array}
+\end{equation*}
+
+De lo que obtenemos
+
+\begin{equation}
+\begin{array}{rcccl}
+\Rea \ {K(\omega)} & = & \cfrac{A\cos{\phi}}{F_0} & = & \cfrac{\omega_0 ^2 - \omega^2}{\left(\omega_0 ^2 - \omega^2\right)^2 + \gamma^2\omega^2} \\
+\Ima{K(\omega)} & = & \cfrac{A\sin{\phi}}{F_0} & = & \cfrac{\gamma\omega}{\left(\omega_0 ^2 - \omega^2\right)^2 + \gamma^2\omega^2} 
+\end{array}
+\end{equation}
+
+Y aunque se ve medio fea $K(\omega)$ la podemos hacer linda con un poquiiito de cuentas y nos termina dando
+
+\begin{equation}
+K(\omega)=\cfrac{1}{\left( k-m\omega^2\right) + ib\omega}
+\end{equation}
+
+Y aunque nos guste trabajar ne reales admitamos que trabajar con complejos puede ser mucho mas simple, ya que todos los denominadores al cuadrados al ser en general modulos nos los sacamos de encima! Finalmente recordando \ref{definicion_impedancia} tenemos que
+
+\begin{equation}
+Z(\omega)=\cfrac{1}{i \omega K(\omega)}=b + i\left(m\omega-\cfrac{k}{\omega}\right)
+\end{equation}
+
+Y entonces veamos que $Z(\omega_0)=b \ \in\R$ con lo cual en general es muy comun para hallar la frecuencia natural de un sistema, hallar $\omega \in \R \ / \ Z(\omega)\in\R$. Lo importante es que \textbf{una impedancia real implica que la velocidad esta en fase con la fuerza impulsora}.
+
+Ahora que analizamos ambos enfoques, ya podemos asegurar conseguimos la solucion $\psi_p$ (se acuuuerdan eso queriamos nosotros?) y podemos analizar como varia la solucion en los diferentes casos que llamaremos \textit{amortiguamiento suave} cuando $Q>\cfrac{1}{2}$ y \textit{amortiguamiento fuerte} cuando $Q \ll \cfrac{1}{2}$
+
+\paragraph*{Amortiguamiento suave}
+
+Recordemos \ref{curvas_respuestas_forzado} de donde podemos ver un efecto importante, cerca de $\omega_0$ todas las amplitudes resultan significativas, y la fase cambia drasticamente (notar de \ref{fase_forzado_variacion} como varia de 0 a $-\pi$ en la zona que llamaremos \textit{de resonancia}. De la fase podemos destacar que en $\omega=\omega_0 \qquad \phi=-\cfrac{\pi}{2}$ por lo que el desplazamiento retrasa a la fuerza en cuadratura y entonces, como habiamos visto antes, \textbf{en la resonancia la velocidad esta en fase con la fuerza y la impedancia resulta real}.
+Si consideramos el caso de frecuencias muy bajas ($\omega\ll\omega_0$) tenemos
+
+\begin{equation}
+\begin{array}{rcccl}
+\phi & \approx & 0 \\
+A & \approx & \cfrac{F_0}{m\omega_0 ^2}&=& \cfrac{F_0}{k} \\
+\psi & \approx & \left(\cfrac{F_0}{k}\right) \cos{\omega t}
+\end{array}
+\label{aproximacion_frecuencias_bajas_forzado}
+\end{equation}
+
+Notemos que ni $m$ ni $\gamma$ esta involucrados aca lo que nos lleva a decir que a frecuencias bajas el movimiento se encuentra \textit{controlado por el resorte}, y es facil de entender. La masa tiene muy poca aceleracion haciendo que la mayoria de la fuerza impulsora se contrareste con la fuerza de retorno del resorte, provocando entonces que el desplazamiento este en fase con la fuerza, como \ref{aproximacion_frecuencias_bajas_forzado} verifica. Por otro lado a altas frecuencias ($\omega\gg\omega_0$) tenemos
+
+\begin{equation}
+\begin{array}{rcl}
+\phi & \approx & -\pi \\
+A & \approx & \cfrac{F_0}{m\omega^2}\\
+\psi & \approx & \left(\cfrac{F_0}{m \omega^2}\right) \cos{\omega t}
+\end{array}
+\label{aproximacion_frecuencias_altas_forzado}
+\end{equation}
+
+Y decimos que el movimiento es \textit{controlado por la masa} donde el resorte basicamente no hace nada y todo lo hace la fuerza impulsora, por lo que los resultados de \ref{aproximacion_frecuencias_altas_forzado} es de esperar.
+
+Lo ultimo a notar es que 
+
+\[\lim_{{\gamma \rightarrow 0}\atop{\omega \rightarrow \omega_0}} A \left(\omega\right) = \infty \]
+
+Por lo que decimos el movimiento en $\omega \sim \omega_0$ es \textit{limitado por la resistencia} (Como el imperio galactico =P)
+
+La resonancia provee amplificacion, una redistribucion de la vibracion podriamos decir, y en que factor sino en $Q$, que nos daba la suavidad del amortiguamiento $Q\equiv \cfrac{\gamma}{\omega_0}$
+
+\paragraph{Energia y Potencia}
+Como nos podemos imaginar para todo tiempo el amortiguamiento esta sacando energia de nuestro sistema, lo que tiene que ser repuesto por la fuerza impulsora del estado estacionario. Entonces veamos la potencia asociada al oscilador forzado, en el regimen estacionario donde $\psi \approx \psi_p$, la cual es igual a 
+	\begin{equation}
+		P(t) = F(t) \dot{\psi}(t) = A \sen(\omega t) \omega (- \Rea \ (C) \sin(\omega t) + \Ima(C) \cos(\omega t))
+		\label{eq:oscilador_forzado_potencia_t}
+	\end{equation}
+	
+De donde terminamso teniendo
+	
+\begin{equation}
+P=-F_a \dot{\psi}=b\dot{\psi}^2
+\end{equation}
+
+
+Que es la potencia instantanea, pero si la calculamos sobre varios periodos, o sea el promedio temporal como definimos en \ref{promedio_temporal} en un periodo $\tau = \dfrac{2\pi}{\omega}$ tenemos
+
+\[
+\begin{array}{rcl}
+\langle{P}\rangle&=&b\langle{\dot{\psi}^2}\rangle \\
+&=&\cfrac{1}{2} b \left(\cfrac{F_0}{b}\right)^2 R(\omega)
+\end{array}
+\]
+
+Y entonces...
+
+\[\langle{P}\rangle= \cfrac{F_0^2}{2b}R(\omega)\]
+
+Y adquiere su maximo en $\omega=\omega_0$, que es, \textbf{recordamos}, cuando $A_{abs}$ es maximo, $A_{el}=0$, $\vert{\dot{\psi}}\vert$ es maximo, $\phi=-\cfrac{\pi}{2}$, por lo que $\varphi_{\dot{\psi}/F}=0$ y la velocidad esta en fase con la fuerza, por lo que $Z=b \in\R $
+
+Finalmente podemos ver que la frecuencia donde se obtiene la mitad de la potencia en resonancia, es decir semi-potencia, es
+ 
+	\begin{equation}
+		\omega_{sp}^2 = \omega_0^2 \pm \gamma \omega
+		\label{eq:oscilador_forzado_potencia_semipotencia}
+	\end{equation}
+
+Razon principal por lo que a $\gamma$ se le llama el \textit{ancho del sistema}
+
+\paragraph{Sobreamortiguamiento}
+Nosotros sabemos que si $Q>\cfrac{1}{2}$ en general el movimiento es aperiodico y asintoticamente $\psi \rightarrow 0$, sin embargo bajo una fuerza impulsora puede haber efectos interesantes. En general las soluciones halladas en \ref{curvas_respuestas_forzado} son validas para todo tipo de amortiguamiento. Para darnos una idea imaginemos el caso extremo $(\gamma \gg \omega_0 \qquad Q\ll 1)$ En general esperamos halla un desplazamiento apreciable para $\omega\ll\omega_0$ por lo que
+
+\begin{equation}
+R(\omega)\approx \cfrac{\gamma^2 \cfrac{\omega ^2}{\omega_0  ^4}}{1+{\gamma^2\cfrac{\omega^2}{\omega_0 ^4}}}
+\end{equation}
+
+Y aqui es donde introducimos un nuevo termino, el \textit{tiempo de relajacion} del sistema como
+
+\begin{equation}
+\tau_r\equiv\cfrac{\gamma}{\omega_0 ^2}=\cfrac{b}{k}
+\label{tiempo_de_relajacion}
+\end{equation}
+
+Que era el tiempo que tardaba en que la amplitud decaiga $\cfrac{1}{e}$ en todo sistema amortiguado, y es muy caracteristico de los sistemas sobreamortiguados. Con este nuevo factor tenemos
+
+\begin{equation}
+R(\omega)\approx \cfrac{\tau_r ^2\omega^2}{1+\tau_r ^2\omega^2}
+\end{equation}
+
+Que notemos ahora es mas simple analizar $R(\omega)$ ya que es cercana a 0, luego a valores de $\tau_r\omega\sim1$ crece y luego rapidamente tiende a 1. Esto interesa ya que, como vimos, $\langle{P}\rangle \propto R(\omega)$ por lo que en los sistemas muy fuertemente amortiguados tenemos que elegir una frecuencia tal que $\omega\tau_r \gg 1$ para que el sistema absorba potencia, hecho aprovechado muy bien en la \textbf{cocina por microondas}.
+
+\subsection{El movimiento armonico forzado en la fisica}
+Nuevamente intentaremos aplicar el modelo a situaciones algo mas reales, que seran dos muy importantes en la vida diaria: \textbf{la dispersion de la luz} y \textbf{los fundamentos de la cocina por microondas}.
+
+\paragraph{La dispersion de la luz}
+Cuando una onda electromagnetica avanza en el espacio, esta generada por un campo electrico oscilante que produce una vibracion forzada de los electrones de las particulas circundantes; estos, a su vez, al vibrar emiten radiacion por si mismos. Esta radiacion variara dependiendo que los electrones vibren \textit{coherentemente} unon con otros (fenomeno complicado para el cual necesitamos saber electromagnetismo), o vibren \textit{incoherentemente} produciendo el fenomeno de \textbf{dispersion o scattering de la luz}, que es el proceso podemos modelar aqui. Para ello estimemos $\omega_0$ y $\gamma$ con una curda aproximacion clasica y veamos que obtenemos...
+
+\subparagraph*{Estimacion de $\omega_0$}
+Imaginemos al nucleo compuesto de un unico proton con su nube electronica dispersa, que supondremos circular y uniforme con una carga total $-e$. Entonces
+
+\[
+ q_{\psi}= e \left(\cfrac{\vert{\psi}\vert}{R}\right)^3
+\]
+
+Y entonces recordando la formula para la fuerza electrica
+
+\[
+\begin{array}{rcl}
+\vert{F}\vert & = & e \cfrac{q_{\psi}}{4 \pi \epsilon_0 {\psi}^2} \\
+& = & \vert{\psi}\vert \left(\cfrac{e^2}{R^3 4 \pi \epsilon_0}\right)
+\end{array}
+\] 
+
+De donde podemos obtener el estimado de
+
+\begin{equation}
+\begin{array}{rcccl}
+	k & = & \cfrac{\vert{F}\vert}							{\vert{\psi}\vert} & = & \cfrac{e^2}{R^{3} 4 \pi 			\epsilon_0 } \\
+	\omega_0 & = & \cfrac{e}{\sqrt{4 \pi \epsilon_0 m_e R^3}}
+	\end{array}
+	\label{frecuencia_dispersion_luz}
+\end{equation}
+	
+
+Con estos valores tendriamos un $\omega_0 \approx 4,5.10^{16} s^{-1}$ ($v_0 \sim 10^{16} Hz$) que caeria en el ultravioleta por lo que podemos estimar en general que la luz blanca que dispersa tiene un $\omega < \omega_0$ aproximadamente. 
+
+\subparagraph*{Estimacion de $\gamma$}
+De resultados teoricos anexos se sabe que la potencia media emitida por un emisor que vibra harmonicamente es
+
+\begin{equation}
+\langle{P}\rangle=\cfrac{p_0 ^2 \omega^4}{12\pi\epsilon_0 c^3}
+\end{equation}
+
+Donde $p_0$ es la amplitud del momento dipolar (que termina valiendo $eA$ para un electron vibrando con amplitud $A$). De aca lo importante es que
+
+\begin{equation}
+\langle{P}\rangle \propto \omega^4 
+\label{potencia_dispersion_luz}
+\end{equation}
+
+Recordemos que necesitamos $\gamma$ que resulta de \ref{perdida_proporcional_energia_oscilador}. Recordemos de la misma seccion que 
+
+\[\langle{E}\rangle \approx \cfrac{1}{2}m_e \omega_0 ^2 A^2\]
+
+
+Por lo que
+
+\begin{equation}
+\gamma=\cfrac{\langle{P}\rangle}{\langle{E}\rangle} \approx \cfrac{\omega_0 ^2 e^2}{6 \pi \epsilon_0 m_e c^3}
+\end{equation}
+
+Habiendo sustituido $\omega \approx \omega_0$ pues consideramos vibraciones libres para los electrones. Tomando todos los valores terminamos obteniendo $\gamma \approx 1,3.10^{10} s^{-1}$ que nos lleva a $Q \sim 10^6$ indicando un sistema muy poco amortiguado.
+Resumiendo \textit{la dispersion de la luz blanca resulta de una frecuencia por debajo de la natural y en un sistema muy poco amortiguado}.
+
+\subparagraph*{Dispersion de Rayleigh}
+
+La dispersion fuera de la resonancia se la llama de \textit{Rayleigh} (John William Strutt, tercer Baron de Rayleigh (1842-1919) premio nobel descubridor de los gases nobles y estudio las distribuciones probabilisticas y dispersion de la luz que lleva su nombre) y, dado que $\omega\ll\omega_0$ podemos decir que el movimiento esta controlado por el resorte, en la nomenclatura introdujimos en sistemas poco amortiguados en el modelo. Por esto \textit{la amplitud de vibracion es independiente de la frecuencia incidente, o sea del color de la luz dispersante}. Sin embargo, la eficiencia de dispersion depende fuertemente de la frecuencias (revisar \ref{potencia_dispersion_luz}) con lo que la dispersion sera mas fuerte para los violetas u azules que para los rojos. Todas estas aproximaciones valen para un espacio donde las moleculas esten lo suficientemente alejadas respecto a las longitudes de onda que manejamos para que la emision sea incoherente, como ocurre en la \textbf{estratosfera} llevando a explicar porque el cielo es azul. (\textbf{Pregunta inteligente:} Si la dispersion de Rayleigh es mayor a mayor frecuencia, porque el cielo no es violeta?? \textbf{A investigar la respuesta!!})
+
+\paragraph{Absorcion de microondas por el agua}
+El agua es un compuesto polar cuya formula es $H_2O$ (wooo,posta?) y que, por ende, presenta tres efectos capaces de contribuir a la polarizacion total en el campo electrico circundante. El primero de estos es el cambio en el momento dipolar de los \textit{electrones} de la molecula, efecto que ya discutimos. El segundo corresponde al efecto de la vibracion molecular de los \textit{atomos} con entre si, efecto que se puede visualizar en el infrarojo (El que le gusta saber mas este efecto se explota en la identificacion de moleculas sobretodo organicas en la espectroscopia de infrarojo). Finalmente, la molecula \textit{como un todo} puede vibrar respecto a su centro de masa generado por torque oscilante del campo electrico. Dado que ninguno de estos efectos entonces puede explicar el aumento de la potencia absorbida del agua en la zona de microondas (se empieza a comportar como un \textbf{cuerpo negro}), vamos a analizar las \textit{rotaciones} de la molecula como efecto del torque del campo electrico que es un efecto que cae en las microondas. Para esto seguiremos los siguientes pasos (El que quiera verlo clarisimo ver el Main)
+
+\begin{enumerate}
+\item Estimaremos la tension torsional $c$ que evita que el agua se alinee al campo electrico externo; lo que nos permitira obtener un estimado de $\omega_0$
+\item Estimaremos la resistencia angular $d$ de las fuerzas que evitan la rotacion libre (analogo a $b$ en el amortiguado lineal), lo que nos llevara a estimar $\gamma$ y llegar a la conclusion que el sistema esta fuertemente amortiguado ($\gamma\gg\omega_0$)
+\item Obtendremos via $c$ y $d$ el tiempo de relajacion para observar que $\tau_r\omega_0>1 \Leftrightarrow \omega \gtrapprox 10^{10} Hz$ que es exactamente la zona de las microondas.
+\end{enumerate}
+
+\subparagraph*{Tension termica}
+En la ausencia de un campo electrico externo, las moleculas de agua toman direccion al azar; pero al encender un campo hay una tendencia a alinear los momentos dipolares con el campo unilateralmente. No obstante, tenemos por otro lado la agitacion termica (viejo enemigo si recordamos el plasma, que no os preocupeis ya volvera a aparecer!) que restaura el movimiento al azar. Entonces dado un campo $E$ y un momento dipolar $p$ a un angulo $\theta$ tenemos
+
+\[\langle{E,p}\rangle=p_E=p\cos(\theta)\]
+
+Por otro lado del electromagnetismo clasico se obtiene
+
+\begin{equation}
+\langle{p_E}\rangle=\cfrac{p^2 E}{3kT}
+\label{momento_dipolar_promedio_microondas}
+\end{equation}
+
+Con el valor de $p\approx 6,1.10^{30} C m$ (la del $H_2O$)a temperatura ambiente y un campo de $E=10^5 V m^{-1}$
+
+\[\cfrac{p E}{3kT}\sim 10^{-4}\]
+
+Supongamos entonces que las moleculas de agua no interactuan unas con otras fuertemente, entonces para una molecula en un angulo $\theta$ sin un campo externo, al encender el campo este producira un $\delta\theta$ con:
+
+\[\delta\theta=\cfrac{pE\sin{\theta}}{c}\]
+
+Donde $c$ es una tension imaginada por un cable que es el que produce la tension torsional y hallaremos c para que obtengamos un resultado como el experimental, luego con el momento de inercia ya tendremos el $\omega_0$
+
+Entonces el encendido del cambio produce un cambio en la polarizacion
+
+\[
+\begin{array}{rcccl}
+p'_E & \equiv & \delta p_E & = & -\cfrac{d}{d\theta}\left(p\cos(\theta)\right)\delta\theta \\
+& & & = & p \sin {\theta} \delta\theta \\
+& & & = & p^2 \sin^2 {\theta} \cfrac{E}{c}
+\end{array}
+\]
+
+Como empezamos con una distribucion al azar de angulos $\theta$ entonces la distribucion de $\theta$ es $\propto 2\pi \sin(\theta)d\theta$. Entonces:
+
+\[
+\begin{array}{rcccl}
+\langle{p'_E}\rangle & = & \cfrac{\left(\cfrac{p^2 E}{c}\right)\int_{0}^{\pi}\sin^3{\theta} d\theta}{\int_{0}^{\pi}\sin^3{\theta} d\theta} & & \\
+& = & \cfrac{\left(\cfrac{p^2 E}{c}\right)[\cfrac{1}{3}\cos^3{\theta}- \cos{\theta}]_{0}^{\pi}}{[\cos{\theta}]_{0}^{\pi}} & = & \cfrac{2 p^2 E}{3c}
+\end{array}
+\]
+
+Como $\langle{p'_E}\rangle = \langle{p_E}\rangle$ de \ref{momento_dipolar_promedio_microondas} tenemos ya un valor de $c$ que corresponde a 
+
+\[c=2kT\]
+
+Entonces a temperatura ambiente $c\approx 8.10^{21} N m$. Ahora necesitamos el momento de inercia del agua para poder tener la frecuencia de resonancia pues $\omega_0 = \sqrt{\cfrac{c}{I}}$ (Aunque no lo pusimos de ejemplo el lector lo puede pensar como un engranaje oscilando libremente con un cable que le ejerce una fuerza de retorno $T_r \propto \psi$ con constante de proporcionalidad $c$). Si imaginamos al agua con el atomo de oxigeno central y dos pelotas representando los hidrogenos, su momento de inercia sera
+
+\[I\approx 2m_p R_{OH} ^2\]
+
+que toma el valor de $I \approx 3,5 . 10^{-37} \ kg m^2$ y por ende $\omega_0 \sim 10^{13} \ s^{-1}$ es el valor de la frecuencia de resonancia
+
+\textbf{Ejercicio:} Releer la demostracion anterior hasta poder llegar a decir convincentemente que tiene sentido, cuando no lo logre recurra al libro, si lo logra, busqueme a explicarmela a mi. 
+
+\subparagraph*{Una estimacion de $\gamma$}
+No se preocupen este viene mas corto y entendible jaja. El movimeinto en general esta amortiguado proque cada molecula de agua rotante tiene un \textit{entorno} que arrastra al rotar y le va quitando energia intuitivamente, lo que tomamos por \textit{viscosidad} del fluido. Supongamos que nuestra molecula de agua es esferica en un medio continuo viscoso, entonces queremos averiguar
+
+\begin{equation}
+T_r \equiv -d\dot{\psi}
+\end{equation}
+
+Tomando el analogo de la fuerza amortiguante en \ref{eq:oscilador_amortiguado}. Como la fuerza $T_d$ ejerce un torque sobre la superficie esferica, podemos estimar \[T_r= R F_r\] donde $R$ es el radio de la esfera(que en quimica se le llama el \textbf{radio de Van der Walls} de la molecula) y $F_r$ representa un promedio de las fuerzas amortiguantes sobre la molecula. Si consideramos al fluido laminar y que desliza por la molecula, entonces la velocidad del fluido es de $a\dot{\psi}$ y podemos suponer que esta cae a 0 en una distancia $a$ dado que consideramos la interaccion \textit{solo} con las moleculas rondantes. Por ende
+
+\[F_d \approx - \left(4\pi a^2\right)\eta\dot{\psi}\]
+
+pues debe ser proporcional a la viscosidad, al area de la esfera y a la velocidad promedio del fluido que, suponiendo la caida lineal que dijimos, representa a $\nabla \psi = \dot{\psi}$; esto nos lleva a 
+
+\begin{equation}
+d \approx 4 \pi \eta a^3
+\end{equation}
+
+Y usando los valores experimentales tenemos que $d\approx 9.10^{32} N m s$. Por lo que
+
+\[\gamma \equiv \cfrac{d}{I} \sim 10^{15} \ s^{-1}\]
+
+Con lo que juntando todo $Q \sim 0.01 \ll 1$ y por ende el amortiguamiento es muy fuerte.
+
+\subparagraph*{El tiempo de relajacion}
+Para definir el tiempo de relajacion en las vibraciones rotacionales podemos ver \ref{tiempo_de_relajacion} que es el factor de amortiguamiento sobre la constante de la fuerza de retorno, lo que lleva natural extenderlo a 
+
+\[\tau_r = \cfrac{d}{c}\]
+
+con lo que
+
+\[\tau_r \approx \cfrac{2\pi\eta a^3}{kT}\]
+
+que nos da un valor de $\tau_r \approx 10^{-11} \ s$ y por ende obtenemos que $\omega\tau_r \sim 1 \leftrightarrow \omega \gtrapprox 10^{11} \ s^{-1}$ que nos da una $v_0 \sim 10^{10} \ Hz$ que es la zona del microondas y por eso funciona el microondas! (woaaa, preferia no saber, no?)
+
+\newpage
+
+\part{Movimiento arm\'onico con muchos grados de libertad}
+
+En este apartado vamos a estudiar los sistemas con varios grados de libertad, enlazados con relaciones lineales, por lo que vale el \textbf{principio de superposici\'on}. (\textbf{Recordatorio:} Dado un sistema lineal con coeficientes constantes, si $\psi_1$ y $\psi_2$ son soluciones de $\dot{\overrightarrow{X}}=\textbf{A}\overrightarrow{X}$, entonces $\psi_1 + \psi_2$ son soluci\'on). Como el sistema es lineal, la ecuaci\'on que vamos a resolver la podemos condensar en la siguiente relaci\'on (en coordenadas generalizadas)
+    \begin{equation}
+        \ddot{\vec{\psi}} = \sum_i C_i \psi_i = C_i \psi_i = A \vec{\psi}
+        \label{eq:oscilador}
+    \end{equation}
+	y como son lineales tienen como soluciones una superposici\'on o suma de soluciones arm\'onicas, que denominamos modos normales
+	\begin{equation}
+		\vec{\psi}(t) = \sum_i c_i v_i e^{i (\omega_i t + \phi_i)} =  \sum_i c_i v_i \sen(\omega t + \phi_i)
+		\label{eq:oscilador_solucion}
+	\end{equation}
+	es decir un modo normal es una soluci\'on donde todas las partes se mueven a una frecuencia id\'entica, con fase inicial igual u opuesta a la inmediatamente contigua, pero con una relaci\'on de amplitud caracter\'istica de cada modo. Para obtener la soluci\'on anterior tenemos que probar la soluci\'on $\vec{\psi}(t) = \textbf{c} e^{i \omega t}$, con lo que obtenemos
+	\begin{equation}
+		\omega^2 \textbf{c} = A \textbf{c}
+		\label{eq:oscilador_autovalores}
+	\end{equation}
+	que es una ecuaci\'on que nos representa los \textit{autovalores} de la matriz del problema $\textbf{A}$ con autovectores $\textbf{c}$, que van a indicar la relacion de amplitudes para cada particula en cada modo normal; y claramente podemos resolverla como aprendimos en \'algebra lineal. Las coordenadas que dejan diagonal al la matriz $A$, es decir que desacopla el sistema, se denominan coordenadas normales, y a veces es posible por simple inspecci\'on obtenerlas (resolviendo el problema m\'as f\'acilmente).
+
+\section{Superposicion de vibraciones}
+En general
+\section{Pulsaciones}
+
+Consideremos un sistema con dos modos de oscilaci\'on con frecuencias muy parecidas (aunque tiene validez exacta la f\'ormula posterior, no tiene mucha importancia f\'isica si no son parecidas) con sus partes en un caso general de oscilaci\'on, es decir que el movimiento es suma de ambos modos. En ese caso definimos la frecuencia de modulaci\'on como
+		\begin{equation}
+			\omega_{mod} = \frac{|\omega_1 - \omega_2|}{2}
+			\label{eq:oscilador_pulsaciones_modulacion}
+		\end{equation}
+		y la frecuencia de portadora o promedio
+		\begin{equation}
+			\omega_p = \frac{\omega_1 + \omega_2}{2}
+			\label{eq:oscilador_pulsaciones_portadora}
+		\end{equation}
+		Con esas dos frecuencias podemos reescribir de la siguiente forma el movimiento de cada parte (consideramos que la fase y la amplitud son iguales, en caso contrario simplemente cambia el valor de la amplitud, que pasa a ser $A_1 + A_2$)
+		\begin{equation}
+			\psi = A_{mod}(t) \sen(\omega_p t) = 2 A \sen(\omega_{mod} t) \sen(\omega_p t)
+			\label{eq:oscilador_pulsaciones}
+		\end{equation}
+		La formula anterior tiene validez para cualquier suma de dos se\~nales arm\'onicas muy cercanas, y para darnos una idea de la forma
+		
+\section{Oscilaciones de sistemas de muchos grados de libertad}
+	  Al ir agrandando la cantidad de grados de libertad es necesario tener otro m\'etodo para describir dicho sistema. El sistema general que usamos para describir el problema es
+	  \begin{equation}
+		\ddot{\psi_n} = c_{n-1} \psi_{n-1} + c_{n+1} \psi_{n+1} + c_n \psi_n
+		\label{eq:oscilador_recurrencia}
+	  \end{equation}
+	  es decir lo definimos como una relaci\'on de recurrencia, independiente del elemento m\'ovil elegido (se considera que todas las masas y los resortes son iguales, por simplicidad). Proponiendo como soluci\'on
+	  \begin{equation}
+		 \psi_n(t) = A_n \cos(\omega t - \phi)
+		 \label{eq:oscilador_recurrencia_solucion}
+	  \end{equation}
+	  obtenemos una relaci\'on de recurrencia para las amplitudes
+	  \begin{equation}
+		 \omega^2 + c_n = \frac{c_{n-1} A_{n-1} + c_{n+1} A_{n+1}}{-A_n}
+		 \label{eq:oscilador_recurrencia_relacion}
+	   \end{equation}
+	   Para la cual proponemos $A_n = \cos(k x_n) = \Re(e^{i k x_n})$, siendo $k = \frac{2 \pi}{\lambda}$ la frecuencia espacial o n\'umero de onda (y $\lambda$ la longitud de onda), obteniendo
+	   \begin{equation}
+			\frac{c_{n+1} e^{i k x_{n+1}} + c_{n-1} e^{i k x_{n-1}}}{-e^{i k x_n}} = \omega^2 + c_n
+			\label{eq:oscilador_recurrencia_rel_dispersion}
+	   \end{equation}
+	   que es una relaci\'on entre la frecuencia temporal y la frecuencia espacial, lo que se denomina relaci\'on de dispersi\'on. 
+	   Luego hay que aplicarle condiciones de contorno al problema, es decir cuanto vale la coordenada $\psi_0$ y $\psi_N$ (siendo $N$ la cantidad de elementos), obteniendo el valor de frecuencia espacial y por lo tanto los modos de oscilaci\'on (frecuencias temporales) posibles.
+
+\newpage
+\part{\'Analisis de Fourier}
+
+Llegado a este punto esta bueno recalcar las cosas que nos fuimos encontrando en el camino del \'analisis de vibraciones:
+
+\begin{enumerate}
+\item Si un n\'umero finito de fuerzas arm\'onicas actuan sobre un sistema linear, la soluci\'on estacionaria del sistema $\psi \left({t}\right)$ resulta en la superposici\'on de las soluciones de cada fuerza particular a su frecuencia $\omega$ respectiva. O sea, vale el principio de superposici\'on.
+\item A su vez en el caso de an\'alisis de varios grados de libertad por un $N>1$ tambi\'en vale el principio de superposici\'on sobre los \textit{modos normales} del sistema con frecuencias los autovalores.
+\item El movimiento arm\'onico es f\'acilmente extendible a modelizar casos de la vida rutinaria 
+\end{enumerate} 
+
+Entonces es claro que el movimiento arm\'onico al cual le dedicamos tanto esfuerzo es un movimiento que vale la pena poder extender a sistemas no lineales. A esto se dedica el presente cap\'itulo, a presentar de la manera mas did\'acticamente posible, pero sin perder el rigor matem\'atico en el camino, el \textbf{\'Analisis de Fourier} (Jean-Baptiste Joseph Fourier $(1768-1830)$, matem\'atico y f\'isico franc\'es conocido por sus trabajos sobre la descomposici\'on de funciones peri\'odicas en series trigonom\'etricas convergentes llamadas Series de Fourier, m\'etodo con el cual consigui\'o resolver la ecuaci\'on del calor. La transformada de Fourier recibe su nombre en su honor) que permite presentar toda funci\'on (con ciertas condiciones leves) como suma infinita o infinitesimal de armonicas. \\
+Para esto vamos a repasar primero la estructura y propiedades de los espacios vectoriales con producto interno de dimensi\'on finita y luego extenderemos dimensi\'on infinita para presentar a las series de Fourier como una simple combinaci\'on de los elementos de la base infinita, para luego ver una motivaci\'on del paso de la serie discreta a la continua y luego poder entender la definici\'on de la transformada de Fourier, para finalizar calculando algunas transformadas y algunas propiedades.
+
+\section{Espacios vectoriales con producto interno}
+Considerando que lo t\'ipico para el estudiante de F\'isica de la FCEyN es cursar $F2$ con Mate $2$, su \'unico recuerdo de espacios con producto interno es el CBC, por lo que iremos de lo m\'as b\'asico y adelantaremos un poco apurados:
+\\
+\subsection{Espacios vectoriales y productos internos}
+La estructura b\'asica es el \textit{Espacio lineal}a veces denominado Espacio vectorial sobre un \textit{cuerpo de escalares $K$}. Este cuerpo $K$ sera espec\'ificamente en nuestro caso $\R$ o $\C$. Los elementos del espacio vectorial $V$ son llamados \textit{vectores}. Formalmente, un espacio $V \neq \emptyset$ sobre un cuerpo $K$ es un espacio vectorial sii cumple:
+
+\begin{enumerate}
+\item \textbf{Adici\'on de vectores}: Existe una operaci\'on llamada suma, generalmente notada como $+$ que satisface \\
+\[\forall \ u,v \in V \longrightarrow u+v \in V\]
+\item \textbf{Asociatividad}: $\forall u,v,w\in V \longrightarrow \left({u+v}\right)+w = u+\left({v+w}\right)$ \\
+\\
+$\qquad$ \textbf{Ejercicio interesante:} La l\'inea anterior habla de la $3$-asociatividad de una operaci\'on (o sea asociativa para 3 elementos), probar que para toda operaci\'on $*$ asociada a un conjunto $A \neq \emptyset$ (N\'otese $\left({A,*}\right)$) se tiene $*$ es $3$-asociativa $\leftrightarrow$ $*$ es $n$-asociativa
+\item \textbf{Elemento neutro de la suma}: Existe un elemento neutro para la suma, que notaremos $\vec{0}$ y llamaremos \textit{cero} que cumple $\vec{0}+v=v \ \  \forall v \in V$
+\item \textbf{Inverso aditivo}: Se tiene $\forall v \in V \ \ \exists ! w \in V \ / v+w=\vec{0}$. A ese $w$ lo llamamos el inverso aditivo o "menos v" de $v$ y lo notamos $\left({- v}\right)$
+\item \textbf{Conmutatividad de la suma}: $\forall v,w \in V \ u+v=v+u$
+\\
+(\textbf{Nota:} Las propiedades antes provistas denotan que $\left({V,+}\right)$ es un \textit{grupo abeliano} (En honor a Niels Henrik Abel $(1802-1829)$ fue un matem\'tico noruego. Es c\'elebre fundamentalmente por haber probado en $1824$ que no hay ninguna f\'rmula para hallar los ceros de todos los polinomios generales de grados  en t\'erminos de sus coeficientes y en el de las funciones el\'ipticas, \'ambito en el que desarroll\'o un m\'etodo general para la construcci\'on de funciones peri\'odicas rec\'iprocas de la integral el\'iptica)
+
+\item \textbf{Multiplicaci\'on por escalares}: $\forall v \in V \ k\in K \ ak\in V$
+
+\textbf{Nota importante:} Por dios notemos que la operaci\'on \textit{producto por escalares} es una aplicaci\'on $ \ast \ : \ {V} \times {K} \rightarrow V$ \textbf{\underline{NO} en $K$!!}
+
+\item \textbf{Distributividad del producto con respecto a la suma}: $ \forall a \in K \ \forall v,w \in V \ a\left({v+w}\right)=av+aw$
+
+\item \textbf{Distributividad de la suma respecto al producto} $\forall a,b \in K \ \forall v \in V \ \left({a+b}\right).v=av+bv $ y $ a\left({bv}\right)=\left({ab}\right)v $
+
+\item \textbf{Elemento neutro para $.$:} $\forall v\in V \ \exists!\overline{a} \in K \ / \ \overline{a}v=v$ a ese elemento de $K$ lo llamamos escalar unitario o \textit{uno} y lo notamos $\overline{a}=1$
+\end{enumerate}
+
+Habiendo definido un espacio vectorial, todo subconjunto $W \subseteq V$ que cumpla:
+\begin{enumerate}
+\item $ \vec{0} \in W $
+\item $ av+w \in W \ \forall v,w \in W \ a\in K $
+\end{enumerate}
+
+Se le llamar\'a un \textit{subespacio} del espacio vectorial $V$ y tiene la propiedad que \textbf{es un espacio vectorial en s\'i mismo}.\\
+
+
+\textbf{Definici\'on}: Sea $V$ un $K$ espacio vectorial y $v_1,v_2,\cdots,v_n \in V$ entonces el vector $u$ se dice \textit{combinaci\'on lineal} de los vectores $v_1,v_2,\cdots,v_n $ sii $\exists a_1,a_2,\cdots,a_n \in K$ tal que:
+\[u=a_1v_1+a_2v_2+\cdots+a_nv_n\]
+Y a la colecci\'on de todos los $u$ que son combinaci\'on lineal de $v_1,v_2,\cdots,v_n \in V$ le llamamos el \textit{espacio generado por los vectores $v_1,v_2,\cdots,v_n$} y se nota $\langle{v_1,v_2,\cdots,v_n}\rangle$ notemos es un subespacio de $V$.\\
+
+\textbf{Definici\'on}: Sea $V$ un $K$ espacio vectorial. Los vectores $v_1,v_2,\cdots,v_n \in V$ se les dice \textit{linealmente independientes} si la ecuaci\'on:
+\[a_1v_1+a_2v_2+\cdots+a_nv_n=\vec{0} \ a_1,a_2,\cdots,a_n \in K \]
+Vale solo para $a_1=a_2=\cdots=a_n=0$ De otra forma se dice los vectores son \textit{linealmente dependientes}.\\
+
+
+Se sigue de la definici\'on de independencia lineal que:\\
+\[v_1,v_2,\cdots,v_n \ \mbox{son linealmente independientes}\] 
+\[\Updownarrow\]
+\[\ \forall i\leq n \ v_i \ \mbox{no es combinaci\'on lineal de los otros vectores} \ v_1,v_2,\cdots,v_{i-1},v_{i+1},\cdots,a_n \]
+
+\textbf{Definici\'on}: Un conjunto finito $v_1,v_2,\cdots,v_n \in V$ se les dice una \textit{base} de $V$ si son linealmente independientes y $\langle{v_1,v_2,\cdots,v_n}\rangle = V$. En dicho caso al n\'umero natural $n$ se le llamar\'a \textit{dimensi\'on} de V y se nota $\dim_K{\left(V\right)}=n$.\\
+\newline
+\textbf{Observaci\'on}: Tanto para dimensi\'on finita como infinita no hay problema de definici\'on de combinaci\'on lineal ya que siempre representa la existencia de una cantidad \textit{finita} de escalares en $K$ para los cuales se cumple la ecuaci\'on.\\
+
+Teniendo estas nociones introduzcamos el producto interno.\\
+\newline
+\textbf{Definici\'on}: Sea $V$ un $\R$ o $\C$ espacio vectorial. Un \textit{producto interno} en $V$ es una aplicaci\'on $\phi: \ V \times V \rightarrow K \ \ \phi\left({u,v}\right)=\langle{u,v}\rangle$ que cumple:\\
+\begin{enumerate}
+\item $\forall v,w \in V \ \langle{v,w}\rangle \geq 0$
+\item $\forall v\in V \ \langle{v,v}\rangle=0 \longleftrightarrow v=\vec0 $
+\item $\forall u,v,w \in V \ \forall a,b \in K \ \langle{au+bv,w}\rangle = a\langle{u,w}\rangle + b\langle{v,w}\rangle$
+\item $\forall v,w \in V \ \langle{v,w}\rangle= \overline{\langle{w,v}\rangle}$
+\end{enumerate} 
+
+Y a todo espacio vectorial dotado de un producto interno se le llama un \textit{espacio vectorial con producto interno}.\\
+Algunas de las propiedades b\'asicas se desprenden de la definici\'on son:
+
+\begin{enumerate}
+\item $\forall u,v,w \in V \ \forall a,b \in K \ \langle{u,av+bw}\rangle = \overline{a}\langle{u,v}\rangle + \overline{b}\langle{u,w}\rangle$
+\item $\forall u,v \in V \ \forall a\in K \ \langle{au,av}\rangle = \vert{a}\vert ^2 \langle{u,v}\rangle$
+\item $\forall v \in V \ \langle{\vec{0},v}\rangle=0 \in K$
+\end{enumerate}
+
+\textbf{Ejemplos:}
+\begin{enumerate}
+\item El espacio eucl\'ideo $V=R^n$ fijamos la base can\'onica $\lbrace{e_1,e_2,\dots,e_n}\rbrace$ tenemos definidos los vectores $\vec{x}=\sum\limits_{i=0}^{n}{x_ie_i}=\left({x_1,x_2,\dots,x_n}\right) \ \vec{y}=\sum\limits_{i=0}^{n}{y_ie_i} = \left({y_1,y_2,\dots,y_n}\right) \ \vec{p}=\left({p_1,p_2,\dots,p_n}\right)$ con el producto interno con el vector de peso $\vec{p}$:
+\[\langle{x,y}\rangle_{p}= \sum _{i=0}^{k}{p_i.x_i.y_i}\]
+Y en el caso particular de que $p_i=1 \ \forall i\leq n$ tenemos
+\[\langle{x,y}\rangle= x_1y_1+x_2y_2+\dots+x_ny_n\]
+\textbf{Observaci\'on}: De este simple ejemplo notamos algo vital para el producto interno que resulta ser \emph{vital} fijar primero una base sobre la cual trabajamos.
+\item Sea $V=C[a,b]$ el espacio vectorial de las funciones continuas $f: \ [a,b] \rightarrow \C$ con la usual suma y multiplicaci\'on de funciones. Aqu\'i definimos el producto interno para $f,g \in C[a,b]$:
+\[\langle{f,g}\rangle = \int_a ^b {f\left({x}\right)\overline{g\left({x}\right)}} dx \]
+\textbf{Nota}: Esta espacio vectorial es de dimensi\'on infinita y hallar una base para dicho espacio excede ampliamente los objetivos de hasta un curso de \'algebra lineal, sin embargo el que le interese puede buscarlo en cualquier texto formal de Espacios M\'etricos, aqu\'i simplemente asumiremos que existe y nos basaremos en \'el ciegamente.
+\end{enumerate}
+
+\subsection{Espacios normados}
+
+\textbf{Definici\'on}: Sea $V$ un $K$ espacio vectorial. Una \textit{norma} en $V$ se le llama a una aplicaci\'on $\eta: \ V \rightarrow \R_{+}$ que notamos como $\eta \left({v}\right)= \Vert{v}\Vert$ que cumple las siguientes propiedades:
+\begin{enumerate}
+\item $\forall v \in V \ \Vert{v}\Vert \geq 0$
+\item $\Vert{v}\Vert=0 \longleftrightarrow v=\vec{0}$
+\item $\forall v \in V \ a\in \C \Vert{av}\Vert=\vert{a}\vert\Vert{v}\Vert$
+\item \textbf{Desigualdad triangular}: $\forall u,v,w \in V \Vert{u+v}\Vert\leq\Vert{u}\Vert+\Vert{v}\Vert$
+\end{enumerate}
+
+Que justamente nos permiten decir que dados $u,v \in V \ \Vert{u-v}\Vert$ es una \textit{distancia} en $V$ entre $u$ y $v$, de donde $\Vert{v}\Vert$ es la distancia al $\vec{0}$. (\textbf{Aclaraci\'on}: Una distancia es una funci\'on $d:\ V \times V \rightarrow \R_{+}$ que cumple los items $1,2,4$ de antes pero en vez de $3$ solo pide que la funci\'on $d$ sea \textit{sim\'etrica}, es decir, que $d\left(x,y\right)=d\left(y,x\right) \ \forall x,y \in V$).Notemos que a partir de una norma puedo definir una distancia pero \underline{no todas las distancias son normas}\\
+
+\textbf{Desigualdad de Cauchy-Schwartz-Bunyakovski}: Sea $V$ un $K$ espacio vectorial con producto interno, entonces $\forall u,v \in V$ se da:
+\[ \vert\langle{v,w}\rangle\vert \leq \Vert{v}\Vert \Vert{w}\Vert \]
+
+De Viktor Yakovlevich Bunyakovsky $(1804-1889)$ fue un matem\'atico ruso que trabaj\'o en mec\'anica te\'orica y la teor\'ia de n\'umeros , y se le atribuye un descubrimiento temprano de la desigualdad de Cauchy-Schwarz, demostrando el caso de dimensi\'on infinita en 1859, muchos a\~nos antes de Hermann Schwarz sobre el tema.
+
+Como observaci\'on \'util es de remarcar que dado un producto interno siempre podemos definir una norma como $\Vert{v}\Vert=\sqrt{\langle{v,v}\rangle}$ usando la desigualdad de Chauchy-Schwarz como herramienta para probar la desigualdad triangular. Pero \underline{no todas las normas provienen de un producto interno}, y tenemos como ejemplo a:
+
+\[\Vert{x}\Vert_\infty = \max \lbrace{\vert{x_i}\vert \ 1\leq i \leq n}\rbrace\]
+
+Que es llamada \textit{norma infinito} o norma uniforme \\
+
+En general si una norma cumple la llamada \textit{regla del paralelogramo} proviene de un producto interno. Es m\'as vale que:
+
+\[\Vert{v}\Vert=\sqrt{\langle{v,v}\rangle} \Longleftrightarrow \Vert{v+w}\Vert ^2 + \Vert{v-w}\Vert ^2 = 2 \Vert{v}\Vert ^2 + 2\Vert{w}\Vert ^2\]
+
+\textbf{Definici\'on}: Sea $V$ un $K$ espacio vectorial con producto interno. Entonces si dados $u,v \in V$ se tiene $\langle{u,v}\rangle=0$ se dice que los vectores $u$ y $v$ son \textit{ortogonales} y lo notaremos $u\perp v$.\\
+
+\textbf{Definici\'on}: Sea $V$ un $K$ espacio vectorial con producto interno. Entonces un conjunto finito $\lbrace{u_k}\rbrace_{k=1} ^n$ o un conjunto infinito $\lbrace{u_k}\rbrace_{k=1} ^{\infty}$ de vectores de $V$ se le dice un \textit{conjunto ortogonal} sii $u_k \neq \vec{0} \ \mbox{y} \ u_i \perp u_k \ \forall i\neq k $. Si adem\'as $\Vert{u_i}\Vert =1 \ \forall i$ se le llama un \textit{conjunto ortonormal}.\\
+\newline
+Es claro que dado un conjunto ortogonal podemos pasarlo a un conjunto ortonormal denotando $e_k=\cfrac{u_k}{\Vert{u_k}\Vert}$, donde adem\'as se verifica que $\langle{u_1,u_2,\dots,u_n}\rangle = \langle{e_1,e_2,\dots,e_n}\rangle$ y se cumplen las siguientes propiedades:\\
+
+\textbf{Proposici\'on}: Sea $V$ un $K$ espacio vectorial con producto interno, entonces dado un subespacio $W \subseteq V$ generado por el conjunto ortogonal $\lbrace{u_1,u_2,\dots,u_n}\rbrace$ (respectivamente ortonormal) entonces $\lbrace{u_1,u_2,\dots,u_n}\rbrace$ es un conjunto linealmente independiente\\
+
+\textbf{Demostraci\'on}:\\
+Sea $\langle{v_1,v_2,\dots,v_n}\rangle=W \subseteq V$ un conjunto ortogonal entonces $\vec{0}=a_1v_1+a_2v_2+\dots+a_nv_n$ y se tiene que
+$\forall i\leq n$ \\
+
+\[\begin{array}{rcl}
+0 & = & \langle{\vec{0},v_k}\rangle\\
+& = & \langle{\sum\limits_{i=1}^{n}{a_iv_i},v_k}\rangle \\
+& = & \sum\limits _{i=1}^{n}{a_i\langle{v_i,v_k}\rangle} \\
+& = & a_k\langle{v_k,v_k}\rangle \\
+& = & a_k\Vert{v_k}\Vert ^2
+\end{array}
+\]
+Como $\Vert{v_k}\Vert ^2 \neq 0 \ \Longrightarrow a_k=0 \ \forall k$
+
+\begin{flushright}
+$\square$
+\end{flushright}
+
+\textbf{Proposici\'on}: Sea $V$ un $K$ espacio vectorial y sea $\left({e_k}\right)_{i=1}^{n}=\mathcal{B}$ una base ortogonal de $V$, entonces se tiene que:
+
+\[ \forall v \in V \ v=\sum\limits_{i=1}^{n}{a_ie_i} \\
+a_i= \cfrac{\langle{v,e_i}\rangle}{\Vert{e_i}\Vert ^2} \]
+
+\textbf{Demostraci\'on}: Sea $v \in V$ entonces:
+
+\[
+\begin{array}{rcl}
+\langle{v,e_k}\rangle & = & \langle{\sum\limits_{i=1}^{n}{a_ie_i},e_k\rangle} \\
+& = & \sum\limits_{i=1}^{n}{a_i\langle{e_i,e_k}\rangle} \\
+& = & a_i \Vert{e_k}\Vert \\
+& & \\
+\Longrightarrow & a_i=\cfrac{\langle{v,e_k}\rangle}{\Vert{e_k}\Vert ^2} &
+\end{array}
+\]
+\begin{flushright}
+$\square$
+\end{flushright}
+
+Este \'ultimo resultado es muy importante en nuestro estudio ya que en general dado un subespacio $W \subseteq V$ con una base $\mathcal{B}=\left({e_1,e_2,\dots,e_n}\right)$ los coeficientes en una base dada son una combinaci\'on de \textit{todos} los vectores de la base, sin embargo en las bases ortogonales s\'olo dependen cada uno de su respectivo coeficientes.\\
+
+\textbf{Teorema de Pit\'agoras}: Sea $V$ un $K$ espacio vectorial con producto interno, y sea $\left({e_k}\right)_{i=1}^{n}=\mathcal{B}$ una base de $V$. Entonces se ve que:
+
+\[\Vert{\sum\limits_{i=1}^{n}{a_ie_i}}\Vert ^2 = \sum_{i=1}^{n}{\vert{a_i}\vert ^2 \Vert{e_i}\Vert ^2} \]
+
+Cuya demostraci\'on es simple y siigue el esp\'iritu de las dos anteriores. Finalmente cabe preguntarse si dado una base $\mathcal{B}=\left({v_i}\right)_{i=1}^{n}$ de $V$ se puede hallar una base $\mathcal{B'}=\left({e_i}\right)_{i=1}^{n}$ ortogonal (respectivamente ortonormal) tal que $\langle{v_i}\rangle_{i=1}^{k}=\langle{e_i}\rangle_{i=1}^{k}  \ \forall k\leq n$. Y la respuesta es que s\'i y el teorema que lo demuestra es el de \textit{Ortogonalizaci\'on de Gramm-Schmidt} cuya demostraci\'on es simple y aburrida y se deja al lector que la lea de cualquier lado. 
+
+\medskip 
+
+Finalmente antes de adentrarnos en los espacios vectoriales de dimensi\'on infinita analicemos lo siguiente: Sea $V$ un $K$ espacio vectorial con producto interno y sea $\mathcal{B}=\left({v_i}\right)_{i=1}^{k}$ una base ortogonal de $W \subseteq V$, entonces dado $u \notin W \ u \neq \sum\limits_{i=1}^{n}{a_ie_i}$. En ese caso se define a la \textit{proyecci\'on ortogonal} de $u$ sobre $W$ como
+\[p_W \left({u}\right) = \sum\limits_{i=1}^{n}{a_ie_i} \]
+
+Que cumple las siguientes propiedades de nuevo aburridas de demostrar:
+
+\begin{enumerate}
+\item $\langle{u-p_W\left({u}\right),w}\rangle=0 \  u \in V \ \forall w \in W $
+\item $\Vert{u-p_W\left({u}\right)\Vert \leq \Vert{u-w}\Vert \ \forall w\in W}$\\\\
+Por lo que la proyecci\'on ortogonal es el vector \textit{m\'as cercano} al subespacio $W$ dado y la distancia se realiza (En general la distancia de un punto a un conjunto se define como un \'infimo y a veces no se realiza en la teor\'ia general de espacios m\'etricos)
+\end{enumerate}
+
+\subsection{Sistemas ortonormales infinitos}
+Sea $V$ un espacio vectorial con producto interno, asumiremos en adelante que $\dim_K \left(V\right)=\infty$. Sea $\lbrace{e_1,e_2,\dots}\rbrace$ un sistema ortonormal con un n\'umero infinito de vectores, nos encontramos con que el concepto de base es problem\'atico al menos. Entonces por ahora \underline{no} podemos decir que el sistema ortonormal dado es una base de $V$ o siquiera un sistema de generadores. Veamos que tenemos siendo muy cuidadosos:\\
+
+\textbf{Desigualdad de Bessel}: Se tiene $\forall u \in V$ la serie $\sum\limits_{i=1}^{\infty}\vert{\langle{u,e_i}\rangle}\vert^2$
+converge y, adem\'as, se tiene que vale
+
+\[\sum\limits_{i=1}^{\infty}\vert{\langle{u,e_i}\rangle}\vert^2 \leq \Vert{u}\Vert ^2\]
+
+(Friedrich Wilhelm Bessel $(1784 - 1846)$ fue un matem\'atico alem\'an, astr\'onomo, y sistematizador de las funciones de Bessel [las cuales, a pesar de su nombre, fueron descubiertas por Daniel Bernoulli])\\
+
+\textbf{Demostraci\'on}
+Sea $ S_n = \sum \limits_{i=1}^{n}{\vert{\langle{u,e_i}\rangle}\vert^2} $ Entonces para cada $n\in\N$ la suceci\'on de sumas parciales resulta ser  $\Vert{p_{W_{n}} \left({u}\right)}\Vert ^2$ con $W_n = \langle{e_i}\rangle_{i=1}^{n}$\\
+Por Pit\'agoras que no demostramos en dimensi\'on finita (as\'i los obligo a buscarla) sabemos que:
+
+\[ \Vert{u}\Vert^2=\Vert{p_{W_{n}}\left({u}\right)}\Vert^2 + \Vert{u-p_{W_{n}}\left({u}\right)}\Vert^2\]
+
+Por lo que $\Vert{p_{W_{n}}\left({u}\right)}\Vert ^2 \leq \Vert u\Vert ^2$ entonces la sucesi\'on de sumas parciales esta acotada superiormente, y como es mon\'otona creciente se sigue por completitud que converge. Es decir
+
+\[ \lim \limits_{n \rightarrow \infty}{ \sum \limits_{i=1}^{n} {\vert{\langle{u,e_i}\rangle}\vert ^2}} \leq \Vert{u}\Vert^2 \]
+
+\begin{flushright}
+$\square$
+\end{flushright}
+
+En el caso de darse la igualdad decimos que vale la \textit{Igualdad de Parseval}. Inmediatamente podemos entonces decir que:\\
+
+\textbf{Lema de Riemann-Lebesgue}: Sea $V$ un $K$ espacio vectorial con producto interno y sea $\lbrace{e_1,e_2,\dots}\rbrace$ un sistema ortonormal infinito. Entonces para cada $ u \in V $ se tiene:
+
+\[\lim_{n \rightarrow \infty} {\langle{u,e_n}\rangle} =0 \]
+
+(Georg Friedrich Bernhard Riemann $(1826 - 1866)$ fue un matem\'atico alem\'an que realiz\'o contribuciones muy importantes en an\'alisis y geometr\'ia diferencial, se aburri\'o e invento las sumas, algunas de ellas allanaron el camino para el desarrollo m''as avanzado de la relatividad general. Su nombre est\'a conectado con la funci\'on zeta, hip\'otesis de Riemann, la integral de Riemann, el lema de Riemann, las variedades de Riemann, las superficies de Riemann y la geometr\'ia de Riemann; en resumen un groso).\\ 
+
+\textbf{Demostraci\'on}: De la desigualdad de Bessel se tiene que la serie converge, lo que necesariamente indica que el argumento tiende a 0, entonces vale el resultado
+
+\begin{flushright}
+$\square$
+\end{flushright}
+
+Uno de los primeros problemas que nos encontramos al querer definir una base de $V$ es el significado de \textit{combinaci\'on lineal infinita}. Es decir, supongamos $V$ un $K$ espacio vectorial con producto interno y un sistema infinito ortonormal $\lbrace{v_1,v_2,\dots}\rbrace \ v_i \in V \ \forall i \in \N$ y una secuencia de escalares $\lbrace{a_i}\rbrace_{i=1}^{\infty} \ a_i \in K \ \forall i$. A su vez no nos compliquemos mucho y tomemos que los sistemas son secuencias ordenadas (a pesar que en un conjunto no hay orden), entonces podemos dar un significado a la expresi\'on "$\sum \limits _{n=1}^{\infty} {a_nv_n}$" que es una suma infinita de \underline{vectores} y no de escalares!! Es m\'as si le llegamos a dar sentido a esa suma, necesitamos que se mantengan algunas propiedades de las bases, como la unicidad de coeficientes, por ejemplo. Para esto presentamos:\\
+
+\textbf{Definici\'on}: Sea  $\lbrace{v_m}\rbrace_{m=1}^{\infty}$ una suceci\'on infinita de vectores en un espacio vectorial normado $V$. Diremos que la suceci\'on \textit{converge en norma} o en \textit{media cuadr\'atica} a un vector $v \in V$ cuando se tiene que
+
+\[
+{Dado} \ \epsilon >0 \ \exists m\left({\epsilon}\right) \ /\forall m\geq m\left({\epsilon}\right) \Longrightarrow \Vert{v-v_m}\Vert < \epsilon \]
+
+Lo que nos deja\\
+
+\textbf{Definici\'on}: Sea $\lbrace{v_1,v_2,\dots}\rbrace$ una suceci\'on infinita de vectores en un espacio vectorial normado $V$ y sea $\lbrace{a_i}\rbrace_{i=1}^{\infty}$ una suceci\'on de escalares. Entonces decimos que la serie $\sum \limits _{n=1}^{\infty} {a_nv_n}$ converge en norma a $v \in V$ y escribimos $v=\sum \limits _{n=1}^{\infty} {a_nv_n}$ cuando se tiene que las sumas parciales $w_m=\sum \limits _{n=1}^{m} {a_nv_n}$ convergen en norma a $v$. Es decir:
+
+\[ v = \sum \limits _{n=1}^{\infty} {a_n v_n} \  \Longleftrightarrow \ \lim \limits _{m \rightarrow \infty}{\Vert{v-w_m}\Vert}=0\]
+
+Y la expresi\'on que $v$ esta generado por $\lbrace{v_1,v_2,\dots}\rbrace$ se extiende a $\exists \lbrace{a_i}\rbrace_{i=1}^{\infty} \ a_i\in K \forall i $ tal que se tenga que $\Vert{v- \sum \limits _{n=1}^{m} {a_nv_n}}\Vert$ tienda a cero cuando $m$ tiende a infinito. \\
+Ahora estamos en condiciones de definir LA propiedad que vamos a tener que asumir del sistema trigonom\'etrico al tener que trabajar con las series de Fourier que es la de un sistema cerrado o total:\\
+
+\textbf{Definici\'on}: Sea $\lbrace{v_1,v_2,\dots}\rbrace = W$ un sistema ortonormal infinito en un $K$ espacio vectorial $V$ con producto interno. Diremos que el sistema es \textit{cerrado} o \textit{total} en $V$ si $\forall v \in V$ se tiene que:
+
+\[\lim \limits _{m \rightarrow \infty}{\Vert{v- \sum \limits _{i=1}^{m}{\langle{v,v_i}\rangle v_i}}\Vert}=0\]
+
+Que si recordamos que el vector $\sum \limits _{i=1}^{m}{\langle{v,v_i}\rangle v_i}$ es la proyecci\'on ortogonal de $v$ sobre $W$, por lo que un sistema es cerrado en $V$ si y solo si para todo elemento de $V$ tenemos una combinaci\'on lineal infinita que converge en norma a ese elemento.\\
+
+\textbf{Proposici\'on}: El sistema ortonormal infinito $\lbrace{v_1,v_2,\dots}\rbrace = W$ es cerrado en el $K$ espacio vectorial $V$ con producto interno \textbf{\underline{si y solo si}} $\forall v \in V$ se tiene:
+
+\[\sum\limits_{i=1}^{\infty}\vert{\langle{u,e_i}\rangle}\vert^2 = \Vert{u}\Vert ^2\]
+
+Es decir \textbf{la propiedad de un sistema de ser cerrado en $V$ es equivalente a que $\forall v \in V$ valga la igualdad de Parseval}.\\
+
+\textbf{Proposici\'on}: Para cada m natural, sea $V_m=\langle{e_1,\dots,e_m}\rangle \ y \ u_m=p_{V_m}\left({u}\right)$ sea la proyecci\'on ortogonal de $u$ en $V_m$. Entonces del teorema de Pit\'agoras sabemos que:
+
+\[ \Vert{u}\Vert^2=\Vert{u_m}\Vert^2 + \Vert{u-u_m)}\Vert^2\]
+
+Por lo que se tiene
+
+\[
+\Vert{u-u_m)}\Vert^2 = \Vert{u}\Vert^2 - \sum\limits_{i=1}^{\infty}\vert{\langle{u,e_i}\rangle}\vert^2
+\]
+
+Por lo que se puede ver que
+
+\[ \lim \limits _{m \rightarrow \infty}{\Vert{u-u_m)}\Vert^2} \ \Longleftrightarrow \ \lim \limits _{m \rightarrow \infty}{\Vert{u}\Vert^2 - \sum\limits_{i=1}^{\infty}\vert{\langle{u,e_i}\rangle}\vert^2
+} \]
+
+Que justamente dice que el sistema es cerrado en $V$ sii vale la igualdad de Parseval.
+
+\begin{flushright}
+$\square$
+\end{flushright}
+
+Otra propiedad importante de los sistemas infinitos es la de \textit{completitud}.\\
+
+\textbf{Definici\'on}: Sea $\lbrace{v_1,v_2,\dots}\rbrace = W$ un sistema ortonormal infinito en un $K$ espacio vectorial $V$ con producto interno. Diremos que el sistema es \textit{completo} si \underline{solo} el vector cero ($\vec{0}=v$) cumple con:
+
+\[\langle{v,v_i}\rangle=0 \ i \in \N\] 
+
+Claramente la propiedad de completitud es copada, y d\'ificil de conseguir, o sea, supongamos un sistema ortonormal infinito y le quitamos un vector, ya ese sistema no es ni completo ni cerrado, pero sigue siendo infinito, lo que implica que hay un factor mas importante que la cardinalidad en este asunto de los infinitos. Es m\'as puede que tengamos un sistema que sea cerrado y completo, pero que el "ritmo de convergencia" a algunos elementos del espacio sea insuficiente y no nos sirve de todos modos.\\
+Antes de pasar a la pr''oxima secci\'on e introducir a las Series de Fourier notemos que claramente un sistema cerrado es completo pero no viceversa, ya que suponiendo es cerrado basta con reemplazar en la igualdad de Parseval $v=0$ y leesto es completo.
+
+\section{Series de Fourier}
+
+En \'esta secci\'on vamos a introducir las Series de Fourier como una representaci\'on o approximaci\'on de ciertas funciones en un intervalo finito. Justamente esto es posible debido a que elsistema trigonom\'etrico es un sistema ortonormal infinito cerrado, como definimos antes, y entonces toda $f$ puede ser aproximada por una combinaci\'on lineal infinita de dichos elementos del sistema.
+
+\subsection{Definiciones}
+
+Sea $E[-\pi,\pi]$ al conjunto de las funciones complejas continuas a trozos. Recordemos una funciones $f: \ [-\pi,\pi] \rightarrow \C$ la llamamos \textit{continua a trozos} si tiene \textbf{a lo sumo} un n\'umero finito de discontinuidades y , adem\'as existen los l\'imites laterales en todo punto. Es decir
+
+\begin{defi}
+\[ Dada \ f: \ [-\pi,\pi] \rightarrow \C \quad \exists \lim \limits _{x \rightarrow x_i} {f\left({x}\right)} \ \forall i\leq n \in \N \ y \ sea \ A=\lbrace{x_i \in [-\pi,\pi] \ / \ \lim \limits _{x \rightarrow x_i} \neq f\left({x_i)}\right)}\rbrace \\
+\Longrightarrow \ \vert{A}\vert < \infty \]
+Entonces decimos $f$ es continua a trozos
+\end{defi}
+
+Notemos que $f$ puede no estar definida en las discontinuidades de salto. Es simple ver que $E[-\pi,\pi]$ es un espacio vectorial y si definimos como producto interno
+
+\[ \langle{f,g}\rangle = \cfrac{1}{\pi} \int_{\-pi}^{\pi}{f\left({x}\right).\overline{g\left({x}\right)}} dx\]
+
+Tenemos que $E[-\pi,\pi]$ es un espacio vectorial con producto interno.
+
+\begin{teo}
+La secuencia de funciones
+\[\lbrace{\cfrac{1}{\sqrt{2}}, \sin{x}, \cos{x}, \sin{2x},\dots}\rbrace\]
+es un sistema ortonormal infinito en E
+\end{teo}
+
+\subsection{Existencia y unicidad de la serie de Fourier}
+Y este sistema es importante por que es cerrado en $E$, el cual vale por el:
+
+\begin{teo}\textbf{Teorema de Stone-Weirstrass}
+\\Sea $M$ un espacio m\'etrico compacto y $A\subset \mathcal{C}\left({M;\C}\right)$ un sub\'algebra autoadjunta que contiene las constantes y separa los puntos de $M$. Entonces toda funci\'on cont''inua compleja $f: \ M \rightarrow \C$ puede ser uniformemente aproximada por funciones pertenecientes a $A$ 
+\end{teo}
+
+\begin{cor}
+Sea $M$ un espacio m\'etrico compacto y $S\subset \mathcal{C}\left({M;\R}\right)$ un conjnuto que separa puntos. Entonces toda funci\'on continua $f: \ M \rightarrow \R$ puede ser uniformemente aproximada por polinomios de las funciones de $S$
+\end{cor}
+
+Espec\'ificamente podemos tomar los polinomios trigonom\'etricos
+
+\[p\left(t\right)= a_0 + \sum \limits_{k=1}^{n}a_k\cos{kt} + b_k \sin{kt} \]
+
+que constituyen un sub\'algebra de $\mathcal{C}\left({[-\pi,\pi];\R}\right)$ que contiene constante pero que no separa los puntos pues $p(-\pi)=p(\pi)$ para todo polinomio trigonom\'etrico $p$; sin embargo, salvo ese caso en general para $x\neq0 \ y\neq 2\pi \ si \ p(x)=p(y) \Longrightarrow \ x=y$ Por lo que se puede probar que en virtud del corolario mostrado el sub\'algebra de polin\'omios trigonom\'etricos es densa en $\mathcal{C}\left({S^1;\R}\right)$ denotando $S^1$ como la circunferencia unitaria y entonces toda funci\'on continua $f: \ [-\pi,\pi] \rightarrow \R$ (y en general a $\C$) es uniformemente aproximada por los polinomios dados que llamaremos el \textbf{desarrollo de Fourier}.
+
+S\'i, es complicado pero si asumimos lo anterior (que igual val\'ia comentarlo aunque no demostramos el teorema se demuestra en C\'alculo Avanzado) podemos entonces ver que el sistema trigonom\'etrico es cerrado o total en $E$ y entonces anteriormente vimos que si $\lbrace{e_n}\rbrace_{n=1}^{\infty}$ es un sistema ortonormal, podemos representar $f \in E$ como una suma de la forma
+
+\[\sum \limits _{n=1}^{\infty}{\langle{f,e_n}\rangle e_n}\] 
+
+De la cual veamos los coeficientes:
+
+\begin{enumerate}
+\item Si $e_n(x)=\cfrac{1}{\sqrt{2}}$ entonces:
+
+\[\langle{f,e_n}\rangle e_n = \cfrac{1}{\pi}\left({ \int_{-\pi}^{\pi}{f(t)\cfrac{1}{\sqrt{2}}}dt }\right)\cfrac{1}{\sqrt{2}} = \cfrac{1}{2\pi} \int_{-\pi}^{\pi}{f(t)}dt\]
+
+\item Si $e_n(x)=\sin{nx} \ n \in \N$ entonces:
+
+\[\langle{f,e_n}\rangle e_n = \cfrac{1}{\pi}\left({ \int_{-\pi}^{\pi}{f(t)\sin{nt}}dt}\right)\sin{nx}\]
+
+\item Si $e_n(x)=\cos{nx} \ n \in \N$ entonces:
+
+\[\langle{f,e_n}\rangle e_n = \cfrac{1}{\pi}\left({ \int_{-\pi}^{\pi}{f(t)\cos{nt}}dt}\right)\cos{nx}\]
+\end{enumerate}
+
+Por lo que la serie dada antes tiene la forma de
+
+\begin{equation}
+\cfrac{a_0}{2} + \sum \limits_{n=1}^{\infty}a_n\cos{nx} + b_n \sin{nx}
+\label{desarrollo_fourier} 
+\end{equation}
+
+donde
+
+\begin{equation}
+\left\lbrace \begin{array}{rcl} 
+a_n & = & \cfrac{1}{\pi} \int_{-\pi}^{\pi}{f(x)\cos{nx}} dx \ n \in \N \\
+& & \\
+b_n & = & \cfrac{1}{\pi} \int_{-\pi}^{\pi}{f(x)\sin{nx}} dx \ n \in \N
+\end{array} \right.
+\label{coeficientes_fourier}
+\end{equation}
+
+Lo que nos lleva entonces finalmente a notar que la famosa Serie de Fourier no es mas que tomar un sistema ortonormal y representar una combinaci\'on lineal cualquiera de una base dada, no mais!! Veamoslo tranca:
+
+\begin{defi}
+Sea $f \in E$ Entonces la serie(\ref{desarrollo_fourier}) associada a $f$, con $a_n \ y \ b_n$ como en (\ref{coeficientes_fourier}) es llamada la \emph{Serie de Fourier} de $f$ y escribimos:
+\[f(x) \sim \cfrac{a_0}{2} + \sum \limits_{n=1}^{\infty}a_n\cos{nx} + b_n \sin{nx} \]
+\end{defi}
+
+\begin{obs} a\\
+
+\begin{enumerate}
+
+\item La notaci\'on del t\'ermino constante como $\cfrac{a_o}{2}$ es simple notaci\'on est\'andar y luego veremor la utilidad.
+\item Notemos en la definici\'on de la serie de Fourier notamos que $f(x) \sim$ a la serie de Fourier, pues no hay necesidad que la serie converga a la funci\'on para alg\'un punto, y menos a\'un a $f(x)$
+\item Podemos definir una relaci\'on de equivalencia entre funciones $f,g \in E$ dada por 
+\[ f \equiv g \Longleftrightarrow \ f\left({x}\right)=g\left({x}\right) \ \forall x \in [-\pi,\pi] \] salvo para finitos $x_1,x_2,\dots,x_n$
+ Y se justifica por la norma del espacio dado que la integral no se modifica por finitos puntos 
+\end{enumerate}
+\end{obs}
+
+Vale notar que en los casos particulares que $f(x)=f(-x)$, o sea, f sea \textit{par} tenemos que $b_n=0 \ \forall n\in \N$, u el caso alternativo en que $f(x)=-f(-x)$, o sea, f sea \textit{impar} tenemos que $a_n=0 \ n\in\N$. Es m\'as en el caso com\'un de $F2$ en que la extensi\'on de la funci''on sea par o impar pero la funci\'on \textbf{en s\'i} tengo una paridad tenemos que solo los modos pares u impares actuan en el desarrollo de Fourier que habr\'a que analizar en particular. 
+
+\smallskip
+
+No hablaremos aqu\'i mucho m\'as como la deigualdad de Bessel o o el lema de Riemann-Lebesgue la igualdad de Parseval en este caso particular de espacio de Hilbert en este apunte ya que resulta in\'util para nuestro uso; simplemente quer\'ia introducir formalmente a las Series de Fourier, no una exposici\'on completa de sus propiedades y el an\'alisis de los distintos de convergencia (materia que realmente a los f\'isicos les chupa un huevo XD).
+
+\smallskip
+
+Finalmente dada $f \in E[a,b]$ se puede ver que se puede extender a cualquier intervalo finito la serie de Fourier mediante traslaciones y homotecias como
+
+\begin{equation}
+f \left({x}\right) \sim \cfrac{a_0}{2} + \sum \limits_{n=1}^{\infty} {a_n \cos{ \cfrac{2n \pi x}{b-a}} + b_n \sin{ \cfrac{2n \pi x}{b-a}}} 
+\end{equation}
+
+\begin{equation}
+\left\lbrace \begin{array}{rcl} 
+a_n & = & \cfrac{2}{b-a} \int_{a}^{b}{f \left({x}\right) \cos{\cfrac{2n \pi x}{b-a}}} dx \ n \in \N \\
+& & \\
+b_n & = & \cfrac{2}{b-a} \int_{a}^{b}{f \left({x}\right) \sin{\cfrac{2n \pi x}{b-a}}} dx \ n \in \N
+\end{array} \right.
+\end{equation}
+
+\section{Integral y Transformada de Fourier}
+
+Antes de poder presentar la transformada de Fourier nos conviene hacer un peque\~no repaso de integraci\'on en $\C$ y dos o tres resultados importantes que nos lleven a poder definir correctamente lo que conocemos como Transformada de Fourier.
+
+\subsection{Integraci\'on de funciones de variable real y campo complejo}
+Diremos que una funci\'on $\phi : \ [a,b] \rightarrow \C$ es integrable Riemann en el intervalo $[a,b]$, y
+escribiremos $\phi \in R([a,b])$, si las funciones $\Rea(\phi)$ y $\Ima(\phi)$ son integrables Riemann en $[a,b]$ (en el sentido que conocemos, ya que son funciones reales de variable real definidas en
+un intervalo) en cuyo caso definimos la integral de $\phi$ en $[a,b]$ como el n\'umero complejo
+
+\[ \int_{a}^{b}{\phi(t)} dt = \int_{a}^{b}{\Rea \lbrace\phi(t)\rbrace} dt + i \int_{a}^{b}{\Ima \lbrace\phi(t)\rbrace} dt\]
+
+Es claro que una condici\'on necesaria para la integrabilidad de $\phi$ es la acotaci\'on. La
+integrabilidad se puede caracterizar en los siguientes t\'erminos:
+
+\begin{teo}\textbf{Criterio de integrabilidad de Lebesgue}\\
+Sea $\phi: \ [a,b] \rightarrow \C$ una funci\'on acotada. Entonces $\phi \in R ([a,b])$ si, y s\'olo si, $\phi$ es continua casi por doquier en $[a,b]$. En particular, toda funci\'on acotada y continua salvo en un n\'umero finito de puntos es integrable.
+\end{teo}
+
+(Henri L\'eon Lebesgue $(1875 - 1941)$ fue un matem\'atico franc\'es. Lebesgue es fundamentalmente conocido por sus aportes a la teor\'ia de la medida y de la integral. A partir de trabajos de otros matem\'aticos como \'Emile Borel y Camille Jordan, Lebesgue realiz''o importantes contribuciones a la teor\'ia de la medida en 1901. Al a\~no siguiente, en su disertaci\'on Int\'egrale, longueur, aire (Integral, longitud, \'area) presentada en la Universidad de Nancy, defini\'o la integral de Lebesgue, que generaliza la noci\'on de la integral de Riemann extendiendo el concepto de \'area bajo una curva para incluir funciones discontinuas. Este es uno de los logros del an\'alisis moderno que expande el alcance del an\'alisis de Fourier)
+
+Y habiendo ya definido la integral de una funci\'on de variable real a valores complejos, notaremos como $E^1 \left({\R}\right) = E \left({\R}\right) \cap L^1 \left({\R}\right)$ y a $E^2 \left({\R}\right) = E \left({\R}\right) \cap L^2 \left({\R}\right)$ siendo $L^1\left({\R}\right) \ y \ L^2\left({\R}\right)$ las funciones de m\'odulo absolutamente integrales u en media cuadr\'atica respectivamente, que notemos estos ultimos dos conjuntos son espacios vectoriales de $L^1\ y \ L^2$ con normas:
+
+\[\Vert{f}\Vert_1= \int_{-\infty}^{\infty}{\vert{f(x)}\vert} dx \quad \Vert{f}\Vert_2=\int_{-\infty}^{\infty}{\vert{f(x)}\vert}^2 dx \]
+ 
+Entonces veamos un resultado cl\'asico del an\'alisis real que nos va a permitir intercambiar limites y derivadas con el signo integral (algo que en general quiere):
+
+\begin{teo}\textbf{Teorema de la convergencia Dominada de Lebesgue}\\
+Sean $(f_n)\subset L^1(\R), \ g \in L^1(\R) \ y \ f: \ \R \rightarrow \R$ absolutamente integrable sobre intervalos finitos tales que:
+\begin{itemize}
+\item $f_n(x) \ \rightarrow \ f(x) \ \forall x \in \R $
+\item $\vert{f_n(x)}\vert \leq \vert{g(x)}\vert \ \forall x \in \R$
+\end{itemize}
+Entonces:
+\begin{enumerate}
+\item $f\in L^1(\R)$
+\item $\int_{-\infty}^{\infty}{f_n(x)} dx \ {\rightarrow} \ \int_{-\infty}^{\infty}{f(x)} dx \\ (n \rightarrow \infty) $
+\end{enumerate}
+\end{teo}
+
+\subsection{Integral de Fourier}
+Entonces vimos como las series de Fourier pueden representar una cantidad considerable de funciones peri\'odicas. Intentemos reemplazar la serie por una integral para las funciones no peri\'odicas!!
+Sea $f: \ [-l,l] \rightarrow \R \ / \ f,f' \in E([-l,l])$ entonces:
+\[ f(x)= \cfrac{a_0}{2} + \sum \limits_{n=1}^{\infty}a_n\cos{\cfrac{n\pi}{l}x} + b_n \sin{\cfrac{n\pi}{l}x}\] 
+
+Donde tenemos 
+
+\[
+\left\lbrace \begin{array}{rcl} 
+a_n & = & \cfrac{1}{l} \int \limits_{-l}^{l}{f(t)\cos{\left({\cfrac{n\pi}{l}}\right)t}} \ dt \quad n \in \N \\
+& & \\
+b_n & = & \cfrac{1}{l} \int \limits_{-l}^{l}{f(t)\sin{\left({\cfrac{n\pi}{l}}\right)t}} \ dt \quad n \in \N
+\end{array} \right.
+\]
+
+Entonces
+
+\[
+\begin{array}{rclll}
+
+f(x) & = & \cfrac{1}{2l} \int \limits_{-l}^{l}{f(t)} dt + \cfrac{1}{l} \sum \limits_{k=1}^{\infty}{\int \limits_{-l}^{l}{f(t) \big[ \cos \left({\cfrac{k\pi}{l} t} \right) \cos \left({\cfrac{k\pi}{l} x} \right) + \sin \left({\cfrac{k\pi}{l} t}\right) \sin \left( {\cfrac{k\pi}{l} x} \right) \big] } \ dt} & & \\
+& = & \cfrac{1}{2l} \int \limits_{-l}^{l}{f(t)} dt + \cfrac{1}{l} \sum \limits_{k=1}^{\infty}{\int \limits_{-l}^{l}{f(t)\cos\left({\left({\cfrac{n\pi}{l}}\right)x - \left({\cfrac{n\pi}{l}}\right)t}\right)}} \ dt & & \\
+& = & \cfrac{1}{2l} \int \limits_{-l}^{l}{f(t)} dt + \cfrac{1}{l} \sum \limits_{k=1}^{\infty}{\int \limits_{-l}^{l}{f(t)\cos\left({\cfrac{k\pi}{l}\left({x-t}\right)}\right)}} \ dt & & \\
+& = & \cfrac{1}{2l} \int \limits_{-l}^{l}{f(t)} dt + \cfrac{1}{\pi} \sum \limits_{k=1}^{\infty}{\cfrac{\pi}{l} \int \limits_{-l}^{l}{f(t)\cos\left({k \cfrac{\pi}{l}\left({x-t}\right)}\right)}} \ dt & & \\
+& = & \cfrac{1}{2l} \int \limits_{-l}^{l}{f(t)} dt + \cfrac{1}{\pi} \sum \limits_{k=1}^{\infty}{\cfrac{\pi}{l} F_l (k \cfrac{\pi}{l})} \ dt & = & (\bigstar)
+\end{array}
+\]
+\\
+si $F_l (y) = \int\limits_{-l}^{l}{f(t)\cos\left({y\left({x-t}\right)}\right)} \ dt$
+\\
+Con lo cual pensemos en una partici\'on de $\R_{\geq 0}$ dada por $y_0:0 < y_1=\cfrac{\pi}{l}<\dots<y_k=\cfrac{k\pi}{l}< \dots $ con la longitud de cada intervalito $\cfrac{\pi}{l}$ lo que sugiere pensar al segundo sumando de $(\bigstar)$ como una suma de Riemann de la funci\'on $F_l: \ \sum \limits_{k=1}^{\infty}{F_l \left(y_k\right) \Delta y_k} \ dt $. Notemos que la norma de la partici\'on tiende a cero cuando $l$ tiende a infinito. Supongamos ahora que $f \in L^1(\R)$, por lo que la funci\'on $f(t)\cos{y\left(x-t\right)} \in L^1(\R)$, por lo que formalmente podemos decir que \textbf{uniformemente}:
+
+\[F_l(y) \rightarrow F(y)=\int\limits_{-\infty}^{\infty}{f(y)\cos{y(x-t)}} \ dt \ (l \rightarrow \infty)\]
+
+Por lo que podemos decir que claramente $F(y) \in R$ y entonces:
+
+\[\cfrac{1}{\pi} \sum\limits_{k=1}^{\infty}{F_l\left({y_k}\right)\Delta y_k} \ \rightarrow \ \cfrac{1}{\pi}\int\limits_{0}^{\infty}{F\left(y\right)} \ dy \]
+
+Y como se puede ver el primer sumando de $(\bigstar)$ tiende a cero cuando $l$ tiende a infinito debido a que esa integral esta acotada por $\Vert{f}\Vert_1$ (Desigualdad de Bessel un poco modificada pero f\'acil de ver) se puede reescribir que:
+
+\begin{equation}
+ f(x)= \cfrac{1}{\pi}\int\limits_{0}^{\infty}{F(y)} \ dy = \cfrac{1}{\pi}\int\limits_{0}^{\infty}{\int\limits_{-\infty}^{\infty}{f(t)\cos\left({y(x-t)}\right)} \ dt } \ dy 
+\end{equation}
+
+Y con todos pasos formales logramos pasar de una representaci\'on discreta (la serie) a una continua (la integral). Finalmente para llegar al resultado lindo y compacto, aunque todo el laburo ya lo hicimos, podemos ver que $\cos\left({y(x-t)}\right)$ es par como funci\'on de $y$ y entonces vale que
+
+\[f(x)= \cfrac{1}{2\pi}\int\limits_{-\infty}^{\infty} \left( {\int\limits_{-\infty}^{\infty}{f(t)\cos\left({y(x-t)}\right)} \ dt }\right) \ dy \]
+
+Y si adem\'as suponemos que $g(y)=\int\limits_{-\infty}^{\infty}{f(t)\sin{y(x-t)}} \ dt \in L^1(\R)$ (Como casi siempre pasar\'a e las funciones f\'isicas) tenemos que
+
+\[\cfrac{1}{2\pi}\int\limits_{-\infty}^{\infty} \left( {\int\limits_{-\infty}^{\infty}{f(t)\sin\left({y(x-t)}\right)} \ dt }\right) \ dy = 0\]
+
+Entonces:
+
+\[
+\begin{array}{rcl}
+f(x) & = & \cfrac{1}{2\pi}\int\limits_{-\infty}^{\infty} \left( {\int\limits_{-\infty}^{\infty}{f(t)\cos\left({y(x-t)}\right)} \ dt }\right) \ dy + i \cfrac{1}{2\pi}\int\limits_{-\infty}^{\infty} \left( {\int\limits_{-\infty}^{\infty}{f(t)\sin\left({y(x-t)}\right)} \ dt }\right) \ dy \\
+& = & \cfrac{1}{2\pi}\int\limits_{-\infty}^{\infty} \left( {\int\limits_{-\infty}^{\infty}{f(t)e^{iy(x-t)}} \ dt }\right) \ dy \\
+& = & \cfrac{1}{2\pi}\int\limits_{-\infty}^{\infty} \left( {\int \limits_{-\infty}^{\infty}{f(t)e^{-iyt}} \ dt} \right)e^{iyx}  \ dy
+\end{array}
+\] 
+
+Lo que nos permite y motiva a hacer la siguiente definici\'on:
+
+\begin{defi}
+Dada $f \in E^1(\R)$ se le llama \textbf{transformada de Fourier} de $f$ a la funci\'on:
+\[
+\Fou(f)(\omega)=\widehat{f}(\omega)= \int \limits_{-\infty}^{\infty}{f(t)e^{-i\omega t}} \ dt 
+\]
+\end{defi}
+
+\subsection{Propiedades de la transformada y algunas transformadas \'utiles}
+
+Ahora que ya definimos y entendimos porqu\'e la transformada de Fourier esta bueno ver algunas propiedades que nos van a simplificar la vida, para luego calcular algunas transformadas en particular y terminar en c\'omo se calculan en general, con herramientas del an\'alisis complejo:
+
+\paragraph{Propiedades}
+
+\begin{enumerate}
+\item Si $f \in E^1(E)$, entonces $\widehat{f}$ es continua en $\R$ y $\lim\limits_{\vert{x}\vert \rightarrow \infty}{\widehat{f}(\omega)=0}$ (Esto se demuestra intercambiando l\'imites y integral con el Teo de la convergencia dominada de Lebesgue)
+\item Como consecuencia de 1), $\widehat{f}$ es uniformemente continua en $\R \ \forall f \in E^1(\R)$
+\item Como dadas $f,g \in E^1(\R) \rightarrow af+bg \in E^1(\R)$ se tiene que $\widehat{af+bg}=a\widehat{f} + b \widehat{g}$
+\item Sea $f \in E^1(\R)$ y tal que $\Ima f \subset \R$ entonces
+\begin{itemize}
+\item $\widehat{f}(-\omega)=\overline{\widehat{f}(\omega)}$
+\\
+\[\widehat{f}(-\omega)= \int \limits_{-\infty}^{\infty}{f(t)e^{-i(-\omega) t}} \ dt = \int \limits_{-\infty}^{\infty}\overline{{f(t)e^{-i\omega t}}} \ dt = \overline{\int \limits_{-\infty}^{\infty}{f(t)e^{-i\omega t}} \ dt} = \overline{\widehat{f}(\omega)} \]
+\item Si adem\'as $f$ es par, entonces $\widehat{f}$ es par y real
+\\
+\[
+\widehat{f}(\omega)= \int \limits_{-\infty}^{\infty}{f(t)e^{-i\omega t}} \ dt = \int \limits_{-\infty}^{\infty}{f(t)\cos{\omega y}} \ dt + i \int \limits_{-\infty}^{\infty}\underbrace{{f(t)\sin{\omega y}}\ dt}_{Impar} = \int \limits_{-\infty}^{\infty}{f(t)\cos{\omega y}} \ dt  \in \R   
+\]
+\[\widehat{f}(-\omega)=\overline{\widehat{f}(\omega)} = \widehat{f}(\omega)\]
+\item Si $f$ es impar, entonces $\widehat{f}$ es impar y puramente imaginaria con una demostraci\'on an\'aloga a la anterior
+\end{itemize}
+\item Sean $f \in E^1(\R) \ a,b \in \R \ a \neq 0 \ g(x)=f(ax+b)$ entonces
+
+\[\widehat{g}(\omega)= \frac{1}{\vert{a}\vert}e^{\frac{i \omega b}{a}}\widehat{f(\frac{\omega}{a})} \]
+
+En efecto hacer las cuentas con el cambio de variables $u=ax+b$ y sale solo
+\item Sea $f \in E^1(R)\ c\in \R$ entonces recordando que $e^xe^y=e^{x+y}$
+
+\[\Fou(e^{-ict}f(t))(\omega)= \widehat{f}(s+c)\] 
+\end{enumerate}
+
+Y creo que las dem\'as propiedades sobre las derivadas no ser\'an muy \'utiles.
+
+\paragraph{Tranformadas \'utiles}
+
+Sea $f(x)=e^{-\vert{x}\vert}$ Entonces se ve claramente que $f \in E^1(R)$ entonces por paridad se ve que:
+
+\[\Fou(\omega)=\int\limits_{-\infty}^{\infty}{e^{-\vert{x}\vert}e^{-i\omega x}} \ dx = 2 \int\limits_{0}^{\infty}{e^{-\vert{x}\vert}\cos{\omega x}} \ dx \]
+
+Integremos dos veces por partes y usemos el hecho conocido que $\lim_{x \rightarrow \infty}{e^{-x}}=0$ y obtenemos:
+
+\[\Fou(\omega)= 2 \left[{1-\omega^2 \int\limits_{0}^{\infty}{e^{-\vert{x}\vert}\cos{\omega x}} \ dx  }\right] \]
+
+Lo cual resolviendo para la integral esa dada tenemos:
+
+\[\Fou(\omega) = \cfrac {1}{\pi \left({1+\omega^2}\right)}\]
+
+Por otro lado calcul\'andola tediosamente se puede ver que $\Fou (e^{-x^2})(\omega)= \frac{1}{2\sqrt{\pi}} e^{-\frac{\omega^2}{4}}$
+
+Lo que nos lleva a decir que, usando todas las propiedades dadas:
+
+\begin{equation}
+\int_{\infty}^{\infty}{e^{-\left({ax^2+bx}\right)}} \ dx = \sqrt{\frac{\pi}{a}}e^{\frac{b^2}{4a}}
+\label{fourier_rel_disp}
+\end{equation}
+
+Para finalizar esta secci\'on nos gustar\'ia introducir la forma general del c\'alculo de la transformada de Fourier, para lo cual primero introduciremos un teorema importante
+
+\begin{teo}\textbf{Teorema de Cauchy}
+\\
+Sea $f: \ \C \rightarrow \C$ entonces si $f$ es derivable en todo punto de un dominio conexo $\Omega$, $f$ es anal\'itica
+\end{teo}
+
+\begin{teo}\textbf{Teorema de los Residuos} 
+\\
+Sea $\gamma$ una curva simple cerrada, y asumamos que $f$ es anal\'itica en $\gamma$ y su interior salvo finitos puntos $z_1,z_2,\dots,z_n$. Entonces se tiene:
+
+\[ \cfrac{1}{2\pi i} \oint_{\gamma}{f(z)} \ dz = \sum\limits_{k=1}^{n}{Res\lbrace{f;z_k}\rbrace}\]
+\end{teo}
+
+\begin{teo}\textbf{C\'alculo de Tranformadas de Fourier}
+\\
+Sea $f$ anal\'itica en $\C$ salvo finitos puntos $z_1,z_2,\dots,z_m$ en el plano superior y $z_{m+1},\dots,z_n$ en el plano inferior. A su vez asumamos $f \in R$ y que $\lim\limits_{R\rightarrow \infty}{\max\limits_{z \in C_R \cup C'_R} \vert{f(z)}\vert}=0$. Entonces:
+
+\[ \Fou(f)(\omega) \left \lbrace \begin{array}{l}
+ -i \sum \limits_{k= m+1}^{n}{Res \lbrace{ f\left(z\right) e^{-i \omega z};z_k} \rbrace} \ \ w\geq 0 \\
+ \\
+ i \sum\limits_{k=1}^{m}{Res \lbrace {f\left(z\right) e^{-i \omega z};z_k} \rbrace} \ \ w\leq 0 
+\end{array} \right.
+\]
+\end{teo}
+
+\newpage
+\part{Aproximaci\'on continua y ondas unidimensionales}
+
+\section{Aproximaci\'on continua}
+
+\section{Ondas estacionarias}
+			Consideremos una cuerda de cuentas capaces de hacer oscilaciones transversales. Para describir ese sistema utilizamos el m\'etodo de la secci\'on de muchos grados de libertad, considerando peque\~nas oscilaciones, por lo que la fuerza de la part\'icula $n$ es $\frac{- 2 T_0 \psi_n}{m a}$ (siendo $a$ la distancia inicial entre masas y $T_0 = k (a - l_0)$, la tensi\'on inicial de cada resorte), entonces obtenemos la siguiente expresi\'on
+			\begin{equation*}
+				\ddot{\psi}_n = \frac{T_0}{m a} (\psi_{n+1} + \psi_{n-1} - 2 \psi_n)
+			\end{equation*}
+			y la relaci\'on de dispersi\'on ser\'a (considerando que $x_n = n a$)
+			\begin{equation*}
+				2 \cos(k a) = 2 \left(1 - 2 \sen^2\left(\frac{k a}{2}\right)\right) = 2 - \frac{m a}{T_0} \omega^2
+			\end{equation*}
+			es decir
+			\begin{equation*}
+				\omega^2 = \frac{4 T_0}{m a} \sen^2\left(\frac{k a}{2}\right)
+			\end{equation*}
+			si tomamos el l\'imite con $N \to \infty$ y $a \to 0$, encontramos que $\psi_n(t) \to \psi(x,t)$, mientras $\psi_{n+1}(t) \to \psi(z + a,t)$ y $\psi_{n-1}(t) \to \psi(z - a,t)$. La ecuaci\'on diferencial del problema queda
+			\begin{equation*}
+				\partial_{tt} \psi(x,t) = \frac{T_0}{m a} (\psi(x+a,t) - 2 \psi(x,t) + \psi(x-a,t) = \frac{T_0 a}{m} \partial_{xx} \psi(x,t)
+			\end{equation*}
+			expresi\'on que encontramos expandiendo en serie las funciones en $x +a$ y $x-a$. Observemos que la relaci\'on de dispersi\'on queda
+			\begin{equation*}
+				\omega^2 = \frac{4 T_0}{m a} \sen^2\left(\frac{k a}{2}\right) \approx \frac{4 T_0}{m a} \left(\frac{k a}{2}\right)^2 = \frac{T_0 a k^2}{m}
+			\end{equation*}
+			es decir que la relaci\'on de dispersi\'on indica que la frecuencia espacial es proporcional a frecuencia temporal o n\'umero de onda.
+			
+			La ecuaci\'on que qued\'o se denomina ecuaci\'on de onda cl\'asica, y en general la escribimos de la siguiente forma
+			\begin{equation}
+				\frac{\partial^2 \psi(x,t)}{\partial t^2} = c^2 \frac{\partial^2 \psi(x,t)}{\partial x^2} \qquad \partial_{tt} \psi(x,t) = c^2 \partial_{xx} \psi(x,t)
+				\label{eq:ondas_ecuacion}
+			\end{equation}
+			donde $c^2$ es la velocidad de propagaci\'on de la onda en el medio (que para un la cuerda es $c^2 = \dfrac{T_0}{\rho}$, siendo $\rho$ la densidad lineal de masa), que se relaciona con la siguente relaci\'on de dispersi\'on
+			\begin{equation}
+				\omega = c\;k
+				\label{eq:onda_dispersion}
+			\end{equation}
+			Para obtener una soluci\'on para esta ecuaci\'on de onda proponemos $\psi(x,t) = A(x) \sin(\omega t + \phi)$, por lo que obtenemos la siguiente ecuaci\'on
+			\begin{equation*}
+				\frac{d^2 A(x)}{d x^2} + \frac{\omega^2}{c^2} A(x) = A''(x) + k^2 A(x) = 0
+			\end{equation*}
+			que sabemos resolver, lo que obtenemos como soluci\'on general una superposici\'on de soluciones oscilatorias
+			\begin{equation}
+				\psi(x,t) = \sum_{i,j} (c_i \sen(k_i x) + c_j \cos(k_j x)) \sen(\omega t + \phi)
+				\label{eq:onda_solucion}
+			\end{equation}
+			y cada constante $c_i$ va a depender de las condiciones de contorno del problema, adem\'as de los modos posibles (es decir los valores posibles de $k$ y $\omega$). Esta ecuaci\'on corresponde a ondas estacionarias, nombre que tendr\'a sentido cuando observemos las ondas propagantes.
+			
+			Para condiciones iniciales tenemos que descomponer la funci\'on de la forma inicial en las componentes obtenidos de la soluci\'on \ref{eq:onda_solucion}, por medio de las series de Fourier, es decir
+			\begin{equation}
+				\psi(x,t) = \sum_{n=0}^{\infty} [(A_n \sen(n k_1 x) + B_n \cos(n k_1 x) ) \sen(\omega_n t + \phi)]
+				\label{eq:onda_solucion_fourier}
+			\end{equation}
+			siendo $\omega_n = c k_n$ (la relaci\'on de dispersi\'on de la ecuaci\'on de onda) y $A_n$ y $B_n$
+			\begin{equation}
+				A_n = \frac{1}{\tau} \int_{a}^{a + \tau} \psi(x,0) \sen\left(\frac{2 n\pi}{\tau} x\right) dx \qquad B_n = \frac{1}{\tau} \int_{a}^{a + \tau} \psi(x,0) \cos\left(\frac{2 n \pi}{\tau} x\right) dx
+			\end{equation}
+			mientras $B_0$ es
+			\begin{equation}
+				B_0  = \frac{1}{\tau} \int_{a}^{a + \tau} \psi(x,0) dx
+			\end{equation}
+			La constante $\tau$ representa la periodicidad de la funci\'on $\psi(x,0)$, que vendr\'a definido por el tama\~no del problema f\'isico (para una cuerda en general ser\'a $L$ o $2L$, siendo $L$ el largo de la cuerda), y $a$ es donde empieza el sistema f\'isico, que en general se puede disponer que $a = 0$. Tambi\'en podemos escribir la serie de Fourier de forma exponencial, es decir
+			\begin{equation}
+				\psi(x,t) = \sum_{n=-\infty}^{\infty} C_n e^{i \frac{2 n \pi}{\tau} x} \sen(\omega_n t + \phi)
+				\label{eq:onda_solucion_fourier_exp}
+			\end{equation}
+			
+			Como todo problema mec\'anico, vamos a describir la energ\'ia de la onda estacionaria. La energ\'ia la tenemos que pensar como una densidad, es decir que se deriva de una integral sobre la coordenada espacial. La energ\'ia cin\'etica la podemos encontrar como
+			\begin{equation}
+				T = \frac{1}{2} \int \rho \; (\partial_t \psi(x,t))^2 dx
+				\label{eq:ondas_cinetica}
+			\end{equation}
+			siendo $\rho$ la densidad de masa lineal (ya que $\rho dx = dm$), o lo que corresponda dependiendo del caso, y la energ\'ia potencial podemos verla como 
+			\begin{equation}
+				V = \frac{1}{2} \int \lambda \; (\partial_x \psi(x,t))^2 dx
+				\label{eq:ondas_potencial}
+			\end{equation}
+			siendo para una cuerda libre la constante $\lambda = T_0$ (la tensi\'on de la cuerda). En la secci\'on referida a reflexi\'on de ondas analizaremos el caso de la onda reflejada, por medio de un argumento f\'isico y la energ\'ia de una onda propagante que, como veremos en la secci\'on siguiente, es una soluci\'on m\\as general de la ecuaci\'on de ondas
+			
+\section{Ondas propagantes}
+			\label{sec:ondas_propagantes}
+			Existe una soluci\'on m\'as general a la ecuaci\'on de ondas cl\'asicas, que contempla una soluci\'on estacionaria (ondas estacionarias) en medios de propagaci\'on limitados y una soluci\'on propagante. Dicha soluci\'on es la siguiente
+			\begin{equation}
+				\psi(x,t) = \psi_1(x - c t) + \psi_2(x + c t)
+				\label{eq:ondas_propagante}
+			\end{equation}
+			donde $\psi_1$ avanza en $x$ con el tiempo y $\psi_2$ retrocede. El perfil de la onda va a depender de la funci\'on inicial, pero en general vamos a trabajar con soluciones arm\'onicas, es decir
+			\begin{equation}
+				\psi(x,t) = \Re\left(A e^{i (-k x + \omega t)} + B e^{i (k x + \omega t)}\right) = A \cos(\omega t - k x) + B \cos(\omega t + k x)
+				\label{eq:ondas_propagante_armonica}
+			\end{equation}
+			
+			Veamos que pasa con la expresi\'on de la energ\'ia (ecuaciones \ref{eq:ondas_cinetica} y \ref{eq:ondas_potencial}) con la soluci\'on general \ref{eq:ondas_propagante} 
+			\[E = T +  V = \frac{1}{2} \int \rho c^2 (\psi'_1 - \psi'_2)^2 dx + \frac{1}{2} \int \lambda (\psi'_1 + \psi'_2)^2 dx.\] Consideremos que $\psi_2 = 0$, es decir que tenemos solo propagaci\'on para un sentido y que la propagaci\'on es arm\'onica, entonces queda 
+			\begin{equation}
+				E(x,t) = \frac{1}{2} \Re(A) \left( \int \rho \omega^2 \Re\left(e^{i (-k x + \omega t)}\right)^2 dx - \int \lambda k^2 \Re\left(e^{i (-k x + \omega t)}\right) dx \right) = \frac{1}{2} \left(\frac{\rho \omega^2}{2k}-\frac{\lambda k^2}{2k}\right) \Re(A) \sen(2(-kx + \omega t))
+			\end{equation}
+			donde vemos que la energ\'ia avanza en el tiempo siguendo una forma arm\'onica, contrario a lo que observamos en las ondas estacionarias (la soluci\'on con una onda propagandose para un sentido y para otro).
+
+\newpage
+\part{Relaciones de dispersi\'on y ondas en medios dispersivos}
+
+\newpage
+\part{Reflexi\'on y Trasmici\'on de ondas}
+Teniendo una soluci\'on propagante arm\'onica \ref{eq:ondas_propagante_armonica} y un cambio repentino de medio (que se puede lograr en una cuerda cambiando la densidad) se genera un proceso de reflexi\'on y transmisi\'on de la onda propagante.
+			
+			Dispongamos el cambio de medio de $x = 0$, en ese punto pedimos que la continuidad de las soluciones de la ecuaci\'on de onda, que implica que la coordenada y su derivada espacial valgan lo mismo, es decir
+			\begin{equation*}
+				\psi_1(x = 0,t) = \psi_2(x = 0,t) \qquad \partial_x \psi_1(x = 0,t) = \partial_x \psi_2(x = 0, t)
+			\end{equation*}
+			y consideramos que tenemos un n\'umero de ondas para cada medio, es decir $k_1$ y $k_2$. De esta forma encontramos que
+			\begin{align*}
+				\psi_1(0,t) = (A + B) e^{i\omega t} = \psi_2(0,t) = C e^{i\omega t} \qquad &\Rightarrow \qquad A + B = C\\
+				\partial_x \psi_1(0,t) =  i k_1 (B - A) = \partial_x \psi_2(0,t) = i k_2 C \qquad &\Rightarrow \qquad A + B = \frac{k_2}{k_1} C
+			\end{align*}
+			con lo que obtenemos que
+			\begin{equation}
+				B = \frac{k_1 - k_2}{k_1 + k_2} A \qquad C = \frac{2 k_1}{k_2 + k_1} A
+				\label{eq:ondas_reflexion_amplitudes}
+			\end{equation}
+			y definimos coeficientes de transmici\'on y reflexi\'on de la siguiente manera
+			\begin{equation}
+				T = \frac{C}{A} = \frac{2 k_1}{k_1 + k_2} \qquad R = \frac{B}{A} = \frac{k_1 - k_2}{k_1 + k_2}
+				\label{eq:ondas_reflexion_coeficientes}
+			\end{equation}
+			con lo que observamos que si $k_1 = k_2$ no hay reflexi\'on, como es esperable, y la transmisi\'on es total. Si el coeficiente $R = -1$, entonces $T = 0$ (observar que se verifica que $T - R = 1$), por lo que toda la se\~nal es reflejada (que es el caso de ondas estacionarias). Estos coeficientes no dependen de la fase o la frecuencia de la onda incidente y adem\'as siempre van a ser reales, por lo que la reflexi\'on y transmisi\'on tendr\'a la misma fase inicial.
+			En una cuerda la impedancia tiene un valor definido $Z = \sqrt{T_0 \rho}$. En general la impedancia de un sistema es compleja, la parte real se denomina resistencia (determina el valor de la respuesta) y la parte imaginaria, reactancia (cambia la fase de la respuesta).
+			
+			Con esta magnitud definida podemos reescribir los coeficientes de transmisi\'on y reflexi\'on de la siguiente forma
+			\begin{equation}
+				R = \frac{Z_1 - Z_2}{Z_1 + Z_2} \qquad T = \frac{2 Z_1}{Z_1 + Z_2}
+				\label{eq:ondas_reflexion_coeficientes_impedancia}
+			\end{equation}
+			ya que $Z = \frac{T_0}{c} = T_0 \frac{k}{\omega}$. Nuevamente vemos que no cambia la fase al reflejarse, y que si $Z_1 = Z_2$ la reflexi\'on es nula (lo que se llama terminaci\'on perfecta).
+			
+			Como ya mencionamos si la reflexi\'on es total estamos en un caso de onda estacionaria. En este caso no existe transmisi\'on, por lo que toda la energ\'ia que llega al borde debe ser devuelta (ya que si no el borde cambiar\'ia su estado din\'amico, empezando a acelerar) y por lo tanto en una onda estacionaria no hay flujo neto de energ\'ia (toda la energ\'ia que vino de la fuente vuelve a la fuente).
+\newpage
+\part{Ondas multidimensionales}
+
+\newpage
+\part{Un \'analisis integratorio: Modelado de ondas en el agua}
+
+En esta parte pareci\'o propicio finalizar ondas mec\'anicas con el ejemplo que m\'as pensamos cuando nos dicen ondas: ondas en el agua, que son, en general dispersivas. La forma de poder encarar este objetivo es analizar la geometr\'ia del movimiento ondulatorio en el agua, analizar sus restricciones para poder atacar la f\'isica del movimiento (O sea de alg\'un modo poder plantear las ecuaciones de Newton que es lo \'unico que sabemos a\'un) para hallar la relaci\'on de dispersi\'on que nos dar\'a el tipo de ecuaci\'on de ondas regente y finalizar con algunos casos extremos que nos permitiran palpar lo que estamos modelizando.
+
+\section{La naturaleza del movimiento ondulatorio}
+
+Supongamos un canal rectangular infinito de altura $h$ donde est\'a el agua. Observamos que en equilibrio la superficie superior es plana y horizontal; hasta que por alguna brisa se excita alg\'un modo y se forma una onda arm\'onica. Aunque lo \'unico que podamos observar sea una onda transversal al plano de la superficie del agua, \textit{toda} la masa de agua esta participando de alg\'un modo en una onda \textbf{longitudinal}. De no ver esto revisarlo ya que es vital entender la onda es longitudinal. Describiremos, como siempre, los desplazamientos del equilibrio con la funci\'on $\psi$.
+
+\paragraph{Propiedades del agua}
+Veamos algunas propiedades del agua que nos ayudaran en nuestro modelo (ya tomamos como sabidas las dadas en el estudio de la cocina de microondas). Desde el punto de vista del movimiento ondulatorio, las propiedades que resaltan son
+
+\begin{enumerate}
+\item Es muy d\'ificil de comprimir
+\item Fluye f\'acilmente
+\end{enumerate}
+
+N\'umericamente la compresibilidad del agua en condiciones est\'andar es de $5.10^{-10} m^2 N{-1}$, adem\'as si pudiesemos apilar toda uan columna de agua de $1 \ m$ entonces la presi\'on resultante (unos $10^4 N m{-2}$) aumentar\'ian su densidad en $0.05 $, o sea nada, por lo que no es osado asumir que en nuestros casos el agua es un fluido \textit{incompresible} (que es muy distinto a incomprensible jaja).\\
+La facilidad con la que un fluido fluye (ohhhhh) viene de su \textit{viscosidad} que proviene del amortiguamiento y por ende llevar\'a a una \textit{atenuaci\'ion} del movimiento ondulatorio (Repasar los cap anteriores!). Supongamos, sin embargo, que nuestro fluido no presente viscosidad. La incompresibilidad va a presentar serias restricciones al movimiento, ya que si en alg\'un momento tenemos una part\'icula que se mueve hacia abajo, la part\'icula circundante debe moverse \textit{al costado} pues sino se apilar\'ian llevando a una compresi\'on del fluido!! Por ende analicemos dicho movimiento
+
+\subsection{Consideraciones generales}
+Supongamos un eje coordenado cartesiano con el eje $y$ vertical, con $y=0$ la superficie, y el eje $z$ representando el avance de la onda (Notemos con un movimiento en dos dimensiones basta pues por simetr\'ia para peque\~nas vibraciones el eje $x$ se comportar\'a de la misma manera al $z$).\\
+Para el plano $yz$ cada part\'icula de agua va a recorrer una trayectoria dada por $r=(y,z)$ que podemos especificar por los desplazamientos $\psi_y(y,z,t)$ y $\psi_z(y,z,t)$, estimemos algunas afirmaciones para movimientos arm\'onicos en la superficie de estas dos funciones:
+
+\begin{enumerate}
+\item El agua se presenta en un estado estacionario, por lo que tanto $\psi_y$ como $\psi_z$ presentan la frecuencia $\omega$ de la onda viajera de la superficie
+\item Es natural pensar que los argumentos de las funciones presenten un t\'ermino $\omega t -kz$ pues son ondas viajeras en \'algun sentido general de todo el fluido. A su vez al no saber de la dependencia con $y$, supongamos que \textit{son independientes de $y$}, o sea que si en un estado de equilibrio tenemos una pila de part\'iculas, \'estas se mueven conjuntamente al haber una perturbaci\'on y aunque la perturbaci\'on avance \textbf{la posici\'on relativa de la pila de part\'iculas respecto a ellas mismas es siempre constante!}.
+\item Si imaginamos el momento en que $\psi_y =0$ entonces ah\'i $\dot{\psi_y}$ es m\'axima y entonces el mayor rearreglo horizontal debe realizarse, por lo que suponemos que $\psi_z$ es m\'aximo por lo que estimamos \textit{$\psi_y$ y $\psi_z$ estan en cuadratura}
+\item Esperamos que el movimiento del agua acrecente su suavidad al ir adentr\'andonos con profundidades mayores, por lo que a distancia infinita no deber\'ia haber dependencia de la distancia por lo que las amplitudes horizontal y verticla estimamos que \textit{s\'olo dependen de $y$}
+\end{enumerate}
+
+Entonces todo esto se peude decir que esperamos que los desplazamientos sean de la pinta:
+
+\begin{equation}
+\psi_y(y,z,t)=A_y(y)\cos{(\omega t -kz)}
+\ \ 
+\psi_z(y,z,t)=A_z(y)\sin{(\omega t -kz)}
+\label{desplazamientos_agua}
+\end{equation}
+
+Notemos que desplazamientos como los dados, se tiene que $\forall y,z,t$ de (\ref{desplazamientos_agua}) vale
+
+\[(\cfrac{\psi_y}{A_y})^2+(\cfrac{\psi_z}{A_z})^2 = 1\]
+
+Por lo que \textbf{para el movimientos suave ondulatorio del agua, cada part\'icula realiza una trayectoria de una elipse con centro en el punto de equilibrio}. Como el desplazamiento del punto de equilibrio no es un par\'ametro medible f\'acilmente, es preferible utilizar la velocidad del fluido para representarlo, por lo que si suponemos peque\~nas oscilaciones podemos decir que 
+
+\begin{equation}
+\begin{array}{c}
+v_y(y,z,t)\approx \dot{\psi_y}=-\omega A_y(y)\sin{(\omega t -kz)} \\
+\\
+v_z(y,z,t)\approx \dot{\psi_z}=\omega A_z(y)\cos{(\omega t -kz)} \\
+\\
+\Updownarrow \\
+\\
+\psi_y,\psi_z \ll y,z \ \ \forall t 
+\end{array}
+\label{velocidad_fluido}
+\end{equation}
+
+Ahora nos tenemos que preguntar luego de todo lo deducido con los dedos, como son las formas de las elipses? aqu\'i es donde entra nuestro conocimiento de las propiedades del agua para imponer restricciones.
+
+\subsection{La incompresibilidad}
+Vamos a deducir las condiciones matem\'aticas que dicen que un fluido es incompresible. Para una superficie $S$ cerrada y \textit{suave}(Decimos una superficie es suave si presenta plano tangente en todo punto y var\'ia uniformemente) que encierra un volumen dado $V= \int_S \rho(x,y,z)dV$ se tiene que un fluido es incompresible si el flujo a trav\'es de $S$ con frontera $\Omega$ es nulo $\forall S=Im\lbrace{T(x_1,x_2) \in \R^3}\rbrace$. Es decir que
+
+\[ \oiint_{\Omega} {\vec{v} \cdot \vec{dS}} =0 \ \ \forall S \]
+
+Y, si recordamos todos el  teorema de Gauss-Ostrogradsky tenemos entonces que $\forall S$ con frontera $\partial S=\Omega$ el campo $\vec{v}$ es $\mathcal{C}^1$ y entonces
+
+\begin{equation}
+\nabla \cdot \vec{v}= \textbf{div} \ v = \cfrac{\partial v_y}{\partial y} + \cfrac{\partial v_z}{\partial z} = 0
+\label{condiciones_incompresibilidad}
+\end{equation}
+
+Johann Carl Friedrich Gauss $(1777 ? 1855$), fue un matem\'atico, astr\'onomo, geodesta, y f\'isico alem\'an que contribuy\'o significativamente en muchos campos, incluida la teor\'ia de n\'umeros, el an\'alisis matem\'atico, la geometr\'ia diferencial, la estad\'istica, el \'algebra, la geodesia, el magnetismo y la \'optica. Considerado \textbf{el pr\'incipe de las matem\'aticas} y \textbf{el matem\'atico m\'as grande desde la antiguedad}, Gauss ha tenido una influencia notable en muchos campos de la matem\'atica y de la ciencia, y es considerado uno de los matem\'aticos que m\'as influencia ha tenido en la Historia. Fue de los primeros en extender el concepto de divisibilidad a otros conjuntos.
+Gauss fue un ni\~no prodigio, de quien existen muchas an\'ecdotas acerca de su asombrosa precocidad. Hizo sus primeros grandes descubrimientos mientras era apenas un adolescente en el bachillerato y complet\'o su magnum opus, Disquisitiones Arithmeticae a los veinti\'un a\~nos $(1798)$, aunque no ser\'ia publicado hasta $1801$. Fue un trabajo fundamental para que se consolidara la teor\'ia de los n\'umeros y ha moldeado esta \'area hasta los d\'ias presentes.
+
+\subsection{La no-viscosidad}
+Como estamos suponiendo que nuestro fluido no presenta viscosidad, entonces como originalmente estaba en reposo podemos afirmar que cualquier perturbaci\'on \textbf{no puede generar momento angular} en nuestro fluido. La rotaci\'on s\'olo puede generarse por fuerzas transversales que no existen en un fluido no viscoso. Por ende podemos decir que la \textit{circulaci\'on} a trav\'es de toda curva debe ser nula. Matem\'aticamente, Sea $C$ una curva suave (presenta recta tangente en todo punto que var\'ia continuamente) siendo borde de una superficie plana $S$, o sea $C=\partial S$ entonces
+
+\[ \oint_{C} {\vec{v} \cdot \vec{dl}} = 0 \ \ \forall \mathcal{C}\]
+
+y aqu\'i si recordamos el Teorema de Stokes, suponiendo nuevamente que $\vec{v}$ es un campo $\mathcal{C}^1$ entonces tenemos la condici\'on que se llama de \textit{irrotabilidad} o de fluido \textbf{irrotacional}
+
+\begin{equation}
+\nabla \times \vec{v} = \textbf{rot} \ v = \cfrac{\partial v_y}{\partial z} - \cfrac{\partial v_z}{\partial y} = 0
+\label{condiciones_irotabilidad_fluido}
+\end{equation}
+
+Sir George Gabriel Stokes, primer Baronet $(1819-1903)$ fue un matem\'atico y f\'isico irland\'es que realiz\'o contribuciones importantes a la din\'amica de fluidos (incluyendo las ecuaciones de Navier-Stokes), la \'optica y la f\'isica matem\'atica (incluyendo el teorema de Stokes). Fue secretario y luego presidente de la Royal Society de Inglaterra.
+
+\subsection{La forma de las elipses}
+Ahora apliquemos las relaciones (\ref{condiciones_incompresibilidad}) y (\ref{condiciones_irotabilidad_fluido}) halladas antes y algunas otras condiciones de contorno a nuestras expresiones (\ref{velocidad_fluido}) para $v_y$ y $v_z$ lo que nos dara informaci\'on de las amplitudes. Aplicando (\ref{condiciones_incompresibilidad}) tenemos que:
+
+\[ -\omega \cfrac{d {A_y}}{dy}(y)\sin(\omega t -kz) - k \omega A_z(y)\sin(\omega t -kz) =0
+\]
+
+Y cancelando el factor $\omega \sin( \omega t -kz)$ tenemos
+
+\begin{equation}
+ \Longrightarrow \cfrac{d {A_y}}{dy}(y) -k A_z(y) =0 
+\end{equation}
+
+An\'alogamente con (\ref{condiciones_irotabilidad_fluido}) obtenemos
+
+\begin{equation}
+ \cfrac{d {A_z}}{dy}(y) -k A_y(y) =0 
+\end{equation}
+
+Suponiendo las amplitudes $A_y,A_z \in \mathcal{C}^2$ entonces podemos derivar la primera ecuaci\'on con respecto a $y$ y reemplazar la segunda en la primera obteniendo
+
+\[\cfrac{d^2A_y}{dy^2}-k^2A_y=0\]
+
+\[\Longrightarrow A_y(y)=A'e^{ky}+B'e^{-ky}\]
+
+Y ahora nos falta hallar nuestras condiciones de contorno para $A'$ y $B'$. En la superficie $y=0$ tenemos que:
+
+\[\psi_y(0,z,t)=\left(A'+B'\right)\cos(\omega t -kz)\] 
+
+Entonces llamando a $A_y(0)=A=A'+B'$. Por otro lado cuando $y=-h$ en el fondo del canal no puede haber movimiento vertical solo lateral por lo que 
+
+\[A_y(-h)=0=A'e^{-hk}+B'e^{kh}\]
+
+Y entonces resolvemos este sistema de dos ecuaciones con dos inc\'ognitas
+
+\[
+\begin{array}{rcl}
+A' & = & \cfrac{Ae^{kh}}{e^{kh}-e{-kh}} \\
+B' & = & -\cfrac{Ae^{-kh}}{e^{kh}-e{-kh}} 
+\end{array}
+\]
+
+Lo que nos lleva a la ecuaci\'on de la amplitud
+
+\begin{equation}
+A_y(y)=\cfrac{A\left[e^{k(h+y)}-e^{-k(h+y)}\right]}{e^{kh}-e{-kh}}=\cfrac{A\sinh\left[k(h+y)\right]}{\sinh{kh}}
+\label{amplitud_y_fluido}
+\end{equation}
+\begin{equation}
+A_z(y)=\cfrac{A\left[e^{k(h+y)}+e^{-k(h+y)}\right]}{e^{kh}-e{-kh}}=\cfrac{A\cosh\left[k(h+y)\right]}{\sinh{kh}}
+\label{amplitud_z_fluido}
+\end{equation}
+
+Y eso nos indica que la forma de las elipses es mas horizontal y achatadas, factor que va aumentando al aumentar la profundidad como funci\'on de $\tanh[k(h+y)]$ llegando a que en el fondo el movimiento es s\'olo horizontal con el agua yendo de adelante para atr\'as.No obstante en fluidos viscosos en general existe una "capa l\'imite" sobre la cual pasa este efecto y all\'i hay v\'ortices horizontales que son los responsables de las famosas crestas del mar en la arena de una playa.
+
+\subsection{Casos extremos}
+
+Finalmente podemos y vale la pena remarcar los dos casos extremos de movimientos del agua con profundidades grandes y peque\~nas
+
+\paragraph{Los movimientos en aguas profundas}
+Si el movimiento ocurre en aguas mucho mas profundas que la longitud de onda ($kh \gg 1$) y a nosotros nos interesa el agua de la superficie ($\vert y \vert \ll h$) entonces podemos usar
+
+\[\sinh{kh}\approx \frac{1}{2}e^{kh}\]
+\[\sinh[k(h+y)]\approx \cosh[k(h+y)] \approx \frac{1}{2}e^{kh}\]
+
+Entonces ahora tenemos que
+
+\[
+\begin{array}{rcl}
+\psi_y(y,z,t) & \approx & Ae^{yk}\cos[ \omega t -kz] \\
+\psi_z(y,z,t) & \approx & Ae{yk}\sin[ \omega t -kz] 
+\end{array}
+\]
+Entonces podemos ver que ahora las elipses se tornaron circunferencias cuyo di\'ametro decrece exponencialmente al ir aumentando la profundidad y el movimiento es casi nulo a profundidades mayores a $\frac{1}{k}$ porlo que \textit{en aguas profundas las ondas no perturban el agua a mas de una longitud de onda de la superficie} que es aprovechado muy bien por las industrias petroleras al hacer sus estaciones de extracci\'on mar\'itimas.
+
+\paragraph{Aguas poco profundas}
+En el otro extremo tenemos las aproximaciones
+
+\[\sinh{kh} \approx kh \]
+\[\sinh[k(h+y)] \approx k(h+y)\]
+\[\cosh[k(h+y)] \approx 1\]
+
+Y entonces tenemos que los desplazamientos seran del tipo 
+
+\[
+\begin{array}{rcl}
+\psi_y(y,z,t) & \approx & A(1+\frac{y}{h})\cos[ \omega t -kz] \\
+\psi_z(y,z,t) & \approx & A\frac{1}{kh}\sin[ \omega t -kz] 
+\end{array}
+\]
+
+Y ahora la amplitud horizontal es m\'as o menos la misma a todas profundidades mientras que la amplitud vertical decae linealmente con la profundidad por lo que \textit{las ondas de aguas poco profundas resultan ser casi del todo longitudinales} con una masa de agua que simplemente empuja adelante y hacia atr\'as su alrededor.
+
+\section{La relaci\'on de dispersi\'on}
+
+
+\end{document}

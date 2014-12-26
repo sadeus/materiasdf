@@ -1,0 +1,670 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+%Margenes
+\addtolength{\voffset}{-1in}
+\addtolength{\hoffset}{-1in}
+\addtolength{\textheight}{20pt}
+\addtolength{\textwidth}{2in}
+
+%Numeración de ecuaciones
+\numberwithin{equation}{section}
+
+\title{Notas de Física 3}
+\author{S. Schiavinato}
+\date{6/8/2012}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\section{Electrostática}
+\label{sec:e_estatica}
+A partir de experiencias con cuerpos con ciertas propiedades, que denominamos carga eléctrica, encontramos que la interacción (fuerza) entre dos cuerpos puntuales se puede describir como (que recibe el nombre de ley de Coulomb)
+\begin{equation}
+    \textbf{F} = \frac{1}{4\pi\varepsilon_0}\frac{q\,q'(\textbf{r}-\textbf{r}')}{|\textbf{r}-\textbf{r}'|^{3}},
+    \label{eq:coulomb}
+\end{equation}
+donde $q$ es la carga del cuerpo ($[q] = \text{C (Coulombs)}$) que sufre la fuerza y $q'$ la carga que produce la fuerza (podemos decir eso ya que $F$ es la fuerza en un cuerpo debido a otro), por lo que siguiendo la misma notación $\textbf{r}$ es la posición del cuerpo que siente la fuerza y $\textbf{r}'$ del que produce la fuerza.  De ahora en adelante las coordenadas primadas son generadoras de fuerza, que llamaremos puntos fuentes, y las no primadas sienten la fuerza que describiremos, que llamaremos puntos campos. La constante $\varepsilon_0$ se llama permitividad del vacío, que viene determinada por el sistema de medición (y veremos como se relaciona con las magnitudes mecánicas). Para dar una noción de magnitud, la permitividad del vacío vale $8,85\times10^{-12} \; \text{C}^2\text{N}^{-1} \text{m}^{-2}$ (comúnmente se usa F$\cdot$m$^-1$, es decir Faradio por metro)
+
+Con esa ley física definimos otra identidad independiente de la carga en el punto campo, que llamamos campo eléctrico $\textbf{E}$ y se define así
+\begin{equation}
+    \textbf{F} = q \textbf{E}.
+    \label{eq:e_campo}
+\end{equation}
+por lo que el campo eléctrico de un cuerpo puntual cargado es
+\begin{equation}
+    \textbf{E} = \frac{1}{4\pi\varepsilon_0} \frac{q (\textbf{r} - \textbf{r}')}{\| \textbf{r} - \textbf{r}' \|}.
+    \label{eq:e_campo_punto}
+\end{equation}
+Con esa definición, y manteniendo $\textbf{r}'$ constante (es decir el cuerpo fuente estático), podemos calcular propiedades vectoriales del campo eléctrico. Es fácilmente observable que $\nabla \times \textbf{E} = 0$, ya que el campo eléctrico es un campo vectorial radial. Así, en virtud de los teoremas del análisis vectorial, el campo eléctrico es una magnitud conservativa (no depende de la curva al hacer una integral curvilínea, solo depende de las posiciones inicial y final). También el teorema nos dice que existe una identidad $\varphi$, denominada potencial, (también notado $V$) escalar tal que $\textbf{E}(\textbf{r}) = - \nabla \varphi(\textbf{r})$ y por lo tanto verifica que
+\begin{equation}
+    \varphi(\textbf{r}_f) - \varphi(\textbf{r}_i)  = - \int_C \textbf{E} \cdot
+    \mathrm{d}\textbf{l},
+    \label{eq:e_potencial}
+\end{equation}
+y por integración, asignando el potencial de referencia 0 al infinito, obtenemos el potencial de un cuerpo puntual
+\begin{equation}
+    \varphi(\textbf{r}) =  \frac{1}{4\pi\varepsilon_0} \frac{q}{\| \textbf{r} - \textbf{r}' \|}.
+    \label{eq:e_potencial_punto}
+\end{equation}
+Es preciso notar que el campo eléctrico y el potencial de un cuerpo puntual divergen en la posición del punto, por lo que no tiene sentido hablar de dicho valor (considerando que de por si un punto de una abstracción útil pero irrealista). 
+
+Ahora para sistemas extensos, compuesto por varios puntos (diferenciando en el caso continuo y discreto), podemos básicamente sumar el campo de cada punto por separado. Esto se denomina principio de superposición, que es consistente matemáticamente con la ley de Coulomb. De esa forma para un cuerpo continuo (uno discreto simplemente es una suma de cargas) el campo eléctrico queda de la siguiente manera
+manera
+\begin{equation}
+    \textbf{E}(\textbf{r}) = \frac{1}{4\pi\epsilon_0}\int_\Omega \frac{\rho(\textbf{r}') (\textbf{r}-\textbf{r}')}{\|\textbf{r}-\textbf{r}'\|^3} dV',
+    \label{eq:e_campo_continuo}
+\end{equation}
+y de esa forma el potencial eléctrico queda 
+\begin{equation}
+    \varphi(\textbf{r}) = \frac{1}{4\pi\epsilon_0}\int_\Omega \frac{\rho(\textbf{r})}{\|\textbf{r} - \textbf{r}'\|^3} dV'.
+    \label{eq:e_potencial_continuo}
+\end{equation}
+Acá es necesario notar que la distribución de cargas no debe alcanzar el infinito, que es la referencia del potencial, porque si es así la integral no converge. La función $\rho$ se denomina densidad volumétrica de carga, que se puede transformar en densidad superficial (notado por $\sigma$) o en una carga puntual por medio de la delta de Dirac  $\delta(x)$ \cite{griffiths} que verifica la relación $\displaystyle\int_a^b f(x) \delta(x) dx = f(0)$ (si y solo si $0 \in [a,b]$). Finalmente esa integral quedará como si fuese sobre una superficie (o como una carga puntual).
+
+Calculamos de la expresión \ref{eq:e_campo_continuo} su divergencia, utilizando que $\nabla \cdot \left(\frac{\textbf{r}}{\|\textbf{r}\|^3}\right) = 4\pi\delta(\textbf{r})$, y obtenemos que finalmente la siguiente expresión
+\begin{equation}
+    \nabla \cdot \textbf{E}(\textbf{r}) = \frac{\rho(\textbf{r})}{\varepsilon_0}
+    \label{eq:e_gauss_dif}
+\end{equation}
+expresión que conocemos como ley de Gauss (diferencial o local) que podemos transformar a una expresión integral considerando el teorema de Gauss para campos vectoriales, que dice que \[\iiint_{\Omega} \nabla \cdot \textbf{E} dV = \iint_{\partial \Omega} \textbf{E} \cdot \textbf{n} dS\] y de ahí obtenemos que 
+\begin{equation}
+    \iint_{\partial \Omega} \textbf{E}(\textbf{r}) \cdot \textbf{n} dS = \frac{1}{\varepsilon_0} \iiint_{\Omega} \rho(\textbf{r}') dV'.
+    \label{eq:e_gauss_int}
+\end{equation}
+Ahora reemplazamos en la expresión diferencial el potencial eléctrico, considerando el operador laplaciano ($\displaystyle\nabla^2 = \sum_{i}^3 \frac{d^2}{dx_i^2}$), obteniendo
+\begin{equation}
+    \nabla^2 \varphi(\textbf{r}) = -\frac{\rho(\textbf{r})}{\varepsilon_0}
+    \label{eq:e_poisson}
+\end{equation}
+que es una ecuación de Poisson, que rápidamente se observa que la expresión del potencial eléctrico verifica dicha. En caso que de $\rho = 0$ se obtiene una ecuación de Laplace, es decir
+\begin{equation}
+    \nabla^2 \varphi(\textbf{r}) = 0
+    \label{eq:e_laplace}
+\end{equation}
+que es de vital importancia para problemas electrostáticos con conductores (básicamente los más útiles). Ambas ecuaciones nos se resolverán en este curso, quedarán para cursos más avanzados.
+
+\subsection{Expansión multipolar}
+\label{sec:e_multipolar}
+Teniendo dos cargas eléctricas de valor absoluto $q$, la negativa se ubica en $\textbf{r}'$ y la positiva en $\textbf{r}' + \textbf{l}$, podemos ver que el campo eléctrico es de la forma \[\textbf{E}(\textbf{r}) = \frac{q}{4\pi\varepsilon_0} \left( \frac{\textbf{r} -  \textbf{r}' - \textbf{l}}{\|\textbf{r} - \textbf{r}' + \textbf{l}\|} - \frac{ \textbf{r} - \textbf{r}'}{\| \textbf{r} - \textbf{r}'\|} \right),\] pero es complicado de interpretar como es la forma de ese campo. Para eso consideramos la expansión en serie (de Taylor) al orden mínimo no nulo, considerando que $\textbf{l}$ es mucho menor que $\textbf{r} - \textbf{r}'$. Para eso primero efectuamos la expansión en serie de \[\|(\textbf{r} - \textbf{r}') - \textbf{l}\|^{-3} = ((\textbf{r} - \textbf{r}')^2 - 2 (\textbf{r} - \textbf{r}') \cdot \textbf{l} + \textbf{l}^{-\frac{3}{2}} = \|\textbf{r} - \textbf{r}'\|^{-3} \left(1 - 2 \frac{2(\textbf{r} - \textbf{r}')}{\|\textbf{r} - \textbf{r}'\|^2} \cdot \textbf{l} + \frac{\textbf{l}^2}{\|\textbf{r} - \textbf{r}'\|^2}\right)^{-\frac{3}{2}}\] y  ahora encontramos la expansión en serie \[\|\textbf{r} - \textbf{r}' - \textbf{l}\|^{-3} \approx \|\textbf{r} - \textbf{r}'\|^{-3} \left(1 + \frac{3 (\textbf{r} - \textbf{r}')}{\|\textbf{r} - \textbf{r}'\|^2} \cdot  \textbf{l} + \cdots  \right).\] De esa forma el campo eléctrico de dos cargas separadas queda
+\begin{equation}
+    \textbf{E}(\textbf{r}) = \frac{q}{4\pi\varepsilon_0} \left(\frac{3 (\textbf{r} - \textbf{r}') \cdot \textbf{l}}{\|\textbf{r} - \textbf{r}'\|} (\textbf{r} - \textbf{r}') - \frac{\textbf{l}}{\|\textbf{r} - \textbf{r}'\|^3} + \cdots \right).
+    \label{eq:e_campo_dipolo_real}
+\end{equation}
+Ahora definimos el producto entre la carga y la distancia como momento dipolar $\textbf{p}$:
+\begin{equation}
+    \textbf{p} = q\textbf{l}.
+    \label{eq:e_dipolo}
+\end{equation}
+En caso de que $\textbf{l} \to \textbf{0}$, pero $q \to \infty$ (lo que hace $\textbf{p}$ finito), se obtiene un dipolo puntual, que no tiene dimensión espacial ni carga neta. De ese modo el campo eléctrico de un dipolo puntual solo tiene componentes lineal en $\textbf{p}$, es decir que es igual a
+\begin{equation}
+    \textbf{E}(\textbf{r}) = \frac{1}{4\pi\varepsilon_0} \left(\frac{3 (\textbf{r} - \textbf{r}') \cdot \textbf{p}}{\|\textbf{r} - \textbf{r}'\|^5}(\textbf{r} - \textbf{r}') - \frac{\textbf{p}}{\|\textbf{r} - \textbf{r}'\|^3}\right),
+    \label{eq:e_dipolo_puntal}
+\end{equation}
+El potencial eléctrico (se puede probar integrando o aplicando a la fórmula \ref{eq:e_potencial} la expansión en serie de, en este caso, $\|\textbf{r} - \textbf{r}' - \textbf{l}\|^{-1}$) queda 
+\begin{equation}
+    \varphi = \frac{1}{4\pi\varepsilon_0}\frac{\textbf{p}\cdot(\textbf{r} -
+    \textbf{r}')}{\|\textbf{r} - \textbf{r}'\|}
+    \label{eq:e_potencial_dipolo_puntual}
+\end{equation}
+
+Volviendo sobre la cuestión de la expansión en serie del potencial, consideramos ahora una distribución arbitraria de cargas (o densidad volumétrica de carga) usando la ecuación \ref{eq:e_potencial_continuo} nos queda lo siguiente
+\begin{equation}
+    \varphi(\textbf{r}) \approx
+    \frac{1}{4\pi\varepsilon_0}\left(\frac{1}{\|\textbf{r}\|}\int_\Omega \rho(\textbf{r}') dV' +
+    \frac{\textbf{r}}{\|\textbf{r}\|^3} \cdot \int_\Omega \textbf{r}'\rho(\textbf{r}') dV' +
+    \sum_{i = 1}^3 \sum_{j = 1}^3 \frac{x_i x_j}{2 \|\textbf{r}\|^5}\int_\Omega (3 x_i' x_j' - \delta_{ij} \|\textbf{r}'\|^2) dV' + \dots\right),
+    \label{eq:e_potencial_multipolar}
+\end{equation}
+donde la primer integral es el monopolo $Q$ (o carga total), la segunda es el momento dipolar $\textbf{p}$ (como si fuese un dipolo puntual) y el tercer término  se denomina momento cuadrupolar $\hat{Q}$ (es un tensor de rango 2)  donde $\delta_{ij}$ es la delta de Kronecker y $x$ son las coordenadas cartesianas del punto campo o fuente. El vector $\textbf{r}$ corresponde a las coordenadas esféricas, respecto a un origen cercano (tal que valga la aproximación) a la distribución acotada de cargas.
+
+El campo eléctrico se considera, en este curso, del momento monopolar y dipolar, por lo que ya vimos como se escribe.
+
+\subsection{Energía electrostática}
+\label{sec:e_energia}
+Para resolver problemas mecánicos hacemos uso de la energía, que en el caso electrostático es debido al campo eléctrico, el cual es conservativo (independiente del camino). La energía (potencial) de una distribución de cargas la definimos como el trabajo necesario para traer cada elemento desde el infinito, de forma cuasiestacionaria para no tocar problemas electrodinámicos, hasta su posición final. De esa forma, ese trabajo queda \[W = \int_{C} \textbf{F} \cdot d\textbf{l} = q \int_A^B \textbf{E} \cdot d\textbf{l} = q (\varphi(B) - \varphi(A)),\] ya que $\textbf{E} = \nabla \varphi$. Como dijimos se mueve la partícula de forma estacionaria, por lo que a todo momento la fuerza que se le aplica es igual a $q\textbf{E}$ (y entonces el trabajo es igual al presentado arriba). Ahora considerando que traemos la partícula del infinito (donde hay potencial nulo) el trabajo queda
+\begin{equation}
+    W = U = q \varphi(\textbf{r}_f)
+    \label{eq:e_trabajo_particula}
+\end{equation}
+y para una distribución de cargas puntales queda \[U = \frac{1}{2} \sum_{j = 1}^m \sum_{k = 1}^m \frac{q_j q_k}{4\pi\varepsilon_0\|\textbf{r}_j - \textbf{r}_k\|}\] (no se considera la autoenergía, la energía por el campo propio) que se puede simplificar en lo siguiente observado que parte de la expresión anterior es un potencial
+\begin{equation}
+    U = \frac{1}{2} \sum_{j = 0}^m q_j \sum_{k = 0} \frac{q}{4\pi\varepsilon_0 \|\textbf{r}_j - \textbf{r}_k\|} = \frac{1}{2} \sum_{j = 0}^m q_j \varphi_j
+    \label{eq:e_energia_discreta}
+\end{equation}
+Ahora, siguiendo la idea del paso al continuo anteriormente utilizada, para una distribución continúa de cargas obtenemos
+\begin{equation}
+    U = \frac{1}{2} \int_{\Omega} \varphi(\textbf{r}) \rho(\textbf{r}) dV.
+    \label{eq:e_energia_continuo}
+\end{equation}
+Finalmente podemos encontrar una expresión de la energía solamente dependiente del campo eléctrico. Reemplazando $\rho(\textbf{r}) = \varepsilon_0 \nabla \cdot \textbf{E}(\textbf{r})$ en la expresión \ref{eq:e_energia_continuo} se obtiene (usando la regla del producto para la divergencia) \[U = \frac{\varepsilon_0}{2}\int_{\Omega} \nabla \cdot \textbf{E}(\textbf{r}) \varphi(\textbf{r}) dV = \frac{\varepsilon_0}{2}\left(\oint_{\partial \Omega} \varphi(\textbf{r}') \textbf{E}(\textbf{r}) \cdot \textbf{n} dS +  \int_{\Omega} \textbf{E}(\textbf{r}) \cdot (\nabla \varphi(\textbf{r})) dV\right).\] Ahora $\nabla\varphi \cdot \textbf{E} = \|\textbf{E}\|^2$ y si se hace un análisis cuidadoso la integral anterior da lo mismo sin importar el cuerpo $\Omega$ de integración (mientras contenga a la distribución), por lo que integramos en todo el espacio, eliminando la integral de superficie (ya que el potencial es en el peor de los casos proporcional a $r^{-1}$ y el campo eléctrico $r^{-2}$ y el área de la esfera es proporcional a $r^{-2}$). Todo eso queda así
+\begin{equation}
+    U = \frac{\varepsilon_0}{2}\int_{\forall \textbf{r}} \|\textbf{E}\|^2(\textbf{r}) dV.
+    \label{eq:e_energia_campo}
+\end{equation}
+Definimos con la ecuación \ref{eq:e_energia_campo} la densidad volumétrica de energía $u$ que es igual a
+\begin{equation}
+    u = \frac{\varepsilon_0}{2} \|\textbf{E}\|^2.
+    \label{eq:e_energia_densidad}
+\end{equation}
+Esto abre el debate si el campo eléctrico contiene energía o no, que tiene respuesta recién para ondas electromagnéticas (sección \ref{sec:ec_maxwell})
+\subsection{Conductores}
+Un material conductor es compuesto por una estructura cristalina con un gas de electrones libres, que no tienen interacción con ningún núcleo. Por eso al estar expuesto a un campo eléctrico los electrones libres se reorganizan debidamente y en situación de reposo el conductor tiene en su interior campo eléctrico nulo (de lo contrario los electrones se moverían todavía). Al ser el campo interior nulo el potencial es constante, entonces un conductor es una región equipotencial. Nuevamente esto es el caso ideal, en el caso real la red cristalina afecta a los electrones libres, pero con interacciones casi despreciables. 
+
+Entonces, considerando que solo hay carga superficial en un conductor, el potencial producido por un ensambles de conductores en una posición $\textbf{r}$ es
+\begin{equation}
+    \varphi(\textbf{r}) = \frac{1}{4\pi\varepsilon_0} \sum_i \int_{\partial \Omega_i} \frac{\sigma_i}{\| \textbf{r} - \textbf{r}_i \|} dS = \frac{1}{4\pi\varepsilon_0} \sum_i q_i \int_{\partial \Omega_i} \frac{\sigma_i'}{\|\textbf{r} - \textbf{r}_i\|} dS,
+    \label{eq:e_potencial_conductores}
+\end{equation}
+dónde $\sigma'_i = \dfrac{\sigma_i}{q_i}$ (densidad de carga normalizada). Esa integral queda muy complicada de resolver, pero se puede simplificar el problema considerando que los conductores son equipotenciales:
+\begin{equation}
+    \varphi_j = \frac{1}{4\pi\varepsilon_0} \sum_i \left( \int_{\Omega_i} \frac{\sigma_i'}{\| \textbf{r}_j - \textbf{r}_i \|} dS \right) q_j = \frac{1}{4\pi\varepsilon_0} \sum_i p_{ij} q_j,
+    \label{eq:e_potencial_conductores_coeff}
+\end{equation}
+donde el término $p_{ij}$ se llaman coeficientes de potencial (que sólo depende de la forma geométrica de los conductores, ya que la distribución de la carga solo depende de la carga), y se puede probar que $p_{ij} = p_{ji}$. Con todo esto nos queda que la energía del ensamble de conductores es 
+\begin{equation}
+    U = \frac{1}{2} \sum_i q_i V_i.
+    \label{eq:e_energia_conductores}
+\end{equation}
+Podemos agregar una magnitud más, que se observa al notar que $p_{ij}$ forma una matriz de $n \times n$ (siendo $n$ la cantidad de conductores). Dicha magnitud es la inversa de la matriz $P = (p_{ij})$ que notamos $C = (c_{ij})$ y llamamos coeficientes de capacitancia. Por definición esos coeficientes verifica (nota que $c_{ij} = c_{ji}$) que
+\begin{equation}
+    q_j = \sum_i c_{ij} \varphi_i
+    \label{eq:e_potencial_conductores_coeff_capacidad}
+\end{equation}
+\subsubsection{Capacitores}
+Cuando se tiene solamente dos conductores con la misma carga absoluta (una positiva y otra negativa) la ecuación \ref{eq:e_potencial_conductores_coeff} queda muy sencilla
+\begin{equation}
+    \left\{ \begin{array}{l} \varphi_1 = p_{11} q - p_{12} q \\ \varphi_2 = p_{21} q - p_{22} q \end{array}\right.
+\end{equation}
+y tomamos la diferencia de potencial $\Delta \varphi = \varphi_1 - \varphi_2 = (p_{11} - p_{12} - p_{21} + p_{22})q$, y definimos la capacitancia como $C = \dfrac{q}{\Delta \varphi}$, lo que obtenemos es que dicha magnitud es
+\begin{equation}
+    C = \frac{1}{p_{11} + p_{22} - 2 p_{12}} = \frac{c_{11} c_{22} - c_{12}^2}{c_{11} + c_{22} + 2 c_{12}}
+    \label{eq:e_capacitancia}
+\end{equation}
+La capacitancia depende solamente de factores geométricos y se puede calcular a partir de la ecuación de Poisson o la ley de Gauss. 
+
+Considerando la expresión de la energía de \ref{eq:e_energia_conductores} obtenemos que la energía para todo capacitor es
+\begin{equation}
+    W = \frac{1}{2} q \Delta \varphi = \frac{1}{2} C \Delta \varphi^2                
+    \label{eq:eng_capacitor}
+\end{equation}
+\subsection{Dieléctricos}
+Un dieléctrico ideal no tiene electrones libres y no se puede modificar su estructura electrónica. En esta sección analizaremos el caso no ideal, dónde se cambia la estructura electrónica de las moléculas (en general los dieléctricos son moleculares, no estructuras cristalinas) y se inducen dipolos. También veremos un caso especial, los ferroeléctricos o electretes, que tienen los dipolos establecidos sin inducción.
+
+En caso de tener un medio dieléctrico afectado por un campo eléctrico, como ya mencionamos, se polariza y genera un campo (aún siendo en su totalidad neutro) por lo que es necesario utilizar un nuevo modelo para poder explicarlo totalmente. Entre los diversos experimentos que efectuó Michael Faraday encontró que si si tiene un capacitor con vacío entre sus placas se lograba cargarlo con una carga $q_0 = C_0 \Delta \varphi$ y con un dieléctrico se lograba una cargar a $q = k_e q_0$, es decir proporcional a la carga en vacío con proposición dependiente del material dispuesto.
+
+El modelo más simple radica en considerar que se induce una carga sobre la superficie del dieléctrico, por lo que la carga total $q = q_0 - q_{\text{ind}}$ por lo que queda $q_{\text{ind}} = q_0 (1 + k_{e}^{-1})$, por lo que la ley de Gauss queda \[\iint_{S} \textbf{E}(\textbf{r}) \cdot \textbf{n} dS = \frac{q}{\varepsilon_0} = \frac{q}{k_e \varepsilon_0}\] y consideramos crear un vector auxiliar que contenga a $k_e \varepsilon_0 = \varepsilon$ (permitivadad del material) denominado desplazamiento eléctrico $\textbf{D}$:
+\begin{equation}
+    \textbf{D} = \varepsilon \textbf{E},
+    \label{eq:e_desplazamiento_simple}
+\end{equation}
+y la ley de Gauss se simplifica al considerar únicamente la carga prescrita y no la carga inducida.
+
+Ahora el modelo más general radica en aplicar un análisis estadístico sobre las propiedades eléctricas de la materia, llevando lo microscópico a lo macroscópico, que es lo que nos interesa. Tomamos un elemento diferencial (para la escala macroscópica) de volumen $dV$ y sumamos todos los dipolos eléctricos (puntuales para nuestro problema) $\textbf{p}_j$ en el diferencial de potencial siguiente \[d\varphi(\textbf{r}) = \frac{1}{4\pi\varepsilon_0}\sum_i \frac{\textbf{p}_j \cdot (\textbf{r} - \textbf{r}_j)}{\|\textbf{r} - \textbf{r}_j\|} \approx \frac{1}{4\pi\varepsilon_0}\sum_i \frac{\textbf{p}_j \cdot (\textbf{r} - \textbf{r}')}{\|\textbf{r} - \textbf{r}'\|},\] considerando que el volumen $dV$ es tan pequeño que es aproximadamente considerar la posición de todos los dipolos como la posición central de $dV$. Definimos a la densidad volumétrica de dipolos eléctricos como vector polarización $\textbf{P}$, es decir que
+\begin{equation}
+    \textbf{P} = \lim_{\Delta V \to 0}\frac{\Delta \textbf{p}}{\Delta V}
+    \label{eq:e_polarizacion}
+\end{equation}
+Es necesario remarcar que la magnitud anterior es de carácter estadístico, solo es válida a nivel macroscópico el límite. Con eso el potencial total (integrando el diferencial) queda \[\varphi(\textbf{r}) = \frac{1}{4\pi\varepsilon_0}\int_{\Omega} \textbf{P}(\textbf{r}') \cdot \frac{(\textbf{r} - \textbf{r}')}{\|\textbf{r} - \textbf{r}'\|^3} dV' = \frac{1}{4\pi\varepsilon_0}\int_{\Omega} \textbf{P}(\textbf{r}') \cdot \left[\nabla \cdot \left(\frac{1}{\|\textbf{r} - \textbf{r}'\|}\right)\right] dV',\] y usando la regla del producto para la divergencia nos queda que 
+\begin{equation}
+    \varphi(\textbf{r}) = \frac{1}{4\pi\varepsilon_0} (\oint_{\partial \Omega} \frac{\textbf{P} \cdot \textbf{n}}{|\textbf{r}-\textbf{r}'|} dS' + \int_{\Omega} \frac{-\nabla \cdot \textbf{P}}{|\textbf{r}-\textbf{r}'|} dV')
+\end{equation}
+dónde interpretamos que $\rho_p = - \nabla \cdot \textbf{P}$ es la densidad volumétrica de carga de polarización y $\sigma_p = \textbf{P} \cdot \textbf{n}$, densidad superficial de carga de polarización. Ambas son fuentes del vector $E$ producido por el dieléctrico. Esta transformación matemática se puede fundamentar analizando cada $dV$ por separado en caso de presencia de un campo eléctrico, pero una prueba bastante importante de que estamos en lo correcto es que la carga del dieléctrico es nula, ya que \[q = \int_{\Omega} - \nabla \cdot \textbf{P} dV + \oint_{\partial \Omega} \textbf{P} \cdot \textbf{n} dS = 0,\] por el teorema de Gauss de campos vectoriales. Si es un electrete, ambas expresiones generan cargas libres (como las usadas en la ley de Gauss), pero el electrete en general es neutro.
+
+Ahora podemos concluir con la ley de Gauss generalizada, partiendo de la ecuación \ref{eq:e_gauss_dif}, con $\rho = \rho_{\text{libre}} + \rho_p$, que nos queda que \[\varepsilon_0 \nabla \cdot \textbf{E}(\textbf{r}) = \rho(\textbf{r}) = \rho_{\text{libre}}(\textbf{r}) - \nabla \cdot \textbf{P}(\textbf{r}),\] y acá consideramos que 
+\begin{equation}
+    \textbf{D} = \varepsilon_0\textbf{E} + \textbf{P}
+    \label{eq:e_desplazamiento}
+\end{equation}
+por lo que la ley de Gauss queda
+\begin{equation}
+    \nabla \cdot \textbf{D}(\textbf{r}) = \rho(\textbf{r})
+    \label{eq:e_gauss_dif_dielectricos}
+\end{equation}
+y la forma integral es idéntica a la ecuación \ref{eq:e_gauss_int} pero con el vector $\textbf{D}$.
+
+Ahora agregamos dos ecuaciones que relacionan el campo eléctrico con los vectores auxiliares que consideramos anteriormente, que llamamos relaciones constitutivas (que pueden ser encontradas de forma experimental) para medios lineales
+    \begin{align}
+        \textbf{D} = \varepsilon \textbf{E}, \\
+        \textbf{P} = \chi \textbf{E},
+        \label{eq:e_relaciones_constitutivas}
+    \end{align}
+    dónde $\varepsilon$ es la permitividad del medio (que puede ser un tensor o dependiente de la magnitud del campo eléctrico) y $\chi$ es la susceptibilidad eléctrica que verifica $\chi = \varepsilon - \varepsilon_0$. En caso de tener un medio no lineal, la respuesta depende de formas más complicadas, pero puede ser reducido a una expansión en serie de Taylor.
+
+    Para resolver problemas con muchos dieléctricos y otros materiales tenemos que saber las condiciones de frontera para el campo $\textbf{E}$ y el campo $\textbf{D}$. Para eso analizamos el caso para dos dieléctricos o un dieléctrico y un conductor en contacto, y en la interfaz hay una densidad de carga $\sigma$ prescrita (externa a los medios). Tomamos una superficie cerrada cilíndrica con tapas de superficie $\Delta S$ y el largo es despreciable (es más se hará tender a cero) que tenga medio volumen interior inmerso en cada medio, con lo que la carga encerrada $q = \sigma \Delta S + (\rho_1 + \rho_2) \frac{V}{2}$. El volumen $V$ lo podemos despreciar, haciéndolo tender a cero, por lo que la carga queda $q = \sigma \Delta S$ y por ley de Gauss nos queda que \[\textbf{D}_2 \cdot \textbf{n}_2 \Delta S + \textbf{D}_1 \cdot \textbf{n}_1 \Delta S = \sigma \Delta S\] entonces queda que
+    \begin{equation}
+        (\textbf{D}_2 - \textbf{D}_1) \cdot \textbf{n}_2 = \sigma,
+        \label{eq:e_desplazamiento_contorno}
+    \end{equation}
+    es decir si no hay carga superficial prescrita en la interfaz la componente normal del campo $\textbf{D}$ es continua al cambiar de medio. Ahora, seguimos en electrostática, por lo que $\nabla \times \textbf{E} = \textbf{0}$, por lo que si tomamos una curva que contenga dos partes normales y dos tangenciales a la interfaz la integral curvilínea de $\textbf{E}$ da 0. Los elementos normales de la curva los hacemos tender a cero y los tangenciales tienen longitud $ \Delta l$, por lo que la integral queda \[\textbf{E}_2 \cdot \Delta \textbf{l} + \textbf{E}_1 \cdot (-\Delta \textbf{l}) = 0,\] es decir
+    \begin{equation}
+        (\textbf{E}_2 - \textbf{E}_1) \cdot \Delta \textbf{l} = 0
+        \label{eq:e_electrico_dielectrico_contorno}
+    \end{equation}
+    que nos dice que el campo eléctrico $\textbf{E}$ tiene componente tangencial continua y además demuestra que el potencial es continuo (ya que $\varphi = -\textbf{E} \cdot \Delta \textbf{l}$, cuando se tiene puntos muy cercanos), en este caso para cualquier interfaz. 
+    Podemos definir a nivel molecular el campo eléctrico $\textbf{E}_m$ y el momento dipolar de una molécula $\textbf{p}_m$ que se relaciona entre si por medio de 
+    \begin{equation}
+        \textbf{p}_m = \alpha \textbf{E}_m
+        \label{eq:e_momento_dipolar_molecular}
+    \end{equation}
+    donde $\alpha$ se denomina polarizabilidad molecular y tenemos que el campo eléctrico de un volumen esférico de dieléctrico es $\textbf{E} = \dfrac{\textbf{P}}{3\varepsilon_0}$ (se hace integrando $\textbf{P}\cdot\textbf{n}$ en la esfera) por lo que si tenemos $N$ moléculas por unidad de volumen obtenemos que $\textbf{P} = N \textbf{p}_m$, lo que hace que el vector polarización sea $\textbf{P} = N \alpha(\textbf{E} + \frac{1}{3\varepsilon_0} \textbf{P}$ y finalmente obtenemos que
+    \begin{equation}
+        \alpha = \frac{3 \varepsilon_0 (\varepsilon_r - 1)}{N(\varepsilon_r +2)}
+        \label{eq:e_claussius_mossotti}
+    \end{equation}
+    donde $\varepsilon_r = \varepsilon \varepsilon_0^{-1}$. Esta ecuación se denomina de Claussius-Mossotti y relaciona una propiedad molecular con variables netamente macroscópicas del material.
+    Nos quedó pendiente analizar la polarización de moléculas polares, que en el modelo más simple se llega a la fórmula de Langevin-Debye \cite[p.~132]{reitz}. 
+    
+    Considerando que $\rho = \nabla \cdot \textbf{D}$ en todo caso y que $\sigma = \textbf{D} \cdot \textbf{n}$ en los conductores, obtenemos que la energía de una distribución de carga general es
+    \begin{equation}
+        U = \frac{1}{2} \left(\int_{\Omega} \varphi \nabla \cdot \textbf{D} dV + \oint_{S} \varphi \textbf{D} \cdot \textbf{n} dS\right)
+        \label{eq:e_energia_general}
+    \end{equation}
+    donde $\Omega$ es el volumen donde $\rho \neq 0$ y $S$ la superficie de los conductores. Haciendo uso de la regla del producto e integrando en todo el espacio (considerando que la integral de flujo se anula en el infinito) obtenemos que la energía de una distribución en función de $\textbf{D}$ y $\textbf{E}$:
+    \begin{equation}
+        U = \frac{1}{2} \int_{\forall \textbf{r}} \textbf{E} \cdot \textbf{D} dV
+        \label{eq:e_energia_general_campo}
+    \end{equation}
+\section{Corriente eléctrica}
+\label{sec:corriente}
+Ahora pasamos a analizar cargas en movimiento, que denominamos corriente. La intensidad de corriente, es decir la cantidad de carga en movimiento, la denominamos $I$ y se define
+\begin{equation}
+    I = \frac{dq}{dt}
+    \label{eq:corriente_definicion}
+\end{equation}
+y la unidad de $I$ es el ampere $[I] = 1A$ (que es igual a $1A = 1\dfrac{C}{s}$). 
+
+La naturaleza de la corriente depende del medio donde exista dicho movimiento de cargas, ya que en un medio conductor la conducción tiene como portador a los electrones libres pero en los medios con iones libres (como sales en solución acuosa) los portadores son los iones. En el caso de iones libres el movimiento de un portador positivo en un sentido o del portador negativo en el sentido opuesto genera el mismo sentido de corriente, y por convención (o tradición) consideramos el sentido o dirección de la corriente al sentido de movimiento de las cargas positivas (o el movimiento opuesto de las cargas negativas). Después hay casos más complicados de movimiento de carga, como corrientes de convección, donde la carga se mueve por métodos térmicos o mecánicos. El caso que vamos a observar es la corriente por conducción de portadores, donde el portador presenta un movimiento de deriva producto de un campo eléctrico exterior aplicado, además del movimiento térmico estadístico que efectúa, en el estado estacionario, dónde los conductores son eléctricamente neutros en su totalidad (ya que si se distribuiría la carga por fuerzas moleculares muy fuertes).Esto nos permite no considerar el problema electrostático para cada molécula o ion positivo.
+
+Ahora tomemos un $dI$, diferencial de intensidad de corriente, que verifica la siguiente relación \[dI = \frac{\delta Q}{\delta t} = \frac{q N \textbf{v} \cdot \textbf{n} \delta t \delta a}{\delta t} = B q \textbf{v} \cdot \textbf{n} da,\] donde $\textbf{v}$ es la velocidad de deriva de cada portador (que es la misma para todos los portadores), $\textbf{n}$ es el vector normal a la superficie $da$ y $N$ es la cantidad de portadores en ese área. Podemos definir la densidad de corriente $\textbf{J}$ como 
+\begin{equation}
+    \textbf{J} = N q \textbf{v}
+    \label{eq:corriente_densidad}
+\end{equation}
+y si se tiene más de un portador simplemente se suman las densidades de corriente. Esta magnitud la podemos definir en cada punto del conductor y veremos más adelante que tiene importancia mayor en magnetismo. La corriente eléctrica está relacionada con la densidad de corriente con la siguiente expresión
+\begin{equation}
+    I = \int_{S} \textbf{J} \cdot \textbf{n} dS.
+    \label{eq:corriente_intensidad_densidad}
+\end{equation}
+Nos queda derivar la ecuación de continuidad, para la cual calculamos la corriente que entra en un volumen $V$ cualquiera \[I = - \oint_{\partial V} \textbf{J} \cdot \textbf{n} dS = -\int_{V} \nabla \cdot \textbf{J} dV,\] donde aplicamos el teorema de la divergencia o de Gauss para campos vectoriales (considerando que $\textbf{n}$ es la normal saliente al volumen). De la misma forma sabemos que \[I = \frac{d q}{d t} = \frac{d}{dt} \int_{V} \rho dV\] y como el volumen $V$ es constante la derivada puede entrar bajo el signo de la integral, pero de forma parcial, ya que $\rho$ si depende de otras variables, lo que nos queda \[I = \int_{V} \frac{\partial \rho}{\partial t} dV\] y finalmente nos queda la siguiente expresión \[\int_{V} \frac{\partial \rho}{\partial t} + \nabla \cdot \textbf{J} dV = 0.\] Como el volumen es constante y arbitrario la única forma que la integral anterior sea nula es que el integrando lo sea, es decir que 
+\begin{equation}
+    \frac{\partial \rho}{\partial t} + \nabla \cdot \textbf{J} = 0
+    \label{eq:corriente_continuidad}
+\end{equation}
+lo que se conoce como ecuación de continuidad.
+
+Los conductores que vamos a utilizar ahora en adelante verifica la ley de Ohm, un caso que se da para la mayoría de los metales a temperatura constante, la viene expresada en la siguiente relación
+\begin{equation}
+    \textbf{J} = g \textbf{E},
+    \label{eq:corriente_ohm}
+\end{equation}
+siendo $g$ una constante llamada conductividad. El caso más general es $\textbf{J} = g(\textbf{E}) \textbf{E}$, pero ese caso excede este curso. El inverso de $g$ se denomina resistividad $\eta$, con $[\eta] = \Omega \text{m}^{-1}$, siendo $\Omega$ la unidad de Ohm, igual a $1\Omega = 1 \frac{V}{A}$. Si tenemos un alambre de longitud $l$ y de sección constante $A$ que verifica la ley de Ohm podemos ver que la diferencia de potencial entre sus extremos es \[\Delta \varphi = \int \textbf{E} \cdot d\textbf{l},\] pero dijimos que estamos en régimen estacionario (es decir la densidad de carga es constante, $rho_t = 0$) por lo que el campo eléctrico es solo longitudinal (si no se cargaría de forma indefinida la superficie del alambre), por lo que \[\Delta \varphi = E l\] y también sabemos que \[I = J A\] ya que la sección es constante, con lo que llegamos a que  \[I = \frac{g A}{l} \Delta \varphi\] y llamamos al coeficiente que acompaña la diferencia de potencial resistencia (eléctrica) $R$
+\begin{equation}
+    R = \frac{\eta l}{A}
+    \label{eq:corriente_resistencia}
+\end{equation}
+y la ley de Ohm queda (en su forma más conocida):
+\begin{equation}
+    I = \frac{\Delta \varphi}{R}.
+    \label{eq:corriente_ohm_tecnica}
+\end{equation}
+Con las expresiones de la energía ya encontradas podemos calcular la potencia generada por el campo eléctrico al crear una corriente (recordar que $P = \frac{\partial W}{\partial t}$), partiendo de que un diferencial $dW = dq \Delta \varphi$, por lo que nos queda que
+\begin{equation}
+    P = I \Delta \varphi = I^2 R = \frac{(\Delta \varphi)^2}{R}
+    \label{eq:corriente_potencia}
+\end{equation}
+
+Podemos hacer una analogía con un problema de electrostática y de corrientes en régimen estático, ya que como mencionamos $\nabla \cdot \textbf{J} = 0$, $\nabla \times \textbf{E} = \textbf{0}$ y $\textbf{J} = g \textbf{E}$, por lo que nos queda de nuevo \[\nabla^2 \varphi = 0,\] una ecuación de Laplace, que se resuelve solamente considerando la frontera. Pero existe una manera más común, y más utilizada en la técnica, que consiste en utilizar las leyes de Kirchhoff, la cuales son, en su forma diferencial, $\nabla \cdot \textbf{J} = 0$ y $\nabla \times \textbf{E} = \textbf{0}$. Esas dos ecuaciones las podemos transformar en función de la diferencia de potencial y las corrientes, ya que la primera ecuación asegura que toda corriente que acontece a un volumen tiene que salir (es decir $\displaystyle \sum_i I_i = 0$) y la segunda asegura que la suma de diferencia de potencial en un circuito cerrado es cero ($\displaystyle \oint \textbf{E} \cdot d\textbf{l}$), y esas son las leyes de Kirchhoff, primera y segunda ley respectivamente. Resumiendo las herramientas que tenemos para resolver los problemas de corriente estacionaria son
+\begin{align}
+    \nabla \cdot \textbf{J} = 0 &\Rightarrow \sum_i I_i = 0\\
+    \nabla \times \textbf{E} = \textbf{0} \Rightarrow \oint &\textbf{E} \cdot d\textbf{l} = 0 \Rightarrow \sum_i \varphi_i = 0\\
+    \label{eq:corriente_kirchhoff}
+\end{align}
+más la ley de Ohm (la que demuestra que la diferencia de potencial es contraria al sentido de la corriente).
+
+El modelo microscópico de la corriente clásico que disponemos corresponde a la siguiente ecuación (de la velocidad $\textbf{v}$ de deriva)
+\begin{equation}
+    m \dot{\textbf{v}} = q \textbf{E} - G \textbf{v}
+    \label{eq:corriente_micro}
+\end{equation}
+es decir consideramos que cada carga $q$ de masa $m$ sufre la fuerza producto del campo eléctrico y una fuerza de rozamiento viscoso (dependiente de la velocidad), por lo que obtenemos la siguiente solución para la velocidad \[\textbf{v}(t) = \frac{q \textbf{E}}{G} (1 - e^{-\frac{G}{m}t})\] con la condición inicial $\textbf{v}(0) =0$. El tiempo de relajación del modelo es $\tau = \frac{m}{G}$, y podemos reemplazar $G$ por $\tau$, ya que $G$ es una magnitud microscópica imposible de medir si no es indirectamente (ya que es artificiosa). En condición de estado estacionario, cuando ya no hay cambios en la velocidad de deriva, dicha velocidad vale 
+\begin{equation}
+    \textbf{v}_d = \frac{q \tau}{m} \textbf{E}
+    \label{eq:corriente_deriva_micro}
+\end{equation}
+y con la relación \ref{eq:corriente_densidad} y \ref{eq:corriente_ohm} obtenemos que la conductividad en este modelo es
+\begin{equation}
+    g = \frac{N q^2 \tau}{m}
+    \label{eq:corriente_conductividad_micro}
+\end{equation}
+El tiempo $\tau$, en medios conductores, puede ser interpretado como el tiempo entre colisiones del portador y las imperfecciones de la red cristalina (de orden término o geométrico), pero la deducción de esa afirmación escapa con la teoría ondulatoria de la mecánica cuántica.
+
+\section{Magnetostática}
+Cuando tenemos dos cargas, $q$ y $q_1$, en movimiento, es decir con velocidades $\textbf{v}$ y $\textbf{v}_1$ respectivamente, además de tener una interacción eléctrica aparece una interacción magnética, que experimentalmente encontramos que verifica la siguiente expresión (para la fuerza que siente $q$ debido a la carga $q_1$ en casos de velocidades no relativistas):
+\begin{equation}
+    \textbf{F}_m = \frac{\mu_0}{4\pi} \frac{q q_1}{\|\textbf{r}\|^3} (\textbf{v} \times \textbf{v}_1 \times \textbf{r})
+    \label{eq:m_fuerza}
+\end{equation}
+dónde la constante $\mu_0$ se llama permeabilidad del vacío, y su valor en unidades del sistema SI es $4\pi \; 10^{-7} \text{N}\text{A}^{-2}$. Para desprendernos de la fuente $q_1$ creamos un un campo nuevo, llamado inducción magnética $\textbf{B}$, y la fórmula \ref{eq:m_fuerza} la transformamos en
+\begin{equation}
+    \textbf{F} = q \textbf{v} \times \textbf{B},
+    \label{eq:m_lorentz}
+\end{equation}
+que se denomina fuerza de Lorentz, y la velocidad $\textbf{v}$ se medida en un marco inercial adherido al campo magnético. Acá es notable mostrar que la fuerza magnética es siempre perpendicular a la velocidad de la partícula, por lo que nunca hace trabajo, es conservativa. De esa forma el campo magnético (para una velocidad no relativista) de una carga es
+\begin{equation}
+    \textbf{B} = \frac{\mu_0}{4\pi}\frac{q}{\|\textbf{r}\|^3} \textbf{v} \times \textbf{r}
+    \label{eq:m_campo_particula}
+\end{equation}
+con unidades $[\textbf{B}] = \text{N}(\text{A}\text{m})^{-1} = \text{T}$ (Tesla). Como mencionamos varias veces muchas fórmulas solo valen para casos no relativistas, pero hay una relación entre el campo eléctrico y la inducción magnética de una partícula fuente en movimiento que es
+\begin{equation}
+    \textbf{B} = \frac{\textbf{v} \times \textbf{E}}{c^2}
+    \label{eq:m_magnetico_electrico}
+\end{equation}
+
+La inducción magnética generada por una densidad de corriente circulando en un circuito cerrado se puede calcular de la ley de Biot-Savart (la cual fue encontrada de forma experimental)
+\begin{equation}
+    \textbf{B}(\textbf{r}) = \frac{\mu_0}{4\pi} \int_\Omega \frac{\textbf{J} \times (\textbf{r} - \textbf{r}')}{\|\textbf{r} - \textbf{r}'\|} dV
+    \label{eq:biot_savart}
+\end{equation}
+Que en caso de que sea un circuito unidimensional $\textbf{J} dr = I \mathrm{d}\textbf{l}$ y si es una corriente superficial es $\textbf{J} dr = \textbf{g} \cdot d\textbf{l}_p$ donde $l_{p}$ es perpendicular a la corriente superficial (estas aproximaciones se puede obtener con, como para cargas puntuales, una delta de Dirac). A patir de la ley de Biot-Savart se puede deducir la siguiente expresión del campo $\textbf{B}$ (de acuerdo a lo observado): \[ \nabla \cdot \textbf{B} = \frac{\mu_0}{4\pi} \int_{\Omega} \textbf{J}(\textbf{r}') \nabla \times \frac{\textbf{r} - \textbf{r}'}{\|\textbf{r} - \textbf{r}'\|^3} dV = 0,\] usando que $\nabla \cdot (\textbf{F} \times \textbf{G}) = - F \cdot \nabla \times \textbf{G} + \textbf{G} \times \nabla \times \textbf{F}$. Resumiendo encontramos que la inducción magnética es solenoidal, es decir
+\begin{equation}
+    \nabla \cdot \textbf{B} = 0
+    \label{eq:m_gauss_diff}
+\end{equation}
+Existe un teorema integral que asegura que para un campo solenoidal (con algunas propiedades matemáticas del espacio que siempre se cumplen en la física) existe otro campo tal que el primero sea igual al rotor del segundo, es decir que existe $\textbf{A}$ tal que 
+\begin{equation}
+    \textbf{B} = \nabla \times \textbf{A}
+    \label{eq:m_potencial_vector}
+\end{equation} 
+A ese vector lo llamamos potencial vector magnético, por simple analogía, ya que no tiene el mismo significado físico que el potencial electrostático. Por analogía con el caso electrostático, y después se puede probar empezando por otro sentido, encontramos que el potencial vector magnético $\textbf{A}$ verifica la siguiente relación
+\begin{equation}
+    \textbf{A}(\textbf{r}) = \frac{\mu_0}{4\pi} \int_\Omega \frac{\textbf{J}(\textbf{r'})}{|\textbf{r} - \textbf{r}'|} dV'.
+    \label{eq:m_potencial_vector_int}
+\end{equation}
+Con esa expresión podemos probar que $\nabla \cdot \textbf{A} = 0$, por medio de un cambio de variable y considerando que el infinito $\textbf{J}$ se anula (no es necesario considerar eso, es una libertad del potencial vector hacer que tenga divergencia nula, lo que se llama libertad de Gauge o de medida). De esa forma calculemos el rotor del campo magnético, es decir $\nabla \times \textbf{B}$: \[\nabla \times \textbf{B} = \nabla \times (\nabla \times \textbf{A}) = \nabla \cdot \textbf{A} - \nabla^2 \textbf{A} = \frac{\mu_0}{4\pi} \int_{\Omega} \textbf{J}(\textbf{r}')\; \nabla^2 \left(\frac{1}{\|\textbf{r} - \textbf{r}'\|}\right) dV' = \frac{\mu_0}{4\pi} \int_{\Omega} \textbf{J}(\textbf{r}') (-4\pi \delta(\textbf{r} - \textbf{r}') ) dV'\] y finalmente resolviendo la integral con la delta de Dirac nos queda
+\begin{equation}
+    \nabla \times \textbf{B} = \mu_0 \textbf{J}
+    \label{eq:m_ampere_dif}
+\end{equation}
+expresión que se denomina ley de Ampere (en este caso para corrientes estacionarias) y con el teorema de Stokes llegamos a la expresión integral
+\begin{equation}
+    \oint_{C} \textbf{B} \cdot d\textbf{l} = \mu_0 \iint_{S} \textbf{J} \cdot \textbf{n} dS.
+    \label{eq:m_ampere_int}
+\end{equation}
+que es más útil para resolver analíticamente. También existe una ecuación de Poisson magnética, que ya obtuvimos mientras efectuamos la derivación de la ley de Ampere
+
+\begin{equation}
+    \nabla^2\textbf{A} = -\mu_0 \textbf{J},
+    \label{eq:m_poisson}
+\end{equation}
+Es notable remarcar que el potencial vector magnético no mejor los cálculos como el potencial escalar, pero tiene importancia para completar la teoría electromagnética con los resultados de la física moderna.
+
+\subsection{Expansión multipolar.}
+Podemos también efectuar una descripción multipolar del campo inducción magnética, y para eso partimos del potencial vector, del cual tenemos que desarrollar en serie el término $\|\textbf{r} - \textbf{r}'\|^{-1}$ (como ya lo efectuamos para el caso eléctrico). Nos queda que \[\|\textbf{r} - \textbf{r}'\|^{-1} = (\|\textbf{r}\|^2 + \|\textbf{r}'\|^2 - 2 \textbf{r} \cdot \textbf{r}')^{-\frac{1}{2}} \approx \frac{1}{\textbf{r}} \left(1 + \frac{\textbf{r}' \cdot \textbf{r}}{\|\textbf{r}\|^2} + \cdots\right),\] dónde se usó que $\textbf{r}' \ll \textbf{r}$ para deshacerse de potencias de $\textbf{r}'$. Finalmente el potencial vector nos queda \[\textbf{A}(\textbf{r}) = \frac{\mu_0}{4\pi} \int_{\Omega} \textbf{J}(\textbf{r}') \frac{1}{\|\textbf{r}\|} \left(1 + \frac{\textbf{r}' \cdot \textbf{r}}{\|\textbf{r}\|^2} + \cdots \right)dV'.\] A continuación consideramos que $\textbf{J} dV' = I d\textbf{l}$, es decir que la distribución de corriente que vamos a manejar simplemente son circuitos cerrados (lo que es razonable ya que $\textbf{J}$ debe estar acotada y muy cercana al origen de coordenadas, y como ya mencionamos tenemos corrientes estáticas). De esa forma nos queda \[\textbf{A}(\textbf{r}) = \frac{\mu_0 I}{4\pi} \left(\frac{1}{\|\textbf{r}\|}\oint d\textbf{l} + \frac{1}{\|\textbf{r}\|^3} \oint (\textbf{r} \cdot \textbf{r}') d\textbf{l} + \cdots \right),\] y podemos ver que la primera integral se anula y la segunda la escribimos como $\displaystyle \frac{1}{2}\left(\oint \textbf{r}' \times d\textbf{l}\right) \times \textbf{r}$ (utilizando identidades vectoriales), y finalmente definimos el momento dipolar magnético con la siguiente expresión (la segunda expresión se logró por medio del teorema de Stokes sobre la expresión multipolar)
+\begin{equation}
+    \textbf{m} = \frac{I}{2} \oint \textbf{r} \times \mathrm{d}\textbf{l} = I \iint \textbf{n} dS
+    \label{eq:m_dipolo}
+\end{equation}
+Por lo que finalmente podemos describir el potencial vector magnético con la siguiente expresión
+\begin{equation}
+    \textbf{A}(\textbf{r}) = \frac{\mu_0}{4\pi}\frac{\textbf{m}\times\textbf{r}}{r^{3}}
+    \label{eq:m_potencial_multipolar}
+\end{equation}
+y el campo inducción magnética se obtiene reemplazando en la definición \ref{eq:m_potencial_vector}, considerando la regla del producto para el producto vectorial:
+\begin{equation}
+    \textbf{B}(\textbf{r}) = \frac{\mu_0}{4\pi}\left[\frac{3(\textbf{m}\cdot\textbf{r})\textbf{r}}{r^{5}}-\frac{\textbf{m}}{\textbf{r}^3}\right]
+    \label{eq:m_induccion_multipolar}
+\end{equation}
+La expresión anterior del campo inducción magnética justifica el nombre de dipolo magnético, ya que es de idéntica expresión al campo de un dipolo puntual o del momento dipolar.
+
+En el caso que no haya densidad de corriente en todo un entorno, la ley de Ámpere queda \[\nabla \times \textbf{B} = \textbf{0},\] por lo que existe un potencial magnético tal que
+\begin{equation}
+    \textbf{B} = -\mu_0 \nabla \varphi_m
+    \label{eq:m_potencial_escalar}
+\end{equation}
+y como el campo $\textbf{B}$ siempre verifica que $\nabla \cdot \textbf{B} = 0$ entonces siempre este potencial verifica la ecuación de Laplace, es decir siempre
+\begin{equation}
+    \nabla^2 \varphi_m = 0
+    \label{eq:m_potencial_escalar_laplace}
+\end{equation}
+Con el potencial $\varphi_m$ podemos escribir la expansión multipolar de forma muy sencilla, ya que el potencial escalar de un dipolo eso
+\begin{equation}
+    \varphi_m(\textbf{r}) = \frac{\textbf{m} \cdot \textbf{r}}{4\pi\|\textbf{r}\|^2}
+    \label{eq:m_potencial_escalar_dipolo}
+\end{equation}
+que verifica que $\textbf{B} = -\mu_0 \nabla \varphi_m$.
+
+\subsection{Medios magnéticos}
+Cada átomo lo podemos entender como un núcleo con electrones orbitándolo (en el modelo más clásico del átomo), por lo que se genera una corriente atómica. Cada átomo por lo tanto se puede ver como un circuito pequeño y en la distancia genera un dipolo magnético (con el análisis cuántico obtenemos que el campo generado por las corrientes atómicas tiene un momento dipolar dominante). Ahora para el análisis macroscópico tomamos un elemento de volumen $\Delta V$ (mucho mayor que el volumen atómico) y definimos un campo (que es puntual a nivel macroscópico) llamado magnetización $\textbf{M}$ como 
+\begin{equation}
+    \textbf{M} = \lim_{\Delta V \to 0} \frac{\Delta \textbf{m}}{\Delta V}
+    \label{eq:m_magnetizacion}
+\end{equation}
+Veamos el potencial vector magnético $d\textbf{A}(\textbf{r})$ producido por los dipolos magnéticos presentes en un volumen $dV'$: \[d\textbf{A}(\textbf{r}) = \frac{\mu_0}{4\pi} \sum_i \frac{\textbf{m}_i \times (\textbf{r} - \textbf{r}_i)}{\|\textbf{r} - \textbf{r}_i\|^3} \approx \frac{\mu_0}{4\pi} \frac{\textbf{M}(\textbf{r}') \times (\textbf{r} - \textbf{r}')}{\|\textbf{r} - \textbf{r}'\|^3} dV'.\] Integrando nos queda que
+\begin{equation}
+    \textbf{A}(\textbf{r}) = \frac{\mu_0}{4\pi} \int_{\Omega} \frac{\textbf{M}(\textbf{r}') \times (\textbf{r} - \textbf{r}')}{\|\textbf{r} - \textbf{r}'\|^3} dV'
+    \label{eq:m_potencial_vector_materia}
+\end{equation}
+que podemos transformar en \[\textbf{A}(\textbf{r}) = \frac{\mu_0}{4\pi} \int_{\Omega} \textbf{M}(\textbf{r}') \times \nabla'\frac{1}{\|\textbf{r} - \textbf{r}'\|} dV' = \frac{\mu_0}{4\pi} \left(\int_{\Omega} \frac{\nabla' \times \textbf{M}(\textbf{r}')}{\|\textbf{r} - \textbf{r}'} dV' + \oint_{\partial \Omega} \frac{\textbf{M}(\textbf{r}') \times \textbf{n}}{\|\textbf{r} - \textbf{r}'\|} dS'\right)\]
+y llamamos a las expresiones de la integral
+\begin{equation}
+    \textbf{J}_m = \nabla' \times \textbf{M}
+    \label{eq:m_corriente_magnetizacion}
+\end{equation}
+densidad de corriente de magnetización (con $[J_m] = [J] = \text{A}\text{m}^{-2}$) y 
+\begin{equation}
+    \textbf{g}_m = \textbf{M} \times \hat{n}
+    \label{eq:m_corriente_magnetizacion_superficie}
+\end{equation}
+densidad de corriente superficial de magnetización. Falta calcular el rotor del potencial vector para obtener la inducción magnética 
+
+\begin{align*}
+    \nabla \times \textbf{A}(\textbf{r}) &= \frac{\mu_0}{4\pi} \int_\Omega \nabla \times \left(\textbf{M}(\textbf{r}') \times \frac{\textbf{r} - \textbf{r}'}{\|\textbf{r} - \textbf{r}'\|^3}\right) dV' \\ &= \frac{\mu_0}{4\pi} \left(\int_{\Omega} \textbf{M}(\textbf{r}) \nabla\cdot\left(\frac{\textbf{r} - \textbf{r}'}{\|\textbf{r} - \textbf{r}'\|^3}\right) dV' + \int_{\Omega} (\textbf{M} \cdot \nabla) \frac{\textbf{r} - \textbf{r}'}{\|\textbf{r} - \textbf{r}'\|^3} dV'\right)\\ &= \mu_0 \textbf{M}(\textbf{r}) - \mu_0 \nabla\left(\frac{1}{4\pi} \int_\Omega \textbf{M}(\textbf{r}') \cdot \frac{\textbf{r} - \textbf{r}'}{\|\textbf{r} - \textbf{r}'\|^3} dV'\right)
+\end{align*}
+resultado al que llegamos con varias identidades vectoriales, y se observa que la integral final es un escalar, por lo que lo llamamos potencial escalar (producido por el medio material). Es decir que
+\begin{equation}
+    \varphi_m = \frac{1}{4\pi} \int_\Omega \textbf{M} \cdot \frac{\textbf{r} - \textbf{r}'}{\|\textbf{r} - \textbf{r}'\|^3} dV'
+    \label{eq:m_potencial_escalar_materia}
+\end{equation}
+y de esa forma la inducción magnética queda
+\begin{equation}
+    \textbf{B} = \mu_0 (- \nabla\varphi_m + \textbf{M})
+    \label{eq:m_induccion_materia}
+\end{equation}
+Ahora, podemos hacer una transformación más a la ecuación \ref{eq:m_potencial_escalar_materia} por medio de $\nabla \frac{1}{\|\textbf{r}\|}$ y la regla del producto, la cual finalmente queda
+\begin{equation}
+    \varphi_m(\textbf{r}) = \frac{1}{4\pi} \left(\oint_{\partial \Omega} \frac{\textbf{M}(\textbf{r}') \cdot \textbf{n}}{|\textbf{r} - \textbf{r}'|} dS' - \int_\Omega \frac{\nabla' \cdot \textbf{M}(\textbf{r}')}{|\textbf{r} - \textbf{r}'} dV' \right)
+    \label{eq:m_potencial_escalar_cargas}
+\end{equation}
+y consideramos (por analogía)
+\begin{equation}
+    \sigma_m = \textbf{M}(\textbf{r}') \cdot \textbf{n}
+\end{equation}
+la densidad superficial de polos magnéticos, y 
+\begin{equation}
+    \rho_m = \nabla' \cdot \textbf{M}(\textbf{r}')
+\end{equation}
+la densidad volumétrica de polos magnéticos. Dichas magnitudes son de carácter casi matemático, ya que sabemos la no existencia de monopolos magnéticos, pero nos permite entender muchos problemas.
+
+Consideremos ahora la ley de Ampere diferencial, la ecuación \ref{eq:m_gauss_diff}, pero con una densidad de corriente $\textbf{J}' = \textbf{J} + \textbf{J}_{m}$ por tener un medio material. De esa forma podemos encontrar la siguiente relación \[\nabla \times \left(\frac{\textbf{B}}{\mu_0} - \textbf{M}\right)\] y la expresión dentro del rotor la nombramos intensidad magnética $\textbf{H}$, es decir
+\begin{equation}
+    \textbf{H} = \frac{\textbf{B}}{\mu_0} - \textbf{M}
+    \label{eq:m_intensidad_magnetica}
+\end{equation}
+Entonces ese campo tiene por divergencia a
+\begin{equation}
+    \nabla \cdot \textbf{H} = - \nabla \cdot \textbf{M}
+    \label{eq:m_intensidad_magnetica_divergencia}
+\end{equation}
+y finalmente la ley de Ampere para medios materiales
+\begin{equation}
+    \nabla \times \textbf{H} = \textbf{J}
+    \label{eq:m_ampere_dif_materia}
+\end{equation}
+y en su forma integral
+\begin{equation}
+    \oint_{\partial S} \textbf{H} \cdot d\textbf{l} = \iint_{S} \textbf{J} \cdot \textbf{n} dS
+    \label{eq:m_ampere_int_materia}
+\end{equation}
+
+Para poder de resolver los problemas magnéticos es necesario una relación, denotadas constitutivas, entre la magnetización, la intensidad magnética y la inducción magnética, que se puede obtener de forma experimental. En muchos problemas prácticos las relaciones constitutivas son lineales (en caso contrario es posible encontrar una expansión en serie para cada caso), y las constante de la relación se llaman suceptiblidad y permeabilidad magnética, $\chi_m$ y $\mu$ respectivamente. Ambas magnitudes corresponde a la siguientes relaciones
+\begin{align}
+    \textbf{B} = \mu \textbf{H}\\
+    \textbf{M} = \chi_m \textbf{H}
+    \label{eq:m_relaciones_constitutivas}
+\end{align}
+y por lo tanto se relaciona de la siguente manera
+\begin{equation}
+    \mu = \mu_0(1 + \chi_m)
+    \label{eq:m_permeabilidad_suceptibilidad}
+\end{equation}
+
+Las condiciones de frontera para el campo inducción magnética es fácil de conseguir, ya que $\nabla \cdot \textbf{B} = 0$, por lo que $\oint_{S} \textbf{B} \cdot \textbf{n} dS = 0$, es decir que la componente normal se conserva
+\begin{equation}
+    (\textbf{B}_2 - \textbf{B}_1)\cdot \textbf{n}_2 = 0
+    \label{eq:m_induccion_interfaz}
+\end{equation}
+por lo que la componente normal del campo inducción magnética es contínua. Para el campo intensidad magnética aplicamos la ley de Ampere a un circuito plano perpendicular (normal del plano del circuito perpendicular a la normal de la interfaz) a la normal de la interfaz, y tendemos a cero el largo de las ramas paralelas a la interfaz, por la expresión integral de la ley de Ampere nos queda \[(\textbf{H}_2 - \textbf{H}_1)\cdot \textbf{l} = \textbf{g} \times \textbf{n}_2,\] siendo $\textbf{g}$ una corriente superficial en la interfaz que debe atravezar el circuito (por eso se hace ese producto), por lo que nos queda que
+\begin{equation}
+    \textbf{n}_2 \times (\textbf{H}_2 - \textbf{H}_1) = \textbf{g}
+    \label{eq:m_intensidad_interfaz}
+\end{equation}
+es decir que en falta de corriente superficial la intensidad tangencial es contínua
+\section{Inducción electromagnética}
+Se denomina fuerza electromotriz $\mathcal{E}$ (por analogía con el concepto de trabajo) a la siguiente magnitud
+\begin{equation}
+    \mathcal{E} = \oint_{C} \textbf{E} \cdot d\textbf{l}
+    \label{eq:im_fem}
+\end{equation}
+integral que se hace en una curva cerrada o circuito. Diversas experiencias con inducción magnética variando en el tiempo lleva a formular la siguiente relación, denominada forma integral de la ley de Faraday
+\begin{equation}
+    \int_c \textbf{E} \cdot d\textbf{l} = \mathcal{E} = -
+    \frac{\partial}{\partial t} \left(\iint \textbf{B} \cdot \hat{n} ds \right) = -
+    \frac{\partial \Phi_m}{\partial t}
+    \label{eq:im_faraday_int}
+\end{equation}
+dónde $\Phi$ lo llamamos flujo magnético (que acá vemos que es de vital importancia) y se mide en $[\Phi] = \text{Wb (weber)} = \text{T}\text{m}^{2}$. El signo menos indica una propiedad física notable, todo cambio en el flujo genera un campo eléctrico contrario al sentido positivo de circulación, que genera una corriente, que a su vez genera un campo de inducción contrario al cambio del flujo. Es decir que finalmente cuando se genera induce el circuito se opone, lo que está en acuerdo con la conservación de la energía. Podemos transformar la ley de Faraday a su forma local, considerando un circuito cuadrado fijo de dimensiones diferenciables y aplicando el teorema de Stokes llegamos a que
+\begin{equation}
+    \nabla \times \textbf{E} = - \frac{\partial \textbf{B}}{\partial t}
+    \label{eq:im_faraday_dif}
+\end{equation}
+
+Aplicando regla de la cadena al segundo término de la ley de Faraday integral obtenemos $\displaystyle \frac{\partial \Phi}{\partial t} = \frac{\partial \Phi}{\partial I} \frac{\partial I}{\partial t}$, y al primer término del producto lo denominamos autoinductancia, producto del flujo propio del circuito, es decir
+\begin{equation}
+    L = \frac{\partial\Phi_m}{\partial I}
+    \label{eq:im_autoinductancia}
+\end{equation}
+magnitud que se mide en $\text{Wb}\text{A}^{-1} = \text{H}$ (henry). Esa magnitud es independiente de la intensidad de corriente circulante, sólo depende de la geometría del problema, por lo que de ahora en adelante tendremos circuitos rígidos y estacionarios. Entonces la ley de Faraday queda de la siguiente forma (que es la conocida expresión de la autoinductancia en la técnica)
+\begin{equation}
+    \mathcal{E} = -L\frac{d I}{d t}
+    \label{eq:im_autoinductancia_fem}
+\end{equation}
+En caso de tener varios circuitos cercanos, el flujo de cada circuito alterara a los otros. Podemos, por principio de superposición, sumar los flujos tal que $\Phi_i = \sum_j \Phi_{ij}$, siendo el flujo $ii$ el propio, y por lo tanto la fuerza electromotriz inducida será $\mathcal{E}_i = - \sum_j \frac{\partial \Phi_{ij}}{\partial t}$. Consideramos que todos los circuitos están quietos deducimos, de forma análoga a la autoinductancia, una magnitud puramente geométrica denominada inductancia mutua $M_{ij}$
+\begin{equation}
+    M_{ij} = \frac{d \Phi_{ij}}{d I_j}
+    \label{eq:im_inductancia_mutua}
+\end{equation}
+y para encontrar una fórmula para dicha magnitud utilizamos la fórmula de Biot-Savart (ecuación \ref{eq:biot_savart}) \[\Phi_{ij} = \frac{\mu_0}{4\pi} I_j \int_{S_j} \left(\oint_{C_i} \frac{d\textbf{l}_i \times (\textbf{r}_j - \textbf{r}_i)}{\|\textbf{r}_j - \textbf{r}_i\|^3} \right) \cdot \textbf{n} dS = \frac{\mu_0}{4\pi} I_j \int_{S_j} \left(\nabla_j \times (\frac{1}{\|\textbf{r}_j - \textbf{r}_i\|} \right) \cdot \textbf{n} dS\]
+y aplicando el teorema de Stokes llegamos a la expresión deseada, denominada de Newmann
+\begin{equation}
+    M_{ij} = M_{ji} = \frac{\mu_0}{4\pi} \oint_{C_i} \oint_{C_j} \frac{\mathrm{d}\textbf{l}_j \cdot d\textbf{l}_i}{\|\textbf{r}_i - \textbf{r}_j\|}
+\end{equation}
+Se observa automáticamente la simetría de los índices, ya que dentro de las integrales son escalares. En el caso especial $i = j$ obtenemos la autoinductancia.
+
+\subsection{Energía magnetostática}
+La energía necesaria para mover una carga $dq$ sabemos que es $\Delta \varphi dq = \Delta \varphi I dt = - \mathcal{E} I dt = I d\Phi$, deducción que hicimos considerando un circuito donde se verifica la ley de Faraday y la segunda ley de Kirchhoff (sin resistencia eléctrica), siendo $\Phi$ el autoflujo. De esta forma el trabajo para establecer un flujo magnético es $dW = I d\Phi$. Si todos los circuitos son rígidos y estacionarios entonces no existe trabajo debido al cambio del flujo sobre las corrientes y por lo tanto $dW = dU$, el cambio de energía potencial magnética. Ahora integramos la expresión anterior para muchos circuitos, todos teniendo la misma fracción de su corriente final tiempo a tiempo (para simplificar los cálculos, ya que es independiente de como se llegue a la situación final, la inducción magnética es conservativa), es decir
+\[U = \int dW = \int_0^1 \sum_i \alpha I_i \Phi_i d\alpha\] y finalmente obtenemos que 
+\begin{equation}
+    U = \frac{1}{2} \sum_i I_i \Phi_i = \frac{1}{2} \sum_i \sum_j M_{ij} I_i I_j
+    \label{eq:m_energia_circuitos}
+\end{equation}
+donde usamos la relación de inductancia mutua previamente encontrada.
+Para un caso más general podemos escribir el flujo en función del potencial vector \[\Phi_i = \int_{S_i} \textbf{B} \cdot \textbf{n} dS = \oint \textbf{A} \cdot d\textbf{l}\] gracias al teorema de Stokes y consideramos que que la corriente que circula es una densidad de corriente en un volumen cerrado (no alcanza el infinito) de algún material magnético, los que no lleva a la siguiente expresión \[U = \frac{1}{2} \int_{\Omega} \textbf{J} \cdot \textbf{A} dV,\] que transformamos con la regla del producto vectorial para la divergencia y la ley de Ampere para materiales, lo que obtenemos \[U = \frac{1}{2} \left(\int_{\Omega} \textbf{H} \cdot \nabla \times \textbf{A} dV - \int_{\partial \Omega} \textbf{A} \times \textbf{H} \cdot \textbf{n} dS\right).\] La integral de superficie se anula si integramos en todo el espacio, ya que en el peor de los casos el campo $\textbf{A} \times \textbf{H}$ decae proporcional a $r^{-3}$ y el área es proporcional a $r^2$, entonces queda la siguiente expresión
+\begin{equation}
+    U = \frac{1}{2} \int_{\forall \textbf{r}} \textbf{H} \cdot \textbf{B} dV
+    \label{eq:m_energia_campo}
+\end{equation}
+y en el caso de tener materiales lineales, homogéneos y isótropos
+\begin{equation}
+    U = \frac{1}{2\mu} \int_{\forall \textbf{r}} \|\textbf{B}\|^2 dV
+\end{equation}
+Veremos en la próxima sección que finalmente los campos eléctricos e inducción magnética transmiten energía, por lo que pueden considerarse magnitudes reales.
+
+\section{Ecuaciones de Maxwell}
+\label{sec:ec_maxwell}
+Con esta sección completamos la teoría clásica electromagnética, abriendo el camino para la física relativista y la óptica física, piedras angulares de la física moderna. Consideremos un capacitor de placas paralelas y una superficie que que corta uno de los alambres conductores que mueve cargas a las placas y otra superficie con el mismo contorno que no tenga intersección con ningún alambre. Si aplicamos la ley de Ampere con ambas superficies deberían darnos el mismo resultado, es decir deberíamos tener la misma circulación de campo intensidad magnética $\textbf{H}$. Pero en la segunda superficie no hay corriente que la atraviese, y eso nos lleva a deducir que falta un término en dicha ley. Considerando el volumen $\Omega$ encerrado por ambas superficies tenemos que \[\int_{\partial \Omega} \textbf{J} \cdot \textbf{n} = - I,\] considerando la normal exterior, pero también obtenemos que \[\int_{\partial \Omega} \textbf{J} \cdot \textbf{n} dS = \oint_{C} \textbf{H} \cdot d\textbf{l} - \oint_{C} \textbf{H} \cdot d\textbf{l} = 0,\] por lo que necesariamente algo está mal con la ley de Ampere. 
+
+Tomemos la ecuación de continuidad \ref{eq:corriente_continuidad}, y reemplazamos $\rho = \nabla \cdot \textbf{D}$, lo que obtenemos es que $\nabla \cdot \left(\textbf{J} + \frac{\partial D}{\partial t}\right)$, donde asumimos que $\textbf{D}$ es lo suficientemente continuo para intercambiar derivadas, los que no lleva al siguiente agregado a la ley de Ampere
+\begin{equation}
+    \nabla \times \textbf{H} = \textbf{J} + \frac{\partial \textbf{D}}{\partial t}
+    \label{eq:em_ampere}
+\end{equation}
+donde al término agregado lo llamamos densidad de corriente de desplazamiento
+\begin{equation}
+    \textbf{J}_d = \frac{\partial \textbf{D}}{\partial t}
+    \label{eq:em_corriente_desplazamiento}
+\end{equation}
+Este trabajo matemático fue básicamente el análisis teórico que efectuó Maxwell en su trabajo, y no debe ser tomado como una demostración formal por más que tenga consistencia matemática. Posteriores estudios experimentales, de profusa cantidad y calidad, sostuvieron la hipótesis presentada acá y finalmente completó la teoría electromagnética como tal. 
+
+Resumiendo, lo que llamamos ecuaciones de Maxwell son las siguientes ecuaciones, ya presentadas en todo este trabajo
+\begin{align}
+    \nabla \cdot \textbf{D} = \rho\\
+    \nabla \cdot \textbf{B} = 0\\
+    \nabla \times \textbf{E} = -\frac{\partial \textbf{B}}{\partial t}\\
+    \nabla \times \textbf{H} = \textbf{J} + \frac{\partial \textbf{D}}{\partial t}
+    \label{eq:em_maxwell}
+\end{align}
+Podemos transformar las expresiones anterior a una formulación potencial, con los potenciales $\varphi$ escalar electrostático y $\textbf{A}$ vector magnético. Sabemos que $\nabla \times \textbf{E} = -\frac{\partial \textbf{B}}{\partial t} = - \frac{\partial (\nabla \times \textbf{A})}{\partial t}$, y considerando $A$ lo suficientemente continuo llegamos que $\textbf{E} = - \frac{\partial \textbf{A}}{\partial t}$, y en el caso general \[    \textbf{E} = - (\nabla \varphi + \frac{\partial \textbf{A}}{\partial t}).\] Reemplazamos en la ley de Gauss y de Ampere y obtenemos 
+\begin{align*}
+    - \nabla \cdot \left(\nabla \varphi + \frac{\partial \textbf{A}}{\partial t}\right) &= \frac{\rho}{\varepsilon_0}\\
+    \nabla \times (\nabla \times \textbf{A}) &= \mu_0 \textbf{J} - \mu_0\varepsilon_0\frac{\partial}{\partial t} \left(\nabla \varphi + \frac{\partial \textbf{A}}{\partial t}\right)
+\end{align*}
+Ahora utilizando la identidad para el doble rotor obtenemos que \[- \nabla^2 \textbf{A} + \nabla \left(\nabla \cdot \textbf{A} - \mu_0\varepsilon_0 \frac{\partial \varphi}{\partial t}\right) - \mu_0\varepsilon_0 \frac{\partial^2 \textbf{A}}{\partial t^2} = 0\] y proponemos como condición que el segundo término se anule, es decir $\nabla \cdot \textbf{A} - \mu_0\varepsilon_0 \dfrac{\partial \varphi}{\partial t} = 0$, como una libertad o Gauge de ambos potenciales, por lo que nos queda
+\begin{align}
+    \nabla^2\varphi - \mu_0\varepsilon_0\frac{\partial^2 \varphi}{\partial t^2} = 0\\
+    \nabla^2\textbf{A} - \mu_0\varepsilon_0\frac{\partial^2 \textbf{A}}{\partial t^2} = 0
+    \label{eq:em_potenciales_ec_onda}
+\end{align}
+que son dos ecuaciones de ondas, no homogénea, para ambos potenciales. Se pueden deducir la mismas ecuaciones en vacío (o en medio lineal) para el campo eléctrico e intensidad magnética considerando de nuevo el rotor de un rotor. Esto nos lleva a la piedra angular de esta teoría, la radiación electromagnética, y podemos observar que $\mu_0\varepsilon_0$ tiene unidad de inverso de velocidad al cuadrado, y experimentalmente se obtiene que 
+\begin{equation}
+    c = \frac{1}{\sqrt{\mu_0\varepsilon_0}}
+    \label{eq:em_velocidad_luz}
+\end{equation}
+lo que llevó a Maxwell a creer que la luz, de forma acertada, era una onda electromagnética. 
+
+Para completar la idea anterior definimos un vector (que podemos deducirlo de las ecuaciones de Maxwell en el vacío) denominado vector de Poynting $\textbf{S}$, que muestra el flujo local de energía por unidad de área (en la interpretación más usual):
+\begin{equation}
+    \textbf{S} = \textbf{E} \times \textbf{H}
+    \label{eq:em_poyting}
+\end{equation}
+y ya sabemos que la densidad de energía electromagnética viene dada por
+\begin{equation}
+    u = \frac{1}{2} (\textbf{E} \cdot \textbf{D} + \textbf{B} \cdot \textbf{H})
+    \label{eq:em_densidad_energia}
+\end{equation}
+Con ambas expresiones llegamos a la conservación de la energía de forma local, donde el producto $\textbf{J} \cdot \textbf{E}$ corresponde al trabajo efectuado sobre densidades de cargas
+\begin{equation}
+    \nabla \cdot \textbf{S} + \frac{\partial u}{\partial t} = -\textbf{J} \cdot \textbf{E}
+    \label{eq:em_ec_continuidad}
+\end{equation}
+Así podemos concluir que el campo $\textbf{E}$ y el campo $\textbf{H}$ contienen energía, y no que esa energía está dispuesta en la distribución de cargas o corrientes. Es posible probar, pero queda fuera de este curso, que a partir de las ecuaciones de Maxwell se llega a la conservación del momento. De esa forma los campos eléctrico y magnético contienen momento, y por ende también momento angular.
+\begin{thebibliography}{9}
+    \bibitem{griffiths}
+        David J. Griffiths, 
+        \emph{Introduction to Electrodynamics},
+        3era ed.
+        Prentice Hall
+        (1999)
+    \bibitem{reitz}
+        John R. Reitz, Frederick J. Milford, Robert W. Christy,
+        \emph{Fudamentos de la teoría electromagnética},
+        4ta ed.
+        Addison-Wesley
+        (1996)
+\end{thebibliography}
+\end{document}

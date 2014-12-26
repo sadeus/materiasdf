@@ -1,0 +1,161 @@
+\documentclass[a4paper,spanish]{article}
+
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\newcommand{\oiint}{\displaystyle\bigcirc\!\!\!\!\!\!\!\!\int\!\!\!\!\!\int}
+
+
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+
+\def\Fou {\mathcal{F}}
+\def\Rea {\mathcal{R}e}
+\def\Ima {\mathcal{I}m}
+\def\N {\mathbb{N}}
+\def\C {\mathbb{C}}
+\def\Q {\mathbb{Q}}
+\def\R {\mathbb{R}}
+\def\Z {\mathbb{Z}}
+
+
+%\renewcommand{\contentsname}{\'Indice}
+%\renewcommand{\chaptername}{Cap\'\i tulo}
+%\renewcommand{\bibname}{Referencias}
+
+\newtheorem{prop}{Proposici\'on}[section]
+\newtheorem{teo}[prop]{Teorema}
+\newtheorem{defi}[prop]{Definici\'on}
+\newtheorem{obs}[prop]{Observaci\'on}
+\newtheorem{cor}[prop]{Corolario}
+\newtheorem{lema}[prop]{Lema}
+\newtheorem{ejem}[prop]{Ejemplo}
+\newtheorem{ejer}[prop]{Ejercicio}
+
+\numberwithin{equation}{section}
+\newtheorem{definition}{Definici\'on}
+
+
+\newenvironment{proof}{
+\trivlist \item[\hskip \labelsep\mbox{\it Demostraci\'on:
+}]}{\hfill\mbox{$\square$}
+%\trivlist \item[\hskip \labelsep{\sl
+%#1}\mbox{Demostraci\'on}]}{\hfill\mbox{$\square$}
+\endtrivlist}
+
+%\topmargin 0cm \oddsidemargin 0.7cm %% margenes
+%\textheight 21cm \textwidth 15cm %% tama\~no del texto
+\parindent 0cm %% sangria
+
+\begin{document}
+
+
+\part{Aproximaci\'on continua y ondas unidimensionales}
+
+\section{Aproximaci\'on continua}
+
+\section{Ondas estacionarias}
+			Consideremos una cuerda de cuentas capaces de hacer oscilaciones transversales. Para describir ese sistema utilizamos el m\'etodo de la secci\'on de muchos grados de libertad, considerando peque\~nas oscilaciones, por lo que la fuerza de la part\'icula $n$ es $\frac{- 2 T_0 \psi_n}{m a}$ (siendo $a$ la distancia inicial entre masas y $T_0 = k (a - l_0)$, la tensi\'on inicial de cada resorte), entonces obtenemos la siguiente expresi\'on
+			\begin{equation*}
+				\ddot{\psi}_n = \frac{T_0}{m a} (\psi_{n+1} + \psi_{n-1} - 2 \psi_n)
+			\end{equation*}
+			y la relaci\'on de dispersi\'on ser\'a (considerando que $x_n = n a$)
+			\begin{equation*}
+				2 \cos(k a) = 2 \left(1 - 2 \sen^2\left(\frac{k a}{2}\right)\right) = 2 - \frac{m a}{T_0} \omega^2
+			\end{equation*}
+			es decir
+			\begin{equation*}
+				\omega^2 = \frac{4 T_0}{m a} \sen^2\left(\frac{k a}{2}\right)
+			\end{equation*}
+			si tomamos el l\'imite con $N \to \infty$ y $a \to 0$, encontramos que $\psi_n(t) \to \psi(x,t)$, mientras $\psi_{n+1}(t) \to \psi(z + a,t)$ y $\psi_{n-1}(t) \to \psi(z - a,t)$. La ecuaci\'on diferencial del problema queda
+			\begin{equation*}
+				\partial_{tt} \psi(x,t) = \frac{T_0}{m a} (\psi(x+a,t) - 2 \psi(x,t) + \psi(x-a,t) = \frac{T_0 a}{m} \partial_{xx} \psi(x,t)
+			\end{equation*}
+			expresi\'on que encontramos expandiendo en serie las funciones en $x +a$ y $x-a$. Observemos que la relaci\'on de dispersi\'on queda
+			\begin{equation*}
+				\omega^2 = \frac{4 T_0}{m a} \sen^2\left(\frac{k a}{2}\right) \approx \frac{4 T_0}{m a} \left(\frac{k a}{2}\right)^2 = \frac{T_0 a k^2}{m}
+			\end{equation*}
+			es decir que la relaci\'on de dispersi\'on indica que la frecuencia espacial es proporcional a frecuencia temporal o n\'umero de onda.
+			
+			La ecuaci\'on que qued\'o se denomina ecuaci\'on de onda cl\'asica, y en general la escribimos de la siguiente forma
+			\begin{equation}
+				\frac{\partial^2 \psi(x,t)}{\partial t^2} = c^2 \frac{\partial^2 \psi(x,t)}{\partial x^2} \qquad \partial_{tt} \psi(x,t) = c^2 \partial_{xx} \psi(x,t)
+				\label{eq:ondas_ecuacion}
+			\end{equation}
+			donde $c^2$ es la velocidad de propagaci\'on de la onda en el medio (que para un la cuerda es $c^2 = \dfrac{T_0}{\rho}$, siendo $\rho$ la densidad lineal de masa), que se relaciona con la siguiente relaci\'on de dispersi\'on
+			\begin{equation}
+				\omega = c\;k
+				\label{eq:onda_dispersion}
+			\end{equation}
+			Para obtener una soluci\'on para esta ecuaci\'on de onda proponemos $\psi(x,t) = A(x) \sin(\omega t + \phi)$, por lo que obtenemos la siguiente ecuaci\'on
+			\begin{equation*}
+				\frac{d^2 A(x)}{d x^2} + \frac{\omega^2}{c^2} A(x) = A''(x) + k^2 A(x) = 0
+			\end{equation*}
+			que sabemos resolver, lo que obtenemos como soluci\'on general una superposici\'on de soluciones oscilatorias
+			\begin{equation}
+				\psi(x,t) = \sum_{i,j} (c_i \sen(k_i x) + c_j \cos(k_j x)) \sen(\omega t + \phi)
+				\label{eq:onda_solucion}
+			\end{equation}
+			y cada constante $c_i$ va a depender de las condiciones de contorno del problema, adem\'as de los modos posibles (es decir los valores posibles de $k$ y $\omega$). Esta ecuaci\'on corresponde a ondas estacionarias, nombre que tendr\'a sentido cuando observemos las ondas propagantes.
+			
+			Para condiciones iniciales tenemos que descomponer la funci\'on de la forma inicial en las componentes obtenidos de la soluci\'on \ref{eq:onda_solucion}, por medio de las series de Fourier, es decir
+			\begin{equation}
+				\psi(x,t) = \sum_{n=0}^{\infty} [(A_n \sen(n k_1 x) + B_n \cos(n k_1 x) ) \sen(\omega_n t + \phi)]
+				\label{eq:onda_solucion_fourier}
+			\end{equation}
+			siendo $\omega_n = c k_n$ (la relaci\'on de dispersi\'on de la ecuaci\'on de onda) y $A_n$ y $B_n$
+			\begin{equation}
+				A_n = \frac{1}{\tau} \int_{a}^{a + \tau} \psi(x,0) \sen\left(\frac{2 n\pi}{\tau} x\right) dx \qquad B_n = \frac{1}{\tau} \int_{a}^{a + \tau} \psi(x,0) \cos\left(\frac{2 n \pi}{\tau} x\right) dx
+			\end{equation}
+			mientras $B_0$ es
+			\begin{equation}
+				B_0  = \frac{1}{\tau} \int_{a}^{a + \tau} \psi(x,0) dx
+			\end{equation}
+			La constante $\tau$ representa la periodicidad de la funci\'on $\psi(x,0)$, que vendr\'a definido por el tama\~no del problema f\'isico (para una cuerda en general ser\'a $L$ o $2L$, siendo $L$ el largo de la cuerda), y $a$ es donde empieza el sistema f\'isico, que en general se puede disponer que $a = 0$. Tambi\'en podemos escribir la serie de Fourier de forma exponencial, es decir
+			\begin{equation}
+				\psi(x,t) = \sum_{n=-\infty}^{\infty} C_n e^{i \frac{2 n \pi}{\tau} x} \sen(\omega_n t + \phi)
+				\label{eq:onda_solucion_fourier_exp}
+			\end{equation}
+			
+			Como todo problema mec\'anico, vamos a describir la energ\'ia de la onda estacionaria. La energ\'ia la tenemos que pensar como una densidad, es decir que se deriva de una integral sobre la coordenada espacial. La energ\'ia cin\'etica la podemos encontrar como
+			\begin{equation}
+				T = \frac{1}{2} \int \rho \; (\partial_t \psi(x,t))^2 dx
+				\label{eq:ondas_cinetica}
+			\end{equation}
+			siendo $\rho$ la densidad de masa lineal (ya que $\rho dx = dm$), o lo que corresponda dependiendo del caso, y la energ\'ia potencial podemos verla como 
+			\begin{equation}
+				V = \frac{1}{2} \int \lambda \; (\partial_x \psi(x,t))^2 dx
+				\label{eq:ondas_potencial}
+			\end{equation}
+			siendo para una cuerda libre la constante $\lambda = T_0$ (la tensi\'on de la cuerda). En la secci\'on referida a reflexi\'on de ondas analizaremos el caso de la onda reflejada, por medio de un argumento f\'isico y la energ\'ia de una onda propagante que, como veremos en la secci\'on siguiente, es una soluci\'on m\\as general de la ecuaci\'on de ondas
+			
+\section{Ondas propagantes}
+			\label{sec:ondas_propagantes}
+			Existe una soluci\'on m\'as general a la ecuaci\'on de ondas cl\'asicas, que contempla una soluci\'on estacionaria (ondas estacionarias) en medios de propagaci\'on limitados y una soluci\'on propagante. Dicha soluci\'on es la siguiente
+			\begin{equation}
+				\psi(x,t) = \psi_1(x - c t) + \psi_2(x + c t)
+				\label{eq:ondas_propagante}
+			\end{equation}
+			donde $\psi_1$ avanza en $x$ con el tiempo y $\psi_2$ retrocede. El perfil de la onda va a depender de la funci\'on inicial, pero en general vamos a trabajar con soluciones arm\'onicas, es decir
+			\begin{equation}
+				\psi(x,t) = \Re\left(A e^{i (-k x + \omega t)} + B e^{i (k x + \omega t)}\right) = A \cos(\omega t - k x) + B \cos(\omega t + k x)
+				\label{eq:ondas_propagante_armonica}
+			\end{equation}
+			
+			Veamos que pasa con la expresi\'on de la energ\'ia (ecuaciones \ref{eq:ondas_cinetica} y \ref{eq:ondas_potencial}) con la soluci\'on general \ref{eq:ondas_propagante} 
+			\[E = T +  V = \frac{1}{2} \int \rho c^2 (\psi'_1 - \psi'_2)^2 dx + \frac{1}{2} \int \lambda (\psi'_1 + \psi'_2)^2 dx.\] Consideremos que $\psi_2 = 0$, es decir que tenemos solo propagaci\'on para un sentido y que la propagaci\'on es arm\'onica, entonces queda 
+			\begin{equation}
+				E(x,t) = \frac{1}{2} \Re(A) \left( \int \rho \omega^2 \Re\left(e^{i (-k x + \omega t)}\right)^2 dx - \int \lambda k^2 \Re\left(e^{i (-k x + \omega t)}\right) dx \right) = \frac{1}{2} \left(\frac{\rho \omega^2}{2k}-\frac{\lambda k^2}{2k}\right) \Re(A) \sen(2(-kx + \omega t))
+			\end{equation}
+			donde vemos que la energ\'ia avanza en el tiempo siguiendo una forma arm\'onica, contrario a lo que observamos en las ondas estacionarias (la soluci\'on con una onda propag\'andose para un sentido y para otro).
+			
+\end{document}
