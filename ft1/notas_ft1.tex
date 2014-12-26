@@ -14,7 +14,7 @@
 %Numeración de ecuaciones
 \numberwithin{equation}{section}
 
-\title{Notas de Física 3}
+\title{Notas de Electromagnetismo clásico}
 \author{S. Schiavinato}
 \date{6/8/2012}
 
@@ -87,7 +87,15 @@ que es una ecuación de Poisson, que rápidamente se observa que la expresión d
     \nabla^2 \varphi(\textbf{r}) = 0
     \label{eq:e_laplace}
 \end{equation}
-que es de vital importancia para problemas electrostáticos con conductores (básicamente los más útiles). Ambas ecuaciones nos se resolverán en este curso, quedarán para cursos más avanzados.
+
+
+\subsection{Separación de variables}
+
+\subsubsection{Geometría cartesiana}
+
+\subsubsection{Geometría esférica}
+
+\subsubsection{Geometría cilindrica}
 
 \subsection{Expansión multipolar}
 \label{sec:e_multipolar}
@@ -153,6 +161,7 @@ Definimos con la ecuación \ref{eq:e_energia_campo} la densidad volumétrica de 
     \label{eq:e_energia_densidad}
 \end{equation}
 Esto abre el debate si el campo eléctrico contiene energía o no, que tiene respuesta recién para ondas electromagnéticas (sección \ref{sec:ec_maxwell})
+
 \subsection{Conductores}
 Un material conductor es compuesto por una estructura cristalina con un gas de electrones libres, que no tienen interacción con ningún núcleo. Por eso al estar expuesto a un campo eléctrico los electrones libres se reorganizan debidamente y en situación de reposo el conductor tiene en su interior campo eléctrico nulo (de lo contrario los electrones se moverían todavía). Al ser el campo interior nulo el potencial es constante, entonces un conductor es una región equipotencial. Nuevamente esto es el caso ideal, en el caso real la red cristalina afecta a los electrones libres, pero con interacciones casi despreciables. 
 
@@ -176,6 +185,7 @@ Podemos agregar una magnitud más, que se observa al notar que $p_{ij}$ forma un
     q_j = \sum_i c_{ij} \varphi_i
     \label{eq:e_potencial_conductores_coeff_capacidad}
 \end{equation}
+
 \subsubsection{Capacitores}
 Cuando se tiene solamente dos conductores con la misma carga absoluta (una positiva y otra negativa) la ecuación \ref{eq:e_potencial_conductores_coeff} queda muy sencilla
 \begin{equation}
@@ -193,6 +203,7 @@ Considerando la expresión de la energía de \ref{eq:e_energia_conductores} obte
     W = \frac{1}{2} q \Delta \varphi = \frac{1}{2} C \Delta \varphi^2                
     \label{eq:eng_capacitor}
 \end{equation}
+
 \subsection{Dieléctricos}
 Un dieléctrico ideal no tiene electrones libres y no se puede modificar su estructura electrónica. En esta sección analizaremos el caso no ideal, dónde se cambia la estructura electrónica de las moléculas (en general los dieléctricos son moleculares, no estructuras cristalinas) y se inducen dipolos. También veremos un caso especial, los ferroeléctricos o electretes, que tienen los dipolos establecidos sin inducción.
 
@@ -270,6 +281,7 @@ Ahora agregamos dos ecuaciones que relacionan el campo eléctrico con los vector
         U = \frac{1}{2} \int_{\forall \textbf{r}} \textbf{E} \cdot \textbf{D} dV
         \label{eq:e_energia_general_campo}
     \end{equation}
+
 \section{Corriente eléctrica}
 \label{sec:corriente}
 Ahora pasamos a analizar cargas en movimiento, que denominamos corriente. La intensidad de corriente, es decir la cantidad de carga en movimiento, la denominamos $I$ y se define
@@ -439,7 +451,7 @@ Con el potencial $\varphi_m$ podemos escribir la expansión multipolar de forma 
 \end{equation}
 que verifica que $\textbf{B} = -\mu_0 \nabla \varphi_m$.
 
-\subsection{Medios magnéticos}
+\section{Medios magnéticos}
 Cada átomo lo podemos entender como un núcleo con electrones orbitándolo (en el modelo más clásico del átomo), por lo que se genera una corriente atómica. Cada átomo por lo tanto se puede ver como un circuito pequeño y en la distancia genera un dipolo magnético (con el análisis cuántico obtenemos que el campo generado por las corrientes atómicas tiene un momento dipolar dominante). Ahora para el análisis macroscópico tomamos un elemento de volumen $\Delta V$ (mucho mayor que el volumen atómico) y definimos un campo (que es puntual a nivel macroscópico) llamado magnetización $\textbf{M}$ como 
 \begin{equation}
     \textbf{M} = \lim_{\Delta V \to 0} \frac{\Delta \textbf{m}}{\Delta V}
@@ -535,6 +547,7 @@ por lo que la componente normal del campo inducción magnética es contínua. Pa
     \label{eq:m_intensidad_interfaz}
 \end{equation}
 es decir que en falta de corriente superficial la intensidad tangencial es contínua
+
 \section{Inducción electromagnética}
 Se denomina fuerza electromotriz $\mathcal{E}$ (por analogía con el concepto de trabajo) a la siguiente magnitud
 \begin{equation}
@@ -576,7 +589,12 @@ y aplicando el teorema de Stokes llegamos a la expresión deseada, denominada de
 \end{equation}
 Se observa automáticamente la simetría de los índices, ya que dentro de las integrales son escalares. En el caso especial $i = j$ obtenemos la autoinductancia.
 
-\subsection{Energía magnetostática}
+
+\section{Medios materiales}
+\label{sec:medios}
+
+
+\section{Energía magnetostática}
 La energía necesaria para mover una carga $dq$ sabemos que es $\Delta \varphi dq = \Delta \varphi I dt = - \mathcal{E} I dt = I d\Phi$, deducción que hicimos considerando un circuito donde se verifica la ley de Faraday y la segunda ley de Kirchhoff (sin resistencia eléctrica), siendo $\Phi$ el autoflujo. De esta forma el trabajo para establecer un flujo magnético es $dW = I d\Phi$. Si todos los circuitos son rígidos y estacionarios entonces no existe trabajo debido al cambio del flujo sobre las corrientes y por lo tanto $dW = dU$, el cambio de energía potencial magnética. Ahora integramos la expresión anterior para muchos circuitos, todos teniendo la misma fracción de su corriente final tiempo a tiempo (para simplificar los cálculos, ya que es independiente de como se llegue a la situación final, la inducción magnética es conservativa), es decir
 \[U = \int dW = \int_0^1 \sum_i \alpha I_i \Phi_i d\alpha\] y finalmente obtenemos que 
 \begin{equation}
@@ -594,6 +612,9 @@ y en el caso de tener materiales lineales, homogéneos y isótropos
     U = \frac{1}{2\mu} \int_{\forall \textbf{r}} \|\textbf{B}\|^2 dV
 \end{equation}
 Veremos en la próxima sección que finalmente los campos eléctricos e inducción magnética transmiten energía, por lo que pueden considerarse magnitudes reales.
+
+\section{Conservaciones}
+
 
 \section{Ecuaciones de Maxwell}
 \label{sec:ec_maxwell}
@@ -653,6 +674,14 @@ Con ambas expresiones llegamos a la conservación de la energía de forma local,
     \label{eq:em_ec_continuidad}
 \end{equation}
 Así podemos concluir que el campo $\textbf{E}$ y el campo $\textbf{H}$ contienen energía, y no que esa energía está dispuesta en la distribución de cargas o corrientes. Es posible probar, pero queda fuera de este curso, que a partir de las ecuaciones de Maxwell se llega a la conservación del momento. De esa forma los campos eléctrico y magnético contienen momento, y por ende también momento angular.
+
+\section{Relatividad especial}
+
+\section{Radiación}
+
+\section{Formulación lagrangiana}
+
+
 \begin{thebibliography}{9}
     \bibitem{griffiths}
         David J. Griffiths, 

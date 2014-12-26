@@ -1,5 +1,0 @@
--Aca falta la deduccion de aprox continua de las dos formas
--Tambein hablar de ondas de sonido
--Ejemplos
-- Hablar un poco mas de la ecuacion de onda viajera, etc y de medios no dispersivos!
--Igual cuakqueir extra es bienvenido
