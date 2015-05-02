@@ -1,0 +1,157 @@
+%Setea los caracteres extraños para listing
+\lstset{literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\EUR}}1 {£}{{\pounds}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1
+}
+
+%% Coloreado para Julia
+\lstdefinelanguage{Julia}%
+  {morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
+      end,export,false,for,function,immutable,import,importall,if,in,%
+      macro,module,otherwise,quote,return,switch,true,try,type,typealias,%
+      using,while},%
+   sensitive=true,%
+   alsoother={$},%
+   morecomment=[l]\#,%
+   morecomment=[n]{\#=}{=\#},%
+   morestring=[s]{"}{"},%
+   morestring=[m]{'}{'},%
+}[keywords,comments,strings]%
+
+\lstset{%
+    language         = Julia,
+    basicstyle       = \ttfamily,
+    keywordstyle     = \bfseries\color{blue},
+    stringstyle      = \color{magenta},
+    commentstyle     = \color{ForestGreen},
+    showstringspaces = false,
+}
+{\footnotesize
+\begin{lstlisting}[inputencoding=utf8,extendedchars=true]
+import PyPlot #ploteo de datos
+using LaTeXStrings #Permite usar LaTeX en los strings
+
+#Funciones auxiliares. 
+#Nota: Los arrays son pasados por referencia.
+#Entonces, no es necesario retornarlos con return
+
+#Función que calcula el cambio de energía al cambiar el spin i
+# deltaE =  2 * i * (abajo + arriba + izquierda + derecha)
+function deltaE(latt, i)
+    L = size(latt)[1]
+    N = L * L
+    #Condiciones de contorno
+    i_down = i % L != 0 ? i + 1 : i - L + 1
+    i_up = (i - 1) % L != 0 ? i - 1 : i + L - 1
+    i_izq = (i - L) > 0 ? i - L : i - L + N
+    i_der = (i + L) <= N ? i + L : i + L - N
+    result = latt[i_up] 
+    result += latt[i_down]
+    result += latt[i_izq] 
+    result += latt[i_der]
+    result *= 2 * latt[i] 
+    return result
+end
+
+#Función que implementa la transición entre configuraciones.
+#Se ejecuta en cada paso de Monte Carlo y recorre N spines al azar o ordenado
+function transicion(latt, T, isRandom = false)
+    srand(time_ns())
+    L = size(latt)[1] #Tamaño de la red
+    N = L * L 
+    beta = 1.0 / T
+    p = [exp(-beta * 4), exp(-beta * 8)]
+    for s = 1:N
+            #Permite elegir un spin al azar o ordenadamente
+            if isRandom
+                i = rand(1:L)
+            else
+                i = s
+            end
+            dE = deltaE(latt, i)
+            if dE != 0 #No hacer nada si dE = 0
+                if dE < 0 || p[dE == 4 ? 1 : 2] > rand()
+                    latt[i] *= -1                
+                end
+            end
+        end
+end
+
+#Función que inicializa la red de L x L. 
+#De forma aleatoria o ordenada
+function initLatt(L, isRandom = true)
+    
+     if isRandom
+        #Devuelve un número aleatorio de -1:2:1 que es -1,1
+        return rand(-1:2:1, L, L)
+        #También podemos usar sign(rand(Int32, L, L))
+    else
+        #Devuelve red ordenada con unos.
+        return ones(L, L)
+    end
+end
+
+#Funcion utilizada para medir observables
+function sampleo(latt)
+    
+    L = size(latt)[1]
+    N = L * L
+    m = 0.0
+    e = 0.0
+    m = sum(latt) #Con sumar es suficiente
+    for i = 1:N
+        #Multiplica con los vecinos posteriores.
+        i_der = (i + L) <= N ? i + L : i + L - N
+        i_down = i % L != 0 ? i + 1 : i - L + 1
+        e += latt[i] * (latt[i_der] + latt[i_down])
+    end
+    m /= N
+    e /= N
+    return (abs(m), e) #Tomo sólo la magnitud de la magnetización
+end
+
+#Función donde se implementa la iteración Monte Carlo
+function isingMetropolis(L, T, fMed = 100, nSamp = 1000, nTerm = 500, 
+                        lattRandom = false, randTrans = false) 
+    #Cantidad de iteraciones
+    nIter = nSamp * fMed  
+    N = L*L   
+    latt = initLatt(L, lattRandom) #Inicializa la red
+    #Observables
+    e = zeros(nSamp + 1)
+    mag = zeros(nSamp + 1)
+    nSamp = 1 #Resteo el nSamp así lo uso como un indice para los observables
+    #Termalizado de la red
+    for s = 1:nTerm
+        #En cada iteración efecutúa una transición posible
+        transicion(latt, T, randTrans)
+    end
+    #Primera medición
+    mag[nSamp], e[nSamp] = sampleo(latt)
+    nSamp += 1
+    for s = 1:nIter
+        #En cada iteración efecutúa una transición posible
+        transicion(latt,T, randTrans)
+        if s % fMed == 0 #Si el paso es múltiplo de fMed => Mide los observables
+            mag[nSamp], e[nSamp] = sampleo(latt)
+            nSamp += 1
+        end
+    end
+    return (T, mag, e) #Devuelve una tupla con todos los observables
+end
+\end{lstlisting}
+}
+
+
+
+
+
