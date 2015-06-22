@@ -112,7 +112,7 @@ void initOrd(char F[], int L) {
     int N = L * L;
     for (i = 0; i < N; i++) {
         if (i % 2)
-            F[i] = 1;
+            *(F + i) = 1;
         else
             F[i] = -1;
     }
@@ -138,40 +138,25 @@ void parseParametros(int argc, char * argv[], Parametros &param) {
     }
 }
 
-
-int main(int argc, char * argv[]) {
-    Parametros param; //Parametros
-    param.L = 4;
-    param.beta = 1; //Temperatura adimensional  beta = J/(k*T)
-    int N = param.L * param.L; //Cantidad de spines
-    param.f_samp = 100;  //Cantidad de pasos entre mediciones
-    param.n_term = 500; //Cantidad de pasos hasta termalizar
-    param.n_samp = 100;   //Cantidad de mediciones
-    int n_iter = param.f_samp * param.n_samp + param.n_term; //Pasos de MC, cada uno tiene N cambios de spin
-    param.seed = time(NULL);
-    //Variables internas de cálculo
+void MonteCarlo(char F[], int L, double beta) {
     int de;   //Delta de energía
+    int N = L*L;
     double p[2]; //Factor de aceptación
     double r; //Número aleatorio, para comprar con la aceptación
-    int i,j,a,c;  //Contadores
-    //Observables
     double m = 0.0, m2_sum = 0.0, m_sum=0.0; //Magentización
     double e=0.0, e2_sum = 0.0, e_sum=0.0; //Energía
-    //Inicialización
-    parseParametros(argc, argv, param); //Parsea los parámetros.
-   	N = param.L * param.L;  //Recalcula parámetros derivados.
-    n_iter = param.f_samp * param.n_samp + param.n_term;
-    srand(param.seed); //Genera los números aleatorios a partir de seed.
-    char* F = new char[N]; //Aloca la red. Sin el new se puede pisar en el stack al hacer muchas llamadas.
-    initOrd(F, param.L); //Inicializa la red. Para aleatorio usar initRandom(F, param.L).
-    p[0] = exp(-8 * param.beta); //Prealoco las exponenciales.
-    p[1] = exp(-4 * param.beta); 
-    // Corrida de MC
-    param.n_samp = 0; //Aún cuando es un parámetro, lo vuelvo a contabilizar.
+    int f_samp = 100;  //Cantidad de pasos entre mediciones
+    int n_term = 500; //Cantidad de pasos hasta termalizar
+    int n_samp = 100;   //Cantidad de mediciones
+    int n_iter = f_samp * n_samp + n_term;
+    int i, j, k, c;
+    p[0] =  exp(-8 * beta);//Prealoco las exponenciales.
+    p[1] = exp(-4 * beta); 
     for (c = 0; c < n_iter; c++) {
         //Por cada paso de MC hace N giros de spin.
-        for (i = 0; i < N; i++) {
-            de = DeltaE(F, param.L, i); //Delta de Enegía al posiblemente cambiar el estado.
+        for (k = 0; k < N; k++) {
+            i = rand() % N; //posición al azar del array
+            de = DeltaE(F, L, i); //Delta de Enegía al posiblemente cambiar el estado.
             if (de < 0) {
                 //DeltaE < 0 => Minimiza energía => Invierte el spin.
                 F[i] *= -1;
@@ -183,23 +168,43 @@ int main(int argc, char * argv[]) {
             }
         }
         //Samplea n_samp veces, después de que haya termalizado (n_term pasos).
-        if ((c % param.f_samp) == 0 && c > param.n_term) {
-            sampleo(F, param.L, m, e);
-            m_sum += m; 
-            m2_sum += m*m; 
-            e_sum += e; 
-            e2_sum += e*e;
-            param.n_samp++;
+        if ((c % f_samp) == 0 && c > n_term) {
+            sampleo(F, L, m, e);
+            m_sum += m/N; 
+            m2_sum += m*m/(N*N); 
+            e_sum += e/N; 
+            e2_sum += e/N*e/N;
+            n_samp++;
         }
     }
-    //Calcula los promedios.
-    m_sum /= param.n_samp;
-    e_sum /= param.n_samp;
-    e2_sum /= param.n_samp;
-    m2_sum /= param.n_samp;
-    //Imprime en STDOUT.
-    cout << 1.0 / param.beta << " "; //Temperatura adimensional.
-    cout << m_sum << " " <<  m2_sum - m_sum * m_sum << " ";  //magnetización más varianza.
+    cout << 1.0 / beta << " "; //Temperatura adimensional.
+    cout << m_sum << " " <<  m2_sum - m_sum/N * m_sum << " ";  //magnetización más varianza.
     cout << e_sum << " " <<  e2_sum - e_sum*e_sum << "\n"; //energía más varianza.
+}
+
+
+int main(int argc, char * argv[]) {
+    Parametros param; //Parametros
+    param.L = 4;
+    double beta = 1;
+    int N = param.L * param.L; //Cantidad de spines
+    int L = param.L;
+
+    int n_iter = param.f_samp * param.n_samp + param.n_term; //Pasos de MC, cada uno tiene N cambios de spin
+    param.seed = time(NULL);
+
+    //Inicialización
+    parseParametros(argc, argv, param); //Parsea los parámetros.
+    N = param.L*L;
+    L = param.L;
+    //beta = param.beta;
+    
+    srand(param.seed); //Genera los números aleatorios a partir de seed.
+    char* F = new char[N]; //Aloca la red. Sin el new se puede pisar en el stack al hacer muchas llamadas.
+    //initOrd(F, param.L); //Inicializa la red. Para aleatorio usar 
+    initRandom(F, L);
+    MonteCarlo(F, L, beta);
+   
+    
     return 0;
 }
