@@ -21,7 +21,7 @@ out = "med_L_{}".format(L)
 filePath = os.path.join(path, out)
 open(filePath,'w+').close() #Lo crea de nuevo el archivo
 for t in temps:
-    cmd = ['ising.exe']
+    cmd = ['./ising']
     cmd += ['-T', str(t)]
     cmd += ['-L', str(L)]
     cmd += ['-n',str(n_samp)]

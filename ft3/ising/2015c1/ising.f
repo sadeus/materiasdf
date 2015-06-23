@@ -58,7 +58,7 @@ c
 c       double precision dseed,random
         double precision  dseed
         real              xjj,xjn
-        character*15      aaa
+        character*12      aaa
 c............................................................
         common /datain/ nx,ny,xj,b
         common /param/  nterm,ngrupo,nfrec,nsize
