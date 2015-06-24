@@ -63,7 +63,8 @@ int DeltaE(char F[], int L, int i) {
     int i_der = (i + 1) % L == 0 ? i + 1 - L : i + 1;
     int i_up = i - L + 1 < 0 ? i + N - L : i - L;
     int i_down = i + L + 1 > N ? i + L - N : i + L;
-    return (int)2 * F[i] * (F[i_izq] + F[i_der] + F[i_down] + F[i_up]);
+    printf("%d, %d, %d, %d, %d \n", i, i_izq, i_der, i_up, i_down);
+    return (int)- 2 * F[i] * (F[i_izq] + F[i_der] + F[i_down] + F[i_up]);
 	
 }
 
@@ -181,6 +182,7 @@ int main(int argc, char * argv[]) {
     double beta = 1;
     int N = param.L * param.L; //Cantidad de spines
     int L = param.L;
+    int i;
 
     //int n_iter = param.f_samp * param.n_samp + param.n_term; //Pasos de MC, cada uno tiene N cambios de spin
     param.seed = time(NULL);
@@ -192,10 +194,13 @@ int main(int argc, char * argv[]) {
     beta = param.beta;
     srand(param.seed);
     char F[N];
-    initOrd(F, L); 
-    //initRandom(F, L);
+    initRandom(F, L);
+    for (i = 0; i < N; i++) {
+        printf("%d \n", F[i]);
+    }
+    
 
-    MonteCarlo(F, L, beta);
+    //MonteCarlo(F, L, beta);
    
     return 0;
 }
