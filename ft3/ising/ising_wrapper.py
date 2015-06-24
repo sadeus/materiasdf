@@ -10,17 +10,16 @@ plt.rcParams["ytick.labelsize"] = 12
 plt.rcParams["xtick.labelsize"] = 12
 plt.rcParams["axes.labelsize"] = 20
 
-L = 32
+L = 50
 path = '.'
-temps = np.linspace(0.1,1,30)
+temps = np.linspace(0.1,1,10)
 fs = 100 #Cantidad de pasos entre mediciones.
-n_samp = 100 #Cantidad de sampleos
+n_samp = 200 #Cantidad de sampleos
 warm = 500 #Cantidad de pasos antes de termalizar
-os.system("gcc -o ising ising.c -lm")
+sub.check_output(["gcc","-o","ising","ising.c","-lm"])
 out = "med_L_{}".format(L)
-#N = warm + fs * Nsamp #Cantidad de iteraciones finales
 filePath = os.path.join(path, out)
-open(filePath,'w+').close() #Lo crea de nuevo el archivo
+mag = []
 for t in temps:
     cmd = ['./ising']
     cmd += ['-T', str(t)]
@@ -28,24 +27,31 @@ for t in temps:
     cmd += ['-n',str(n_samp)]
     cmd += ['-nT',str(warm)]
     cmd += ['-fs',str(fs)]
-    cmd += ['-s', str(32232)]
+    #cmd += ['-s', str(32232)]
+    out = "med_L_{}_{}".format(L,t)
+    #N = warm + fs * Nsamp #Cantidad de iteraciones finales
+    filePath = os.path.join(path, out)
+    open(filePath,'w+').close() #Lo crea de nuevo el archivo
     with open(filePath, "a+") as file:
         file.write(str(sub.check_output(cmd),"utf-8"))
-                                
-data = np.loadtxt(filePath)
+    data = np.loadtxt(filePath)
+    mag.append(np.mean(np.abs(data[:,0])))
 
 #Tamaño de figuras, siguiendo la regla de oro
 plt.figure(1)
 plt.xlabel(r"$\beta J$")
 plt.ylabel(r'$\langle m \rangle$')           
-plt.plot(data[:,0], data[:,1], 'bo-')
+plt.plot(temps, mag, 'bo-')
+plt.grid()
 plt.axvline(np.log(1+ np.sqrt(2))/2, ls = "--", c = "k")
 #plt.savefig(os.path.join(path, 'mag_L_{}'.format(L)), bbox_inches = 'tight')
 
-plt.figure(2)
-plt.xlabel(r"$\beta J$")
-plt.ylabel(r'$\langle e \rangle$')   
-plt.plot(data[:,0], data[:,2],'ro-') 
+#plt.figure(2)
+#plt.xlabel(r"$\beta J$")
+#plt.ylabel(r'$\langle e \rangle$')   
+#plt.plot(data[:,0], data[:,2],'ro-')
+#plt.grid()
+#plt.axvline(np.log(1+ np.sqrt(2))/2, ls = "--", c = "k")
 #plt.savefig(os.path.join(path, 'e_L_{}'.format(L)), bbox_inches = 'tight')
 
 

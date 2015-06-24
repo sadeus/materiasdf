@@ -67,27 +67,28 @@ int DeltaE(char *F, int L, int i) {
     int i_der = (i + 1) % L == 0 ? i + 1 - L : i + 1;
     int i_up = i - L < 0 ? i + N - L : i - L;
     int i_down = i + L + 1 > N ? i + L - N : i + L;
-    int de = 2 * F[i] * (F[i_izq] + F[i_der] + F[i_down] + F[i_up]);
+    int de = -2 * F[i] * (F[i_izq] + F[i_der] + F[i_down] + F[i_up]);
     return de;
 	
 }
 
 //Función que mide la magnetización y la energía por sitio
 //e y m se pasan por referencia, energía y magnetización
-void sampleo(char *F, int L, double * m, double * e){
+void sampleo(char * F, int L, double * m, double * e){
     int i, i_der, i_down;
     int N = L*L;
-    *m = 0.0;
-    *e = 0.0;
+    double M = 0.0;
+    double E = 0.0;
     for (i = 0; i < N; i++) {
-        *m += F[i];
+        M += F[i];
         //Multiplica con los vecinos posteriores.
         i_der = (i + 1) % L == 0 ? i + 1 - L : i + 1;
         i_down = i + L + 1 > N ? i + L - N : i + L;
-        *e +=  F[i] * (F[i_der] + F[i_down]); 
+        E -=  F[i] * (F[i_der] + F[i_down]); 
     }
-    *m = (double)*m / N;
-    *e = (double)*e / N;
+    printf("%f %f \n", M/N, E/N);
+    //*m = fabs(*m) / N;
+    //e /= N;
 }
 
 
@@ -110,7 +111,7 @@ void initOrd(char *F, int L) {
     int N = L * L;
     for (i = 0; i < N; i++) {
         if (i % 2)
-            *(F + i) = 1;
+            F[i] = 1;
         else
             F[i] = -1;
     }
@@ -138,68 +139,60 @@ void parseParametros(int argc, char * argv[], struct Parametros *param) {
 
 void mmc(char *F, struct Parametros param) {
     int de;   //Delta de energía
-    printf("%d %d\n", param.L, param.beta);
     int N = param.L * param.L;
-    int L = param.L;
-    double beta = param.beta;
     double p[2]; //Factor de aceptación
     double r; //Número aleatorio, para comprar con la aceptación
     double m = 0.0, m_sum = 0.0; //Magentización
     double e = 0.0, e_sum = 0.0; //Energía
-    int n_samp = 50;  //Cantidad de mediciones
+    int n_samp = 1;  //Cantidad de mediciones
     int n_iter = param.f_samp * param.n_samp + param.n_term;
     int i, j, k;
-    p[0] = exp(8 * beta); //Prealoco las exponenciales.
-    p[1] = exp(4 * beta); 
+    p[0] = exp(-4.0 * param.beta); //Prealoco las exponenciales.
+    p[1] = exp(-8.0 * param.beta); 
     for (j = 0; j < n_iter; j++) {
         //Por cada paso de MC hace N giros de spin.
         for (k = 0; k < N; k++) {
-            i = rand() % N; //posición al azar del array
-            de = DeltaE(F, L, i); //Delta de Enegía al posiblemente cambiar el estado.
-            if (de < 0) {
-                //DeltaE < 0 => Minimiza energía => Invierte el spin.
-                F[i] *= -1;
-            }
-            else if (de > 0) { //Si de > 0 no hacer nada.
+            //i = rand() % N; //posición al azar del array
+            //printf("%d\n",i);
+            de = DeltaE(F, param.L, k); //Delta de Enegía al posiblemente cambiar el estado.
+            if (de != 0) {
                 r = (double)rand()/RAND_MAX * 1.0; //Número aleatorio en [0,1].
-                if (p[de == 4 ? 0 : 1] > r)
-                    F[i] *= -1; //Acepta el cambio => Invierte el spin.
+                if (de < 0 || p[de == 4 ? 0 : 1] > r){
+                    *(F + k) *= -1; //Acepta el cambio => Invierte el spin.
+                }
             }
         }
-        
+    
+
         //Samplea n_samp veces, después de que haya termalizado (n_term pasos).
         if ((j % param.f_samp) == 0 && j > param.n_term) {
-            sampleo(F, L, &m, &e);
-            printf("%f \n", m);
+            sampleo(F, param.L, &m, &e);
+            //printf("%f %f\n", m, e);
             m_sum += m; 
             e_sum += e; 
             n_samp++;
         }
     }
-    m_sum /= n_samp;
-    e_sum /= n_samp;
-    printf("%f %f %f \n", beta, m_sum, e_sum);
+    //m_sum /= n_samp;
+    //e_sum /= n_samp;
+    //printf("%f %f %f\n", param.beta, m_sum, e_sum);
 }
 
 
 int main(int argc, char * argv[]) {
     struct Parametros param; //Parametros
-    //param.L = 4;
-    double beta = 1;
-    int N = param.L * param.L; //Cantidad de spines
-    int L = param.L;
-    int i;
-
-    //int n_iter = param.f_samp * param.n_samp + param.n_term; //Pasos de MC, cada uno tiene N cambios de spin
+    param.L = 16;
+    param.n_samp = 200;
+    param.f_samp = 100;
+    param.n_term = 500;
     param.seed = time(NULL);
+    int N = param.L * param.L;
     //Inicialización
     parseParametros(argc, argv, &param); //Parsea los parámetros.
-    L = param.L;
-    N = L * L;
-    beta = param.beta;
+    N = param.L * param.L;
     srand(param.seed);
     char F[N];
-    initRandom(F, L);
+    initRandom(F, param.L);
     //Código
     mmc(F, param);   
     return 0;
