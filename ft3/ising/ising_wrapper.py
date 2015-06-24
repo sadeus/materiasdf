@@ -20,6 +20,7 @@ sub.check_output(["gcc","-o","ising","ising.c","-lm"])
 out = "med_L_{}".format(L)
 filePath = os.path.join(path, out)
 mag = []
+e = []
 for t in temps:
     cmd = ['./ising']
     cmd += ['-T', str(t)]
@@ -36,6 +37,7 @@ for t in temps:
         file.write(str(sub.check_output(cmd),"utf-8"))
     data = np.loadtxt(filePath)
     mag.append(np.mean(np.abs(data[:,0])))
+    e.append(e)
 
 #Tamaño de figuras, siguiendo la regla de oro
 plt.figure(1)
@@ -46,12 +48,12 @@ plt.grid()
 plt.axvline(np.log(1+ np.sqrt(2))/2, ls = "--", c = "k")
 #plt.savefig(os.path.join(path, 'mag_L_{}'.format(L)), bbox_inches = 'tight')
 
-#plt.figure(2)
-#plt.xlabel(r"$\beta J$")
-#plt.ylabel(r'$\langle e \rangle$')   
-#plt.plot(data[:,0], data[:,2],'ro-')
-#plt.grid()
-#plt.axvline(np.log(1+ np.sqrt(2))/2, ls = "--", c = "k")
+plt.figure(2)
+plt.xlabel(r"$\beta J$")
+plt.ylabel(r'$\langle e \rangle$')   
+plt.plot(temps, e,'ro-')
+plt.grid()
+plt.axvline(np.log(1+ np.sqrt(2))/2, ls = "--", c = "k")
 #plt.savefig(os.path.join(path, 'e_L_{}'.format(L)), bbox_inches = 'tight')
 
 
