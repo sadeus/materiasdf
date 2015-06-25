@@ -74,19 +74,18 @@ int DeltaE(char *F, int L, int i) {
 
 //Función que mide la magnetización y la energía por sitio
 //e y m se pasan por referencia, energía y magnetización
-void sampleo(char * F, int L, double * m, double * e){
+void sampleo(char * F, struct Parametros param, double * m, double * e){
     int i, i_der, i_down;
-    int N = L*L;
+    int N = param.L*param.L;
     double M = 0.0;
     double E = 0.0;
     for (i = 0; i < N; i++) {
-        M += F[i];
-        //Multiplica con los vecinos posteriores.
-        i_der = (i + 1) % L == 0 ? i + 1 - L : i + 1;
-        i_down = i + L + 1 > N ? i + L - N : i + L;
-        E -=  F[i] * (F[i_der] + F[i_down]); 
+        M += *(F + i);
+        i_der = (i + 1) % param.L == 0 ? i + 1 - param.L : i + 1;
+        i_down = i + param.L + 1 > N ? i + param.L - N : i + param.L;
+        E -= *(F + i) * (*(F + i_der) + *(F + i_down));
     }
-    printf("%f %f \n", M/N, E/N);
+    printf("%f %f %f \n", param.beta, fabs(M)/N, E/N);
     //*m = fabs(*m) / N;
     //e /= N;
 }
@@ -152,13 +151,13 @@ void mmc(char *F, struct Parametros param) {
     for (j = 0; j < n_iter; j++) {
         //Por cada paso de MC hace N giros de spin.
         for (k = 0; k < N; k++) {
-            //i = rand() % N; //posición al azar del array
+            i = rand() % N; //posición al azar del array
             //printf("%d\n",i);
-            de = DeltaE(F, param.L, k); //Delta de Enegía al posiblemente cambiar el estado.
+            de = DeltaE(F, param.L, i); //Delta de Enegía al posiblemente cambiar el estado.
             if (de != 0) {
                 r = (double)rand()/RAND_MAX * 1.0; //Número aleatorio en [0,1].
                 if (de < 0 || p[de == 4 ? 0 : 1] > r){
-                    *(F + k) *= -1; //Acepta el cambio => Invierte el spin.
+                    *(F + i) *= -1; //Acepta el cambio => Invierte el spin.
                 }
             }
         }
@@ -166,8 +165,8 @@ void mmc(char *F, struct Parametros param) {
 
         //Samplea n_samp veces, después de que haya termalizado (n_term pasos).
         if ((j % param.f_samp) == 0 && j > param.n_term) {
-            sampleo(F, param.L, &m, &e);
-            //printf("%f %f\n", m, e);
+            sampleo(F, param, &m, &e);
+            
             m_sum += m; 
             e_sum += e; 
             n_samp++;
