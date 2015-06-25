@@ -10,12 +10,12 @@ plt.rcParams["ytick.labelsize"] = 12
 plt.rcParams["xtick.labelsize"] = 12
 plt.rcParams["axes.labelsize"] = 20
 
-L = 128
+L = 64
 nterm = 1000 # pasos de termalizacion
 ngrupo = 100 # cantidad de subcadenas (muestras)
 nfrec = 100 # cada cuantos pasos se toman mediciones dentro de una subcadena
 nsize = 50 # cuantas mediciones se hacen dentro de una subcadena, sobre las cuales se promedia
-temps = np.concatenate((np.linspace(0.01, 0.39, 10), np.linspace(0.4, 0.5, 50), np.linspace(0.51, 1, 10)))
+temps = np.concatenate((np.linspace(0.01, 0.43, 10), np.linspace(0.44, 0.46, 10), np.linspace(0.47, 1, 10)))
 ngrupo = 100
 n_samp = 100 #Cantidad de sampleos
 warm = 500 #Cantidad de pasos antes de termalizar
