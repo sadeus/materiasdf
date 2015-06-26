@@ -10,15 +10,13 @@ plt.rcParams["ytick.labelsize"] = 12
 plt.rcParams["xtick.labelsize"] = 12
 plt.rcParams["axes.labelsize"] = 20
 
-L = 64
+L = 128
 nterm = 1000 # pasos de termalizacion
 ngrupo = 100 # cantidad de subcadenas (muestras)
-nfrec = 100 # cada cuantos pasos se toman mediciones dentro de una subcadena
-nsize = 50 # cuantas mediciones se hacen dentro de una subcadena, sobre las cuales se promedia
+nfrec = 200 # cada cuantos pasos se toman mediciones dentro de una subcadena
+nsize = 100 # cuantas mediciones se hacen dentro de una subcadena, sobre las cuales se promedia
 temps = np.concatenate((np.linspace(0.01, 0.43, 10), np.linspace(0.44, 0.46, 10), np.linspace(0.47, 1, 10)))
-ngrupo = 100
-n_samp = 100 #Cantidad de sampleos
-warm = 500 #Cantidad de pasos antes de termalizar
+
 seed = 672791038.0
 #N = warm + fs * Nsamp #Cantidad de iteraciones finales
 path = os.path.abspath(".")
@@ -26,6 +24,7 @@ dataPath = path + "/data{}".format(L)
 if not os.path.isdir(dataPath):
     os.mkdir(dataPath)
 os.chdir(dataPath)
+np.savetxt("temps", temps)
 if os.path.isfile("./Ising"):
     os.remove("./Ising")
 sub.call("gfortran {}/ising.f -o Ising".format(path), shell = True)
