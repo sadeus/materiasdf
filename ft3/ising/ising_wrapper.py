@@ -10,11 +10,11 @@ plt.rcParams["ytick.labelsize"] = 12
 plt.rcParams["xtick.labelsize"] = 12
 plt.rcParams["axes.labelsize"] = 20
 
-L = 64
+L = 8
 path = '.'
 temps = np.linspace(0.1,1,20)
 fs = 100 #Cantidad de pasos entre mediciones.
-n_samp = 2000 #Cantidad de sampleos
+n_samp = 200 #Cantidad de sampleos
 warm = 500 #Cantidad de pasos antes de termalizar
 seed = 672791038.0
 sub.check_output(["gcc","-o","ising","ising.c","-lm"])
@@ -31,17 +31,15 @@ for t in temps:
     cmd += ['-nT',str(warm)]
     cmd += ['-fs',str(fs)]
     cmd += ['-s', str(seed)]
-    out = "med_L_{}".format(L)
-    #N = warm + fs * Nsamp #Cantidad de iteraciones finales
     filePath = os.path.join(path, out)
-    open(filePath,'w+').close() #Lo crea de nuevo el archivo
+    #open(filePath,'w+').close() #Lo crea de nuevo el archivo
     with open(filePath, "a+") as file:
         file.write(str(sub.check_output(cmd),"utf-8"))
-    data = np.loadtxt(filePath)
-    mag.append(np.abs(np.mean(data[:,1])))
-    e.append(np.mean(data[:,2]))
-    c.append(np.var(data[:,2])**2)
 
+data = np.loadtxt(filePath)
+temps = data[:,0]
+mag = data[:,1]
+e = data[:,2]
 #Tamaño de figuras, siguiendo la regla de oro
 plt.figure(1)
 plt.xlabel(r"$\beta J$")
@@ -60,12 +58,12 @@ plt.grid()
 plt.savefig(os.path.join(path, 'e_L_{}'.format(L)), bbox_inches = 'tight')
 
 
-plt.figure(3)
-plt.xlabel(r"$T' = \frac{k}{J} T$")
-plt.ylabel(r"$c = \frac{<\Delta E>^2}{N T'^2}$")  
-plt.plot(temps, c,'go-') 
-plt.grid()
-plt.savefig(os.path.join(path, 'c_L_{}'.format(L)) , bbox_inches = 'tight')
+#plt.figure(3)
+#plt.xlabel(r"$T' = \frac{k}{J} T$")
+#plt.ylabel(r"$c = \frac{<\Delta E>^2}{N T'^2}$")  
+#plt.plot(temps, c,'go-') 
+#plt.grid()
+#plt.savefig(os.path.join(path, 'c_L_{}'.format(L)) , bbox_inches = 'tight')
 
 #plt.show()
 
