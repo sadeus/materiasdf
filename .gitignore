@@ -1,6 +1,6 @@
 *.aux
-*.pdf
 *.bbl
 *.log
 *.toc
 *checkpoint.ipynb
+*~
