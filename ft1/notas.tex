@@ -1,4 +1,4 @@
-\documentclass{article}
+﻿\documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsmath,amssymb,amsfonts} %Fonts de AMS
@@ -37,10 +37,12 @@
 \maketitle
 \tableofcontents
 
+
+
 \section{Electroestática}
 
 \begin{equation}
-\vec{F}_{1\to2} = k_E \; q_1 q_2\frac{\vec{r}_2 - \vec{r}_1}{|\vec{r}_2 - \vec{r}_1|^3} = - \vec{F}_{2\to1}
+\vec{F}_{1\to2} = q_1 q_2\frac{\vec{r}_2 - \vec{r}_1}{|\vec{r}_2 - \vec{r}_1|^3} = - \vec{F}_{2\to1}
 \label{eq:electroestatica_coulomb}
 \end{equation}
 
@@ -51,7 +53,7 @@ Definimos el campo eléctrico con una carga de prueba $q$ (que no deforma la con
 \end{equation}
 Experimentalmente vale el principio de superposición, por lo que el campo eléctrico general de una distribución de carga con densidad de carga $\rho(\vec{r}')$ es 
 \begin{equation}
-\vec{E}(\vec{r}) = k_E \int \rho(\vec{r}') \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} d\vec{r}'
+\vec{E}(\vec{r}) = \int \rho(\vec{r}') \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} d\vec{r}'
 \label{eq:campo_electrico_dist_carga}
 \end{equation}
 Que se transforma en la expresión para una carga con la siguiente distribución
@@ -67,14 +69,14 @@ y además sabemos que
 \nabla \left(\frac{1}{|\vec{r} - \vec{r}'|}\right) = -\frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3}
 \end{equation}
 Con estas dos expresiones podemos calcular la divergencia del campo eléctrico
-\[ \nabla \cdot \vec{E}(\vec{r}) = k_E \, \nabla \cdot \int \rho(\vec{r}') \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} d\vec{r}' = k_E \int \rho(\vec{r}') \, \nabla \cdot \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} d\vec{r}' = 4\pi k_E \int \rho(\vec{r}') \delta(\vec{r} - \vec{r}') d\vec{r}'\]
+\[ \nabla \cdot \vec{E}(\vec{r}) = \nabla \cdot \int \rho(\vec{r}') \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} d\vec{r}' = \int \rho(\vec{r}') \, \nabla \cdot \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} d\vec{r}' = 4\pi \int \rho(\vec{r}') \delta(\vec{r} - \vec{r}') d\vec{r}'\]
 nos que nos da
 \begin{equation}
-\nabla \cdot \vec{E}(\vec{r}) = 4\pi k_E \rho(\vec{r})
+\nabla \cdot \vec{E}(\vec{r}) = 4\pi \rho(\vec{r})
 \label{eq:gauss_diff}
 \end{equation}
 y el rotor del campo eléctrico es
-\[\nabla \times \vec{E}(\vec{r}) = k_E \nabla \times \int \rho(\vec{r}') \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} d\vec{r}' = k_E \int \rho(\vec{r}') \nabla \times \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} d\vec{r}' = -k_E \int \rho(\vec{r}') \nabla \times \nabla \left(\frac{1}{|\vec{r} - \vec{r}'|}\right) d\vec{r}'\]
+\[\nabla \times \vec{E}(\vec{r}) = \nabla \times \int \rho(\vec{r}') \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} d\vec{r}' = \int \rho(\vec{r}') \nabla \times \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} d\vec{r}' = - \int \rho(\vec{r}') \nabla \times \nabla \left(\frac{1}{|\vec{r} - \vec{r}'|}\right) d\vec{r}'\]
 lo que nos deja 
 \begin{equation}
 \nabla \times \vec{E}(\vec{r}) = 0
@@ -94,8 +96,183 @@ lo que nos define
 \end{equation}
 con lo que la divergencia del campo nos da
 \begin{equation}
- \nabla^2 \varphi(\vec{r}) = - 4  \pi k_E \rho(\vec{r})
+ \nabla^2 \varphi(\vec{r}) = - 4  \pi \rho(\vec{r})
 \end{equation}
-\end{document}
+Que corresponde a la ecuación de Poisson cuando hay carga libre o a la ecuación de Laplace
+\begin{equation}
+ \nabla^2 \varphi(\vec{r}) = 0
+ \end{equation}
+ si no hay carga libre. Se presentará algunos métodos de resolución de ambas ecuaciones.
+ 
+\section{Magnetoestática}
+Un campo magnético, que puede tener la fuente presente o no en el entorno del problema, produce una fuerza sobre una carga de prueba $q$ igual a 
+\begin{equation}
+F = q \frac{\vec{v}}{c} \times \vec{B}
+\end{equation}
+donde el producto $\times$ corresponde al producto vectorial. Esto lo tomamos como la definición del campo magnético, para tener una base mecánica sobre sustentar la teoría.
+Experimentalmente, se observa la siguiente ley, Biot-Savart, relacionando el movimiento de cargas o \emph{corrientes} por hilos conductores y el campo magnético generado.
+\begin{equation}
+ d\vec{B} = \frac{1}{c} \frac{I d\vec{l} \times \vec{r}}{r^3}
+\end{equation}
+es decir 
+\begin{equation}
+    \vec{B} = \frac{1}{c} \int  \frac{I d\vec{l} \times \vec{r}}{r^3}.
+\end{equation}
+Esto se generaliza a corrientes volumétricas de la siguiente forma
+\begin{equation}
+    \vec{B} = \frac{1}{c} \int  \vec{J}(\vec{r}') \times \Rinv d\vec{r}'
+    \label{eq:biot_savart}
+\end{equation}
 
+De la misma forma, vamos a buscar expresiones para el rotor y la divergencia de campo magnético. Primero reescribamos un poco la expresión general de la ley de Biot-Savart (eq \ref{eq:biot_savart}), usando la regla del producto del rotor
+\[ \nabla \times (\phi \vec{A}) = (\nabla \phi) \times \vec{A} + \phi \nabla \times \vec{A} \]
+y que $\vec{J}$ no depende de la coordenada campo $\vec{r}$.
+\[ \vec{B} = \frac{1}{c} \int  \vec{J}(\vec{r}') \times \left(- \nabla\left(\rinv\right) \right) d\vec{r}' = \frac{1}{c} \int  \nabla\left(\rinv\right) \times \vec{J}(\vec{r}') d\vec{r}' = \frac{1}{c} \int \nabla \times \left( \frac{\vec{J}(\vec{r}')}{|\vec{r} - \vec{r}'|}\right) d\vec{r}'\]
+Como la derivada no depende del integrando, las podemos intercambiar sin problemas, pero a nosotros nos interesa la divergencia de esto
+\[ \nabla \cdot \vec{B} = \frac{1}{c} \int  \nabla \cdot \nabla \times \left( \frac{\vec{J}(\vec{r}')}{|\vec{r} - \vec{r}'|}\right) d\vec{r}' = 0\]
+es decir 
+\begin{equation}
+    \nabla \cdot \vec{B} = 0
+    \label{eq:gauss_magnetic}
+\end{equation}
+Para el rotor del campo magnético usamos la siguiente identidad
+\begin{equation}
+\nabla \times \left( \nabla \times \vec{A} \right) = \nabla(\nabla \cdot \vec{A}) - \nabla^{2}\vec{A}
+\end{equation}
+que nos queda
+\[ \nabla \times \vec{B} = \frac{1}{c} \int  \nabla \times \nabla \times \left( \frac{\vec{J}(\vec{r}')}{|\vec{r} - \vec{r}'|}\right) d\vec{r}' = \frac{1}{c} \int \left\{ \nabla  \left(\vec{J}(\vec{r}') \cdot \nabla \left( \rinv \right) \right) - \vec{J}(\vec{r}') \nabla^2 \left( \rinv \right) \right\} d\vec{r}' \]
+
+Para el segundo término usamos que 
+\begin{equation}
+    \nabla^2 \phi = \nabla \cdot (\nabla \phi)
+\end{equation}
+es decir
+\begin{equation}
+    \nabla^2 \left(\rinv\right) = - 4\pi \delta(\vec{r} - \vec{r}')
+\end{equation}
+y para el primero integramos por partes
+\[ \nabla \times \vec{B} = \frac{1}{c} \nabla \int \frac{\nabla \cdot \vec{J}}{|\vec{r} - \vec{r}'|} d\vec{r}' + \frac{4\pi}{c} \vec{J}(\vec{r})\]
+y como estamos en magnetoestática, sabemos que
+\begin{equation}
+\nabla \cdot \vec{J} = 0
+\end{equation}
+por lo que nos queda la ley de Ampere, en forma diferencial,
+\begin{equation}
+\nabla \times \vec{B} = \frac{4\pi}{c} \vec{J}(\vec{r})
+\label{eq:ampere}
+\end{equation}
+
+Ahora, como el campo magnético $\vec{B}$ es un campo sin divergencia, podemos defir otro campo, llamado \emph{potencial vector magnético} o potencial vector, tal que
+\begin{equation}
+\vec{B} = \nabla \times \vec{A}
+\end{equation}
+con el que obtengo la siguiente ecuación diferencial (a partir de la ley de Ampere)
+\begin{equation}
+\nabla^2 \vec{A} - \nabla (\nabla \cdot \vec{A}) = - \frac{4\pi}{c} \vec{J}
+\end{equation}
+que se puede simplificar, sabiendo que podemos elegir diferentes potenciales a menos de un gradiente (que se anula al calcularle el rotor)
+\begin{equation}
+\vec{A} \to \vec{A} + \nabla \varphi
+\label{eq:gauge_A}
+\end{equation}
+con lo que la solución a la ecuación diferencial finalmente nos queda
+\begin{equation}
+\vec{A} = \frac{1}{c} \int  \frac{\vec{J}(\vec{r}')}{|\vec{r} - \vec{r}'|} d\vec{r}' + \nabla \varphi
+\end{equation}
+y si elegimos $\varphi$ tal que
+\begin{equation}
+\nabla \cdot \vec{A} = 0
+\label{eq:gauge_coulumb}
+\end{equation}
+que se denomina \emph{gauge de Coulomb}, tenemos
+\begin{equation}
+\nabla^2 \vec{A} = - \frac{4\pi}{c} \vec{J}
+\end{equation}
+que se soluciona con
+\begin{equation}
+\vec{A} = \frac{1}{c} \int  \frac{\vec{J}(\vec{r}')}{|\vec{r} - \vec{r}'|} d\vec{r}'
+\end{equation}
+\section{Simetrías}
+Con la fuerza de Lorentz
+\begin{equation}
+\vec{F} = q \left(\vec{E} + \frac{\vec{v}}{c} \times \vec{B}\right)
+\end{equation}
+aparecen ciertas simetrías, propias de exigir la homogeneidad e isotropía del espacio; es decir, si rotamos o trasladamos las fuentes y las cargas de prueba las fuerzas deben ser iguales, impactando en las fuentes.
+Transladar las fuentes implica
+\begin{equation}
+\rho'(\vec{r}) = \rho(\vec{r} - \vec{a}) \quad \vec{j}'(\vec{r}) = \vec{j}(\vec{r} - \vec{a})
+\end{equation}
+e implica que las fuerzas
+\[q \left(\vec{E}'(\vec{r}) + \frac{\vec{v}}{c} \times \vec{B}'(\vec{r})\right) = q \left(\vec{E}(\vec{r} - \vec{a}) + \frac{\vec{v}}{c} \times \vec{B}(\vec{r} - \vec{a})(\vec{\right)\]
+por lo que nos queda (considerando que las cargas de prueba no tienen diferente velocidad)
+\begin{equation}
+\vec{E}'(\vec{r}) = \vec{E}(\vec{r} - \vec{a}) \quad \vec{B}'(\vec{r}) = \vec{B}(\vec{r} - \vec{a})
+\end{equation}
+
+Mientras, rotar las fuentes implica 
+\begin{equation}
+\rho'(\vec{r}) = \rho(\vec{R}^{-1} \vec{r}) \qquad \vec{j}'(\vec{r}) = \vec{R}\vec{j}(\vec{R}^{-1} \vec{r})
+\end{equation}
+donde la matriz u operador $\vec{R}$ es una matriz ortogonal que representa la translación. 
+
+Con esta expresión, es evidente que el campo eléctrico se translada como
+\begin{equation}
+\vec{E}'(\vec{r}) = \vec{R} \vec{E}(\vec{R}^{-1} \vec{r})
+\end{equation}
+mientras que para el campo magnético debemos usar la siguiente identidad
+\begin{equation}
+\vec{R} (\vec{A} \times \vec{B}) = (\vec{R} \vec{A]) \times (\vec{R} \vec{B})
+\end{equation}
+que nos termina dando que el campo magnético rota con las fuentes, salvo un factor, es decir
+\begin{equation}
+\vec{B}'(\vec{r}) = \det(\vec{R}) \vec{B}(\vec{R}^{-1} \vec{r})
+\end{equation}
+El factor $\det(\vec{R})$ proviene de considerar las reflexiones, que tienen determinante negativo, y por lo tanto cambian el signo del campo magnético; el campo magnético es un \textbf{pseudo vector}.
+
+Estas simetrías corresponden a las atadas a la realidad mecánica, pero no nos dice que las ecuaciones que relacionan las fuentes con los campos (las ecuaciones de la electrodinámica o de Maxwell) verifican estas simetrías. 
+
+Con cálculo vectorial se demuestra que aún en el caso dinámico las simetrías anteriores se conservan.
+ \subsection{Medios materiales}
+Para medios materiales consideramos medios ponderables, es decir vamos a trabajar con campos promedios, sabiendo que la materia ordinaria tiene una densidad de particulas enorme.
+Podemos que si cada elemento de carga está en una situación estática, tenemos
+\begin{equation}
+\nabla \times \langle \vec{E} \rangle = \nabla \times \vec{E} = 0
+\end{equation}
+donde eliminamos el promedio para simpleza de la notación. De ahora en adelante serán campos macroscópicos promedio.
+
+Definimos la \emph{polarización eléctrica} como
+\begin{equation}
+\vec{P}(\vec{r}) = \sum \frac{\vec{N_i}}{V_i} \langle \vec{p}_i \rangle
+\end{equation}
+donde se promedia en un pequeño volumen centrado en $\vec{r}$, con $N_i$ particulas del tipo $i$ con dipolo eléctrico $\vec{p}_i$, dividido el volumen del cúmulo de partículas. De la misma forma definimos la densidad de carga
+\begin{equation}
+\rho(\vec{r}) = \sum_i \frac{N_i}{V_i} \langle q_i \rangle + \rho_{libre}
+\end{equation}
+Se observa que en la materia es neutra, por lo que la carga libre es la que impacta en la densidad de carga. 
+Si consideramos que no existe otro momento multipolar mayor tenemos que el potencial ponderado, valiendonos del principio de superposición, es
+\begin{equation*}
+ \varphi(\vec{r}) = \int \rho(\vec{r}') \rinv d\vec{r}' + \int \vec{P}(\vec{r}') \cdot \Rinv d\vec{r}' = \int \rho(\vec{r}') \rinv d\vec{r}' + \int \vec{P}(\vec{r}') \cdot \nabla\left(\rinv\right) d\vec{r}' 
+\end{equation*}
+Si integramos por partes el segundo término, y eliminamos el término de superficie, tenemos que
+\begin{equation}
+\varphi(\vec{r}) = \int (\rho(\vec{r}') - \nabla' \cdot \vec{P}(\vec{r}')) \rinv d\vec{r'}
+\end{equation}
+por lo que encontramos una fuente de carga más, que podemos expresar
+\begin{equation*}
+\nabla \cdot \vec{E} = 4\pi (\rho - \nabla \cdot \vec{P})
+\end{equation*}
+Acá definimos el campo \emph{desplazamiento eléctrico} como 
+\begin{equation}
+ \vec{D} = \vec{E} + 4\pi \vec{P} 
+\end{equation}
+que nos lleva a la ecuación de Gauss para medios materiales
+\begin{equation}
+ \nabla \cdot \vec{D} = 4\pi \rho
+\end{equation}
+Es necesario remarcar que el rotor de $\vec{D}$ no es necesariamente nulo, ya que
+\begin{equation}
+\nabla \times \vec{D} = \nabla \times \vec{P}
+\end{equation}
+es decir depende de la polarización del medio.
+\end{document}
 
