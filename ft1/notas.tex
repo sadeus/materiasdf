@@ -1,10 +1,10 @@
-﻿\documentclass{article}
+\documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsmath,amssymb,amsfonts} %Fonts de AMS
 \usepackage{mathbbol} %Font para matrices como la identidad
 %%Formato de hoja%%
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=1.5cm]{geometry}
 
 %%Imagenes%%
 \usepackage{graphicx}
@@ -51,7 +51,7 @@ Definimos el campo eléctrico con una carga de prueba $q$ (que no deforma la con
 \vec{E} = \frac{\vec{F}}{q}
 \label{eq:campo_electrico}
 \end{equation}
-Experimentalmente vale el principio de superposición, por lo que el campo eléctrico general de una distribución de carga con densidad de carga $\rho(\vec{r}')$ es 
+Experimentalmente vale el principio de superposición, por lo que el campo eléctrico general de una distribución de carga con densidad de carga $\rho(\vec{r}')$ es
 \begin{equation}
 \vec{E}(\vec{r}) = \int \rho(\vec{r}') \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} d\vec{r}'
 \label{eq:campo_electrico_dist_carga}
@@ -77,7 +77,7 @@ nos que nos da
 \end{equation}
 y el rotor del campo eléctrico es
 \[\nabla \times \vec{E}(\vec{r}) = \nabla \times \int \rho(\vec{r}') \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} d\vec{r}' = \int \rho(\vec{r}') \nabla \times \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} d\vec{r}' = - \int \rho(\vec{r}') \nabla \times \nabla \left(\frac{1}{|\vec{r} - \vec{r}'|}\right) d\vec{r}'\]
-lo que nos deja 
+lo que nos deja
 \begin{equation}
 \nabla \times \vec{E}(\vec{r}) = 0
 \label{eq:electroestatica_rotor}
@@ -97,15 +97,17 @@ lo que nos define
 con lo que la divergencia del campo nos da
 \begin{equation}
  \nabla^2 \varphi(\vec{r}) = - 4  \pi \rho(\vec{r})
+ \label{eq:electroestatico_potencial_poisson}
 \end{equation}
 Que corresponde a la ecuación de Poisson cuando hay carga libre o a la ecuación de Laplace
 \begin{equation}
  \nabla^2 \varphi(\vec{r}) = 0
+ \label{eq:electroestatico_potencial_laplace}
  \end{equation}
  si no hay carga libre. Se presentará algunos métodos de resolución de ambas ecuaciones.
- 
+
 \section{Magnetoestática}
-Un campo magnético, que puede tener la fuente presente o no en el entorno del problema, produce una fuerza sobre una carga de prueba $q$ igual a 
+Un campo magnético, que puede tener la fuente presente o no en el entorno del problema, produce una fuerza sobre una carga de prueba $q$ igual a
 \begin{equation}
 F = q \frac{\vec{v}}{c} \times \vec{B}
 \end{equation}
@@ -114,7 +116,7 @@ Experimentalmente, se observa la siguiente ley, Biot-Savart, relacionando el mov
 \begin{equation}
  d\vec{B} = \frac{1}{c} \frac{I d\vec{l} \times \vec{r}}{r^3}
 \end{equation}
-es decir 
+es decir
 \begin{equation}
     \vec{B} = \frac{1}{c} \int  \frac{I d\vec{l} \times \vec{r}}{r^3}.
 \end{equation}
@@ -130,7 +132,7 @@ y que $\vec{J}$ no depende de la coordenada campo $\vec{r}$.
 \[ \vec{B} = \frac{1}{c} \int  \vec{J}(\vec{r}') \times \left(- \nabla\left(\rinv\right) \right) d\vec{r}' = \frac{1}{c} \int  \nabla\left(\rinv\right) \times \vec{J}(\vec{r}') d\vec{r}' = \frac{1}{c} \int \nabla \times \left( \frac{\vec{J}(\vec{r}')}{|\vec{r} - \vec{r}'|}\right) d\vec{r}'\]
 Como la derivada no depende del integrando, las podemos intercambiar sin problemas, pero a nosotros nos interesa la divergencia de esto
 \[ \nabla \cdot \vec{B} = \frac{1}{c} \int  \nabla \cdot \nabla \times \left( \frac{\vec{J}(\vec{r}')}{|\vec{r} - \vec{r}'|}\right) d\vec{r}' = 0\]
-es decir 
+es decir
 \begin{equation}
     \nabla \cdot \vec{B} = 0
     \label{eq:gauss_magnetic}
@@ -142,7 +144,7 @@ Para el rotor del campo magnético usamos la siguiente identidad
 que nos queda
 \[ \nabla \times \vec{B} = \frac{1}{c} \int  \nabla \times \nabla \times \left( \frac{\vec{J}(\vec{r}')}{|\vec{r} - \vec{r}'|}\right) d\vec{r}' = \frac{1}{c} \int \left\{ \nabla  \left(\vec{J}(\vec{r}') \cdot \nabla \left( \rinv \right) \right) - \vec{J}(\vec{r}') \nabla^2 \left( \rinv \right) \right\} d\vec{r}' \]
 
-Para el segundo término usamos que 
+Para el segundo término usamos que
 \begin{equation}
     \nabla^2 \phi = \nabla \cdot (\nabla \phi)
 \end{equation}
@@ -192,6 +194,7 @@ que se soluciona con
 \begin{equation}
 \vec{A} = \frac{1}{c} \int  \frac{\vec{J}(\vec{r}')}{|\vec{r} - \vec{r}'|} d\vec{r}'
 \end{equation}
+
 \section{Simetrías}
 Con la fuerza de Lorentz
 \begin{equation}
@@ -209,11 +212,11 @@ por lo que nos queda (considerando que las cargas de prueba no tienen diferente 
 \vec{E}'(\vec{r}) = \vec{E}(\vec{r} - \vec{a}) \quad \vec{B}'(\vec{r}) = \vec{B}(\vec{r} - \vec{a})
 \end{equation}
 
-Mientras, rotar las fuentes implica 
+Mientras, rotar las fuentes implica
 \begin{equation}
 \rho'(\vec{r}) = \rho(\vec{R}^{-1} \vec{r}) \qquad \vec{j}'(\vec{r}) = \vec{R}\vec{j}(\vec{R}^{-1} \vec{r})
 \end{equation}
-donde la matriz u operador $\vec{R}$ es una matriz ortogonal que representa la translación. 
+donde la matriz u operador $\vec{R}$ es una matriz ortogonal que representa la translación.
 
 Con esta expresión, es evidente que el campo eléctrico se translada como
 \begin{equation}
@@ -229,12 +232,101 @@ que nos termina dando que el campo magnético rota con las fuentes, salvo un fac
 \end{equation}
 El factor $\det(\vec{R})$ proviene de considerar las reflexiones, que tienen determinante negativo, y por lo tanto cambian el signo del campo magnético; el campo magnético es un \textbf{pseudo vector}.
 
-Estas simetrías corresponden a las atadas a la realidad mecánica, pero no nos dice que las ecuaciones que relacionan las fuentes con los campos (las ecuaciones de la electrodinámica o de Maxwell) verifican estas simetrías. 
+Estas simetrías corresponden a las atadas a la realidad mecánica, pero no nos dice que las ecuaciones que relacionan las fuentes con los campos (las ecuaciones de la electrodinámica o de Maxwell) verifican estas simetrías. Usando notación de indices, %HACER
+para las ecuaciones de la electroestática y magnetoestática, se verifica las simetrías de traslación y rotación ya predichas; es más podemos agregar la componente temporal, y trabajar con la electrodinámica y obtendríamos el mismo resultado.
 
-Con cálculo vectorial se demuestra que aún en el caso dinámico las simetrías anteriores se conservan.
+\section{Métodos de resolución}
+En esta sección vamos a tratar de resolver las ecuaciónes del potencial electroestático, las ecuaciones \ref{eq:electroestatico_potencial_poisson} y \ref{eq:electroestatico_potencial_laplace}, con diferentes condiciones de contorno y cargas; la idea de resolver la ecuación del potencial es no tener que resolver cada componente del campo, aunque siempre va a haber una \emph{libertad} de definición (o \emph{gauge}). Recordemos, la ecuación que vamos a resolver es:
+\[ \nabla^2 \varphi(\vec{r}) = - 4 \pi \rho(\vec{r}) \]
+Además, las herramientas que implementemos acá nos servirán para los problemas de magnetoestática.
+
+\subsection{Separación de variables}
+Uno de los métodos más usuales para resolver ecuaciones homogeneas (sin fuentes), cuando las condiciones de contorno son \emph{razonables} (o mejor dicho, \emph{separables}), es el de \textbf{separación de variables}. Este consiste, en grandes rasgos, proponer lo siguiente
+\begin{equation}
+  \varphi(x_1, x_2, x_3) = \varphi_{1}(x_1) \varphi_{2}(x_2) \varphi_{3}(x_3)
+  \label{eq:separacion_variables_multiplicacion}
+\end{equation}
+Con esto, la ecuación de Laplace nos queda
+\begin{equation}
+  \nabla^2 \varphi =  \varphi_2  \varphi_3 \nabla_{x_1}^2 \varphi_1 +  \varphi_1  \varphi_3 \nabla_{x_2}^2 \varphi_2 +   \varphi_1  \varphi_2 \nabla_{x_3}^2 \varphi_3 = 0
+\end{equation}
+y por lo tanto nos queda
+\begin{equation}
+   \frac{1}{\varphi_{x_1}} \nabla_{x_1}^2 \varphi_1 +   \frac{1}{\varphi_{x_2}} \nabla_{x_2}^2 \varphi_2 + \frac{1}{\varphi_{x_3}} \nabla_{x_3}^2 \varphi_3 = 0
+\end{equation}
+Así nos quedó una suma de tres términos, cada uno con una relación funcional de una sola variable; sin las condiciones de contorno no mezclan coordenadas, permitirán definir la siguiente terna de ecuaciones
+\begin{equation}
+ \nabla_i^2 \varphi_i = \lambda_i \varphi_i \qquad \sum^3_{i = 1} \lambda_i = 0
+ \label{eq:separacion_variables_ecuacion}
+\end{equation}
+Dejamos expresado el operador laplaciano porque solamente en coordenadas cartesianas es simplemente suma de derivadas segundas. Ahora, dada las ecuaciones, pasamos a considerar algunos tipos de coordenadas, donde el operador laplaciano es \emph{separable}. En estos casos, el problema se reduce a lo que se llama \emph{problema de Stum-Lioville}, que tienen solución usando herramientas del álgebra lineal.
+
+\subsubsection{Coordenadas cartesianas}
+En coordenadas cartesianas, tenemos que la ecuación \ref{eq:separacion_variables_ecuacion} se escribe
+\begin{equation}
+  \frac{\partial^2}{\partial x_i^2} \varphi_{i} = \lambda_i \varphi_i \qquad \lambda_x + \lambda_y + \lambda z = 0
+\end{equation}
+Consideremos el potencial dentro de una caja cubica de lado $L$ (para simplificar la exposición), con todas los extremos a potencial nulo salvo la cara de $z = L$, que tiene un potencial $V(x,y)$. De esta forma elegimos la siguiente propiedad para las constantes $\lambda_i$:
+\begin{equation}
+  \lambda_x = - \alpha^2 \quad \lambda_y = - \beta^2 \quad \lambda_z = \gamma^2 \quad \Rightarrow \quad \alpha^2 + \beta^2 = \gamma^2
+\end{equation}
+que produce el siguiente conjunto de ecuaciones diferenciales
+\begin{equation}
+  \begin{gathered}
+    \partial_{xx} \varphi_x = - \alpha{^2} \varphi_x \\
+    \partial_{yy} \varphi_y = - \beta{^2} \varphi_y \\
+    \partial_{zz} \varphi_z =  \gamma{^2} \varphi_z
+  \end{gathered}
+\end{equation}
+que tienen como solución
+\begin{equation}
+  \begin{gathered}
+    \varphi_{x} = e^{\pm i \alpha x}\\
+    \varphi_y = e^{\pm i \beta y}\\
+    \varphi_z = e^{\pm \sqrt{\alpha^2 + \beta^2} z}
+  \end{gathered}
+  \label{eq:separacion_variables_cartesiana}
+\end{equation}
+Esta solución es bastante general y vamos a utilizarla en la mayoría de los casos: por superposición y renombramiento de variables podemos generar cualquier elección de contorno.
+
+Si ahora le imponemos las condiciones que consideramos, tenemos que
+\begin{equation}
+  \begin{gathered}
+    \varphi_{x} = \sen(\alpha_n x)\\
+    \varphi_y = \sen(\beta_m x)\\
+    \varphi_z = \senh(\sqrt{\alpha_n^2 + \beta_m^2} z)\\
+    \alpha_n = \frac{n \pi}{L} \quad \beta_m = \frac{m \pi}{L}
+  \end{gathered}
+\end{equation}
+por lo que la solución final es una combinación lineal de cada solución
+\begin{equation}
+  \varphi(x, y, z) = \sum^\infty_{n, m = 1} A_{nm} \sen(\alpha_n x)\; \sen(\beta_m x)\; \senh(\sqrt{\alpha_n^2 + \beta_m^2} z)
+\end{equation}
+que finalmente nos permite encontrar las componentes $A_{nm}$ a partir del potencial $V(x,y)$ como
+\begin{equation}
+  V(x, y, z) = \sum^2_{n, m = 1} A_{nm} \sen(\alpha_n x)\; \sen(\beta_m x)\; \senh(\sqrt{\alpha_n^2 + \beta_m^2} L)
+\end{equation}
+y sabiendo que las funciones senoidales son funciones ortogonales y forman una base, es decir
+\begin{equation}
+  \int_{0}^{L} \int_{0}^{L} \sen\left(\frac{\pi n}{L} x\right) \sen(\frac{\pi m}{L} y) dx dy = \frac{2}{L} \delta_{mn}
+\end{equation}
+podemos escribir a las componentes $A_{mn}$ como
+\begin{equation}
+  A_{mn} = \frac{4}{L^2 \senh(\gamma_{mn} L)}\int_{0}^{L} \int_{0}^{L} V(x, y) \sen(\alpha_n x) \sen(\beta_m y) dx dy
+\end{equation}
+
+Acá salta a la luz el mecanismo usual de resolver un problema por separación de variables:
+\begin{itemize}
+  \item{Proponer coordenadas que permitan separar la ecuación de Laplace, ecuación \ref{eq:electroestatico_potencial_laplace}, y las condiciones de contorno. Aparecen tres ecuaciones diferenciales ordinarias}
+  \item{Dos de estas ecuaciones se resuelven como un problema de Stum-Lioville, que asegura que existe un conjunto ortonormal de funciones asociado a un conjunto de autovalores}
+  \item{Aplicamos condiciones de contorno y encontramos el valor de los autovalores y de las componentes libres}
+\end{itemize}
+Si es necesario, se pueden "pegar" dos soluciones, exigiendo la continuidad del potencial (debido a que sabemos que el campo eléctrico es proporcional a la fuerza y por lo tanto debe tener integral continua) y encontrando las constantes libres.
+
+\subsubsection{Coordenadas esféricas}
 
 
- \subsection{Medios materiales}
+\subsection{Medios materiales}
 Para medios materiales consideramos medios ponderables, es decir vamos a trabajar con campos promedios, sabiendo que la materia ordinaria tiene una densidad de particulas enorme.
 Podemos que si cada elemento de carga está en una situación estática, tenemos
 \begin{equation}
@@ -250,10 +342,10 @@ donde se promedia en un pequeño volumen centrado en $\vec{r}$, con $N_i$ partic
 \begin{equation}
 \rho(\vec{r}) = \sum_i \frac{N_i}{V_i} \langle q_i \rangle + \rho_{libre}
 \end{equation}
-Se observa que en la materia es neutra, por lo que la carga libre es la que impacta en la densidad de carga. 
+Se observa que en la materia es neutra, por lo que la carga libre es la que impacta en la densidad de carga.
 Si consideramos que no existe otro momento multipolar mayor tenemos que el potencial ponderado, valiendonos del principio de superposición, es
 \begin{equation*}
- \varphi(\vec{r}) = \int \rho(\vec{r}') \rinv d\vec{r}' + \int \vec{P}(\vec{r}') \cdot \Rinv d\vec{r}' = \int \rho(\vec{r}') \rinv d\vec{r}' + \int \vec{P}(\vec{r}') \cdot \nabla\left(\rinv\right) d\vec{r}' 
+ \varphi(\vec{r}) = \int \rho(\vec{r}') \rinv d\vec{r}' + \int \vec{P}(\vec{r}') \cdot \Rinv d\vec{r}' = \int \rho(\vec{r}') \rinv d\vec{r}' + \int \vec{P}(\vec{r}') \cdot \nabla\left(\rinv\right) d\vec{r}'
 \end{equation*}
 Si integramos por partes el segundo término, y eliminamos el término de superficie, tenemos que
 \begin{equation}
@@ -263,9 +355,9 @@ por lo que encontramos una fuente de carga más, que podemos expresar
 \begin{equation*}
 \nabla \cdot \vec{E} = 4\pi (\rho - \nabla \cdot \vec{P})
 \end{equation*}
-Acá definimos el campo \emph{desplazamiento eléctrico} como 
+Acá definimos el campo \emph{desplazamiento eléctrico} como
 \begin{equation}
- \vec{D} = \vec{E} + 4\pi \vec{P} 
+ \vec{D} = \vec{E} + 4\pi \vec{P}
 \end{equation}
 que nos lleva a la ecuación de Gauss para medios materiales
 \begin{equation}
