@@ -84,6 +84,14 @@ lo que nos deja
 \end{equation}
 Con esas ecuaciones podemos encontrar el campo eléctrico para cualquier configuración.
 
+Las ecuaciones diferenciales del campo eléctrico tienen asociadas ecuaciones de continuidad, que se obtienen observando de forma cercana una interfaz
+\begin{equation}
+ (\vec{E}_2 - \vec{E}_1) \cdot \vec{n} = 4 \pi \sigma \qquad \vec{n} \times (\vec{E}_2 - \vec{E}_1) = 0 
+ \label{eq:electroestatica_continuidad_campo}
+\end{equation}
+donde queda explicito que la componente que es discontinua es la normal y la tangencial debe ser continua. 
+
+
 Para hacerlo más fácil sabemos que el campo eléctrico debe ser
 \begin{equation}
  \vec{E}(\vec{r}) = - \nabla \varphi(\vec{r})
@@ -104,8 +112,18 @@ Que corresponde a la ecuación de Poisson cuando hay carga libre o a la ecuació
  \nabla^2 \varphi(\vec{r}) = 0
  \label{eq:electroestatico_potencial_laplace}
  \end{equation}
- si no hay carga libre. Se presentará algunos métodos de resolución de ambas ecuaciones.
+ si no hay carga libre. A partir de la fuerza de Coulomb y con la definición del potencial tenemos que se verifica
+\begin{equation}
+	\varphi(\vec{r}) = \int \frac{\rho(\vec{r}'}{|\vec{r} - \vec{r}'|} d\vec{r}'
+	\label{eq:electroestatica_potencial_superposicion_integral}
+\end{equation}
+si y solo si no hay contornos, para lo que vamos a utilzar otras herramientas.
 
+ La ecuaciones de continuidad para el potencial corresponde a reemplazar en la ecuación \ref{eq:electroestatica_continuidad_campo} el potencial, obteniendo
+ \begin{equation}
+  \phi_1 = \phi_2 \qquad \frac{\partial \phi_1}{\partial n} - \frac{\partial \phi_2}{\partial n} = 4 \pi \sigma
+ \end{equation}
+ 
 \section{Magnetoestática}
 Un campo magnético, que puede tener la fuente presente o no en el entorno del problema, produce una fuerza sobre una carga de prueba $q$ igual a
 \begin{equation}
@@ -135,7 +153,7 @@ Como la derivada no depende del integrando, las podemos intercambiar sin problem
 es decir
 \begin{equation}
     \nabla \cdot \vec{B} = 0
-    \label{eq:gauss_magnetic}
+    \label{eq:gauss_magnetico}
 \end{equation}
 Para el rotor del campo magnético usamos la siguiente identidad
 \begin{equation}
@@ -163,6 +181,12 @@ por lo que nos queda la ley de Ampere, en forma diferencial,
 \nabla \times \vec{B} = \frac{4\pi}{c} \vec{J}(\vec{r})
 \label{eq:ampere}
 \end{equation}
+
+De la misma forma que para el campo eléctrico, la continuidad del campo magnético estático corresponde a 
+\begin{equation}
+	(\vec{B}_2 - \vec{B}_1)\cdot \vec{n} = 0 \qquad  \vec{n} \times (\vec{B}_2 - \vec{B}_1) = \frac{4\pi}{c} \vec{K}  
+\end{equation}
+donde $\vec{K}$ corresponde a la corriente superficial, tal que tiene solo componentes en el plano de la interfaz.
 
 Ahora, como el campo magnético $\vec{B}$ es un campo sin divergencia, podemos defir otro campo, llamado \emph{potencial vector magnético} o potencial vector, tal que
 \begin{equation}
@@ -318,15 +342,229 @@ podemos escribir a las componentes $A_{mn}$ como
 Acá salta a la luz el mecanismo usual de resolver un problema por separación de variables:
 \begin{itemize}
   \item{Proponer coordenadas que permitan separar la ecuación de Laplace, ecuación \ref{eq:electroestatico_potencial_laplace}, y las condiciones de contorno. Aparecen tres ecuaciones diferenciales ordinarias}
-  \item{Dos de estas ecuaciones se resuelven como un problema de Stum-Lioville, que asegura que existe un conjunto ortonormal de funciones asociado a un conjunto de autovalores}
+  \item{Dos de estas ecuaciones se resuelven como un problema de Stum-Lioville, que asegura que existe un conjunto ortonormal de funciones asociado a un conjunto de autovalores. Las coordenadas que van a ser base tienen condiciones de contorno homogeneas (es decir nulas) o no están acotadas}
   \item{Aplicamos condiciones de contorno y encontramos el valor de los autovalores y de las componentes libres}
 \end{itemize}
-Si es necesario, se pueden "pegar" dos soluciones, exigiendo la continuidad del potencial (debido a que sabemos que el campo eléctrico es proporcional a la fuerza y por lo tanto debe tener integral continua) y encontrando las constantes libres.
+Si es necesario, se pueden "pegar" dos soluciones, exigiendo la continuidad del potencial (debido a que sabemos que el campo eléctrico es proporcional a la fuerza y por lo tanto debe tener integral continua) y encontrando las constantes libres. 
+
+
+
+Si en una dirección no se tiene contorno, es decir la variable recorre todo el eje o un semieje, las soluciones posibles son exponenciales imaginarias. Por ejemplo, tenemos que en el eje $x$ no hay contorno, por lo tanto la solución es
+\begin{equation}
+ X_k(x) = e^{i k x} \qquad -\infty < k \infty
+\end{equation}
+con la siguiente relación de ortogonalidad
+\begin{equation}
+ \frac{1}{2\pi} \int_{-\infty}^{\infty} X_k(x) X_{k'}(x) dx = \frac{1}{2\pi} \int_{-\infty}^{\infty} e^{i (k - k') x} dx = \delta(k - k') 
+\end{equation}
+Sabiendo que son base, cualquier función $f(x)$ en el intervalo real puede ser descripta por su equivalente en el $k$-espacio como
+\begin{equation}
+f(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} \acute{F}(k) e^{i k x} dx \qquad \acute{F}(k) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(x) e^{-i k x} dx
+\end{equation}
+
+De esta forma el potencial queda definido como
+\begin{equation}
+\phi(\vec{r}) = \int_{-\infty}^{\infty} e^{i k x} Y(y) Z(z) dx
+\end{equation}
+donde tenemos otras coordenadas no especificadas para destacar la generalidad del resultado.
+
 
 \subsubsection{Coordenadas esféricas}
+Cuando se trabaja con coordenadas esféricas, con $r$ la coordenadas radial, $\theta$ el ángulo azimutal y $\phi$ el ángulo polar, se puede demostrar que la ecuación de Laplace (y por analogía la de Poisson) queda
+\begin{equation}
+\frac{1}{r} \frac{\partial^2}{\partial r^2} (r \varphi) + \frac{1}{r^2 \sen(\theta)} \frac{\partial}{\partial \theta} \left( \sen(\theta) \frac{\partial \varphi}{\partial \theta}\right) + \frac{1}{r^2 \sen^2(\theta)} \frac{\partial^2 \varphi}{\partial \phi^2}  = 0
+\label{eq:electroestatica_laplace_esfericas}
+\end{equation}
+Si se propen la solución
+\begin{equation}
+\varphi = \frac{U(r)}{r} P(\theta) Q(\phi)
+\end{equation}
+y multiplicamos por $r^2 \sen(\theta) / U P Q$ tenemos
+\begin{equation}
+r^2 \sen^2(\theta) \left[ \frac{1}{U} \frac{d^2 U}{d r^2} + \frac{1}{P r^2 \sen(\theta)} \frac{d}{d\theta} \left( \sen(\theta) \frac{d P}{d\theta}\right)\right] + \frac{1}{Q} \frac{d^2 Q}{d \phi^2} = 0
+\end{equation}
+
+Esta ecuación usualmente se separa inicialmente por la parte polar, eligiendo
+\begin{equation}
+ \frac{1}{Q} \frac{d^2 Q}{d \phi^2} = -m^2
+\end{equation}
+por lo que el resto es
+\[ r^2 \sen^2(\theta) \left[ \frac{1}{U} \frac{d^2 U}{d r^2} + \frac{1}{P r^2 \sen(\theta)} \frac{d}{d\theta} \left( \sen(\theta) \frac{d P}{d\theta}\right)\right] - m^2 = 0 \]
+La próxima separación de variables que se efectua consiste en considerar que
+\begin{equation}
+\frac{1}{U} \frac{d^2 U}{\partial r^2} = l (l + 1) 
+\end{equation}
+por lo que llegamos a que la ecuación azimutal queda
+\begin{equation}
+\frac{1}{\sen(\theta)} \frac{d}{d\theta} \left( \sen(\theta) \frac{d P}{d\theta}\right) + \left[l (l + 1) \frac{m^2}{\sen^2(\theta)}\right] P = 0
+\end{equation}
+
+Esta elección de separación de variables no es casual ya si elegimos $x = \cos(\theta)$ (y hacemos el cambio de variables) tenemos la ecuación de Legrendre generalizada
+\begin{equation}
+\frac{d}{d\theta} \left( (1 - x^2) \frac{d P}{d x}\right) + \left[l (l + 1) \frac{m^2}{1 - x^2}\right] P = 0
+\end{equation}
+que tiene como solución los polinomios de Legrendre asociados $P^{m}_l(x)$ que los podemos obtener con la formula de Rodriguez
+\begin{equation}
+P^{m}_l = \frac{(-1)^m}{2^l l!} (1 - x^2)^{m/2} \frac{d^{l + m}}{d x^{l + m}} (x^2 - 1)^l
+\end{equation}
+con los indices libres con la siguientes propiedades
+\begin{equation}
+l \in \mathbb{N} \qquad -l < m < l 
+\end{equation}
+
+Estos polinomios tienen, además, la siguiente relación de ortogonalidad
+\begin{equation}
+\int_{-1}^{1} P^m_{l}(x) P^m_{l'}(x) dx = \frac{2}{2l + 1} \frac{(l + m)!}{(l - m)!} \delta_{l \; l'}
+\end{equation}
+
+
+
+Con la solución polar, que corresponde a 
+\begin{equation}
+Q(\phi) = e^{i m \phi}
+\end{equation}
+podemos construir los llamados \emph{armónicos esféricos}, que son a su vez ortogonales
+\begin{equation}
+Y_{lm}(\theta,\phi) = P(\theta) Q(\phi) = \sqrt{\frac{2l + 1}{4\pi} \frac{(l + m)!}{(l - m)!}} P^{m}_l(\cos(\theta)) e^{i m \phi}
+\end{equation}
+que tienen la relación de normalización
+\begin{equation}
+\int_{0}^{2\pi} \int_{0}^{\pi} Y^{*}_{l' \; m'} Y_{l \; m} \sen(\theta) d\theta d\phi = \delta_{l\;l'} \delta_{m'\; m}
+\end{equation}
+
+Si el problema tiene simetría axial, es decir no depende de $\phi$, la única forma de eliminar la dependencia de esta variable es exigir $m = 0$. 
+
+Mientras, la solución radial corresponde a
+\begin{equation}
+R(r) = A_{l m} r^{l + 1} + B_{l m} r^{-l}
+\end{equation}
+donde disponemos las constantes, propias de la condiciones de contorno, en la parte radial. Esto siempre es posible de hacer, no implica ninguna restricción en los contornos elegidos, salvo que estos sean separables en radios fijos; de esta forma no tiene sentido hablar de una solución no acotada, ya que el infinito aparece naturalmente en la parte radial (exiguiendo eliminar la solución divergente).
+
+Finalmente el potencial en esféricas queda
+\begin{equation}
+\varphi(r, \theta, \phi) = \sum_{l, m} [A_{l m} r^{l + 1} + B_{l m} r^{-l}] Y_{l m}(\phi, \theta) =  \sum_{l, m} \sqrt{\frac{2l + 1}{4\pi} \frac{(l + m)!}{(l - m)!}}  [A_{l m} r^{l + 1} + B_{l m} r^{-l}] P^{m}_l(\cos(\theta)) e^{i m \phi}
+\end{equation}
+
+\subsubsection{Coordenadas cilindricas}
+En coordenadas cilindricas, $\rho$, $\phi$ y $z$, la ecuación de Laplace queda
+\begin{equation}
+	\frac{\partial^2 \varphi}{\partial \rho^2} + \frac{1}{\rho} \frac{\partial \varphi}{\partial \rho} + \frac{1}{\rho^2} \frac{\partial^2 \varphi}{\partial \phi^2} + \frac{\partial^2 \varphi}{\partial z^2} = 0
+	\label{eq:electroestatica_separacion_cilindricas_laplace}
+\end{equation}
+
+Eligiendo la solución usual
+\begin{equation}
+	\varphi(\rho, \phi, z) = R(\rho) Q(\phi) Z(z)
+\end{equation}
+tenemos las siguientes ecuaciones diferenciales
+\begin{equation}
+	\begin{gathered}
+		\frac{\partial^2 Z}{\partial z^2} - k^2 Z = 0 \\
+		\frac{\partial^2 Q}{\partial \phi^2} + \nu^2 Q = 0 \\
+		\frac{\partial^2 R}{\partial \rho^2} + \frac{1}{\rho} \frac{\partial R}{\partial \rho} + \left(k^2 - \frac{\nu^2}{\rho^2} \right) R = 0
+	\end{gathered}
+\end{equation}
+
+La parte radial la resolvemos con un cambio de variable $x = k \rho$, a lo que llegamos a
+\begin{equation}
+		\frac{\partial^2 R}{\partial x^2} + \frac{1}{x} \frac{\partial R}{\partial x} + \left(1 - \frac{\nu^2}{x^2} \right) R = 0
+\end{equation}
+que tiene como solución los polinimios de Bessel.
+
+\subsection{Funciones de Green}
+Sabemos que la solución a la ecuación de Poisson no acotada (cotorno en el infinito) es la ecuación
+\begin{equation}
+	\varphi(\vec{r}) = \int \frac{\rho(\vec{r}'}{|\vec{r} - \vec{r}'|} d\vec{r}'
+\end{equation}
+Si tenemos un contorno, podemos encontrar la solución por imágenes, aunque puede resultar complejo analíticamente. Otro método consiste en encontrar las funciones de Green, para lo que primero debemos encontrar las condiciones de contorno.
+
+El teorema de Gauss o de la divergencia asegura que
+\begin{equation}
+	\int_{V} \nabla \cdot \vec{A} d\vec{r} = \oint_{\partial V} \vec{A} \cdot \vec{n} dS
+\end{equation}
+es decir el flujo de un campo por la superficie de un volumen cerrado es igual a la integral volumetrica de la divergencia en ese volumen. Si elegimos $\vec{A} = \phi \nabla \psi$, siendo estas funciones continuas, tenemos que el teorema de la divergencia nos queda
+\[ \int_{V} (\phi \nabla^2 \psi + \nabla \phi \cdot \nabla \psi) d\vec{r} = \oint_{\partial V} \phi \nabla \psi \cdot \vec{n} dS \]
+Ahora nos eliminamos del término $\nabla \phi \cdot \nabla \psi$ restandole exactamente la misma expresión intercambiando $\psi$ con $\phi$, con lo que nos queda
+\begin{equation}
+	\int_{V} (\phi \nabla^2 \psi - \psi \nabla^2 \phi) d\vec{r} = \oint_{\partial V} (\phi \nabla \psi \cdot \vec{n} - \psi \nabla \phi \cdot \vec{n}) dS
+\end{equation}
+que corresponde a la primera identidad de Green. Si elegimos $\phi = \varphi$, el potencial eléctrico, y $\psi = \frac{1}{|\vec{r} - \vec{r}'|}$, y reemplazamos los laplacianos conocidos tenemos que
+\[ \int_{V} \left[ - 4\pi varphi(\vec{r}') \delta(\vec{r} - \vec{r}') + \frac{4\pi \rho(\vec{r}'}{|\vec{r} - \vec{r}'} \right] d\vec{r}' = \oint_{\partial V} \left[\varphi \nabla \left(\frac{1}{|\vec{r} - \vec{r}'|}\right) - \rinv \nabla \varphi \cdot \vec{n} \right] dS \]
+Si hacemos la integral en todo el espacio, esto nos queda
+\begin{equation}
+	\vaphi(\vec{r}) = \int_{V} \frac{\rho(\vec{r}')}{|\vec{r} - \vec{r}'|} d\vec{r}' + \frac{1}{4\pi} \oint_{\partial V} \left[\rinv \nabla \varphi \cdot \vec{n} - \varphi \nabla \left(\frac{1}{|\vec{r} - \vec{r}'|}\right)  \right] dS
+	\label{eq:electroestatica_potencial_integral_contorno}
+\end{equation}
+donde el segundo término corresponde al potencial en la superficie o el campo eléctrico (es decir la derivada direccional del potencial); este término tiende a cero cuando la  superficie tiende a infinito, recuperando la expresión conocida del potencial. Otro detalle interesante es que si no hay cargas en el volumen, el potencial queda definido por lo que pasa en la superficie \emph{unicamente}.
+
+Para probar la unicidad de esta solución, construimos una nueva solución con dos plausibles, es decir
+\[ U = \varphi_1 - \varphi_2 \]
+Esta función $U$ nueva verifica que 
+\[ \nabla^2 U = 0 \]
+en el volumen y el el contorno verifica 
+\[ U = 0 \]
+o 
+\[ \nabla U \cdot \vec{n} = \frac{\partial U}{\partial n} = 0 \]
+Si reemplazamos $U$ en la primera identidad de Green tenemos que
+\[ \int_{V} (U \nabla^2 U + \nabla U \cdot \nabla U) d\vec{r}' = \oint U \nabla \cdot \vec{n} dS \]
+que se reduce a
+\[ \int_{V} |\nabla U|^2 d\vec{r}' = 0 \]
+con lo que necesariamente implica que
+\[ \nabla U = 0\]
+es decir que la función $U$ es constante en todo el volumen, y por lo tanto ambas soluciones, $\varphi_1$ y $\varphi_2$ son iguales a menos de una constante (que no tiene significado físico). Esto asegura la \emph{unicidad} de este método.
+
+Otro detalle importante es que no es posible aseverar el valor del potencial y la derivada en el contorno, \emph{solamente} se puede exigir una condición para que la solución sea consistente. Determinar el potencial en la superficie se denomina contorno de \emph{Dirichlet} y aseverar el campo eléctrico, la derivada, se denomina contorno de \emph{Neumann}. Con esto queda claro que la expresión que obtuvimos \emph{no es una solución}, si no una relación integral que debe mantenerse.
+
+Para resolver la ecuación \ref{eq:electroestatica_potencial_integral_contorno} eso, sabemos que la función $\rinv$ verifica 
+\begin{equation}
+	\nabla'^2 \left(\rinv\right) = -4\pi \delta(\vec{r} - \vec{r}')
+\end{equation}
+Esta función pertenece a una familia de funciones, llamadas \emph{funciones de Green} $G(\vec{r}, \vec{r}')$ que satisfacen
+\begin{equation}
+	\nabla'^2 G(\vec{r}, \vec{r}') = - 4\pi \delta(\vec{r} - \vec{r}')
+\end{equation}
+donde
+\begin{equation}
+	G(\vec{r}, \vec{r}') = \rinv + F(\vec{r}, \vec{r}')
+\end{equation}
+con la función $F(\vec{r},\vec{r}')$ verifica
+\begin{equation}
+	\nabla'^2 F(\vec{r}, \vec{r}') = 0
+\end{equation}
+Esta función nos permite determinar eliminar alguna de las condiciones, o el potencial o la derivada del potencial, y tener explicitamente las condiciones de contorno. En la segunda identidad de Green, si disponemos $\phi = \varphi$ y $\psi = G(\vec{r}, \vec{r}')$ y usamos la ecuación de Laplace tenemos que
+\begin{equation}
+	\varphi(\vec{r}) = \int_{V} \rho(\vec{r}') G(\vec{r}, \vec{r}') d\vec{r}' + \frac{1}{4\pi} \oint_{\partial V} \left[ G(\vec{r}, \vec{r}') \frac{\partial \varphi}{\partial n'} - \varphi(\vec{r}) \frac{\partial G}{\partial n'} \right]dS 
+\end{equation}
+Si elegimos una condición de Dirichlet la función de Green debe ser nula en el contorno, es decir
+\begin{equation}
+	G_{D}(\vec{r}, \vec{r}') = 0 \qquad \vec{r} \in \partial V
+\end{equation}
+obteniendo la siguiente expresión integral
+\begin{equation}
+		\varphi(\vec{r}) = \int_{V} \rho(\vec{r}') G(\vec{r}, \vec{r}') d\vec{r}' - \frac{1}{4\pi} \oint_{\partial V}  \varphi(\vec{r}) \frac{\partial G}{\partial n'} dS
+		\label{eq:electroestatica_potencial_green_dirichlet}
+\end{equation}
+mientras que si tenemos una condicion de Neumann debemos elegir la siguiente condición
+\begin{equation}
+	\frac{\partial G_{N}(\vec{r},\vec{r}')}{\partial n'} = - \frac{4\pi}{S}
+\end{equation}
+siendo $S$ la superficie del contorno (esta relación es debido al teorema de la divergencia), y nos queda finalmente
+\begin{equation}
+		\varphi(\vec{r}) = \langle \varphi \rangle_S + \int_{V} \rho(\vec{r}') G(\vec{r}, \vec{r}') d\vec{r}' + \frac{1}{4\pi} \oint_{\partial V} G(\vec{r}, \vec{r}') \frac{\partial \varphi}{\partial n'} dS 
+\end{equation}
+donde queda el valor promedio del potencial en la superficie, que no tiene ninguna importancia física.
+
+Hasta ahora definimos a la función de Green a partir de dos parámetros, el punto fuente y el punto campo. Esto es simplemente una cuestión artifiosa, ya que las funciones de Green verifican
+\begin{equation}
+	G(\vec{r}, \vec{r}') = G(\vec{r}', \vec{r})
+\end{equation}
+propiedad que se debe verificar siempre, para cualquier frontera o geometría, y que nos permite verificar una expresión obtenida o espolear una solución.
+
+Finalmente, determinar la forma funciona de la función de Green depende de la geometría y existen varios métodos para calcularla (separación de variables e imágenes son los más usados).
 
 
 \subsection{Medios materiales}
+
 Para medios materiales consideramos medios ponderables, es decir vamos a trabajar con campos promedios, sabiendo que la materia ordinaria tiene una densidad de particulas enorme.
 Podemos que si cada elemento de carga está en una situación estática, tenemos
 \begin{equation}
