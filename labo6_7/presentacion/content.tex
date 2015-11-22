@@ -1,0 +1,300 @@
+\begin{frame}[t,plain]
+\titlepage
+\end{frame}
+
+\begin{frame}{Objetivo del proyecto}
+Objetivos de laboratorio 6:
+\begin{itemize}
+ \item Diseñar y construir un perfilador portátil y de fácil reproducción capaz de caracterizar el haz en diferentes setups ópticos.
+ \item Diseñar y construir un espectrómetro portátil para aplicaciones del LEC, adaptado a los diferentes setups del laboratorio.
+ \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[t]{Motivación del proyecto}
+
+
+\begin{center}
+\underline{Mucho} es el tiempo desperdiciado en el laboratorio armado y desarmando el setup, alineando cada etapa.
+\end{center}
+
+\begin{minipage}{0.5\textwidth}
+Caracterizar haces de fuentes conlleva
+\begin{itemize}
+\item Perfil espacial. Divergencia
+\item Perfil espectral y temporal
+\item Polarización
+\end{itemize}
+
+\end{minipage}
+%
+\begin{minipage}{0.45\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{fig/optic_setup}
+%\caption{}
+\label{fig:optic_setup}
+\end{figure}
+\end{minipage}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Concepto del perfilador}
+\begin{onlyenv}<1>
+\begin{minipage}[t]{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{fig/perfilador_basico}
+\label{fig:perfilador_basico}
+\end{figure}
+\end{minipage}
+%
+\begin{minipage}[t]{0.45\textwidth}
+Funcionamiento general de un perfilador
+\begin{itemize}
+\item  Se corta el haz con un filo móvil (en general con un tornillo micrométrico), recolectando el haz.
+\item Se usan sensores económicos, integradores del haz obturado.
+\end{itemize}
+\end{minipage}
+\end{onlyenv}
+
+
+\begin{onlyenv}<2>
+\centering
+Para haces gaussianos (\underline{la mayoría}), el perfil de intensidades, es decir la integral del perfil, es la función error
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{fig/err_function.png}
+\label{fig:err_function}
+\end{figure}
+
+\end{onlyenv}
+
+\begin{onlyenv}<3>
+\begin{minipage}[t]{0.45\textwidth}
+Propuesta inicial:
+\begin{itemize}
+\item Tambor giratorio, capaz de obturar automáticamente
+\item Sensor de luz integrador, tipo fotodiodo o medidor de potencia
+\item Adquisición en tiempo real de los cambios del haz.
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}[t]{0.5\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{fig/perfilador}
+\label{fig:perfilador}
+\end{figure}
+\end{minipage}
+\end{onlyenv}
+
+\end{frame}
+
+\section{Avances}
+
+\begin{frame}{Diseño mecánico}
+
+Premisas mecánicas del perfilador:
+
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+\item Se debe poder insertar en el sistema Cage de ThorLabs, de 30mm. A 50mm de la mesa
+\item El tambor debe tener una velocidad que permita actualización en tiempo real.
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}[t]{0.45\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{fig/cage.jpg}
+\label{fig:cage}
+\end{figure}
+\end{minipage}
+
+
+\end{frame}
+
+\begin{frame}{Diseño mecánico}
+\begin{onlyenv}<1>
+Diseño del tambor
+
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+\item Cilindro de 20mm de diametro
+\item Fácil de ubicar en el Cage
+\item Proyección axial, permite obturar el haz.
+\item Fácil prototipado con impresora 3D.
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}[t]{0.45\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{fig/tambor.jpg}
+\label{fig:tambor}
+\end{figure}
+\end{minipage}
+\end{onlyenv}
+
+
+\begin{onlyenv}<3>
+\begin{minipage}[t]{0.45\textwidth}
+\begin{itemize}
+\item Diseño auto-portante, no se necesita ningún agregado.
+\item Permite adaptarse al Cage y a otros entornos de trabajo.
+\item Permite medir el haz en varias direcciones.
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}[t]{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{fig/soporte.jpg}
+\label{fig:pieza}
+\end{figure}
+\end{minipage}
+\end{onlyenv}
+
+\begin{onlyenv}<2>
+El motor se determinó con las siguientes premisas 
+\begin{itemize}
+\item Debe ser fácil de controlar la velocidad. Descartados motores de escobillas, que requieren retroalimentación.
+\item Debe ser rápido, alcanzando 24 revoluciones por segundo si se puede. Descartado servomotores, no alcanzan las 2 revoluciones por segundo.
+\end{itemize}
+\centering
+Se eligen \underline{motores paso a paso}.
+\begin{itemize}
+\item Motor modelo NEMA 17 (1,8$^\circ$, máx 3000PPS, 4kg$\;$cm).
+\end{itemize}
+\end{onlyenv}
+
+\end{frame}
+
+\begin{frame}{Diseño de electrónica de adquisición}
+\begin{onlyenv}<1>
+Electrónica digital (microcontrolador) de uso general, adaptada a la adquisición de un sensor de luz (fotodiodo)
+\begin{minipage}[t]{0.5\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{fig/uC}
+\label{fig:uC}
+\end{figure}
+\end{minipage}
+%
+\begin{minipage}[t]{0.45\textwidth}
+\begin{itemize}
+\item Arduino UNO: Barato, sencillo. CPU 16MHz y 2KiB RAM. ADC a 10ksps.
+\item Teensy v3.1: CPU 96MHz, y 64KiB RAM. ADC a 1Msps. Tipicamente 100kmps.
+\end{itemize}
+\end{minipage}
+\end{onlyenv}
+\begin{onlyenv}<2>
+
+Circuito resultante, con integrado driver (Pololu A4988) del motor
+\begin{minipage}[t]{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{fig/circuito.jpg}
+\label{fig:circuito}
+\end{figure}
+\end{minipage}
+%
+\begin{minipage}[t]{0.45\textwidth}
+\begin{itemize}
+\item Permite mover motores hasta 2A por fase.
+\item Adquiere corriente del fotodiodo en resistencia variable por el usuario
+\item Adquiere 100ksps de la señal analogica.
+\item Permite adquirir a la velocidad máxima de 12RPS, limitación del motor, es decir adquirir \underline{24 perfiles por segundo}.
+\end{itemize}
+\end{minipage}
+\end{onlyenv}
+\end{frame}
+
+
+\begin{frame}{Analisis de datos}
+
+\begin{onlyenv}<1>
+La computadora es encargada del análisis automático de los datos transmitidos. A partir de una serie de datos
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.56\textwidth]{fig/datos_teensy.png}
+\label{fig:data_teensy}
+\end{figure}
+\end{onlyenv}
+%
+\begin{onlyenv}<2>
+Se ajusta automáticamente los datos con un algoritmo de procesamiento de señales propio.
+\\
+\begin{minipage}[c]{0.5\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{fig/fit_data.png}
+\label{fig:fit_data}
+\end{figure}
+\end{minipage}
+%
+\begin{minipage}[c]{0.45\textwidth}
+\begin{itemize}
+\item Tamaño del haz inferido del ajuste y la velocidad del motor, con el error de propagación
+\item Diferencia entre perfiles debido a problemas mecánicos de la pieza plástica. 
+\end{itemize}
+\end{minipage}
+%
+\end{onlyenv}
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{Proyecto SOMA (Sistema de OptoMecánica Abierta)}
+
+\centering
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{fig/proyecto_soma}
+%\caption{}
+\label{fig:soma}
+\end{figure}
+
+\begin{itemize}
+\item Plataforma abierta de instrumental opto-mecánico
+\item Diseño con énfasis en la reproducibilidad, con tecnología de impresora 3D o mecanizado automático.
+\item Electrónica libre, controlada por software creado con tecnologías libres.
+\end{itemize}
+
+Página del proyecto: \url{http://lec.df.uba.ar/soma}
+
+\end{frame}
+
+\begin{frame}{A completar}
+\begin{itemize}
+\item Mecanizado de las piezas metálicas
+\item Terminado final del perfilador
+\item Diseño y construcción del espectrómetro, a partir del circuito Hamammatsu C12666MA
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objetivos de Laboratorio 7}
+
+Estos dispositivos van a ser utilizados durante laboratorio 7 en los siguientes proyectos:
+\begin{itemize}
+\item Mejora de la resolución del SPIM mediante la optimización del perfil del haz
+\item Caracterización del espectro de emisión de nanolamparas de Lantánidos
+\end{itemize}
+
+
+\end{frame}
+
+
+
+\begin{frame}[plain]{}
+\centering
+
+\Huge
+Gracias
+
+\end{frame}
