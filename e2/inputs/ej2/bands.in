@@ -1,0 +1,5 @@
+&inputpp
+prefix = 'Alk1579'
+outdir = './'
+filband = 'bands.out'
+/

@@ -1,0 +1,6 @@
+&inputpp
+outdir='./'
+prefix='Alk1579'
+Emin=-4.0, Emax=25.0, DeltaE=0.1
+ngauss=1, degauss=0.02
+/
