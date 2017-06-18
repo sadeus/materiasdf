@@ -1,0 +1,2649 @@
+ Entering Link 1 = C:\G03W\l1.exe PID=      5788.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2004, Gaussian, Inc.
+                  All Rights Reserved.
+  
+ This is the Gaussian(R) 03 program.  It is based on the
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 03, Revision C.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, J. A. Montgomery, Jr., T. Vreven, 
+ K. N. Kudin, J. C. Burant, J. M. Millam, S. S. Iyengar, J. Tomasi, 
+ V. Barone, B. Mennucci, M. Cossi, G. Scalmani, N. Rega, 
+ G. A. Petersson, H. Nakatsuji, M. Hada, M. Ehara, K. Toyota, 
+ R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, 
+ H. Nakai, M. Klene, X. Li, J. E. Knox, H. P. Hratchian, J. B. Cross, 
+ C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, O. Yazyev, 
+ A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, P. Y. Ayala, 
+ K. Morokuma, G. A. Voth, P. Salvador, J. J. Dannenberg, 
+ V. G. Zakrzewski, S. Dapprich, A. D. Daniels, M. C. Strain, 
+ O. Farkas, D. K. Malick, A. D. Rabuck, K. Raghavachari, 
+ J. B. Foresman, J. V. Ortiz, Q. Cui, A. G. Baboul, S. Clifford, 
+ J. Cioslowski, B. B. Stefanov, G. Liu, A. Liashenko, P. Piskorz, 
+ I. Komaromi, R. L. Martin, D. J. Fox, T. Keith, M. A. Al-Laham, 
+ C. Y. Peng, A. Nanayakkara, M. Challacombe, P. M. W. Gill, 
+ B. Johnson, W. Chen, M. W. Wong, C. Gonzalez, and J. A. Pople, 
+ Gaussian, Inc., Wallingford CT, 2004.
+ 
+ ******************************************
+ Gaussian 03:  IA32W-G03RevC.01  3-Apr-2004
+                18-Jun-2017 
+ ******************************************
+ %Chk=H2S-RHF-sto-3g-SCAN-GEO-SYM
+ Default route:  MaxDisk=2000MB
+ ---------------------------
+ # rhf/sto-3g scan guess=mix
+ ---------------------------
+ 1/38=1,60=1/1,8;
+ 2/17=6,18=5,29=3,40=1/2;
+ 3/6=3,11=1,16=1,25=1,30=1/1,2,3;
+ 4/7=1,9=2,13=1/1;
+ 5/5=2,38=5/2;
+ 6/7=2,8=2,9=2,10=2,18=1,28=1/1;
+ 1/60=1/8(1);
+ 99/9=1/99;
+ 2/29=3/2;
+ 3/6=3,11=1,16=1,25=1,30=1/1,2,3;
+ 4/5=5,7=1,9=2,16=3/1;
+ 5/5=2,38=5/2;
+ 1/60=1/8(-4);
+ 99/9=1/99;
+ ---------------------------
+ H2S-RHF-sto-3g-SCAN-GEO-SYM
+ ---------------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ S
+ H                    1    r
+ H                    1    r        2    aHSH
+       Variables:
+  r                     2.     Scan 30   -0.04   
+  aHSH                 92.11                     
+ 
+ Scan the potential surface.
+ Variable   Value     No. Steps Step-Size
+ -------- ----------- --------- ---------
+     1       2.000000      30     -0.0400
+ A total of     31 points will be computed.
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   2.000000(  1)
+   3   3  H     1   2.000000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    2.000000
+    3          1             0        1.998644    0.000000   -0.073636
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    2.000000   0.000000
+     3  H    2.000000   2.880025   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.154215
+    2          1             0        0.000000    1.440013   -1.233720
+    3          1             0        0.000000   -1.440013   -1.233720
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    138.3614282    120.9120214     64.5247710
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy         8.6505758131 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (?A)
+       Virtual   (?A) (A1)
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ Density matrix breaks symmetry, PCut= 1.00D-04
+ Density has only Abelian symmetry.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ SCF Done:  E(RHF) =  -394.035325574     A.U. after   13 cycles
+             Convg  =    0.2505D-08             -V/T =  2.0110
+             S**2   =   0.0000
+
+ **********************************************************************
+
+            Population analysis using the SCF density.
+
+ **********************************************************************
+
+ Orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (A1) (B2)
+ The electronic state is 1-A1.
+ Alpha  occ. eigenvalues --  -90.74456  -8.65053  -6.28147  -6.28067  -6.27715
+ Alpha  occ. eigenvalues --   -0.78769  -0.32203  -0.30779  -0.27470
+ Alpha virt. eigenvalues --    0.19784   0.19801
+          Condensed to atoms (all electrons):
+              1          2          3
+     1  S   15.560136   0.158621   0.158621
+     2  H    0.158621   0.904162  -0.001472
+     3  H    0.158621  -0.001472   0.904162
+ Mulliken atomic charges:
+              1
+     1  S    0.122622
+     2  H   -0.061311
+     3  H   -0.061311
+ Sum of Mulliken charges=   0.00000
+ Atomic charges with hydrogens summed into heavy atoms:
+              1
+     1  S    0.000000
+     2  H    0.000000
+     3  H    0.000000
+ Sum of Mulliken charges=   0.00000
+ Electronic spatial extent (au):  <R**2>=    54.5045
+ Charge=     0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=     0.0000    Y=     0.0000    Z=    -0.1823  Tot=     0.1823
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=   -13.3788   YY=   -11.6330   ZZ=   -11.9291
+   XY=     0.0000   XZ=     0.0000   YZ=     0.0000
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=    -1.0651   YY=     0.6806   ZZ=     0.3845
+   XY=     0.0000   XZ=     0.0000   YZ=     0.0000
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=     0.0000  YYY=     0.0000  ZZZ=     1.5075  XYY=     0.0000
+  XXY=     0.0000  XXZ=     0.3862  XZZ=     0.0000  YZZ=     0.0000
+  YYZ=     0.3121  XYZ=     0.0000
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=   -11.8684 YYYY=   -30.3203 ZZZZ=   -26.6051 XXXY=     0.0000
+ XXXZ=     0.0000 YYYX=     0.0000 YYYZ=     0.0000 ZZZX=     0.0000
+ ZZZY=     0.0000 XXYY=    -7.3013 XXZZ=    -6.6503 YYZZ=    -8.5654
+ XXYZ=     0.0000 YYXZ=     0.0000 ZZXY=     0.0000
+ N-N= 8.650575813078D+00 E-N=-9.552525468978D+02  KE= 3.897339365969D+02
+ Variable Step   Value    
+ -------- ---- -----------
+     1       1    3.703863
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.960000(  1)
+   3   3  H     1   1.960000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.960000
+    3          1             0        1.958671    0.000000   -0.072164
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.960000   0.000000
+     3  H    1.960000   2.822425   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.151131
+    2          1             0        0.000000    1.411212   -1.209046
+    3          1             0        0.000000   -1.411212   -1.209046
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    144.0664600    125.8975650     67.1853093
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy         8.8271181766 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (A1) (B2)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.056384347     A.U. after    7 cycles
+             Convg  =    0.5809D-10             -V/T =  2.0112
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1       2    3.628274
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.920000(  1)
+   3   3  H     1   1.920000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.920000
+    3          1             0        1.918698    0.000000   -0.070691
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.920000   0.000000
+     3  H    1.920000   2.764824   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.148046
+    2          1             0        0.000000    1.382412   -1.184371
+    3          1             0        0.000000   -1.382412   -1.184371
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    150.1317580    131.1979399     70.0138574
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy         9.0110164720 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.077595190     A.U. after    7 cycles
+             Convg  =    0.1217D-09             -V/T =  2.0113
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1       3    3.552685
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.880000(  1)
+   3   3  H     1   1.880000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.880000
+    3          1             0        1.878725    0.000000   -0.069218
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.880000   0.000000
+     3  H    1.880000   2.707224   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.144962
+    2          1             0        0.000000    1.353612   -1.159697
+    3          1             0        0.000000   -1.353612   -1.159697
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    156.5883071    136.8402234     73.0248653
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy         9.2027402267 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.098874234     A.U. after    7 cycles
+             Convg  =    0.1811D-09             -V/T =  2.0114
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1       4    3.477096
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.840000(  1)
+   3   3  H     1   1.840000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.840000
+    3          1             0        1.838752    0.000000   -0.067745
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.840000   0.000000
+     3  H    1.840000   2.649623   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.141878
+    2          1             0        0.000000    1.324812   -1.135022
+    3          1             0        0.000000   -1.324812   -1.135022
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    163.4704964    142.8544677     76.2343703
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy         9.4027997968 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.120125523     A.U. after    7 cycles
+             Convg  =    0.2279D-09             -V/T =  2.0115
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1       5    3.401507
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.800000(  1)
+   3   3  H     1   1.800000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.800000
+    3          1             0        1.798780    0.000000   -0.066273
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.800000   0.000000
+     3  H    1.800000   2.592023   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.138794
+    2          1             0        0.000000    1.296011   -1.110348
+    3          1             0        0.000000   -1.296011   -1.110348
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    170.8165780    149.2741005     79.6602111
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy         9.6117509034 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.141239378     A.U. after    7 cycles
+             Convg  =    0.2630D-09             -V/T =  2.0116
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1       6    3.325918
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.760000(  1)
+   3   3  H     1   1.760000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.760000
+    3          1             0        1.758807    0.000000   -0.064800
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.760000   0.000000
+     3  H    1.760000   2.534422   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.135709
+    2          1             0        0.000000    1.267211   -1.085674
+    3          1             0        0.000000   -1.267211   -1.085674
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    178.6691996    156.1363913     83.3222766
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy         9.8301997876 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.162090394     A.U. after    7 cycles
+             Convg  =    0.2877D-09             -V/T =  2.0117
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1       7    3.250329
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.720000(  1)
+   3   3  H     1   1.720000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.720000
+    3          1             0        1.718834    0.000000   -0.063327
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.720000   0.000000
+     3  H    1.720000   2.476822   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.132625
+    2          1             0        0.000000    1.238411   -1.060999
+    3          1             0        0.000000   -1.238411   -1.060999
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    187.0760251    163.4829927     87.2427948
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        10.0588090850 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.182534989     A.U. after    7 cycles
+             Convg  =    0.3033D-09             -V/T =  2.0118
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1       8    3.174740
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.680000(  1)
+   3   3  H     1   1.680000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.680000
+    3          1             0        1.678861    0.000000   -0.061854
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.680000   0.000000
+     3  H    1.680000   2.419221   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.129541
+    2          1             0        0.000000    1.209611   -1.036325
+    3          1             0        0.000000   -1.209611   -1.036325
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    196.0904594    171.3605746     91.4466709
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        10.2983045394 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.202408391     A.U. after    7 cycles
+             Convg  =    0.3110D-09             -V/T =  2.0119
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1       9    3.099151
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.640000(  1)
+   3   3  H     1   1.640000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.640000
+    3          1             0        1.638888    0.000000   -0.060382
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.640000   0.000000
+     3  H    1.640000   2.361621   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.126456
+    2          1             0        0.000000    1.180810   -1.011650
+    3          1             0        0.000000   -1.180810   -1.011650
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    205.7724987    179.8215667     95.9618843
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        10.5494826989 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.221520979     A.U. after    7 cycles
+             Convg  =    0.3116D-09             -V/T =  2.0120
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      10    3.023562
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.600000(  1)
+   3   3  H     1   1.600000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.600000
+    3          1             0        1.598915    0.000000   -0.058909
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   2.304020   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.123372
+    2          1             0        0.000000    1.152010   -0.986976
+    3          1             0        0.000000   -1.152010   -0.986976
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    216.1897315    188.9250335    100.8199547
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        10.8132197663 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.239653811     A.U. after    7 cycles
+             Convg  =    0.3060D-09             -V/T =  2.0120
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      11    2.947973
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.560000(  1)
+   3   3  H     1   1.560000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.560000
+    3          1             0        1.558942    0.000000   -0.057436
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.560000   0.000000
+     3  H    1.560000   2.246420   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.120288
+    2          1             0        0.000000    1.123210   -0.962302
+    3          1             0        0.000000   -1.123210   -0.962302
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    227.4185210    198.7377078    106.0564941
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        11.0904818116 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.256553220     A.U. after    7 cycles
+             Convg  =    0.2948D-09             -V/T =  2.0121
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      12    2.872384
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.520000(  1)
+   3   3  H     1   1.520000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.520000
+    3          1             0        1.518969    0.000000   -0.055964
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.520000   0.000000
+     3  H    1.520000   2.188819   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.117203
+    2          1             0        0.000000    1.094410   -0.937627
+    3          1             0        0.000000   -1.094410   -0.937627
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    239.5454089    209.3352172    111.7118612
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        11.3823365962 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.271924286     A.U. after    7 cycles
+             Convg  =    0.2788D-09             -V/T =  2.0121
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      13    2.796795
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.480000(  1)
+   3   3  H     1   1.480000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.480000
+    3          1             0        1.478997    0.000000   -0.054491
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.480000   0.000000
+     3  H    1.480000   2.131219   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.114119
+    2          1             0        0.000000    1.065609   -0.912953
+    3          1             0        0.000000   -1.065609   -0.912953
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    252.6687877    220.8035453    117.8319412
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        11.6899673150 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.285422979     A.U. after    7 cycles
+             Convg  =    0.2584D-09             -V/T =  2.0121
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      14    2.721206
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.440000(  1)
+   3   3  H     1   1.440000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.440000
+    3          1             0        1.439024    0.000000   -0.053018
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.440000   0.000000
+     3  H    1.440000   2.073618   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.111035
+    2          1             0        0.000000    1.036809   -0.888278
+    3          1             0        0.000000   -1.036809   -0.888278
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    266.9009031    233.2407821    124.4690799
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        12.0146886293 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.296646739     A.U. after    7 cycles
+             Convg  =    0.2343D-09             -V/T =  2.0121
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      15    2.645617
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.400000(  1)
+   3   3  H     1   1.400000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.400000
+    3          1             0        1.399051    0.000000   -0.051545
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.400000   0.000000
+     3  H    1.400000   2.016018   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.107951
+    2          1             0        0.000000    1.008009   -0.863604
+    3          1             0        0.000000   -1.008009   -0.863604
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    282.3702615    246.7592274    131.6832062
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        12.3579654473 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.305123211     A.U. after    7 cycles
+             Convg  =    0.2064D-09             -V/T =  2.0120
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      16    2.570028
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.360000(  1)
+   3   3  H     1   1.360000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.360000
+    3          1             0        1.359078    0.000000   -0.050073
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.360000   0.000000
+     3  H    1.360000   1.958417   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.104866
+    2          1             0        0.000000    0.979209   -0.838930
+    3          1             0        0.000000   -0.979209   -0.838930
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    299.2245419    261.4879356    139.5431899
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        12.7214350192 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.310296807     A.U. after    6 cycles
+             Convg  =    0.6584D-08             -V/T =  2.0120
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      17    2.494438
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.320000(  1)
+   3   3  H     1   1.320000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.320000
+    3          1             0        1.319105    0.000000   -0.048600
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.320000   0.000000
+     3  H    1.320000   1.900817   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.101782
+    2          1             0        0.000000    0.950408   -0.814255
+    3          1             0        0.000000   -0.950408   -0.814255
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    317.6341326    277.5758068    148.1284918
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        13.1069330501 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.311512728     A.U. after    6 cycles
+             Convg  =    0.2407D-08             -V/T =  2.0118
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      18    2.418849
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.280000(  1)
+   3   3  H     1   1.280000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.280000
+    3          1             0        1.279132    0.000000   -0.047127
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.280000   0.000000
+     3  H    1.280000   1.843216   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.098698
+    2          1             0        0.000000    0.921608   -0.789581
+    3          1             0        0.000000   -0.921608   -0.789581
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    337.7964555    295.1953648    157.5311792
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        13.5165247079 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.307998003     A.U. after    6 cycles
+             Convg  =    0.2307D-08             -V/T =  2.0117
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      19    2.343260
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.240000(  1)
+   3   3  H     1   1.240000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.240000
+    3          1             0        1.239159    0.000000   -0.045654
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.240000   0.000000
+     3  H    1.240000   1.785616   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.095613
+    2          1             0        0.000000    0.892808   -0.764906
+    3          1             0        0.000000   -0.892808   -0.764906
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    359.9412803    314.5474023    167.8584054
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        13.9525416340 Hartrees.
+
+
+
+ Warning!  S  atom    1 may be hypervalent but has no d functions.
+
+
+
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.298839011     A.U. after    6 cycles
+             Convg  =    0.3341D-08             -V/T =  2.0115
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      20    2.267671
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.200000(  1)
+   3   3  H     1   1.200000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.200000
+    3          1             0        1.199186    0.000000   -0.044182
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.200000   0.000000
+     3  H    1.200000   1.728015   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.092529
+    2          1             0        0.000000    0.864008   -0.740232
+    3          1             0        0.000000   -0.864008   -0.740232
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    384.3373004    335.8667262    179.2354751
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        14.4176263551 Hartrees.
+
+
+
+ Warning!  S  atom    1 may be hypervalent but has no d functions.
+
+
+
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.282954861     A.U. after    6 cycles
+             Convg  =    0.4045D-08             -V/T =  2.0113
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      21    2.192082
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.160000(  1)
+   3   3  H     1   1.160000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.160000
+    3          1             0        1.159214    0.000000   -0.042709
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.160000   0.000000
+     3  H    1.160000   1.670415   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.089445
+    2          1             0        0.000000    0.835207   -0.715558
+    3          1             0        0.000000   -0.835207   -0.715558
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    411.3003215    359.4293146    191.8096642
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        14.9147858846 Hartrees.
+
+
+
+ Warning!  S  atom    1 may be hypervalent but has no d functions.
+
+
+
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.259065782     A.U. after    6 cycles
+             Convg  =    0.4707D-08             -V/T =  2.0110
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      22    2.116493
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.120000(  1)
+   3   3  H     1   1.120000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.120000
+    3          1             0        1.119241    0.000000   -0.041236
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.120000   0.000000
+     3  H    1.120000   1.612814   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.086360
+    2          1             0        0.000000    0.806407   -0.690883
+    3          1             0        0.000000   -0.806407   -0.690883
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    441.2035337    385.5612928    205.7550096
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        15.4474568091 Hartrees.
+
+
+
+ Warning!  S  atom    1 may be hypervalent but has no d functions.
+
+
+
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.225655506     A.U. after    6 cycles
+             Convg  =    0.7449D-08             -V/T =  2.0106
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      23    2.040904
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.080000(  1)
+   3   3  H     1   1.080000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.080000
+    3          1             0        1.079268    0.000000   -0.039764
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.080000   0.000000
+     3  H    1.080000   1.555214   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.083276
+    2          1             0        0.000000    0.777607   -0.666209
+    3          1             0        0.000000   -0.777607   -0.666209
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    474.4904944    414.6502793    221.2783643
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        16.0195848390 Hartrees.
+
+
+
+ Warning!  S  atom    1 may be hypervalent but has no d functions.
+
+
+
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.180926280     A.U. after    7 cycles
+             Convg  =    0.3781D-10             -V/T =  2.0102
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      24    1.965315
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.040000(  1)
+   3   3  H     1   1.040000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.040000
+    3          1             0        1.039295    0.000000   -0.038291
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.040000   0.000000
+     3  H    1.040000   1.497613   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.080192
+    2          1             0        0.000000    0.748807   -0.641534
+    3          1             0        0.000000   -0.748807   -0.641534
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    511.6916722    447.1598426    238.6271118
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        16.6357227175 Hartrees.
+
+
+
+ Warning!  S  atom    1 may be hypervalent but has no d functions.
+
+
+
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.122744922     A.U. after    7 cycles
+             Convg  =    0.8136D-10             -V/T =  2.0097
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      25    1.889726
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   1.000000(  1)
+   3   3  H     1   1.000000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.000000
+    3          1             0        0.999322    0.000000   -0.036818
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.000000   0.000000
+     3  H    1.000000   1.440013   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.077108
+    2          1             0        0.000000    0.720006   -0.616860
+    3          1             0        0.000000   -0.720006   -0.616860
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    553.4457126    483.6480857    258.0990841
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        17.3011516262 Hartrees.
+
+
+
+ Warning!  S  atom    1 may be hypervalent but has no d functions.
+
+
+
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -394.048578134     A.U. after    7 cycles
+             Convg  =    0.1242D-09             -V/T =  2.0090
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      26    1.814137
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   0.960000(  1)
+   3   3  H     1   0.960000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    0.960000
+    3          1             0        0.959349    0.000000   -0.035345
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    0.960000   0.000000
+     3  H    0.960000   1.382412   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.074023
+    2          1             0        0.000000    0.691206   -0.592186
+    3          1             0        0.000000   -0.691206   -0.592186
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    600.5270319    524.7917597    280.0554298
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        18.0220329439 Hartrees.
+
+
+
+ Warning!  S  atom    1 may be hypervalent but has no d functions.
+
+
+
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -393.955415440     A.U. after    7 cycles
+             Convg  =    0.1590D-09             -V/T =  2.0083
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      27    1.738548
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   0.920000(  1)
+   3   3  H     1   0.920000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    0.920000
+    3          1             0        0.919376    0.000000   -0.033873
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    0.920000   0.000000
+     3  H    0.920000   1.324812   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.070939
+    2          1             0        0.000000    0.662406   -0.567511
+    3          1             0        0.000000   -0.662406   -0.567511
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    653.8819856    571.4178707    304.9374812
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        18.8055995936 Hartrees.
+
+
+
+ Warning!  S  atom    1 may be hypervalent but has no d functions.
+
+
+
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -393.839678709     A.U. after    7 cycles
+             Convg  =    0.1701D-09             -V/T =  2.0074
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      28    1.662959
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   0.880000(  1)
+   3   3  H     1   0.880000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    0.880000
+    3          1             0        0.879403    0.000000   -0.032400
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    0.880000   0.000000
+     3  H    0.880000   1.267211   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.067855
+    2          1             0        0.000000    0.633606   -0.542837
+    3          1             0        0.000000   -0.633606   -0.542837
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    714.6767983    624.5455652    333.2891065
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        19.6603995752 Hartrees.
+
+
+
+ Warning!  S  atom    1 may be hypervalent but has no d functions.
+
+
+
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -393.697118236     A.U. after    6 cycles
+             Convg  =    0.8817D-08             -V/T =  2.0064
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      29    1.587370
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   0.840000(  1)
+   3   3  H     1   0.840000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    0.840000
+    3          1             0        0.839430    0.000000   -0.030927
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    0.840000   0.000000
+     3  H    0.840000   1.209611   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.064770
+    2          1             0        0.000000    0.604805   -0.518162
+    3          1             0        0.000000   -0.604805   -0.518162
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    784.3618376    685.4422984    365.7866838
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        20.5966090788 Hartrees.
+
+
+
+ Warning!  S  atom    1 may be hypervalent but has no d functions.
+
+
+
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -393.522695897     A.U. after    6 cycles
+             Convg  =    0.1670D-08             -V/T =  2.0052
+             S**2   =   0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1      30    1.511781
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   0.800000(  1)
+   3   3  H     1   0.800000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    0.800000
+    3          1             0        0.799458    0.000000   -0.029454
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    0.800000   0.000000
+     3  H    0.800000   1.152010   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.061686
+    2          1             0        0.000000    0.576005   -0.493488
+    3          1             0        0.000000   -0.576005   -0.493488
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    864.7589260    755.7001339    403.2798189
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        21.6264395327 Hartrees.
+
+
+
+ Warning!  S  atom    1 may be hypervalent but has no d functions.
+
+
+
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Initial guess read from the read-write file:
+ Initial guess orbital symmetries:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1)
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 integrals in memory in canonical form, NReq=      421788.
+ SCF Done:  E(RHF) =  -393.310452999     A.U. after    7 cycles
+             Convg  =    0.6492D-08             -V/T =  2.0038
+             S**2   =   0.0000
+ Scan completed.
+
+ Summary of the potential surface scan:
+   N       r          SCF    
+ ----  ---------  -----------
+    1     2.0000   -394.03533
+    2     1.9600   -394.05638
+    3     1.9200   -394.07760
+    4     1.8800   -394.09887
+    5     1.8400   -394.12013
+    6     1.8000   -394.14124
+    7     1.7600   -394.16209
+    8     1.7200   -394.18253
+    9     1.6800   -394.20241
+   10     1.6400   -394.22152
+   11     1.6000   -394.23965
+   12     1.5600   -394.25655
+   13     1.5200   -394.27192
+   14     1.4800   -394.28542
+   15     1.4400   -394.29665
+   16     1.4000   -394.30512
+   17     1.3600   -394.31030
+   18     1.3200   -394.31151
+   19     1.2800   -394.30800
+   20     1.2400   -394.29884
+   21     1.2000   -394.28295
+   22     1.1600   -394.25907
+   23     1.1200   -394.22566
+   24     1.0800   -394.18093
+   25     1.0400   -394.12274
+   26     1.0000   -394.04858
+   27     0.9600   -393.95542
+   28     0.9200   -393.83968
+   29     0.8800   -393.69712
+   30     0.8400   -393.52270
+   31     0.8000   -393.31045
+ ----  ---------  -----------
+  
+ 1|1|UNPC-UNK|Scan|RHF|STO-3G|H2S1|PCUSER|18-Jun-2017|1||# RHF/STO-3G S
+ CAN GUESS=MIX||H2S-RHF-sto-3g-SCAN-GEO-SYM||0,1|S|H,1,r|H,1,r,2,aHSH||
+ r=2.,s,30,-0.04|aHSH=92.11||Version=IA32W-G03RevC.01|HF=-394.0353256,-
+ 394.0563843,-394.0775952,-394.0988742,-394.1201255,-394.1412394,-394.1
+ 620904,-394.182535,-394.2024084,-394.221521,-394.2396538,-394.2565532,
+ -394.2719243,-394.285423,-394.2966467,-394.3051232,-394.3102968,-394.3
+ 115127,-394.307998,-394.298839,-394.2829549,-394.2590658,-394.2256555,
+ -394.1809263,-394.1227449,-394.0485781,-393.9554154,-393.8396787,-393.
+ 6971182,-393.5226959,-393.310453|RMSD=2.505e-009,5.809e-011,1.217e-010
+ ,1.811e-010,2.279e-010,2.630e-010,2.877e-010,3.033e-010,3.110e-010,3.1
+ 16e-010,3.060e-010,2.948e-010,2.788e-010,2.584e-010,2.343e-010,2.064e-
+ 010,6.584e-009,2.407e-009,2.307e-009,3.341e-009,4.045e-009,4.707e-009,
+ 7.449e-009,3.781e-011,8.136e-011,1.242e-010,1.590e-010,1.701e-010,8.81
+ 7e-009,1.670e-009,6.492e-009|PG=C02V [C2(S1),SGV(H2)]||@
+
+
+ BOOKS ARE LIGHTHOUSES ERECTED IN THE GREAT SEA OF TIME.
+     -- E.P.WHIPPLE
+ Job cpu time:  0 days  0 hours  0 minutes 13.0 seconds.
+ File lengths (MBytes):  RWF=     17 Int=      0 D2E=      0 Chk=     12 Scr=      1
+ Normal termination of Gaussian 03 at Sun Jun 18 14:37:01 2017.

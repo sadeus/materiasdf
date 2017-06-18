@@ -1,0 +1,10 @@
+%Chk=H2S-RHF-SINGLETE-OPT-GEOM
+# uhf/sto-3g opt freq
+ 
+Optimizacion geometria H2S Singlete RHF
+ 
+0 1
+S1 	0.0000 	0.0000 	 0.0
+H2 	0.0000 	1.0 	 -1.0
+H3 	0.0000  -1.0  -1.0
+ 

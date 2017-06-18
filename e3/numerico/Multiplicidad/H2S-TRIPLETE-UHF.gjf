@@ -1,0 +1,11 @@
+%chk=H2S-TRIPLETE.chk
+%nproc=1
+# uhf/sto-3g pop=full
+ 
+H2S-TRIPLETE
+ 
+0 3
+S1 	0.0000 	0.0000 	 0.1030
+H2 	0.0000 	0.9616 	 -0.8239
+H3 	0.0000  -0.9616  -0.8239
+ 

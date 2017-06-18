@@ -1,0 +1,11 @@
+%chk=H2S-SINGLETE.chk
+%mem=6MW
+%nproc=1
+# rhf/sto-3g iop(3/33=6) pop=full
+ 
+H2S-SINGLET
+ 
+0 1
+S1 	0.0000 	0.0000 	 0.1030
+H2 	0.0000 	0.9616 	 -0.8239
+H3 	0.0000  -0.9616  -0.8239

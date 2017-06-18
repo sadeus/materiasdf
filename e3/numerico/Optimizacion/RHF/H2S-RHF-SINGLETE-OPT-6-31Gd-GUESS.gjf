@@ -1,0 +1,9 @@
+%Chk=H2S-RHF-SINGLETE-OPT-GEOM-6-31G-GUESS
+# rhf/6-31G(d',p') pop=full opt freq
+ 
+Optimizacion geometria con prueba inicial H2S Singlete RHF en 6-31G
+ 
+0 1
+S1 	0.000000    0.000000    0.
+H1      0.000000    1.   -1.
+H2       0.000000   -1.   -1.

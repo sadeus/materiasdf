@@ -1,0 +1,12 @@
+%Chk=H2S-RHF-6-31g-SCAN-GEO-SYM
+# rhf/6-31g scan guess=mix
+
+Disociacion simetrica RHF 6-31g de H2S
+
+0 1
+S
+H 1 r
+H 1 r 2 aHSH
+
+r 2.0 30 -0.04
+aHSH=92.11

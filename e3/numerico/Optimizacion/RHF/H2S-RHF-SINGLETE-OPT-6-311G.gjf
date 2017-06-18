@@ -1,0 +1,9 @@
+%Chk=H2S-RHF-SINGLETE-OPT-GEOM-6-311G
+# rhf/6-311G pop=full opt freq
+ 
+Optimizacion geometria H2S Singlete RHF en 6-311G
+ 
+0 1
+S1 	0.000000    0.000000    0.102065
+H1      0.000000    0.959977   -0.816518
+H2       0.000000   -0.959977   -0.816518
