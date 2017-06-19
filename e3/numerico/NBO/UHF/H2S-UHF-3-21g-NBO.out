@@ -1,0 +1,804 @@
+ Entering Link 1 = C:\G03W\l1.exe PID=       876.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003, Gaussian, Inc.
+                  All Rights Reserved.
+  
+ This is the Gaussian(R) 03 program.  It is based on the
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under DFARS:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, duplication or disclosure by the US Government is subject
+ to restrictions as set forth in subparagraph (c)(1)(ii) of the
+ Rights in Technical Data and Computer Software clause at DFARS
+ 252.227-7013.
+  
+ Gaussian, Inc.
+ Carnegie Office Park, Building 6, Pittsburgh, PA 15106 USA
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is subject
+ to restrictions as set forth in subparagraph (c) of the
+ Commercial Computer Software - Restricted Rights clause at FAR
+ 52.227-19.
+  
+ Gaussian, Inc.
+ Carnegie Office Park, Building 6, Pittsburgh, PA 15106 USA
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 03, Revision B.03,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, J. A. Montgomery, Jr., T. Vreven, 
+ K. N. Kudin, J. C. Burant, J. M. Millam, S. S. Iyengar, J. Tomasi, 
+ V. Barone, B. Mennucci, M. Cossi, G. Scalmani, N. Rega, 
+ G. A. Petersson, H. Nakatsuji, M. Hada, M. Ehara, K. Toyota, 
+ R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, 
+ H. Nakai, M. Klene, X. Li, J. E. Knox, H. P. Hratchian, J. B. Cross, 
+ C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, O. Yazyev, 
+ A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, P. Y. Ayala, 
+ K. Morokuma, G. A. Voth, P. Salvador, J. J. Dannenberg, 
+ V. G. Zakrzewski, S. Dapprich, A. D. Daniels, M. C. Strain, 
+ O. Farkas, D. K. Malick, A. D. Rabuck, K. Raghavachari, 
+ J. B. Foresman, J. V. Ortiz, Q. Cui, A. G. Baboul, S. Clifford, 
+ J. Cioslowski, B. B. Stefanov, G. Liu, A. Liashenko, P. Piskorz, 
+ I. Komaromi, R. L. Martin, D. J. Fox, T. Keith, M. A. Al-Laham, 
+ C. Y. Peng, A. Nanayakkara, M. Challacombe, P. M. W. Gill, 
+ B. Johnson, W. Chen, M. W. Wong, C. Gonzalez, and J. A. Pople, 
+ Gaussian, Inc., Pittsburgh PA, 2003.
+ 
+ *********************************************
+ Gaussian 03:  x86-Win32-G03RevB.03 4-May-2003
+                  19-Jun-2017 
+ *********************************************
+ % Chk=H2S-UHF-3-21g-NBO
+ Default route:  MaxDisk=2000MB
+ ----------------------------------
+ # uhf/3-21g pop=(nbo,savenbo) fchk
+ ----------------------------------
+ 1/38=1/1;
+ 2/17=6,18=5,40=1/2;
+ 3/5=5,11=2,16=1,25=1,30=1/1,2,3;
+ 4/7=2/1;
+ 5/5=2,32=1,38=5/2;
+ 6/7=2,8=2,9=2,10=2,28=1,73=1/1,7;
+ 99/5=1,9=1/99;
+ -----------------------
+ UHF NBO en 3-21g de H2S
+ -----------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ S1
+ H2                   1     1.336 
+ H3                   1     1.336    2     92.11 
+ 
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    1.336000
+    3          1             0        1.335094    0.000000   -0.049189
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    1.336000   0.000000
+     3  H    1.336000   1.923857   0.000000
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.103016
+    2          1             0        0.000000    0.961928   -0.824125
+    3          1             0        0.000000   -0.961928   -0.824125
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    310.0716863    270.9670960    144.6017494
+ Standard basis: 3-21G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 2 integral format.
+ Two-electron integral symmetry is turned on.
+    17 basis functions,    33 primitive gaussians,    17 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        12.9499637920 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.42D-01 ExpMax= 1.21D+03 ExpMxC= 1.21D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Initial guess orbital symmetries:
+ Alpha Orbitals:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1) (B2) (A1) (B1) (A1) (A1) (B2)
+ Beta  Orbitals:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1) (B2) (A1) (B1) (A1) (A1) (B2)
+ The electronic state of the initial guess is 1-A1.
+ <S**2> of initial guess= 0.0000
+ Warning!  Cutoffs for single-point calculations used.
+ Requested convergence on RMS density matrix=1.00D-04 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-02.
+ Requested convergence on             energy=5.00D-05.
+ No special actions if energy rises.
+ Keep R1 and R2 integrals in memory in canonical form, NReq=      445113.
+ SCF Done:  E(UHF) =  -396.703957116     A.U. after    5 cycles
+             Convg  =    0.1602D-04             -V/T =  2.0004
+             S**2   =   0.0000
+ Annihilation of the first spin contaminant:
+ S**2 before annihilation     0.0000,   after     0.0000
+
+ **********************************************************************
+
+            Population analysis using the SCF density.
+
+ **********************************************************************
+
+ Orbital symmetries:
+ Alpha Orbitals:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1) (B2) (A1) (A1) (B1) (A1) (B2)
+ Beta  Orbitals:
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1) (B2) (A1) (A1) (B1) (A1) (B2)
+ The electronic state is 1-A1.
+ Alpha  occ. eigenvalues --  -91.31955  -8.92265  -6.59767  -6.59584  -6.59227
+ Alpha  occ. eigenvalues --   -1.00328  -0.59226  -0.49390  -0.39279
+ Alpha virt. eigenvalues --    0.18106   0.21075   0.66603   0.68035   0.69569
+ Alpha virt. eigenvalues --    0.70576   1.16059   1.19645
+  Beta  occ. eigenvalues --  -91.31955  -8.92265  -6.59767  -6.59584  -6.59227
+  Beta  occ. eigenvalues --   -1.00328  -0.59226  -0.49390  -0.39279
+  Beta virt. eigenvalues --    0.18106   0.21075   0.66603   0.68035   0.69569
+  Beta virt. eigenvalues --    0.70576   1.16059   1.19645
+          Condensed to atoms (all electrons):
+              1          2          3
+     1  S   15.626784   0.265697   0.265697
+     2  H    0.265697   0.686815  -0.031600
+     3  H    0.265697  -0.031600   0.686815
+ Mulliken atomic charges:
+              1
+     1  S   -0.158177
+     2  H    0.079089
+     3  H    0.079089
+ Sum of Mulliken charges=   0.00000
+ Atomic charges with hydrogens summed into heavy atoms:
+              1
+     1  S    0.000000
+     2  H    0.000000
+     3  H    0.000000
+ Sum of Mulliken charges=   0.00000
+          Atomic-Atomic Spin Densities.
+              1          2          3
+     1  S    0.000000   0.000000   0.000000
+     2  H    0.000000   0.000000   0.000000
+     3  H    0.000000   0.000000   0.000000
+ Mulliken atomic spin densities:
+              1
+     1  S    0.000000
+     2  H    0.000000
+     3  H    0.000000
+ Sum of Mulliken spin densities=   0.00000
+ Electronic spatial extent (au):  <R**2>=    44.6741
+ Charge=     0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=     0.0000    Y=     0.0000    Z=    -1.8103  Tot=     1.8103
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=   -16.7595   YY=   -12.8369   ZZ=   -14.2628
+   XY=     0.0000   XZ=     0.0000   YZ=     0.0000
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=    -2.1398   YY=     1.7828   ZZ=     0.3569
+   XY=     0.0000   XZ=     0.0000   YZ=     0.0000
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=     0.0000  YYY=     0.0000  ZZZ=    -1.4066  XYY=     0.0000
+  XXY=     0.0000  XXZ=    -0.6171  XZZ=     0.0000  YZZ=     0.0000
+  YYZ=    -0.5257  XYZ=     0.0000
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=   -22.6282 YYYY=   -23.6508 ZZZZ=   -25.1603 XXXY=     0.0000
+ XXXZ=     0.0000 YYYX=     0.0000 YYYZ=     0.0000 ZZZX=     0.0000
+ ZZZY=     0.0000 XXYY=    -7.8627 XXZZ=    -8.1076 YYZZ=    -7.6769
+ XXYZ=     0.0000 YYXZ=     0.0000 ZZXY=     0.0000
+ N-N= 1.294996379203D+01 E-N=-9.708206342865D+02  KE= 3.965331505390D+02
+ Symmetry A1   KE= 3.210459619965D+02
+ Symmetry A2   KE= 0.000000000000D+00
+ Symmetry B1   KE= 3.819080781443D+01
+ Symmetry B2   KE= 3.729638072804D+01
+                          Isotropic Fermi Contact Couplings
+        Atom                 a.u.       MegaHertz       Gauss      10(-4) cm-1
+     1  S(33)              0.00000       0.00000       0.00000       0.00000
+     2  H(1)               0.00000       0.00000       0.00000       0.00000
+     3  H(1)               0.00000       0.00000       0.00000       0.00000
+ --------------------------------------------------------
+       Center         ----  Spin Dipole Couplings  ----
+                      3XX-RR        3YY-RR        3ZZ-RR
+ --------------------------------------------------------
+     1   Atom        0.000000      0.000000      0.000000
+     2   Atom        0.000000      0.000000      0.000000
+     3   Atom        0.000000      0.000000      0.000000
+ --------------------------------------------------------
+                        XY            XZ            YZ
+ --------------------------------------------------------
+     1   Atom        0.000000      0.000000      0.000000
+     2   Atom        0.000000      0.000000      0.000000
+     3   Atom        0.000000      0.000000      0.000000
+ --------------------------------------------------------
+
+
+ ---------------------------------------------------------------------------------
+              Anisotropic Spin Dipole Couplings in Principal Axis System
+ ---------------------------------------------------------------------------------
+
+       Atom             a.u.   MegaHertz   Gauss  10(-4) cm-1        Axes
+
+              Baa     0.0000     0.000     0.000     0.000  1.0000  0.0000  0.0000
+     1 S(33)  Bbb     0.0000     0.000     0.000     0.000  0.0000  1.0000  0.0000
+              Bcc     0.0000     0.000     0.000     0.000  0.0000  0.0000  1.0000
+ 
+              Baa     0.0000     0.000     0.000     0.000  1.0000  0.0000  0.0000
+     2 H(1)   Bbb     0.0000     0.000     0.000     0.000  0.0000  1.0000  0.0000
+              Bcc     0.0000     0.000     0.000     0.000  0.0000  0.0000  1.0000
+ 
+              Baa     0.0000     0.000     0.000     0.000  1.0000  0.0000  0.0000
+     3 H(1)   Bbb     0.0000     0.000     0.000     0.000  0.0000  1.0000  0.0000
+              Bcc     0.0000     0.000     0.000     0.000  0.0000  0.0000  1.0000
+ 
+
+ ---------------------------------------------------------------------------------
+
+ ******************************Gaussian NBO Version 3.1******************************
+             N A T U R A L   A T O M I C   O R B I T A L   A N D
+          N A T U R A L   B O N D   O R B I T A L   A N A L Y S I S
+ ******************************Gaussian NBO Version 3.1******************************
+       /RESON  / : Allow strongly delocalized NBO set
+
+ Analyzing the SCF density
+
+ Job title: UHF NBO en 3-21g de H2S                                         
+
+ Storage needed:      1019 in NPA,      1229 in NBO (   6291416 available)
+
+
+ NATURAL POPULATIONS:  Natural atomic orbital occupancies 
+                                                          
+   NAO  Atom  No  lang   Type(AO)    Occupancy
+ --------------------------------------------
+     1    S    1  S      Cor( 1S)     2.00000
+     2    S    1  S      Cor( 2S)     1.99922
+     3    S    1  S      Val( 3S)     1.74074
+     4    S    1  S      Ryd( 4S)     0.00274
+     5    S    1  px     Cor( 2p)     2.00000
+     6    S    1  px     Val( 3p)     1.99642
+     7    S    1  px     Ryd( 4p)     0.00358
+     8    S    1  py     Cor( 2p)     1.99983
+     9    S    1  py     Val( 3p)     1.08130
+    10    S    1  py     Ryd( 4p)     0.00659
+    11    S    1  pz     Cor( 2p)     1.99983
+    12    S    1  pz     Val( 3p)     1.43588
+    13    S    1  pz     Ryd( 4p)     0.00033
+
+    14    H    2  S      Val( 1S)     0.86582
+    15    H    2  S      Ryd( 2S)     0.00096
+
+    16    H    3  S      Val( 1S)     0.86582
+    17    H    3  S      Ryd( 2S)     0.00096
+
+
+ Summary of Natural Population Analysis:                  
+                                                          
+                                       Natural Population 
+                Natural  -----------------------------------------------
+    Atom  No    Charge         Core      Valence    Rydberg      Total
+ -----------------------------------------------------------------------
+      S    1   -0.26645      9.99888     6.25434    0.01324    16.26645
+      H    2    0.13323      0.00000     0.86582    0.00096     0.86677
+      H    3    0.13323      0.00000     0.86582    0.00096     0.86677
+ =======================================================================
+   * Total *    0.00000      9.99888     7.98597    0.01515    18.00000
+
+                                 Natural Population      
+ --------------------------------------------------------
+   Core                       9.99888 ( 99.9888% of  10)
+   Valence                    7.98597 ( 99.8247% of   8)
+   Natural Minimal Basis     17.98485 ( 99.9158% of  18)
+   Natural Rydberg Basis      0.01515 (  0.0842% of  18)
+ --------------------------------------------------------
+
+    Atom  No          Natural Electron Configuration
+ ----------------------------------------------------------------------------
+      S    1      [core]3S( 1.74)3p( 4.51)4p( 0.01)
+      H    2            1S( 0.87)
+      H    3            1S( 0.87)
+
+
+ ***************************************************
+ *******         Alpha spin orbitals         *******
+ ***************************************************
+
+
+ NATURAL POPULATIONS:  Natural atomic orbital occupancies 
+                                                          
+   NAO  Atom  No  lang   Type(AO)    Occupancy      Energy
+ ----------------------------------------------------------
+     1    S    1  S      Cor( 1S)     1.00000     -91.20530
+     2    S    1  S      Cor( 2S)     0.99961      -8.78344
+     3    S    1  S      Val( 3S)     0.87037      -0.94656
+     4    S    1  S      Ryd( 4S)     0.00137       0.72237
+     5    S    1  px     Cor( 2p)     1.00000      -6.58774
+     6    S    1  px     Val( 3p)     0.99821      -0.39534
+     7    S    1  px     Ryd( 4p)     0.00179       0.70378
+     8    S    1  py     Cor( 2p)     0.99991      -6.59033
+     9    S    1  py     Val( 3p)     0.54065      -0.19203
+    10    S    1  py     Ryd( 4p)     0.00330       0.68412
+    11    S    1  pz     Cor( 2p)     0.99991      -6.58946
+    12    S    1  pz     Val( 3p)     0.71794      -0.26872
+    13    S    1  pz     Ryd( 4p)     0.00016       0.69150
+
+    14    H    2  S      Val( 1S)     0.43291      -0.11736
+    15    H    2  S      Ryd( 2S)     0.00048       0.98918
+
+    16    H    3  S      Val( 1S)     0.43291      -0.11736
+    17    H    3  S      Ryd( 2S)     0.00048       0.98918
+
+
+ Summary of Natural Population Analysis:                  
+                                                          
+                                       Natural Population 
+                Natural  -----------------------------------------------
+    Atom  No    Charge         Core      Valence    Rydberg      Total
+ -----------------------------------------------------------------------
+      S    1   -0.13323      4.99944     3.12717    0.00662     8.13323
+      H    2    0.06661      0.00000     0.43291    0.00048     0.43339
+      H    3    0.06661      0.00000     0.43291    0.00048     0.43339
+ =======================================================================
+   * Total *    0.00000      4.99944     3.99299    0.00757     9.00000
+
+                                 Natural Population      
+ --------------------------------------------------------
+   Core                       4.99944 ( 99.9888% of   5)
+   Valence                    3.99299 ( 99.8247% of   4)
+   Natural Minimal Basis      8.99243 ( 99.9158% of   9)
+   Natural Rydberg Basis      0.00757 (  0.0842% of   9)
+ --------------------------------------------------------
+
+    Atom  No          Natural Electron Configuration
+ ----------------------------------------------------------------------------
+      S    1      [core]3S( 0.87)3p( 2.26)4p( 0.01)
+      H    2            1S( 0.43)
+      H    3            1S( 0.43)
+
+
+ NATURAL BOND ORBITAL ANALYSIS, alpha spin orbitals:
+
+                       Occupancies       Lewis Structure    Low   High
+           Occ.    -------------------  -----------------   occ   occ
+  Cycle   Thresh.   Lewis   Non-Lewis     CR  BD  3C  LP    (L)   (NL)   Dev
+ =============================================================================
+   1(1)    0.90     8.99795   0.00205      5   2   0   2     0      0    0.00
+ -----------------------------------------------------------------------------
+
+ Structure accepted: No low occupancy Lewis orbitals
+
+ --------------------------------------------------------
+   Core                      4.99944 ( 99.989% of   5)
+   Valence Lewis             3.99852 ( 99.963% of   4)
+  ==================       ============================
+   Total Lewis               8.99795 ( 99.977% of   9)
+  -----------------------------------------------------
+   Valence non-Lewis         0.00108 (  0.012% of   9)
+   Rydberg non-Lewis         0.00097 (  0.011% of   9)
+  ==================       ============================
+   Total non-Lewis           0.00205 (  0.023% of   9)
+ --------------------------------------------------------
+
+
+       (Occupancy)   Bond orbital/ Coefficients/ Hybrids
+ ---------------------------------------------------------------------------------
+     1. (0.99926) BD ( 1) S   1 - H   2  
+                ( 56.71%)   0.7530* S   1 s( 15.86%)p 5.31( 84.14%)
+                                            0.0000  0.0001  0.3971  0.0301  0.0000
+                                            0.0000  0.0000 -0.0001  0.7050  0.0550
+                                           -0.0001 -0.5843 -0.0078
+                ( 43.29%)   0.6580* H   2 s(100.00%)
+                                            1.0000  0.0012
+     2. (0.99926) BD ( 1) S   1 - H   3  
+                ( 56.71%)   0.7530* S   1 s( 15.86%)p 5.31( 84.14%)
+                                            0.0000 -0.0001 -0.3971 -0.0301  0.0000
+                                            0.0000  0.0000 -0.0001  0.7050  0.0550
+                                            0.0001  0.5843  0.0078
+                ( 43.29%)   0.6580* H   3 s(100.00%)
+                                           -1.0000 -0.0012
+     3. (1.00000) CR ( 1) S   1           s(100.00%)
+                                            1.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.0000  0.0000
+     4. (0.99961) CR ( 2) S   1           s(100.00%)p 0.00(  0.00%)
+                                            0.0000  1.0000 -0.0001  0.0000  0.0000
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.0002  0.0000
+     5. (1.00000) CR ( 3) S   1           s(  0.00%)p 1.00(100.00%)
+                                            0.0000  0.0000  0.0000  0.0000  1.0000
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.0000  0.0000
+     6. (0.99991) CR ( 4) S   1           s(  0.00%)p 1.00(100.00%)
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.0000  1.0000  0.0001  0.0000
+                                            0.0000  0.0000  0.0000
+     7. (0.99991) CR ( 5) S   1           s(  0.00%)p 1.00(100.00%)
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            1.0000 -0.0001  0.0000
+     8. (1.00000) LP ( 1) S   1           s( 68.47%)p 0.46( 31.53%)
+                                            0.0000  0.0000  0.8273 -0.0171  0.0000
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.5615 -0.0095
+     9. (1.00000) LP ( 2) S   1           s(  0.00%)p 1.00(100.00%)
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.9991 -0.0423  0.0000  0.0000  0.0000
+                                            0.0000  0.0000  0.0000
+    10. (0.00001) RY*( 1) S   1           s( 99.80%)p 0.00(  0.20%)
+    11. (0.00000) RY*( 2) S   1           s(  0.00%)p 1.00(100.00%)
+    12. (0.00000) RY*( 3) S   1           s(  0.00%)p 1.00(100.00%)
+    13. (0.00000) RY*( 4) S   1           s(  0.02%)p99.99( 99.98%)
+    14. (0.00048) RY*( 1) H   2           s(100.00%)
+                                           -0.0012  1.0000
+    15. (0.00048) RY*( 1) H   3           s(100.00%)
+                                           -0.0012  1.0000
+    16. (0.00054) BD*( 1) S   1 - H   2  
+                ( 43.29%)   0.6580* S   1 s( 15.86%)p 5.31( 84.14%)
+                                            0.0000 -0.0001 -0.3971 -0.0301  0.0000
+                                            0.0000  0.0000  0.0001 -0.7050 -0.0550
+                                            0.0001  0.5843  0.0078
+                ( 56.71%)  -0.7530* H   2 s(100.00%)
+                                           -1.0000 -0.0012
+    17. (0.00054) BD*( 1) S   1 - H   3  
+                ( 43.29%)   0.6580* S   1 s( 15.86%)p 5.31( 84.14%)
+                                            0.0000  0.0001  0.3971  0.0301  0.0000
+                                            0.0000  0.0000  0.0001 -0.7050 -0.0550
+                                           -0.0001 -0.5843 -0.0078
+                ( 56.71%)  -0.7530* H   3 s(100.00%)
+                                            1.0000  0.0012
+
+
+ NHO Directionality and "Bond Bending" (deviations from line of nuclear centers)
+
+         [Thresholds for printing:  angular deviation  >  1.0 degree]
+                                    hybrid p-character > 25.0%
+                                    orbital occupancy  >  0.10e
+
+                              Line of Centers        Hybrid 1              Hybrid 2
+                              ---------------  -------------------   ------------------
+              NBO               Theta   Phi    Theta   Phi    Dev    Theta   Phi    Dev
+ ======================================================================================
+   1. BD (   1) S   1 - H   2   133.9   90.0   127.9   90.0   6.0      --     --    --
+   2. BD (   1) S   1 - H   3   133.9  270.0   127.9  270.0   6.0      --     --    --
+   8. LP (   1) S   1             --     --      0.0    0.0   --       --     --    --
+   9. LP (   2) S   1             --     --     90.0    0.0   --       --     --    --
+
+
+ Second Order Perturbation Theory Analysis of Fock Matrix in NBO Basis
+
+     Threshold for printing:   0.25 kcal/mol
+                                                                              E(2)  E(j)-E(i) F(i,j)
+         Donor NBO (i)                     Acceptor NBO (j)                 kcal/mol   a.u.    a.u. 
+ ===================================================================================================
+
+ within unit  1
+   1. BD (   1) S   1 - H   2        / 17. BD*(   1) S   1 - H   3            0.26    1.13    0.021
+   2. BD (   1) S   1 - H   3        / 16. BD*(   1) S   1 - H   2            0.26    1.13    0.021
+   4. CR (   2) S   1                / 14. RY*(   1) H   2                    1.04    9.77    0.127
+   4. CR (   2) S   1                / 15. RY*(   1) H   3                    1.04    9.77    0.127
+
+
+ Natural Bond Orbitals (Summary):
+
+                                                            Principal Delocalizations
+           NBO                        Occupancy    Energy   (geminal,vicinal,remote)
+ ====================================================================================
+ Molecular unit  1  (H2S)
+   1. BD (   1) S   1 - H   2          0.99926    -0.76027  17(g)
+   2. BD (   1) S   1 - H   3          0.99926    -0.76027  16(g)
+   3. CR (   1) S   1                  1.00000   -91.20530   
+   4. CR (   2) S   1                  0.99961    -8.78321  14(v),15(v)
+   5. CR (   3) S   1                  1.00000    -6.58774   
+   6. CR (   4) S   1                  0.99991    -6.59035   
+   7. CR (   5) S   1                  0.99991    -6.58944   
+   8. LP (   1) S   1                  1.00000    -0.83012   
+   9. LP (   2) S   1                  1.00000    -0.39732   
+  10. RY*(   1) S   1                  0.00001     0.71534   
+  11. RY*(   2) S   1                  0.00000     0.70576   
+  12. RY*(   3) S   1                  0.00000     0.66805   
+  13. RY*(   4) S   1                  0.00000     0.69026   
+  14. RY*(   1) H   2                  0.00048     0.98864   
+  15. RY*(   1) H   3                  0.00048     0.98864   
+  16. BD*(   1) S   1 - H   2          0.00054     0.36691   
+  17. BD*(   1) S   1 - H   3          0.00054     0.36691   
+       -------------------------------
+              Total Lewis    8.99795  ( 99.9773%)
+        Valence non-Lewis    0.00108  (  0.0120%)
+        Rydberg non-Lewis    0.00097  (  0.0107%)
+       -------------------------------
+            Total unit  1    9.00000  (100.0000%)
+           Charge unit  1    0.00000
+ Sorting of NBOs:                    3    4    6    7    5    8    2    1    9   16
+ Sorting of NBOs:                   17   12   13   11   10   15   14
+ Reordering of NBOs for storage:     3    4    6    7    5    8    2    1    9   16
+ Reordering of NBOs for storage:    17   12   13   11   10   15   14
+ Labels of output orbitals:  CR  CR  CR  CR  CR  LP  BD  BD  LP  BD* BD* RY* RY* RY* RY* RY* RY* 
+
+
+ ***************************************************
+ *******         Beta  spin orbitals         *******
+ ***************************************************
+
+
+ NATURAL POPULATIONS:  Natural atomic orbital occupancies 
+                                                          
+   NAO  Atom  No  lang   Type(AO)    Occupancy      Energy
+ ----------------------------------------------------------
+     1    S    1  S      Cor( 1S)     1.00000     -91.20530
+     2    S    1  S      Cor( 2S)     0.99961      -8.78344
+     3    S    1  S      Val( 3S)     0.87037      -0.94656
+     4    S    1  S      Ryd( 4S)     0.00137       0.72237
+     5    S    1  px     Cor( 2p)     1.00000      -6.58774
+     6    S    1  px     Val( 3p)     0.99821      -0.39534
+     7    S    1  px     Ryd( 4p)     0.00179       0.70378
+     8    S    1  py     Cor( 2p)     0.99991      -6.59033
+     9    S    1  py     Val( 3p)     0.54065      -0.19203
+    10    S    1  py     Ryd( 4p)     0.00330       0.68412
+    11    S    1  pz     Cor( 2p)     0.99991      -6.58946
+    12    S    1  pz     Val( 3p)     0.71794      -0.26872
+    13    S    1  pz     Ryd( 4p)     0.00016       0.69150
+
+    14    H    2  S      Val( 1S)     0.43291      -0.11736
+    15    H    2  S      Ryd( 2S)     0.00048       0.98918
+
+    16    H    3  S      Val( 1S)     0.43291      -0.11736
+    17    H    3  S      Ryd( 2S)     0.00048       0.98918
+
+
+ Summary of Natural Population Analysis:                  
+                                                          
+                                       Natural Population 
+                Natural  -----------------------------------------------
+    Atom  No    Charge         Core      Valence    Rydberg      Total
+ -----------------------------------------------------------------------
+      S    1   -0.13323      4.99944     3.12717    0.00662     8.13323
+      H    2    0.06661      0.00000     0.43291    0.00048     0.43339
+      H    3    0.06661      0.00000     0.43291    0.00048     0.43339
+ =======================================================================
+   * Total *    0.00000      4.99944     3.99299    0.00757     9.00000
+
+                                 Natural Population      
+ --------------------------------------------------------
+   Core                       4.99944 ( 99.9888% of   5)
+   Valence                    3.99299 ( 99.8247% of   4)
+   Natural Minimal Basis      8.99243 ( 99.9158% of   9)
+   Natural Rydberg Basis      0.00757 (  0.0842% of   9)
+ --------------------------------------------------------
+
+    Atom  No          Natural Electron Configuration
+ ----------------------------------------------------------------------------
+      S    1      [core]3S( 0.87)3p( 2.26)4p( 0.01)
+      H    2            1S( 0.43)
+      H    3            1S( 0.43)
+
+
+ NATURAL BOND ORBITAL ANALYSIS, beta spin orbitals:
+
+                       Occupancies       Lewis Structure    Low   High
+           Occ.    -------------------  -----------------   occ   occ
+  Cycle   Thresh.   Lewis   Non-Lewis     CR  BD  3C  LP    (L)   (NL)   Dev
+ =============================================================================
+   1(1)    0.90     8.99795   0.00205      5   2   0   2     0      0    0.00
+ -----------------------------------------------------------------------------
+
+ Structure accepted: No low occupancy Lewis orbitals
+
+ --------------------------------------------------------
+   Core                      4.99944 ( 99.989% of   5)
+   Valence Lewis             3.99852 ( 99.963% of   4)
+  ==================       ============================
+   Total Lewis               8.99795 ( 99.977% of   9)
+  -----------------------------------------------------
+   Valence non-Lewis         0.00108 (  0.012% of   9)
+   Rydberg non-Lewis         0.00097 (  0.011% of   9)
+  ==================       ============================
+   Total non-Lewis           0.00205 (  0.023% of   9)
+ --------------------------------------------------------
+
+
+       (Occupancy)   Bond orbital/ Coefficients/ Hybrids
+ ---------------------------------------------------------------------------------
+     1. (0.99926) BD ( 1) S   1 - H   2  
+                ( 56.71%)   0.7530* S   1 s( 15.86%)p 5.31( 84.14%)
+                                            0.0000  0.0001  0.3971  0.0301  0.0000
+                                            0.0000  0.0000 -0.0001  0.7050  0.0550
+                                           -0.0001 -0.5843 -0.0078
+                ( 43.29%)   0.6580* H   2 s(100.00%)
+                                            1.0000  0.0012
+     2. (0.99926) BD ( 1) S   1 - H   3  
+                ( 56.71%)   0.7530* S   1 s( 15.86%)p 5.31( 84.14%)
+                                            0.0000 -0.0001 -0.3971 -0.0301  0.0000
+                                            0.0000  0.0000 -0.0001  0.7050  0.0550
+                                            0.0001  0.5843  0.0078
+                ( 43.29%)   0.6580* H   3 s(100.00%)
+                                           -1.0000 -0.0012
+     3. (1.00000) CR ( 1) S   1           s(100.00%)
+                                            1.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.0000  0.0000
+     4. (0.99961) CR ( 2) S   1           s(100.00%)p 0.00(  0.00%)
+                                            0.0000  1.0000 -0.0001  0.0000  0.0000
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.0002  0.0000
+     5. (1.00000) CR ( 3) S   1           s(  0.00%)p 1.00(100.00%)
+                                            0.0000  0.0000  0.0000  0.0000  1.0000
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.0000  0.0000
+     6. (0.99991) CR ( 4) S   1           s(  0.00%)p 1.00(100.00%)
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.0000  1.0000  0.0001  0.0000
+                                            0.0000  0.0000  0.0000
+     7. (0.99991) CR ( 5) S   1           s(  0.00%)p 1.00(100.00%)
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            1.0000 -0.0001  0.0000
+     8. (1.00000) LP ( 1) S   1           s( 68.47%)p 0.46( 31.53%)
+                                            0.0000  0.0000  0.8273 -0.0171  0.0000
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.0000  0.5615 -0.0095
+     9. (1.00000) LP ( 2) S   1           s(  0.00%)p 1.00(100.00%)
+                                            0.0000  0.0000  0.0000  0.0000  0.0000
+                                            0.9991 -0.0423  0.0000  0.0000  0.0000
+                                            0.0000  0.0000  0.0000
+    10. (0.00001) RY*( 1) S   1           s( 99.80%)p 0.00(  0.20%)
+    11. (0.00000) RY*( 2) S   1           s(  0.00%)p 1.00(100.00%)
+    12. (0.00000) RY*( 3) S   1           s(  0.00%)p 1.00(100.00%)
+    13. (0.00000) RY*( 4) S   1           s(  0.02%)p99.99( 99.98%)
+    14. (0.00048) RY*( 1) H   2           s(100.00%)
+                                           -0.0012  1.0000
+    15. (0.00048) RY*( 1) H   3           s(100.00%)
+                                           -0.0012  1.0000
+    16. (0.00054) BD*( 1) S   1 - H   2  
+                ( 43.29%)   0.6580* S   1 s( 15.86%)p 5.31( 84.14%)
+                                            0.0000 -0.0001 -0.3971 -0.0301  0.0000
+                                            0.0000  0.0000  0.0001 -0.7050 -0.0550
+                                            0.0001  0.5843  0.0078
+                ( 56.71%)  -0.7530* H   2 s(100.00%)
+                                           -1.0000 -0.0012
+    17. (0.00054) BD*( 1) S   1 - H   3  
+                ( 43.29%)   0.6580* S   1 s( 15.86%)p 5.31( 84.14%)
+                                            0.0000  0.0001  0.3971  0.0301  0.0000
+                                            0.0000  0.0000  0.0001 -0.7050 -0.0550
+                                           -0.0001 -0.5843 -0.0078
+                ( 56.71%)  -0.7530* H   3 s(100.00%)
+                                            1.0000  0.0012
+
+
+ NHO Directionality and "Bond Bending" (deviations from line of nuclear centers)
+
+         [Thresholds for printing:  angular deviation  >  1.0 degree]
+                                    hybrid p-character > 25.0%
+                                    orbital occupancy  >  0.10e
+
+                              Line of Centers        Hybrid 1              Hybrid 2
+                              ---------------  -------------------   ------------------
+              NBO               Theta   Phi    Theta   Phi    Dev    Theta   Phi    Dev
+ ======================================================================================
+   1. BD (   1) S   1 - H   2   133.9   90.0   127.9   90.0   6.0      --     --    --
+   2. BD (   1) S   1 - H   3   133.9  270.0   127.9  270.0   6.0      --     --    --
+   8. LP (   1) S   1             --     --      0.0    0.0   --       --     --    --
+   9. LP (   2) S   1             --     --     90.0    0.0   --       --     --    --
+
+
+ Second Order Perturbation Theory Analysis of Fock Matrix in NBO Basis
+
+     Threshold for printing:   0.25 kcal/mol
+                                                                              E(2)  E(j)-E(i) F(i,j)
+         Donor NBO (i)                     Acceptor NBO (j)                 kcal/mol   a.u.    a.u. 
+ ===================================================================================================
+
+ within unit  1
+   1. BD (   1) S   1 - H   2        / 17. BD*(   1) S   1 - H   3            0.26    1.13    0.021
+   2. BD (   1) S   1 - H   3        / 16. BD*(   1) S   1 - H   2            0.26    1.13    0.021
+   4. CR (   2) S   1                / 14. RY*(   1) H   2                    1.04    9.77    0.127
+   4. CR (   2) S   1                / 15. RY*(   1) H   3                    1.04    9.77    0.127
+
+
+ Natural Bond Orbitals (Summary):
+
+                                                            Principal Delocalizations
+           NBO                        Occupancy    Energy   (geminal,vicinal,remote)
+ ====================================================================================
+ Molecular unit  1  (H2S)
+   1. BD (   1) S   1 - H   2          0.99926    -0.76027  17(g)
+   2. BD (   1) S   1 - H   3          0.99926    -0.76027  16(g)
+   3. CR (   1) S   1                  1.00000   -91.20530   
+   4. CR (   2) S   1                  0.99961    -8.78321  14(v),15(v)
+   5. CR (   3) S   1                  1.00000    -6.58774   
+   6. CR (   4) S   1                  0.99991    -6.59035   
+   7. CR (   5) S   1                  0.99991    -6.58944   
+   8. LP (   1) S   1                  1.00000    -0.83012   
+   9. LP (   2) S   1                  1.00000    -0.39732   
+  10. RY*(   1) S   1                  0.00001     0.71534   
+  11. RY*(   2) S   1                  0.00000     0.70576   
+  12. RY*(   3) S   1                  0.00000     0.66805   
+  13. RY*(   4) S   1                  0.00000     0.69026   
+  14. RY*(   1) H   2                  0.00048     0.98864   
+  15. RY*(   1) H   3                  0.00048     0.98864   
+  16. BD*(   1) S   1 - H   2          0.00054     0.36691   
+  17. BD*(   1) S   1 - H   3          0.00054     0.36691   
+       -------------------------------
+              Total Lewis    8.99795  ( 99.9773%)
+        Valence non-Lewis    0.00108  (  0.0120%)
+        Rydberg non-Lewis    0.00097  (  0.0107%)
+       -------------------------------
+            Total unit  1    9.00000  (100.0000%)
+           Charge unit  1    0.00000
+ Sorting of NBOs:                    3    4    6    7    5    8    2    1    9   16
+ Sorting of NBOs:                   17   12   13   11   10   15   14
+ Reordering of NBOs for storage:     3    4    6    7    5    8    2    1    9   16
+ Reordering of NBOs for storage:    17   12   13   11   10   15   14
+ Labels of output orbitals:  CR  CR  CR  CR  CR  LP  BD  BD  LP  BD* BD* RY* RY* RY* RY* RY* RY* 
+ 1|1|UNPC-UNK|SP|UHF|3-21G|H2S1|PCUSER|19-Jun-2017|0||# UHF/3-21G POP=(
+ NBO,SAVENBO) FCHK||UHF NBO en 3-21g de H2S||0,1|S|H,1,1.336|H,1,1.336,
+ 2,92.11||Version=x86-Win32-G03RevB.03|State=1-A1|HF=-396.7039571|S2=0.
+ |S2-1=0.|S2A=0.|RMSD=1.602e-005|Dipole=0.5128201,0.,0.4942742|PG=C02V 
+ [C2(S1),SGV(H2)]||@
+
+
+ IF MATHEMATICALLY YOU END UP WITH THE INCORRECT ANSWER,
+ TRY MULTIPLYING BY THE PAGE NUMBER.
+ Rotating derivatives, DoTrsp=T IDiff= 1 LEDeriv=    191 LFDPrp=       0 LDFDPr=       0.
+ Job cpu time:  0 days  0 hours  0 minutes  2.0 seconds.
+ File lengths (MBytes):  RWF=     11 Int=      0 D2E=      0 Chk=      7 Scr=      1
+ Normal termination of Gaussian 03 at Mon Jun 19 12:35:57 2017.

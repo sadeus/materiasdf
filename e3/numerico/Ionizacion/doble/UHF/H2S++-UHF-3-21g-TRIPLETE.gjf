@@ -1,0 +1,10 @@
+% Chk=H2S++-UHF-3-21g-TRIPLETE
+# uhf/3-21g pop=full
+ 
+UHF triplete en 3-21g de H2S++
+ 
+2 3
+S1
+H2 	1 1.336
+H3 	1 1.336 2 92.11
+ 
