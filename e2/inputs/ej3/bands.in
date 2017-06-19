@@ -1,5 +1,0 @@
-&inputpp
-prefix = 'silicon'
-outdir = './'
-filband = 'bands.out'
-/
