@@ -1,0 +1,11 @@
+%Chk=H2S-RHF-6-31g-SCAN-RELAXED
+# rhf/6-31g opt=Z-Matrix
+
+Disociacion simetrica relajada RHF 6-31g de H2S
+
+0 1
+S
+H 1 r
+H 1 r 2 92.11
+
+r 3.5 s 50 -0.06

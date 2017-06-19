@@ -1,0 +1,13 @@
+%Chk=uhf-6-31g-1
+# uhf/6-31G guess=mix
+ 
+uhf-6-31g-1 r=2.0
+ 
+0 1
+S
+H 1 r
+H 1 r 2 aHSH
+
+r 2.59
+aHSH=92.11
+ 

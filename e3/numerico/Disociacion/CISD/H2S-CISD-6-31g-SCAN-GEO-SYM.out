@@ -1,0 +1,468 @@
+ Entering Link 1 = C:\G03W\l1.exe PID=     11124.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2004, Gaussian, Inc.
+                  All Rights Reserved.
+  
+ This is the Gaussian(R) 03 program.  It is based on the
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 03, Revision C.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, J. A. Montgomery, Jr., T. Vreven, 
+ K. N. Kudin, J. C. Burant, J. M. Millam, S. S. Iyengar, J. Tomasi, 
+ V. Barone, B. Mennucci, M. Cossi, G. Scalmani, N. Rega, 
+ G. A. Petersson, H. Nakatsuji, M. Hada, M. Ehara, K. Toyota, 
+ R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, 
+ H. Nakai, M. Klene, X. Li, J. E. Knox, H. P. Hratchian, J. B. Cross, 
+ C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, O. Yazyev, 
+ A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, P. Y. Ayala, 
+ K. Morokuma, G. A. Voth, P. Salvador, J. J. Dannenberg, 
+ V. G. Zakrzewski, S. Dapprich, A. D. Daniels, M. C. Strain, 
+ O. Farkas, D. K. Malick, A. D. Rabuck, K. Raghavachari, 
+ J. B. Foresman, J. V. Ortiz, Q. Cui, A. G. Baboul, S. Clifford, 
+ J. Cioslowski, B. B. Stefanov, G. Liu, A. Liashenko, P. Piskorz, 
+ I. Komaromi, R. L. Martin, D. J. Fox, T. Keith, M. A. Al-Laham, 
+ C. Y. Peng, A. Nanayakkara, M. Challacombe, P. M. W. Gill, 
+ B. Johnson, W. Chen, M. W. Wong, C. Gonzalez, and J. A. Pople, 
+ Gaussian, Inc., Wallingford CT, 2004.
+ 
+ ******************************************
+ Gaussian 03:  IA32W-G03RevC.01  3-Apr-2004
+                19-Jun-2017 
+ ******************************************
+ %Chk=H2S-CISD-6-31g-SCAN-GEO-SYM
+ Default route:  MaxDisk=2000MB
+ -----------------------------
+ # ucisd/sto-3g scan guess=mix
+ -----------------------------
+ 1/38=1,60=1/1,8;
+ 2/17=6,18=5,29=3,40=1/2;
+ 3/6=3,11=2,16=1,25=1,30=1/1,2,3;
+ 4/7=2,9=2,13=1/1;
+ 5/5=2,38=5/2;
+ 8/6=6,9=120000,10=1,27=262144000/1,4;
+ 9/27=262144000/13;
+ 6/7=2,8=2,9=2,10=2,18=1/1;
+ 1/60=1/8(1);
+ 99/9=1/99;
+ 2/29=3/2;
+ 3/6=3,11=2,16=1,25=1,30=1/1,2,3;
+ 4/5=5,7=2,9=2,16=3/1;
+ 5/5=2,38=5/2;
+ 8/6=6,9=120000,10=1,27=262144000/1,4;
+ 9/27=262144000/13;
+ 1/60=1/8(-6);
+ 99/9=1/99;
+ ---------------------------------------
+ Disociacion simetrica CISD 6-31g de H2S
+ ---------------------------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ S
+ H                    1    r
+ H                    1    r        2    aHSH
+       Variables:
+  r                     3.5    Scan 15   -0.2    
+  aHSH                 92.11                     
+ 
+ Scan the potential surface.
+ Variable   Value     No. Steps Step-Size
+ -------- ----------- --------- ---------
+     1       3.500000      15     -0.2000
+ A total of     16 points will be computed.
+ ------------------------------------------------------------------------
+                         Z-MATRIX (ANGSTROMS AND DEGREES)
+ CD Cent Atom  N1     Length/X     N2    Alpha/Y     N3     Beta/Z      J
+ ------------------------------------------------------------------------
+   1   1  S 
+   2   2  H     1   3.500000(  1)
+   3   3  H     1   3.500000(  2)   2   92.110(  3)
+ ------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.000000
+    2          1             0        0.000000    0.000000    3.500000
+    3          1             0        3.497627    0.000000   -0.128863
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3
+     1  S    0.000000
+     2  H    3.500000   0.000000
+     3  H    3.500000   5.040044   0.000000
+                           Interatomic angles:
+       H2-S1-H3= 92.11  
+ Stoichiometry    H2S
+ Framework group  C2V[C2(S),SGV(H2)]
+ Deg. of freedom     2
+ Full point group                 C2V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic     Atomic              Coordinates (Angstroms)
+ Number     Number      Type              X           Y           Z
+ ---------------------------------------------------------------------
+    1         16             0        0.000000    0.000000    0.269876
+    2          1             0        0.000000    2.520022   -2.159010
+    3          1             0        0.000000   -2.520022   -2.159010
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):     45.1792418     39.4814764     21.0693130
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     3 symmetry adapted basis functions of B2  symmetry.
+ Integral buffers will be    262144 words long.
+ Raffenetti 2 integral format.
+ Two-electron integral symmetry is turned on.
+    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy         4.9431861789 Hartrees.
+ NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
+ One-electron integrals computed using PRISM.
+ NBasis=    11 RedAO= T  NBF=     6     0     2     3
+ NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ SCF N**3 symmetry information disabled.
+ Harris functional with IExCor=  205 diagonalized for initial guess.
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Initial guess orbital symmetries:
+ Alpha Orbitals:
+       Occupied  (A1) (A1) (B1) (B2) (A1) (A1) (B2) (A1) (?A)
+       Virtual   (?A) (B2)
+ Beta  Orbitals:
+       Occupied  (A1) (A1) (B1) (B2) (A1) (A1) (B2) (A1) (?A)
+       Virtual   (?A) (B2)
+ <S**2> of initial guess= 1.0000
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Keep R1 and R2 integrals in memory in canonical form, NReq=      423999.
+ Density matrix breaks symmetry, PCut= 1.00D-04
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Rare condition: small coef for last iteration:  0.000D+00
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ Restarting incremental Fock formation.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density matrix has no symmetry -- integrals replicated.
+ SCF Done:  E(UHF) =  -393.698390780     A.U. after   20 cycles
+             Convg  =    0.2763D-09             -V/T =  2.0077
+             S**2   =   1.0000
+ Annihilation of the first spin contaminant:
+ S**2 before annihilation     1.0000,   after     0.0000
+ ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ Range of M.O.s used for correlation:     6    11
+ NBasis=    11 NAE=     9 NBE=     9 NFC=     5 NFV=     0
+ NROrb=      6 NOA=     4 NOB=     4 NVA=     2 NVB=     2
+ Estimate disk for full transformation     1050984 words.
+ Spin components of T(2) and E(2):
+     alpha-alpha T2 =       0.4267921323D-04 E2=     -0.2518224269D-04
+     alpha-beta  T2 =       0.2376553005D+01 E2=     -0.5091986798D+00
+     beta-beta   T2 =       0.4267921323D-04 E2=     -0.2518224269D-04
+ ANorm=    0.1837563159D+01
+ E2=       -0.5092490443D+00 EUMP2=       -0.39420763982442D+03
+ (S**2,0)=  0.99996D+00           (S**2,1)=  0.10616D+01
+ E(PUHF)=      -0.39366591846D+03        E(PMP2)=      -0.39417416719D+03
+ Iterations=  50 Convergence= 0.100D-06
+ Iteration Nr.   1
+ **********************
+ E(PMP3)=      -0.39467557425D+03
+ E3=       -0.50240969D+00        EUMP3=      -0.39471004952D+03
+ DE(CI)=   -0.29999587D+00        E(CI)=      -0.39399838665D+03
+ NORM(A)=   0.16218801D+01
+ Iteration Nr.   2
+ **********************
+ DE(CI)=   -0.38778481D+00        E(CI)=      -0.39408617559D+03
+ NORM(A)=   0.15843580D+01
+ Iteration Nr.   3
+ **********************
+ DE(CI)=   -0.32801458D+00        E(CI)=      -0.39402640536D+03
+ NORM(A)=   0.15423347D+01
+ Iteration Nr.   4
+ **********************
+ DE(CI)=   -0.35651814D+00        E(CI)=      -0.39405490892D+03
+ NORM(A)=   0.15477530D+01
+ Iteration Nr.   5
+ **********************
+ DE(CI)=   -0.34026715D+00        E(CI)=      -0.39403865793D+03
+ NORM(A)=   0.15350527D+01
+ Iteration Nr.   6
+ **********************
+ DE(CI)=   -0.34795426D+00        E(CI)=      -0.39404634504D+03
+ NORM(A)=   0.15305564D+01
+ Iteration Nr.   7
+ **********************
+ DE(CI)=   -0.34260414D+00        E(CI)=      -0.39404099492D+03
+ NORM(A)=   0.15060283D+01
+ Iteration Nr.   8
+ **********************
+ DE(CI)=   -0.34169195D+00        E(CI)=      -0.39404008273D+03
+ NORM(A)=   0.14908093D+01
+ Iteration Nr.   9
+ **********************
+ DE(CI)=   -0.33978685D+00        E(CI)=      -0.39403817763D+03
+ NORM(A)=   0.14649501D+01
+ Iteration Nr.  10
+ **********************
+ DE(CI)=   -0.33667002D+00        E(CI)=      -0.39403506080D+03
+ NORM(A)=   0.14393124D+01
+ Iteration Nr.  11
+ **********************
+ DE(CI)=   -0.33425799D+00        E(CI)=      -0.39403264877D+03
+ NORM(A)=   0.14241234D+01
+ Iteration Nr.  12
+ **********************
+ DE(CI)=   -0.33315863D+00        E(CI)=      -0.39403154941D+03
+ NORM(A)=   0.14180966D+01
+ Iteration Nr.  13
+ **********************
+ DE(CI)=   -0.33283892D+00        E(CI)=      -0.39403122970D+03
+ NORM(A)=   0.14170225D+01
+ Iteration Nr.  14
+ **********************
+ DE(CI)=   -0.33299993D+00        E(CI)=      -0.39403139071D+03
+ NORM(A)=   0.14204099D+01
+ Iteration Nr.  15
+ **********************
+ DE(CI)=   -0.33342579D+00        E(CI)=      -0.39403181657D+03
+ NORM(A)=   0.14248876D+01
+ Iteration Nr.  16
+ **********************
+ DE(CI)=   -0.33399573D+00        E(CI)=      -0.39403238651D+03
+ NORM(A)=   0.14270426D+01
+ Iteration Nr.  17
+ **********************
+ DE(CI)=   -0.33402206D+00        E(CI)=      -0.39403241284D+03
+ NORM(A)=   0.14294018D+01
+ Iteration Nr.  18
+ **********************
+ DE(CI)=   -0.33443108D+00        E(CI)=      -0.39403282186D+03
+ NORM(A)=   0.14352187D+01
+ Iteration Nr.  19
+ **********************
+ DE(CI)=   -0.33521582D+00        E(CI)=      -0.39403360660D+03
+ NORM(A)=   0.14343936D+01
+ Iteration Nr.  20
+ **********************
+ DE(CI)=   -0.33458676D+00        E(CI)=      -0.39403297754D+03
+ NORM(A)=   0.14356099D+01
+ Iteration Nr.  21
+ **********************
+ DE(CI)=   -0.33516186D+00        E(CI)=      -0.39403355264D+03
+ NORM(A)=   0.14339289D+01
+ Iteration Nr.  22
+ **********************
+ DE(CI)=   -0.33452412D+00        E(CI)=      -0.39403291490D+03
+ NORM(A)=   0.14857429D+01
+ Iteration Nr.  23
+ **********************
+ DE(CI)=   -0.34336765D+00        E(CI)=      -0.39404175843D+03
+ NORM(A)=   0.14357065D+01
+ Iteration Nr.  24
+ **********************
+ DE(CI)=   -0.32989525D+00        E(CI)=      -0.39402828603D+03
+ NORM(A)=   0.14348064D+01
+ Iteration Nr.  25
+ **********************
+ DE(CI)=   -0.33765518D+00        E(CI)=      -0.39403604596D+03
+ NORM(A)=   0.14291558D+01
+ Iteration Nr.  26
+ **********************
+ DE(CI)=   -0.33216783D+00        E(CI)=      -0.39403055861D+03
+ NORM(A)=   0.14311138D+01
+ Iteration Nr.  27
+ **********************
+ DE(CI)=   -0.33564908D+00        E(CI)=      -0.39403403986D+03
+ NORM(A)=   0.14252682D+01
+ Iteration Nr.  28
+ **********************
+ DE(CI)=   -0.33259412D+00        E(CI)=      -0.39403098490D+03
+ NORM(A)=   0.14268023D+01
+ Iteration Nr.  29
+ **********************
+ DE(CI)=   -0.33469764D+00        E(CI)=      -0.39403308842D+03
+ NORM(A)=   0.14244838D+01
+ Iteration Nr.  30
+ **********************
+ DE(CI)=   -0.33303421D+00        E(CI)=      -0.39403142499D+03
+ NORM(A)=   0.14072494D+01
+ Iteration Nr.  31
+ **********************
+ DE(CI)=   -0.33077243D+00        E(CI)=      -0.39402916321D+03
+ NORM(A)=   0.13914006D+01
+ Iteration Nr.  32
+ **********************
+ DE(CI)=   -0.32934700D+00        E(CI)=      -0.39402773778D+03
+ NORM(A)=   0.13971024D+01
+ Iteration Nr.  33
+ **********************
+ DE(CI)=   -0.33128438D+00        E(CI)=      -0.39402967516D+03
+ NORM(A)=   0.13878921D+01
+ Iteration Nr.  34
+ **********************
+ DE(CI)=   -0.32830215D+00        E(CI)=      -0.39402669293D+03
+ NORM(A)=   0.14017268D+01
+ Iteration Nr.  35
+ **********************
+ DE(CI)=   -0.33268622D+00        E(CI)=      -0.39403107700D+03
+ NORM(A)=   0.14052198D+01
+ Iteration Nr.  36
+ **********************
+ DE(CI)=   -0.33069233D+00        E(CI)=      -0.39402908311D+03
+ NORM(A)=   0.14029751D+01
+ Iteration Nr.  37
+ **********************
+ DE(CI)=   -0.33138831D+00        E(CI)=      -0.39402977909D+03
+ NORM(A)=   0.14024363D+01
+ Iteration Nr.  38
+ **********************
+ DE(CI)=   -0.33079486D+00        E(CI)=      -0.39402918564D+03
+ NORM(A)=   0.13994485D+01
+ Iteration Nr.  39
+ **********************
+ DE(CI)=   -0.33037241D+00        E(CI)=      -0.39402876319D+03
+ NORM(A)=   0.14080509D+01
+ Iteration Nr.  40
+ **********************
+ DE(CI)=   -0.33252907D+00        E(CI)=      -0.39403091985D+03
+ NORM(A)=   0.14323945D+01
+ Iteration Nr.  41
+ **********************
+ DE(CI)=   -0.33590047D+00        E(CI)=      -0.39403429125D+03
+ NORM(A)=   0.16301206D+01
+ Iteration Nr.  42
+ **********************
+ DE(CI)=   -0.35576213D+00        E(CI)=      -0.39405415291D+03
+ NORM(A)=   0.15120771D+01
+ Iteration Nr.  43
+ **********************
+ DE(CI)=   -0.33216428D+00        E(CI)=      -0.39403055506D+03
+ NORM(A)=   0.14128299D+01
+ Iteration Nr.  44
+ **********************
+ DE(CI)=   -0.33213649D+00        E(CI)=      -0.39403052727D+03
+ NORM(A)=   0.14577771D+01
+ Iteration Nr.  45
+ **********************
+ DE(CI)=   -0.33964733D+00        E(CI)=      -0.39403803811D+03
+ NORM(A)=   0.14366228D+01
+ Iteration Nr.  46
+ **********************
+ DE(CI)=   -0.33222509D+00        E(CI)=      -0.39403061587D+03
+ NORM(A)=   0.14358329D+01
+ Iteration Nr.  47
+ **********************
+ DE(CI)=   -0.33636011D+00        E(CI)=      -0.39403475089D+03
+ NORM(A)=   0.14383081D+01
+ Iteration Nr.  48
+ **********************
+ DE(CI)=   -0.33422092D+00        E(CI)=      -0.39403261170D+03
+ NORM(A)=   0.14373923D+01
+ Iteration Nr.  49
+ **********************
+ DE(CI)=   -0.33538897D+00        E(CI)=      -0.39403377975D+03
+ NORM(A)=   0.14370760D+01
+ Iteration Nr.  50
+ **********************
+ DE(CI)=   -0.33466733D+00        E(CI)=      -0.39403305811D+03
+ NORM(A)=   0.14353453D+01
+ *************
+ *MAX. CYCLES*
+ *************
+ ***************************************************************
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           9    9   10   10      -0.100630D+01
+ Largest amplitude= 1.01D+00
+ Error termination via Lnk1e in C:\G03W\l913.exe at Mon Jun 19 19:26:58 2017.
+ Job cpu time:  0 days  0 hours  0 minutes  1.0 seconds.
+ File lengths (MBytes):  RWF=     20 Int=      0 D2E=      0 Chk=     12 Scr=      1
