@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-t = np.arange(2.0, 0.76, -.04)
+#t = np.arange(2.0, 0.76, -.04)
 
 
 def read_file(path):
@@ -22,24 +22,16 @@ def parse_energy(s):
     array = s[init+3 : end].strip()
     return np.fromstring(array, dtype=float, sep=",")
 
-files = glob.glob("*/*.out")
+files = glob.glob("*/*.dat")
 for f in files:
-    path = f.replace("H2S-", "").replace("-SCAN-GEO-SYM.out", "")
-    path = path[path.find("\\") + 1:]
-
-    s = read_file(f).replace("\n ", "")
-    E = parse_energy(s)
-    if E.size > 0:
-        plt.plot(t, E, "o-", label=path)
+    #path = f.replace("H2S-", "").replace("-SCAN-GEO-SYM.out", "")
+    #path = path[path.find("\\") + 1:]
+    E = np.loadtxt(f)
+    #s = read_file(f).replace("\n\r ", "")
+    #E = parse_energy(s)
+    #print(E)
+    #print(E.size, t.size)
+    plt.plot(E[:,1], E[:,2], "o-", label=f)
 
 plt.legend(loc=0)
 plt.show()
-#with open(name,"r") as f:
-#    s = ""
-#    for i in f:
-#        s += i
-#    fInd = s.find("HF=")
-#    lInd = s.find("|", fInd)
-#    A = np.array(s[fInd+3:lInd].replace("\n ", "").split(","), dtype=float)
-#    plt.plot(t, A, 'go-')
-#    plt.show()

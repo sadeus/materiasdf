@@ -1,5 +1,5 @@
 %Chk=H2S-RHF-sto-3g-SCAN-GEO-SYM
-# rhf/sto-3g scan guess=mix
+# rhf/sto-3g scan
  
 H2S-RHF-sto-3g-SCAN-GEO-SYM
  
@@ -8,6 +8,6 @@ S
 H 1 r
 H 1 r 2 aHSH
 
-r 2.0 30 -0.04
+r 6.0 50 -0.11
 aHSH=92.11
  

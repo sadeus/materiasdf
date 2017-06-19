@@ -1,0 +1,13 @@
+%Chk=H2S-RHF-6-31G**-SCAN-GEO-SYM
+# rhf/6-31G** scan
+ 
+Disociación simetrica RHF 6-31G** de H2S
+ 
+0 1
+S
+H 1 r
+H 1 r 2 aHSH
+
+r 3.0 50 -0.05
+aHSH=92.11
+ 

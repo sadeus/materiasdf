@@ -1,4 +1,4 @@
- Entering Link 1 = C:\G03W\l1.exe PID=      4024.
+ Entering Link 1 = C:\G03W\l1.exe PID=      2188.
   
  Copyright (c) 1988,1990,1992,1993,1995,1998,2003, Gaussian, Inc.
                   All Rights Reserved.
@@ -87,28 +87,28 @@
  Gaussian 03:  x86-Win32-G03RevB.03 4-May-2003
                   19-Jun-2017 
  *********************************************
- %Chk=H2S-RHF-sto-3g-SCAN-GEO-SYM
+ %Chk=H2S-RHF-6-31g-SCAN-GEO-SYM
  Default route:  MaxDisk=2000MB
- -----------------
- # rhf/sto-3g scan
- -----------------
+ ----------------
+ # rhf/6-31g scan
+ ----------------
  1/38=1,60=1/1,8;
  2/17=6,18=5,29=3,40=1/2;
- 3/6=3,11=1,16=1,25=1,30=1/1,2,3;
+ 3/5=1,6=6,11=1,16=1,25=1,30=1/1,2,3;
  4/7=1/1;
  5/5=2,38=5/2;
  6/7=2,8=2,9=2,10=2,18=1,28=1/1;
  1/60=1/8(1);
  99/9=1/99;
  2/29=3/2;
- 3/6=3,11=1,16=1,25=1,30=1/1,2,3;
+ 3/5=1,6=6,11=1,16=1,25=1,30=1/1,2,3;
  4/5=5,7=1,16=3/1;
  5/5=2,38=5/2;
  1/60=1/8(-4);
  99/9=1/99;
- ---------------------------
- H2S-RHF-sto-3g-SCAN-GEO-SYM
- ---------------------------
+ --------------------------------------
+ Disociacion simetrica RHF 6-31g de H2S
+ --------------------------------------
  Symbolic Z-matrix:
  Charge =  0 Multiplicity = 1
  S
@@ -163,39 +163,37 @@
     3          1             0        0.000000   -4.320038   -3.701160
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     15.3734920     13.4346690      7.1694190
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         2.8835252710 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (B2) (A1) (A1) (B1) (B2) (A1)
-       Virtual   (A1) (B2)
+       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B1) (B2) (A1)
+       Virtual   (A1) (B2) (A1) (A1) (B1) (B2) (B2) (A1)
  The electronic state of the initial guess is 1-A1.
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- Rare condition: small coef for last iteration:  0.000D+00
- Rare condition: small coef for last iteration:  0.000D+00
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
  EnCoef did   100 forward-backward iterations
- SCF Done:  E(RHF) =  -393.609155882     A.U. after   17 cycles
-             Convg  =    0.3818D-09             -V/T =  2.0074
+ SCF Done:  E(RHF) =  -398.119773085     A.U. after   17 cycles
+             Convg  =    0.1933D-08             -V/T =  1.9997
              S**2   =   0.0000
 
  **********************************************************************
@@ -205,22 +203,23 @@
  **********************************************************************
 
  Orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  The electronic state is 1-A1.
- Alpha  occ. eigenvalues --  -90.64187  -8.56596  -6.19999  -6.19229  -6.19229
- Alpha  occ. eigenvalues --   -0.73211  -0.23892  -0.23892  -0.10895
- Alpha virt. eigenvalues --   -0.04770   0.15867
+ Alpha  occ. eigenvalues --  -92.00873  -9.01780  -6.70111  -6.69383  -6.69383
+ Alpha  occ. eigenvalues --   -0.88592  -0.40207  -0.40207  -0.23743
+ Alpha virt. eigenvalues --   -0.17618  -0.06877   0.42144   0.52079   0.52098
+ Alpha virt. eigenvalues --    0.52098   0.98263   0.98263
           Condensed to atoms (all electrons):
               1          2          3
-     1  S   16.000000   0.000000   0.000000
-     2  H    0.000000   1.000000   0.000000
-     3  H    0.000000   0.000000   1.000000
+     1  S   16.000015   0.000002   0.000002
+     2  H    0.000002   0.999989   0.000000
+     3  H    0.000002   0.000000   0.999989
  Mulliken atomic charges:
               1
-     1  S    0.000000
-     2  H    0.000000
-     3  H    0.000000
+     1  S   -0.000019
+     2  H    0.000009
+     3  H    0.000009
  Sum of Mulliken charges=   0.00000
  Atomic charges with hydrogens summed into heavy atoms:
               1
@@ -228,30 +227,30 @@
      2  H    0.000000
      3  H    0.000000
  Sum of Mulliken charges=   0.00000
- Electronic spatial extent (au):  <R**2>=   270.1098
+ Electronic spatial extent (au):  <R**2>=   279.3685
  Charge=     0.0000 electrons
  Dipole moment (field-independent basis, Debye):
-    X=     0.0000    Y=     0.0000    Z=     0.0000  Tot=     0.0000
+    X=     0.0000    Y=     0.0000    Z=    -0.0003  Tot=     0.0003
  Quadrupole moment (field-independent basis, Debye-Ang):
-   XX=    -9.5007   YY=   -13.2404   ZZ=   -13.2404
+   XX=   -17.9802   YY=   -17.9784   ZZ=   -12.4763
    XY=     0.0000   XZ=     0.0000   YZ=     0.0000
  Traceless Quadrupole moment (field-independent basis, Debye-Ang):
-   XX=     2.4931   YY=    -1.2466   ZZ=    -1.2466
+   XX=    -1.8352   YY=    -1.8334   ZZ=     3.6687
    XY=     0.0000   XZ=     0.0000   YZ=     0.0000
  Octapole moment (field-independent basis, Debye-Ang**2):
-  XXX=     0.0000  YYY=     0.0000  ZZZ=     3.4489  XYY=     0.0000
-  XXY=     0.0000  XXZ=     2.8798  XZZ=     0.0000  YZZ=     0.0000
-  YYZ=     1.1497  XYZ=     0.0000
+  XXX=     0.0000  YYY=     0.0000  ZZZ=    19.9114  XYY=     0.0000
+  XXY=     0.0000  XXZ=     4.0931  XZZ=     0.0000  YZZ=     0.0000
+  YYZ=     4.0861  XYZ=     0.0000
  Hexadecapole moment (field-independent basis, Debye-Ang**3):
- XXXX=    -6.7648 YYYY=  -207.3237 ZZZZ=  -170.0417 XXXY=     0.0000
+ XXXX=   -24.9964 YYYY=  -358.7411 ZZZZ=  -269.8911 XXXY=     0.0000
  XXXZ=     0.0000 YYYX=     0.0000 YYYZ=     0.0000 ZZZX=     0.0000
- ZZZY=     0.0000 XXYY=   -35.6814 XXZZ=   -28.6673 YYZZ=   -62.8943
+ ZZZY=     0.0000 XXYY=   -63.9623 XXZZ=   -50.3290 YYZZ=  -105.9324
  XXYZ=     0.0000 YYXZ=     0.0000 ZZXY=     0.0000
- N-N= 2.883525271026D+00 E-N=-9.454714722173D+02  KE= 3.907087289147D+02
- Symmetry A1   KE= 3.193017896754D+02
+ N-N= 2.883525271026D+00 E-N=-9.541635581124D+02  KE= 3.982425605426D+02
+ Symmetry A1   KE= 3.207377590584D+02
  Symmetry A2   KE= 0.000000000000D+00
- Symmetry B1   KE= 3.257067397473D+01
- Symmetry B2   KE= 3.883626526455D+01
+ Symmetry B1   KE= 3.875240963669D+01
+ Symmetry B2   KE= 3.875239184751D+01
  Variable Step   Value    
  -------- ---- -----------
      1       1   11.130487
@@ -295,36 +294,36 @@
     3          1             0        0.000000   -4.240837   -3.633306
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     15.9530761     13.9411591      7.4397077
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         2.9373771861 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.609727798     A.U. after    4 cycles
-             Convg  =    0.6073D-08             -V/T =  2.0074
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.120346901     A.U. after    6 cycles
+             Convg  =    0.5882D-08             -V/T =  1.9997
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -369,36 +368,36 @@
     3          1             0        0.000000   -4.161636   -3.565451
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     16.5660646     14.4768407      7.7255745
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         2.9932788281 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.610321483     A.U. after    5 cycles
-             Convg  =    0.1129D-11             -V/T =  2.0074
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.120943645     A.U. after    6 cycles
+             Convg  =    0.8709D-08             -V/T =  1.9997
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -443,36 +442,36 @@
     3          1             0        0.000000   -4.082436   -3.497596
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     17.2150746     15.0440011      8.0282400
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         3.0513494931 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.610938207     A.U. after    5 cycles
-             Convg  =    0.2069D-11             -V/T =  2.0074
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.121565223     A.U. after    7 cycles
+             Convg  =    0.3491D-09             -V/T =  1.9997
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -517,36 +516,36 @@
     3          1             0        0.000000   -4.003235   -3.429742
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     17.9029849     15.6451557      8.3490465
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         3.1117179184 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.611579338     A.U. after    5 cycles
-             Convg  =    0.3777D-11             -V/T =  2.0074
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.122213950     A.U. after    7 cycles
+             Convg  =    0.5533D-09             -V/T =  1.9997
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -591,36 +590,36 @@
     3          1             0        0.000000   -3.924034   -3.361887
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     18.6329673     16.2830767      8.6894734
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         3.1745232342 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.612246362     A.U. after    5 cycles
-             Convg  =    0.6874D-11             -V/T =  2.0074
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.122892696     A.U. after    7 cycles
+             Convg  =    0.9001D-09             -V/T =  1.9997
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -665,36 +664,36 @@
     3          1             0        0.000000   -3.844834   -3.294033
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     19.4085242     16.9608245      9.0511539
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         3.2399160349 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.612940887     A.U. after    5 cycles
-             Convg  =    0.1249D-10             -V/T =  2.0074
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.123605065     A.U. after    7 cycles
+             Convg  =    0.1502D-08             -V/T =  1.9997
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -739,36 +738,36 @@
     3          1             0        0.000000   -3.765633   -3.226178
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     20.2335296     17.6817846      9.4358947
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         3.3080595844 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.613664668     A.U. after    5 cycles
-             Convg  =    0.2273D-10             -V/T =  2.0074
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.124355647     A.U. after    7 cycles
+             Convg  =    0.2553D-08             -V/T =  1.9997
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -813,36 +812,36 @@
     3          1             0        0.000000   -3.686432   -3.158323
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     21.1122785     18.4497103      9.8456987
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         3.3791311770 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.614419628     A.U. after    5 cycles
-             Convg  =    0.4162D-10             -V/T =  2.0074
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.125150330     A.U. after    7 cycles
+             Convg  =    0.4348D-08             -V/T =  1.9997
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -887,36 +886,36 @@
     3          1             0        0.000000   -3.607232   -3.090469
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     22.0495421     19.2687713     10.2827911
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         3.4533236779 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.615207884     A.U. after    5 cycles
-             Convg  =    0.7724D-10             -V/T =  2.0074
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.125996711     A.U. after    7 cycles
+             Convg  =    0.7284D-08             -V/T =  1.9997
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -961,36 +960,36 @@
     3          1             0        0.000000   -3.528031   -3.022614
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     23.0506336     20.1436104     10.7496495
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         3.5308472706 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.616031796     A.U. after    5 cycles
-             Convg  =    0.1469D-09             -V/T =  2.0074
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.126904613     A.U. after    8 cycles
+             Convg  =    0.2979D-08             -V/T =  1.9997
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1035,36 +1034,36 @@
     3          1             0        0.000000   -3.448830   -2.954760
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     24.1214828     21.0794098     11.2490394
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         3.6119314460 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.616894030     A.U. after    5 cycles
-             Convg  =    0.2908D-09             -V/T =  2.0074
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.127886742     A.U. after    8 cycles
+             Convg  =    0.4247D-08             -V/T =  1.9997
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1109,36 +1108,36 @@
     3          1             0        0.000000   -3.369629   -2.886905
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     25.2687246     22.0819675     11.7840549
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         3.6968272705 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.617797653     A.U. after    5 cycles
-             Convg  =    0.6070D-09             -V/T =  2.0074
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.128959509     A.U. after    8 cycles
+             Convg  =    0.5900D-08             -V/T =  1.9997
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1183,36 +1182,36 @@
     3          1             0        0.000000   -3.290429   -2.819050
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     26.4998019     23.1577880     12.3581671
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         3.7858099838 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.618746288     A.U. after    5 cycles
-             Convg  =    0.1349D-08             -V/T =  2.0074
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.130144058     A.U. after    8 cycles
+             Convg  =    0.8201D-08             -V/T =  1.9997
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1257,36 +1256,36 @@
     3          1             0        0.000000   -3.211228   -2.751196
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     27.8230868     24.3141872     12.9752802
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         3.8791819790 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.619744351     A.U. after    5 cycles
-             Convg  =    0.3182D-08             -V/T =  2.0075
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.131467553     A.U. after    9 cycles
+             Convg  =    0.1492D-08             -V/T =  1.9998
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1331,36 +1330,36 @@
     3          1             0        0.000000   -3.132027   -2.683341
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     29.2480229     25.5594179     13.6397983
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         3.9772762359 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.620797435     A.U. after    5 cycles
-             Convg  =    0.7860D-08             -V/T =  2.0075
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.132964812     A.U. after    9 cycles
+             Convg  =    0.2301D-08             -V/T =  1.9998
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1405,36 +1404,36 @@
     3          1             0        0.000000   -3.052827   -2.615487
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     30.7852946     26.9028172     14.3567041
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         4.0804602892 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (A1) (B2) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.621912909     A.U. after    6 cycles
-             Convg  =    0.2113D-09             -V/T =  2.0075
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.134680457     A.U. after    9 cycles
+             Convg  =    0.3562D-08             -V/T =  1.9998
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1479,36 +1478,36 @@
     3          1             0        0.000000   -2.973626   -2.547632
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     32.4470280     28.3549816     15.1316525
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         4.1891408296 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B2) (A1) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.623100873     A.U. after    6 cycles
-             Convg  =    0.7765D-09             -V/T =  2.0075
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.136671917     A.U. after    9 cycles
+             Convg  =    0.5743D-08             -V/T =  1.9998
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1553,36 +1552,36 @@
     3          1             0        0.000000   -2.894425   -2.479777
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     34.2470306     29.9279774     15.9710827
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         4.3037690612 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B2) (A1) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.624375600     A.U. after    6 cycles
-             Convg  =    0.2877D-08             -V/T =  2.0075
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.139013910     A.U. after   10 cycles
+             Convg  =    0.3034D-09             -V/T =  1.9998
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1627,36 +1626,36 @@
     3          1             0        0.000000   -2.815225   -2.411923
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     36.2010788     31.6355915     16.8823519
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         4.4248469632 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B1) (B2) (A1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.625757658     A.U. after    7 cycles
-             Convg  =    0.3426D-09             -V/T =  2.0075
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.141805468     A.U. after   10 cycles
+             Convg  =    0.9740D-09             -V/T =  1.9999
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1701,36 +1700,36 @@
     3          1             0        0.000000   -2.736024   -2.344068
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     38.3272654     33.4936347     17.8738978
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         4.5529346385 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B1) (A1) (B2) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.627276778     A.U. after    7 cycles
-             Convg  =    0.9880D-09             -V/T =  2.0075
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.145181058     A.U. after   10 cycles
+             Convg  =    0.1163D-08             -V/T =  2.0000
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1775,36 +1774,36 @@
     3          1             0        0.000000   -2.656823   -2.276214
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     40.6464195     35.5203095     18.9554339
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         4.6886589773 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B1) (A1) (B2) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.628975239     A.U. after    7 cycles
-             Convg  =    0.2526D-08             -V/T =  2.0075
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.149327944     A.U. after   10 cycles
+             Convg  =    0.8416D-09             -V/T =  2.0000
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1849,36 +1848,36 @@
     3          1             0        0.000000   -2.577623   -2.208359
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     43.1826186     37.7366566     20.1381889
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         4.8327239179 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B1) (A1) (B2) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.630910998     A.U. after    7 cycles
-             Convg  =    0.5275D-08             -V/T =  2.0076
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.154512351     A.U. after   10 cycles
+             Convg  =    0.3275D-08             -V/T =  2.0001
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1923,36 +1922,36 @@
     3          1             0        0.000000   -2.498422   -2.140504
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     45.9638160     40.1671043     21.4351987
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         4.9859226588 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B1) (A1) (B2) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.633159260     A.U. after    7 cycles
-             Convg  =    0.8421D-08             -V/T =  2.0076
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.161117574     A.U. after   10 cycles
+             Convg  =    0.3894D-08             -V/T =  2.0003
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -1997,36 +1996,36 @@
     3          1             0        0.000000   -2.419221   -2.072650
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     49.0226149     42.8401436     22.8616677
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         5.1491522697 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B1) (A1) (B2) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.635811304     A.U. after    7 cycles
-             Convg  =    0.9934D-08             -V/T =  2.0077
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.169697989     A.U. after   11 cycles
+             Convg  =    0.4388D-09             -V/T =  2.0005
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -2071,36 +2070,36 @@
     3          1             0        0.000000   -2.340020   -2.004795
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     52.3972272     45.7891679     24.4354162
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         5.3234312696 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B1) (A1) (B2) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.638970255     A.U. after    7 cycles
-             Convg  =    0.8669D-08             -V/T =  2.0078
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.181052605     A.U. after   12 cycles
+             Convg  =    0.2230D-08             -V/T =  2.0007
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -2145,36 +2144,36 @@
     3          1             0        0.000000   -2.260820   -1.936940
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     56.1326740     49.0535200     26.1774397
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         5.5099209000 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B1) (A1) (B2) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.642744278     A.U. after    7 cycles
-             Convg  =    0.5764D-08             -V/T =  2.0079
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.196244060     A.U. after   14 cycles
+             Convg  =    0.3139D-08             -V/T =  2.0011
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -2219,36 +2218,36 @@
     3          1             0        0.000000   -2.181619   -1.869086
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     60.2822940     52.6798120     28.1126125
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         5.7099510317 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B1) (A1) (B2) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.647237463     A.U. after    7 cycles
-             Convg  =    0.3059D-08             -V/T =  2.0080
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.214743951     A.U. after   12 cycles
+             Convg  =    0.5974D-08             -V/T =  2.0012
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -2293,36 +2292,36 @@
     3          1             0        0.000000   -2.102418   -1.801231
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     64.9096585     56.7235980     30.2705813
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         5.9250519268 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B1) (B2) (A1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.652537914     A.U. after    7 cycles
-             Convg  =    0.1362D-08             -V/T =  2.0082
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.234921757     A.U. after   10 cycles
+             Convg  =    0.6019D-08             -V/T =  2.0013
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -2367,36 +2366,36 @@
     3          1             0        0.000000   -2.023218   -1.733377
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     70.0910212     61.2515148     32.6869067
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         6.1569934613 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (A1) (B2) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B1) (B2) (A1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.658701945     A.U. after    6 cycles
-             Convg  =    0.5018D-08             -V/T =  2.0084
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.256750891     A.U. after   10 cycles
+             Convg  =    0.2125D-08             -V/T =  2.0014
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -2441,36 +2440,36 @@
     3          1             0        0.000000   -1.944017   -1.665522
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     75.9184791     66.3440447     35.4045383
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         6.4078339356 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (A1) (B2) (A1) (B1) (B2) (A1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.665732911     A.U. after    7 cycles
-             Convg  =    0.1816D-09             -V/T =  2.0086
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.280293290     A.U. after   10 cycles
+             Convg  =    0.1433D-08             -V/T =  2.0015
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -2515,36 +2514,36 @@
     3          1             0        0.000000   -1.864816   -1.597667
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     82.5040939     72.0991168     38.4757359
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         6.6799813228 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (A1) (B2) (A1) (B1) (B2) (A1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.673553072     A.U. after    7 cycles
-             Convg  =    0.5351D-10             -V/T =  2.0088
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.305591964     A.U. after   10 cycles
+             Convg  =    0.1114D-08             -V/T =  2.0015
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -2589,36 +2588,36 @@
     3          1             0        0.000000   -1.785616   -1.529813
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     89.9853201     78.6368506     41.9646013
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         6.9762708170 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (A1) (B2) (A1) (B1) (B2) (A1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.681966782     A.U. after    6 cycles
-             Convg  =    0.3300D-08             -V/T =  2.0090
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.332658048     A.U. after   10 cycles
+             Convg  =    0.1027D-08             -V/T =  2.0016
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -2663,36 +2662,36 @@
     3          1             0        0.000000   -1.706415   -1.461958
  ---------------------------------------------------------------------
  Rotational constants (GHZ):     98.5322353     86.1058744     45.9504503
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         7.3000639773 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (A1) (B1)
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B1) (B2) (A1)
+       Virtual   (A1) (B2) (A1) (B1) (B2) (A1) (A1) (B2)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.690613533     A.U. after    7 cycles
-             Convg  =    0.1452D-10             -V/T =  2.0093
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.361459326     A.U. after    9 cycles
+             Convg  =    0.9635D-08             -V/T =  2.0016
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -2737,36 +2736,36 @@
     3          1             0        0.000000   -1.627214   -1.394104
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    108.3572936     94.6918486     50.5323604
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         7.6553768257 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (B1) (A1)
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (B1) (A1)
+       Virtual   (A1) (B2) (A1) (B1) (B2) (A1) (A1) (B2)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.698909725     A.U. after    6 cycles
-             Convg  =    0.8912D-08             -V/T =  2.0095
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.391906856     A.U. after    9 cycles
+             Convg  =    0.8649D-08             -V/T =  2.0016
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -2811,36 +2810,36 @@
     3          1             0        0.000000   -1.548014   -1.326249
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    119.7286561    104.6291154     55.8353887
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         8.0470472680 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (B1) (A1)
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (A1) (B2) (A1) (B1) (B2) (A1) (A1) (B2)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.705977891     A.U. after    6 cycles
-             Convg  =    0.8423D-08             -V/T =  2.0097
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.423837037     A.U. after    9 cycles
+             Convg  =    0.7981D-08             -V/T =  2.0016
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -2885,36 +2884,36 @@
     3          1             0        0.000000   -1.468813   -1.258394
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    132.9886853    116.2168603     62.0191955
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         8.4809566795 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (B1) (A1)
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (A1) (B2) (A1) (B1) (B2) (A1) (A1) (B2)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.710560509     A.U. after    6 cycles
-             Convg  =    0.9102D-08             -V/T =  2.0099
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.456983895     A.U. after    9 cycles
+             Convg  =    0.7589D-08             -V/T =  2.0016
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -2959,36 +2958,36 @@
     3          1             0        0.000000   -1.389612   -1.190540
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    148.5800190    129.8418980     69.2902049
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         8.9643272674 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (B1) (A1)
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (A1) (B2) (A1) (B1) (B2) (A1) (A1) (B2)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.710911433     A.U. after    6 cycles
-             Convg  =    0.7740D-08             -V/T =  2.0100
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.490931067     A.U. after    9 cycles
+             Convg  =    0.7465D-08             -V/T =  2.0015
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -3033,36 +3032,36 @@
     3          1             0        0.000000   -1.310411   -1.122685
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    167.0829950    146.0113772     77.9190569
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy         9.5061272671 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (B1) (A1)
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (A1) (B2) (A1) (B1) (B2) (A1) (A1) (B2)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.704651864     A.U. after    6 cycles
-             Convg  =    0.7300D-08             -V/T =  2.0100
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.525022319     A.U. after    9 cycles
+             Convg  =    0.7563D-08             -V/T =  2.0013
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -3107,36 +3106,36 @@
     3          1             0        0.000000   -1.231211   -1.054831
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    189.2704465    165.4006654     88.2661619
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy        10.1176325299 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (B1) (A1)
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (A1) (B2) (A1) (B1) (B2) (A1) (A1) (B2)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.688571177     A.U. after    6 cycles
-             Convg  =    0.5114D-08             -V/T =  2.0100
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.558190069     A.U. after    9 cycles
+             Convg  =    0.7644D-08             -V/T =  2.0010
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -3181,37 +3180,36 @@
     3          1             0        0.000000   -1.152010   -0.986976
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    216.1897315    188.9250335    100.8199547
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy        10.8132197663 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
-       Occupied  (A1) (A1) (B1) (A1) (B2) (A1) (B2) (A1) (B2)
-       Virtual   (B1) (A1)
+       Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
+       Virtual   (B2) (A1) (A1) (B1) (B2) (A1) (A1) (B2)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- Rare condition: small coef for last iteration:  0.000D+00
- SCF Done:  E(RHF) =  -394.239653811     A.U. after   12 cycles
-             Convg  =    0.2265D-09             -V/T =  2.0120
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.588630620     A.U. after    9 cycles
+             Convg  =    0.7271D-08             -V/T =  2.0007
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -3256,36 +3254,36 @@
     3          1             0        0.000000   -1.072809   -0.919121
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    249.2886413    217.8496850    116.2556119
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy        11.6115111585 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
        Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
-       Virtual   (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B1) (B2) (A1) (A1) (B2)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -394.282244756     A.U. after    7 cycles
-             Convg  =    0.6517D-09             -V/T =  2.0121
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.613214506     A.U. after   10 cycles
+             Convg  =    0.6799D-08             -V/T =  2.0003
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -3330,36 +3328,36 @@
     3          1             0        0.000000   -0.993609   -0.851267
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    290.6142158    253.9634981    135.5277694
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy        12.5370663958 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
        Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
-       Virtual   (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B2) (B1) (A1) (A1) (B2)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -394.308161262     A.U. after    7 cycles
-             Convg  =    0.4761D-09             -V/T =  2.0120
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.626475817     A.U. after   10 cycles
+             Convg  =    0.2817D-08             -V/T =  1.9996
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -3404,36 +3402,36 @@
     3          1             0        0.000000   -0.914408   -0.783412
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    343.1370281    299.8624129    160.0217522
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy        13.6229540363 Hartrees.
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
        Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
-       Virtual   (B2) (A1)
+       Virtual   (B2) (A1) (B2) (A1) (A1) (B1) (A1) (B2)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -394.306276544     A.U. after    8 cycles
-             Convg  =    0.4482D-09             -V/T =  2.0117
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.618969716     A.U. after   10 cycles
+             Convg  =    0.1962D-08             -V/T =  1.9988
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -3478,15 +3476,15 @@
     3          1             0        0.000000   -0.835207   -0.715558
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    411.3003215    359.4293146    191.8096642
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy        14.9147858846 Hartrees.
 
@@ -3498,23 +3496,23 @@
 
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
        Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
-       Virtual   (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B2) (A1) (B1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -394.259065782     A.U. after    8 cycles
-             Convg  =    0.2386D-09             -V/T =  2.0110
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.574681433     A.U. after   10 cycles
+             Convg  =    0.1995D-08             -V/T =  1.9977
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -3559,15 +3557,15 @@
     3          1             0        0.000000   -0.756007   -0.647703
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    501.9915761    438.6830710    234.1034776
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy        16.4772872630 Hartrees.
 
@@ -3579,23 +3577,23 @@
 
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
        Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
-       Virtual   (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B2) (B1) (A1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -394.138682423     A.U. after    8 cycles
-             Convg  =    0.5130D-09             -V/T =  2.0098
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.466935482     A.U. after   10 cycles
+             Convg  =    0.1165D-08             -V/T =  1.9960
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -3640,15 +3638,15 @@
     3          1             0        0.000000   -0.676806   -0.579848
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    626.3532284    547.3608938    292.0994614
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy        18.4054804534 Hartrees.
 
@@ -3660,23 +3658,23 @@
 
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
        Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
-       Virtual   (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B2) (B1) (A1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.900617389     A.U. after    7 cycles
-             Convg  =    0.4499D-09             -V/T =  2.0079
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -398.251788211     A.U. after   10 cycles
+             Convg  =    0.1039D-08             -V/T =  1.9937
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -3721,15 +3719,15 @@
     3          1             0        0.000000   -0.597605   -0.511994
  ---------------------------------------------------------------------
  Rotational constants (GHZ):    803.3759800    702.0584783    374.6539180
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy        20.8447609954 Hartrees.
 
@@ -3741,23 +3739,23 @@
 
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
        Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
-       Virtual   (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B2) (B1) (A1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -393.473435959     A.U. after    8 cycles
-             Convg  =    0.2216D-09             -V/T =  2.0049
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -397.856776222     A.U. after   10 cycles
+             Convg  =    0.2579D-08             -V/T =  1.9902
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -3802,15 +3800,15 @@
     3          1             0        0.000000   -0.518405   -0.444139
  ---------------------------------------------------------------------
  Rotational constants (GHZ):   1067.6036123    932.9631283    497.8763196
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy        24.0293772586 Hartrees.
 
@@ -3822,23 +3820,23 @@
 
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
        Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
-       Virtual   (B2) (A1)
+       Virtual   (B2) (A1) (A1) (B2) (B1) (A1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -392.742992782     A.U. after    7 cycles
-             Convg  =    0.3512D-08             -V/T =  2.0001
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -397.159236029     A.U. after   10 cycles
+             Convg  =    0.1699D-08             -V/T =  1.9851
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -3883,15 +3881,15 @@
     3          1             0        0.000000   -0.439204   -0.376285
  ---------------------------------------------------------------------
  Rotational constants (GHZ):   1487.3574647   1299.7798595    693.6282829
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy        28.3625436494 Hartrees.
 
@@ -3903,23 +3901,23 @@
 
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
        Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
-       Virtual   (B2) (A1)
+       Virtual   (A1) (B2) (A1) (B2) (B1) (A1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -391.520565850     A.U. after    7 cycles
-             Convg  =    0.1256D-08             -V/T =  1.9931
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -395.939051014     A.U. after    9 cycles
+             Convg  =    0.7657D-08             -V/T =  1.9777
              S**2   =   0.0000
  Variable Step   Value    
  -------- ---- -----------
@@ -3964,15 +3962,15 @@
     3          1             0        0.000000   -0.360003   -0.308430
  ---------------------------------------------------------------------
  Rotational constants (GHZ):   2213.7828505   1934.5923429   1032.3963363
- Standard basis: STO-3G (5D, 7F)
- There are     6 symmetry adapted basis functions of A1  symmetry.
+ Standard basis: 6-31G (6D, 7F)
+ There are     9 symmetry adapted basis functions of A1  symmetry.
  There are     0 symmetry adapted basis functions of A2  symmetry.
- There are     2 symmetry adapted basis functions of B1  symmetry.
- There are     3 symmetry adapted basis functions of B2  symmetry.
+ There are     3 symmetry adapted basis functions of B1  symmetry.
+ There are     5 symmetry adapted basis functions of B2  symmetry.
  Integral buffers will be    262144 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
-    11 basis functions,    33 primitive gaussians,    11 cartesian basis functions
+    17 basis functions,    54 primitive gaussians,    17 cartesian basis functions
      9 alpha electrons        9 beta electrons
        nuclear repulsion energy        34.6023032523 Hartrees.
 
@@ -3984,108 +3982,107 @@
 
  NAtoms=    3 NActive=    3 NUniq=    2 SFac= 2.76D+00 NAtFMM=   60 Big=F
  One-electron integrals computed using PRISM.
- NBasis=    11 RedAO= T  NBF=     6     0     2     3
- NBsUse=    11 1.00D-06 NBFU=     6     0     2     3
+ NBasis=    17 RedAO= T  NBF=     9     0     3     5
+ NBsUse=    17 1.00D-06 NBFU=     9     0     3     5
  Initial guess read from the read-write file:
  Initial guess orbital symmetries:
        Occupied  (A1) (A1) (B2) (A1) (B1) (A1) (B2) (A1) (B1)
-       Virtual   (B2) (A1)
+       Virtual   (A1) (B2) (B1) (A1) (B2) (A1) (B2) (A1)
  Harris functional with IExCor=  205 diagonalized for initial guess.
- ExpMin= 1.69D-01 ExpMax= 5.33D+02 ExpMxC= 5.33D+02 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
+ ExpMin= 1.17D-01 ExpMax= 2.19D+04 ExpMxC= 3.30D+03 IAcc=1 IRadAn=         1 AccDes= 1.00D-06
  HarFok:  IExCor= 205 AccDes= 1.00D-06 IRadAn=         1 IDoV=1
  ScaDFX=  1.000000  1.000000  1.000000  1.000000
  Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
  Requested convergence on MAX density matrix=1.00D-06.
  Requested convergence on             energy=1.00D-06.
  No special actions if energy rises.
- Keep R1 integrals in memory in canonical form, NReq=      421788.
- SCF Done:  E(RHF) =  -389.418065167     A.U. after    8 cycles
-             Convg  =    0.7512D-09             -V/T =  1.9847
+ Keep R1 integrals in memory in canonical form, NReq=      433332.
+ SCF Done:  E(RHF) =  -393.774664475     A.U. after   10 cycles
+             Convg  =    0.1639D-08             -V/T =  1.9673
              S**2   =   0.0000
  Scan completed.
 
  Summary of the potential surface scan:
    N       r          SCF    
  ----  ---------  -----------
-    1     6.0000   -393.60916
-    2     5.8900   -393.60973
-    3     5.7800   -393.61032
-    4     5.6700   -393.61094
-    5     5.5600   -393.61158
-    6     5.4500   -393.61225
-    7     5.3400   -393.61294
-    8     5.2300   -393.61366
-    9     5.1200   -393.61442
-   10     5.0100   -393.61521
-   11     4.9000   -393.61603
-   12     4.7900   -393.61689
-   13     4.6800   -393.61780
-   14     4.5700   -393.61875
-   15     4.4600   -393.61974
-   16     4.3500   -393.62080
-   17     4.2400   -393.62191
-   18     4.1300   -393.62310
-   19     4.0200   -393.62438
-   20     3.9100   -393.62576
-   21     3.8000   -393.62728
-   22     3.6900   -393.62898
-   23     3.5800   -393.63091
-   24     3.4700   -393.63316
-   25     3.3600   -393.63581
-   26     3.2500   -393.63897
-   27     3.1400   -393.64274
-   28     3.0300   -393.64724
-   29     2.9200   -393.65254
-   30     2.8100   -393.65870
-   31     2.7000   -393.66573
-   32     2.5900   -393.67355
-   33     2.4800   -393.68197
-   34     2.3700   -393.69061
-   35     2.2600   -393.69891
-   36     2.1500   -393.70598
-   37     2.0400   -393.71056
-   38     1.9300   -393.71091
-   39     1.8200   -393.70465
-   40     1.7100   -393.68857
-   41     1.6000   -394.23965
-   42     1.4900   -394.28224
-   43     1.3800   -394.30816
-   44     1.2700   -394.30628
-   45     1.1600   -394.25907
-   46     1.0500   -394.13868
-   47     0.9400   -393.90062
-   48     0.8300   -393.47344
-   49     0.7200   -392.74299
-   50     0.6100   -391.52057
-   51     0.5000   -389.41807
+    1     6.0000   -398.11977
+    2     5.8900   -398.12035
+    3     5.7800   -398.12094
+    4     5.6700   -398.12157
+    5     5.5600   -398.12221
+    6     5.4500   -398.12289
+    7     5.3400   -398.12361
+    8     5.2300   -398.12436
+    9     5.1200   -398.12515
+   10     5.0100   -398.12600
+   11     4.9000   -398.12690
+   12     4.7900   -398.12789
+   13     4.6800   -398.12896
+   14     4.5700   -398.13014
+   15     4.4600   -398.13147
+   16     4.3500   -398.13296
+   17     4.2400   -398.13468
+   18     4.1300   -398.13667
+   19     4.0200   -398.13901
+   20     3.9100   -398.14181
+   21     3.8000   -398.14518
+   22     3.6900   -398.14933
+   23     3.5800   -398.15451
+   24     3.4700   -398.16112
+   25     3.3600   -398.16970
+   26     3.2500   -398.18105
+   27     3.1400   -398.19624
+   28     3.0300   -398.21474
+   29     2.9200   -398.23492
+   30     2.8100   -398.25675
+   31     2.7000   -398.28029
+   32     2.5900   -398.30559
+   33     2.4800   -398.33266
+   34     2.3700   -398.36146
+   35     2.2600   -398.39191
+   36     2.1500   -398.42384
+   37     2.0400   -398.45698
+   38     1.9300   -398.49093
+   39     1.8200   -398.52502
+   40     1.7100   -398.55819
+   41     1.6000   -398.58863
+   42     1.4900   -398.61321
+   43     1.3800   -398.62648
+   44     1.2700   -398.61897
+   45     1.1600   -398.57468
+   46     1.0500   -398.46694
+   47     0.9400   -398.25179
+   48     0.8300   -397.85678
+   49     0.7200   -397.15924
+   50     0.6100   -395.93905
+   51     0.5000   -393.77466
  ----  ---------  -----------
   
- 1|1|UNPC-UNK|Scan|RHF|STO-3G|H2S1|PCUSER|19-Jun-2017|1||# RHF/STO-3G S
- CAN||H2S-RHF-sto-3g-SCAN-GEO-SYM||0,1|S|H,1,r|H,1,r,2,aHSH||r=6.,s,50,
- -0.11|aHSH=92.11||Version=x86-Win32-G03RevB.03|HF=-393.6091559,-393.60
- 97278,-393.6103215,-393.6109382,-393.6115793,-393.6122464,-393.6129409
- ,-393.6136647,-393.6144196,-393.6152079,-393.6160318,-393.616894,-393.
- 6177977,-393.6187463,-393.6197444,-393.6207974,-393.6219129,-393.62310
- 09,-393.6243756,-393.6257577,-393.6272768,-393.6289752,-393.630911,-39
- 3.6331593,-393.6358113,-393.6389703,-393.6427443,-393.6472375,-393.652
- 5379,-393.6587019,-393.6657329,-393.6735531,-393.6819668,-393.6906135,
- -393.6989097,-393.7059779,-393.7105605,-393.7109114,-393.7046519,-393.
- 6885712,-394.2396538,-394.2822448,-394.3081613,-394.3062765,-394.25906
- 58,-394.1386824,-393.9006174,-393.473436,-392.7429928,-391.5205659,-38
- 9.4180652|RMSD=3.818e-010,6.073e-009,1.129e-012,2.069e-012,3.777e-012,
- 6.874e-012,1.249e-011,2.273e-011,4.162e-011,7.724e-011,1.469e-010,2.90
- 8e-010,6.070e-010,1.349e-009,3.182e-009,7.860e-009,2.113e-010,7.765e-0
- 10,2.877e-009,3.426e-010,9.880e-010,2.526e-009,5.275e-009,8.421e-009,9
- .934e-009,8.669e-009,5.764e-009,3.059e-009,1.362e-009,5.018e-009,1.816
- e-010,5.351e-011,3.300e-009,1.452e-011,8.912e-009,8.423e-009,9.102e-00
- 9,7.740e-009,7.300e-009,5.114e-009,2.265e-010,6.517e-010,4.761e-010,4.
- 482e-010,2.386e-010,5.130e-010,4.499e-010,2.216e-010,3.512e-009,1.256e
- -009,7.512e-010|PG=C02V [C2(S1),SGV(H2)]||@
+ 1|1|UNPC-UNK|Scan|RHF|6-31G|H2S1|PCUSER|19-Jun-2017|1||# RHF/6-31G SCA
+ N||Disociacion simetrica RHF 6-31g de H2S||0,1|S|H,1,r|H,1,r,2,aHSH||r
+ =6.,s,50,-0.11|aHSH=92.11||Version=x86-Win32-G03RevB.03|HF=-398.119773
+ 1,-398.1203469,-398.1209436,-398.1215652,-398.122214,-398.1228927,-398
+ .1236051,-398.1243556,-398.1251503,-398.1259967,-398.1269046,-398.1278
+ 867,-398.1289595,-398.1301441,-398.1314676,-398.1329648,-398.1346805,-
+ 398.1366719,-398.1390139,-398.1418055,-398.1451811,-398.1493279,-398.1
+ 545124,-398.1611176,-398.169698,-398.1810526,-398.1962441,-398.214744,
+ -398.2349218,-398.2567509,-398.2802933,-398.305592,-398.332658,-398.36
+ 14593,-398.3919069,-398.423837,-398.4569839,-398.4909311,-398.5250223,
+ -398.5581901,-398.5886306,-398.6132145,-398.6264758,-398.6189697,-398.
+ 5746814,-398.4669355,-398.2517882,-397.8567762,-397.159236,-395.939051
+ ,-393.7746645|RMSD=1.933e-009,5.882e-009,8.709e-009,3.491e-010,5.533e-
+ 010,9.001e-010,1.502e-009,2.553e-009,4.348e-009,7.284e-009,2.979e-009,
+ 4.247e-009,5.900e-009,8.201e-009,1.492e-009,2.301e-009,3.562e-009,5.74
+ 3e-009,3.034e-010,9.740e-010,1.163e-009,8.416e-010,3.275e-009,3.894e-0
+ 09,4.388e-010,2.230e-009,3.139e-009,5.974e-009,6.019e-009,2.125e-009,1
+ .433e-009,1.114e-009,1.027e-009,9.635e-009,8.649e-009,7.981e-009,7.589
+ e-009,7.465e-009,7.563e-009,7.644e-009,7.271e-009,6.799e-009,2.817e-00
+ 9,1.962e-009,1.995e-009,1.165e-009,1.039e-009,2.579e-009,1.699e-009,7.
+ 657e-009,1.639e-009|PG=C02V [C2(S1),SGV(H2)]||@
 
 
- GETTING A SIMPLE ANSWER FROM A PROFESSOR IS LIKE
- GETTING A THIMBLE OF WATER FROM A FIRE HYDRANT.
-     -- PROF. LEN SHAPIRO, NDSU
- Job cpu time:  0 days  0 hours  0 minutes 25.0 seconds.
+ MY GROUP MEETINGS AREN'T VERY STRUCTURED.
+     -- PROF. M. S. GORDON, OCT. 5, 1984
+ Job cpu time:  0 days  0 hours  0 minutes 27.0 seconds.
  File lengths (MBytes):  RWF=     17 Int=      0 D2E=      0 Chk=     12 Scr=      1
- Normal termination of Gaussian 03 at Mon Jun 19 09:53:23 2017.
+ Normal termination of Gaussian 03 at Mon Jun 19 09:36:16 2017.
