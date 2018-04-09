@@ -1,0 +1,155 @@
+\documentclass[a4paper]{article}
+
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+
+\usepackage{slashed}
+\usepackage{lineno}
+
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\du}{\partial}
+
+\title{Resumen E4}
+\author{ Sebastián Schiavinato}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introducción}\label{ sec:introduccion}
+
+Cómo vamos a trabajar con mecánica relativista y mecánica cuántica, durante este resumen vamos a tomar
+
+
+\noindent\noindent\[
+\begin{aligned}
+c &= 1\\
+\hbar &= 1
+\end{aligned}
+\]
+
+
+\section{Teoría nuclear}\label{sec:teora-nuclear}
+
+
+\section{Isospin y Quarks}\label{sec:isospin-y-quarks}
+
+
+\section{ 4.\hspace*{0.5em} Revisión de Relatividad especial}\label{ sec:revisin-de-relatividad-especial}
+\label{eq_energy_momentum_relativistic}
+\begin{equation}
+E^2 = m^2 + p^2
+\label{eq:energy_momentum_relativistic}
+\end{equation}
+
+
+\section{Ecuación de Klein Gordon}\label{ sec:klein-gordon}
+La cuantización canónica define a la energía (Hamiltoneano) y al momento como
+
+\[
+\begin{aligned}
+E &= H = i \hbar \du_t \\
+\bar{p} &= i \nabla
+\end{aligned}
+\]
+
+\noindent por lo que la ecuación
+\[H = \frac{p^2}{2m}\]
+pasa a ser
+\begin{equation}
+H = i \du_t = - \frac{\nabla^2}{2m}
+\label{eq_schrodinger}
+\end{equation}
+\noindent que puede ser aplicada a una función  $\psi$  cualquiera.
+
+ Ahora la relación energía-momento relativista (ecuación~\ref{eq:energy_momentum_relativistic})
+tendría la siguiente cuantización canónica
+\[
+- \du^2_{tt} = - \nabla^2 + m^2
+\]
+\noindent que finalmente la podemos expresar covariantemente
+\[
+\du_\mu \du^\mu + m^2 = 0
+\]
+\noindent que se llama ecuación de Klein Gordon
+
+ Esta ecuación tiene la problemática que definir una corriente de probablidad no definida positiva, que proviene de segunda derivada temporal (ya que la transforma en una ecuación hiperbólica)
+
+\section{Ecuación de Dirac}\label{ sec:ecuacin-de-dirac}
+
+
+\noindent Dirac propuso un hamiltoneano lineal en el momento, es decir
+\[H = p_i \alpha_i + \beta m\]
+con  $\alpha$  vector y  $\beta$ número en principio a determinar
+
+
+\section{Teoría de campos clásica}\label{ sec:campos}
+\begin{equation}
+\du_\mu \left(\du_{\du_\mu\phi} \Lagr\right) - \du_{\phi} \Lagr = 0
+\label{eq:euler_lagrange}
+\end{equation}
+
+
+\subsection{Teorema de Noether}\label{ sec:noether}
+Si la transformación infinitecimal (que depende de un parámetro  $\epsilon$ )  $\psi \to \tilde{\psi}$  deja invariante al lagrangiano a menos de una divergencia, es decir
+\[\Lagr = \tilde{\Lagr} + \du_\mu H^\mu,\]
+entonces existe una corriente 
+\[J^\mu = \delta \phi \du_{\du_\mu \phi} \Lagr - H^\mu,\]
+tal que 
+\[\du_\mu J^\mu = 0.\]
+
+
+\subsection{Lagrangianos}\label{ sec:lagrangianos}
+
+
+\noindent Fermi Dirac
+\begin{equation}
+\Lagr = i \bar{\psi} \gamma^{\mu} \du_\mu \psi - m \bar{\psi} \psi
+\label{eq:fermionic}
+\end{equation}
+
+\noindent Klein Gordon
+\begin{equation}
+\Lagr = \du_\mu \du^\mu \phi - m^2 \phi^* \phi
+\end{equation}
+Si usamos la ecuación~\ref{eq:euler_lagrange}
+
+
+\subsection{Simetrías globales}\label{ sec:simetras-globales}
+
+
+\subsection{Simetrías locales}\label{ sec:simetras-locales}
+
+\begin{equation}
+\du_\mu \to D_\mu = \du_\mu - i q A_\mu
+\end{equation}
+
+
+\section{Electrodinámica}\label{ sec:electrodinamica}
+
+
+\section{Fuerza fuerte}\label{ sec:fuerza-fuerte}
+
+
+\section{Fuerza débil}\label{ sec:fuerza-debil}
+
+
+\section{Mecanismo de Higgs}\label{ sec:mecanismo-de-higgs}
+
+
+\section{Modelo estándar}\label{ sec:modelo-estandar}
+\[
+ \Lagr = - \frac{1}{4} F_{\mu \nu} F^{\mu \nu} + i \bar{\psi} \slashed{D} \psi - \|D_\mu \phi\|^2 - V(\phi) 
+\]
+
+
+
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{resumen}
+
+\end{document}
