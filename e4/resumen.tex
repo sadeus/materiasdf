@@ -3,6 +3,7 @@
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
+\usepackage{braket}
 
 \usepackage{slashed}
 \usepackage{lineno}
@@ -33,21 +34,29 @@ c &= 1\\
 \]
 
 
-\section{Teoría nuclear}\label{sec:teora-nuclear}
+\section{Teoría nuclear}\label{sec:nuclear}
+La física nuclear empieza con el descubrimiento de la radioactividad por Becquerel en 1896. 
+
+Rutherford con esta radiación la orientó sobre materia y en 1911 propuso el primer modelo atómico. Propuso un nucleo cargado positivamente, con los electrones, descubiertos por Thompson en 1904, orbitando al núcleo. 
+
+Luego Chadwick descubrirá el neutrón, que permitie explicar la masa del nucleo y la existencia de isótopos, es decir átomos con misma cantidad de electrones (que determinan la química del compuesto) pero diferente masa.
 
 
 \section{Isospin y Quarks}\label{sec:isospin-y-quarks}
+Con los avances experimentales se observaron muchas partículas con diferente carga y masa
 
+Observando la relación de dispersión de varias partícuas 
+\[ \ket{\psi} = \ket{\psi}_S^{SU(3)} \otimes \ket{\chi}_S^{SU(2)} \otimes \ket{\phi}_A^{SU(3)} \]
 
-\section{ 4.\hspace*{0.5em} Revisión de Relatividad especial}\label{ sec:revisin-de-relatividad-especial}
-\label{eq_energy_momentum_relativistic}
+\section{Revisión de Relatividad especial}\label{sec:relatividad-especial}
+
 \begin{equation}
 E^2 = m^2 + p^2
 \label{eq:energy_momentum_relativistic}
 \end{equation}
 
 
-\section{Ecuación de Klein Gordon}\label{ sec:klein-gordon}
+\section{Ecuación de Klein Gordon}\label{sec:klein-gordon}
 La cuantización canónica define a la energía (Hamiltoneano) y al momento como
 
 \[
@@ -57,29 +66,31 @@ E &= H = i \hbar \du_t \\
 \end{aligned}
 \]
 
-\noindent por lo que la ecuación
+por lo que la ecuación
 \[H = \frac{p^2}{2m}\]
 pasa a ser
+
 \begin{equation}
 H = i \du_t = - \frac{\nabla^2}{2m}
 \label{eq_schrodinger}
 \end{equation}
-\noindent que puede ser aplicada a una función  $\psi$  cualquiera.
+
+que puede ser aplicada a una función  $\psi$  cualquiera.
 
  Ahora la relación energía-momento relativista (ecuación~\ref{eq:energy_momentum_relativistic})
 tendría la siguiente cuantización canónica
 \[
 - \du^2_{tt} = - \nabla^2 + m^2
 \]
-\noindent que finalmente la podemos expresar covariantemente
+que finalmente la podemos expresar covariantemente
 \[
 \du_\mu \du^\mu + m^2 = 0
 \]
-\noindent que se llama ecuación de Klein Gordon
+que se llama ecuación de Klein Gordon
 
  Esta ecuación tiene la problemática que definir una corriente de probablidad no definida positiva, que proviene de segunda derivada temporal (ya que la transforma en una ecuación hiperbólica)
 
-\section{Ecuación de Dirac}\label{ sec:ecuacin-de-dirac}
+\section{Ecuación de Dirac}\label{sec:dirac}
 
 
 \noindent Dirac propuso un hamiltoneano lineal en el momento, es decir
@@ -119,34 +130,32 @@ tal que
 Si usamos la ecuación~\ref{eq:euler_lagrange}
 
 
-\subsection{Simetrías globales}\label{ sec:simetras-globales}
+\subsection{Simetrías globales}\label{sec:simetras-globales}
 
 
-\subsection{Simetrías locales}\label{ sec:simetras-locales}
+\subsection{Simetrías locales}\label{sec:simetras-locales}
 
 \begin{equation}
 \du_\mu \to D_\mu = \du_\mu - i q A_\mu
 \end{equation}
 
 
-\section{Electrodinámica}\label{ sec:electrodinamica}
+\section{Electrodinámica}\label{sec:electrodinamica}
 
 
-\section{Fuerza fuerte}\label{ sec:fuerza-fuerte}
+\section{Fuerza fuerte}\label{sec:fuerza-fuerte}
 
 
-\section{Fuerza débil}\label{ sec:fuerza-debil}
+\section{Fuerza débil}\label{sec:fuerza-debil}
 
 
-\section{Mecanismo de Higgs}\label{ sec:mecanismo-de-higgs}
+\section{Mecanismo de Higgs}\label{sec:mecanismo-de-higgs}
 
 
-\section{Modelo estándar}\label{ sec:modelo-estandar}
+\section{Modelo estándar}\label{sec:modelo-estandar}
 \[
  \Lagr = - \frac{1}{4} F_{\mu \nu} F^{\mu \nu} + i \bar{\psi} \slashed{D} \psi - \|D_\mu \phi\|^2 - V(\phi) 
 \]
-
-
 
 \nocite{*}
 \bibliographystyle{unsrt}
